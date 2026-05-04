@@ -11,7 +11,10 @@
       "Bash(git config *)",
       "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\theod\\\\Documents\\\\Paradox Interactive\\\\Europa Universalis V\\\\mod\\\\Panda Express Map\\\\.claude\\\\skills\\\\create-country\")",
       "Bash(Out-Null)",
-      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\theod\\\\Documents\\\\Paradox Interactive\\\\Europa Universalis V\\\\mod\\\\Panda Express Map\\\\.claude\\\\skills\\\\update-country-locations\")"
+      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\theod\\\\Documents\\\\Paradox Interactive\\\\Europa Universalis V\\\\mod\\\\Panda Express Map\\\\.claude\\\\skills\\\\update-country-locations\")",
+      "Bash(Copy-Item \"e:\\\\SteamLibrary\\\\steamapps\\\\common\\\\Europa Universalis V\\\\game\\\\main_menu\\\\setup\\\\start\\\\10_countries.txt\" \"c:\\\\Users\\\\theod\\\\Documents\\\\Paradox Interactive\\\\Europa Universalis V\\\\mod\\\\Panda Express Map\\\\main_menu\\\\setup\\\\start\\\\10_countries.txt\" -Force)",
+      "PowerShell(Copy-Item \"e:\\\\SteamLibrary\\\\steamapps\\\\common\\\\Europa Universalis V\\\\game\\\\main_menu\\\\setup\\\\start\\\\10_countries.txt\" \"c:\\\\Users\\\\theod\\\\Documents\\\\Paradox Interactive\\\\Europa Universalis V\\\\mod\\\\Panda Express Map\\\\main_menu\\\\setup\\\\start\\\\10_countries.txt\" -Force)",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\theod\\\\Documents\\\\Paradox Interactive\\\\Europa Universalis V\\\\mod\\\\Panda Express Map\\\\main_menu\\\\setup\\\\start\")"
     ]
   }
 }
