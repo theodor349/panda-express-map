@@ -13542,26 +13542,10 @@ countries = {
 
 	CAS = {
 		own_control_core = {
-			avila adrada arevalo las_navas oropesa villatoro
-			burgos aranda_de_duero briviesca castrojeriz lerma logrono miranda_de_ebro najera sto_domingo_silos villadiego villarcayo
-			palencia aguilar_de_campoo carrion_de_los_condes monzon_campos palenzuela saldana reinosa
-			segovia cuellar fuentiduena pedraza sepulveda
-			soria agreda almazan berlanga burgo_de_osma calahorra calatanazor medinaceli arnedo
-			santander laredo potes san_vicente_barquera
-			valladolid medina_de_rioseco medina_del_campo penafiel tordesillas
-			cuenca alarcon belmonte beteta canete huete iniesta jorquera molina_de_aragon moya pareja san_clemente requena torralba
-			madrid alcala_de_henares brihuega buitrago_de_lozoya cobeta colmenar el_escorial guadalajara maqueda siguenza zorita
-			ciudad_real alcaraz almaden almodovar_del_campo calatrava lezuza malagon manzanares puertollano alhambra_location montiel villapalacios villarobledo
-			toledo alcazar_de_san_juan chinchon consuegra guadalupe illescas los_yebenes navalucillos ocana puebla_de_montalban puente_arzobispo talavera_de_la_reina tomelloso ucles
-			azuaga llerena monesterio zafra
-			plasencia belalcazar escurial herrera jaraicejo medellin puebla_de_alcocer trujillo valverde villanueva_de_la_serena zalamea
-			bejar piedrahita
 			cordoba baena carpio espiel fuenteovejuna lucena palma_del_rio pedroche santa_eufemia
 			jaen andujar baeza cazorla jodar martos ubeda
-			murcia albacete caravaca cartagena chinchilla cieza hellin lorca mula segura_de_la_sierra villena
-			sevilla arcos_de_la_frontera cadiz carmona constantina ecija jerez_de_la_frontera medina_sidonia moron olvera osuna sanlucar tarifa
+			sevilla arcos_de_la_frontera cadiz carmona constantina ecija jerez_de_la_frontera medina_sidonia moron olvera osuna sanlucar tarifa algeciras gibraltar
 			huelva almonaster_la_real aracena aroche ayamonte coria_del_rio niebla puebla_de_guzman sanlucar_la_mayor
-			bilbao anana durango onate salvatierra san_sebastian tolosa valmaseda vitoria
 		}
 
 		our_cores_conquered_by_others = {
@@ -18147,7 +18131,7 @@ countries = {
 			jerada taourirt debdou echemmaia sidi_bennour
 			nedroma tegeget kalaat_sraghna midelt
 			aouint_yghomane afso ifrane
-			ronda algeciras gibraltar marbella
+			ronda marbella
 		}
 
 		control = {
