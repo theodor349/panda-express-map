@@ -32,7 +32,7 @@
       "PowerShell(Get-ChildItem -Recurse \"c:\\\\Users\\\\theod\\\\Documents\\\\Paradox Interactive\\\\Europa Universalis V\\\\mod\\\\Panda Express Map\" | Where-Object { !$_.PSIsContainer } | ForEach-Object { $_.FullName })",
       "PowerShell(Get-ChildItem \"e:\\\\SteamLibrary\\\\steamapps\\\\common\\\\Europa Universalis V\\\\game\\\\main_menu\\\\localization\\\\english\" | ForEach-Object { $_.Name } | Select-Object -First 10)",
       "PowerShell(\\(Get-Content \"e:\\\\SteamLibrary\\\\steamapps\\\\common\\\\Europa Universalis V\\\\game\\\\main_menu\\\\localization\\\\english\\\\country_names_l_english.yml\" -Raw\\).Length)",
-      "Bash(python scripts/create_country.py --tag IB3 --name \"Valencia\" --adj \"Valencian\" --locations jativa alcoy ayora denia gandia orihuela alicante elche --color 255 165 0 --rank rank_kingdom --capital orihuela)"
+      "Bash(python scripts/create_country.py *"
     ]
   }
 }
