@@ -13484,8 +13484,7 @@ countries = {
 	VAL = {
 		own_control_core = {
 			castellon_de_la_plana ares_del_maestre llucena morella peniscola
-			jativa alcoy alicante denia elche orihuela
-			valencia gandia ayora bunol chelva lliria
+			valencia bunol chelva lliria
 		}
 
 		starting_technology_level = 3
@@ -61584,6 +61583,27 @@ countries = {
 		government = {
 			ruler = random
 		}
+	}
+
+
+	#IB3
+	IB3 = {
+		own_control_core = {
+			alcoy alicante ayora denia elche gandia jativa orihuela
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_kingdom
+		capital = orihuela
 	}
 
 }

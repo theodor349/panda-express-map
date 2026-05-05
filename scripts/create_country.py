@@ -162,17 +162,14 @@ def update_countries_file(tag, locations, capital, rank, includes):
         f'\t}}\n'
     )
 
-    # Insert before the final closing braces (last two non-empty lines ending with '}')
-    # Find the last occurrence of "\t}" which closes the inner countries = { block
-    insert_at = None
-    for li in range(len(lines) - 1, -1, -1):
-        if lines[li].strip() == '}':
-            insert_at = li
-            break
-
-    if insert_at is None:
-        print("ERROR: could not find insertion point in countries file", file=sys.stderr)
+    # Insert before the inner closing brace of 'countries = { countries = { ... } }'.
+    # The file ends with two unindented '}' lines. We want the second-to-last
+    # so that both closing braces remain after the new block.
+    unindented_closes = [li for li, l in enumerate(lines) if l.rstrip('\n\r') == '}']
+    if len(unindented_closes) < 2:
+        print("ERROR: could not find two unindented closing braces in countries file", file=sys.stderr)
         sys.exit(1)
+    insert_at = unindented_closes[-2]
 
     # Apply edits
     new_lines = []
@@ -223,6 +220,9 @@ def update_localization_file(tag, name, adj):
 
     if re.search(rf'^ {tag}:', text, re.MULTILINE):
         print(f"ERROR: tag {tag} already exists in {LOCALIZATION_FILE.name}", file=sys.stderr)
+        sys.exit(1)
+    if re.search(rf':\s*"{re.escape(name)}"', text):
+        print(f"ERROR: name \"{name}\" already exists in {LOCALIZATION_FILE.name}", file=sys.stderr)
         sys.exit(1)
 
     entry = f' {tag}: "{name}"\n {tag}_ADJ: "{adj}"\n'
