@@ -17,3 +17,171 @@ IB3 = { # Valencia
 	culture_definition = castilian
 	religion_definition = catholic
 }
+IB4 = { # Algarve
+	color = rgb { 60 130 80 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IB5 = { # Alentejo
+	color = rgb { 200 100 40 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IB6 = { # Tras-os-Montes
+	color = rgb { 80 140 190 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IB7 = { # Beira Baixa
+	color = rgb { 160 60 100 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IB8 = { # Badajoz
+	color = rgb { 50 100 60 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IB9 = { # Ciudad Rodrigo
+	color = rgb { 190 150 40 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBA = { # Salamanca
+	color = rgb { 100 60 140 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBB = { # Caceres
+	color = rgb { 40 120 110 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBC = { # Trujillo
+	color = rgb { 180 80 50 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBD = { # Zamora
+	color = rgb { 70 90 160 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBE = { # Benavente
+	color = rgb { 150 170 50 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBF = { # Asturias
+	color = rgb { 40 80 150 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBG = { # La Montana
+	color = rgb { 130 50 80 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBH = { # Biscay
+	color = rgb { 60 150 130 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBI = { # Gipuzkoa
+	color = rgb { 200 60 60 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBJ = { # La Mancha
+	color = rgb { 180 130 40 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBK = { # Toledo
+	color = rgb { 50 130 70 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBM = { # Ocana
+	color = rgb { 90 60 160 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBN = { # Madrid
+	color = rgb { 200 80 40 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBO = { # Guadalajara
+	color = rgb { 60 100 180 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBP = { # Avila
+	color = rgb { 160 40 80 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBQ = { # Segovia
+	color = rgb { 100 160 60 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBR = { # Valladolid
+	color = rgb { 140 90 40 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBS = { # Palencia
+	color = rgb { 40 110 150 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBT = { # Lerma
+	color = rgb { 170 50 130 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBU = { # Burgos
+	color = rgb { 80 50 130 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBV = { # Soria
+	color = rgb { 60 140 100 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBW = { # Cuenca
+	color = rgb { 210 100 30 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}

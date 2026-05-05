@@ -12,6 +12,216 @@ IB1 = { # Kingdom of Murcia
 	}
 }
 
+IB4 = { # Algarve
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IB5 = { # Alentejo
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IB6 = { # Tras-os-Montes
+	pattern = "pattern_solid.dds"
+	color1 = "dark_brown"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IB7 = { # Beira Baixa
+	pattern = "pattern_solid.dds"
+	color1 = "teal"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IB8 = { # Badajoz
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "gold"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IB9 = { # Ciudad Rodrigo
+	pattern = "pattern_solid.dds"
+	color1 = "dark_green"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBA = { # Salamanca
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_bridge.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBB = { # Caceres
+	pattern = "pattern_solid.dds"
+	color1 = "dark_green"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBC = { # Trujillo
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "white"
+	color3 = "red"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBD = { # Zamora
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBE = { # Benavente
+	pattern = "pattern_solid.dds"
+	color1 = "purple_mid"
+	color2 = "white"
+	color3 = "gold"
+
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBF = { # Asturias
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBG = { # La Montana
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+
+	colored_emblem = {
+		texture = "ce_tower.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBH = { # Biscay
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "green"
+
+	colored_emblem = {
+		texture = "ce_tree.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBI = { # Gipuzkoa
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "gold"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
 IB2 = { # Marquessate of Villena
 	pattern = "pattern_solid.dds"
 	color1 = "purple_mid"
@@ -23,5 +233,187 @@ IB2 = { # Marquessate of Villena
 		color1 = color2
 		color2 = color3
 		color3 = color2
+	}
+}
+
+IBJ = { # La Mancha
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBK = { # Toledo
+	pattern = "pattern_solid.dds"
+	color1 = "green_dark"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBM = { # Ocana
+	pattern = "pattern_solid.dds"
+	color1 = "blue"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_cross.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBN = { # Madrid
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_bear_standing.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBO = { # Guadalajara
+	pattern = "pattern_solid.dds"
+	color1 = "blue_dark"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBP = { # Avila
+	pattern = "pattern_solid.dds"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBQ = { # Segovia
+	pattern = "pattern_solid.dds"
+	color1 = "white"
+	color2 = "red"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBR = { # Valladolid
+	pattern = "pattern_solid.dds"
+	color1 = "purple_mid"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBS = { # Palencia
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "blue"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBT = { # Lerma
+	pattern = "pattern_solid.dds"
+	color1 = "green"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBU = { # Burgos
+	pattern = "pattern_solid.dds"
+	color1 = "red"
+	color2 = "white"
+	color3 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_lion_crowned_wide.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBW = { # Cuenca
+	pattern = "pattern_solid.dds"
+	color1 = "orange"
+	color2 = "blue_dark"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
+	}
+}
+
+IBV = { # Soria
+	pattern = "pattern_solid.dds"
+	color1 = "blue_dark"
+	color2 = "yellow"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_castle_short.dds"
+		color1 = color2
+		color2 = color1
+		color3 = color3
 	}
 }

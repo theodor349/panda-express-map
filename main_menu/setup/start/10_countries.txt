@@ -13641,55 +13641,10 @@ countries = {
 		
 	}
 
-	#Kingdom of Murcia - IB1
-	IB1 = {
-		own_control_core = {
-			murcia cartagena lorca mula
-		}
-
-		starting_technology_level = 3
-		include = "expl_mediterranean"
-		include = "expl_silk_road_west"
-		include = "iberian_monarchy"
-
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-		}
-
-		country_rank = rank_kingdom
-		capital = murcia_province
-	}
-
-	#Marquessate of Villena - IB2
-	IB2 = {
-		own_control_core = {
-			hellin caravaca cieza segura_de_la_sierra segura_range
-			albacete chinchilla jumilla villena
-		}
-
-		starting_technology_level = 3
-		include = "expl_mediterranean"
-		include = "expl_silk_road_west"
-		include = "iberian_monarchy"
-
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-		}
-
-		country_rank = rank_duchy
-		capital = albacete_province
-	}
-
 	POR = {
 		own_control_core = {
-			lagos faro silves tavira
-			evora alvalade alvito avis beja crato elvas estremoz mertola montemor mora_portugal moura odemira ourique ponte_sor portalegre portel salvaterra serpa sines vila_vicosa
-			coimbra besteiros castelo_branco covilha esgueira feira guarda idanha lamego meda pinhel proenca_nova sabugal seia trancoso viseu
-			lisbon alcacer_do_sal alcobaca chao_de_couce figueira leiria santarem setubal tomar torres_novas torres_vedras
-			aguiar montalegre
-			braganca chaves macedo miranda_de_i_douro mirandela moncorvo vila_real
+			coimbra esgueira feira
+			lisbon alcacer_do_sal alcobaca chao_de_couce figueira leiria setubal torres_vedras
 		}
 
 		starting_technology_level = 3
@@ -13767,12 +13722,7 @@ countries = {
 
 	LON = {
 		own_control_core = {
-			oviedo aviles castropol tineo villaviciosa cangas llanes mieres #Asturias
 			leon mansilla riano sahagun astorga castrocalbon ponferrada villablino villafranca_bierzo #León
-			zamora alba_de_aliste fermoselle toro benavente alcanices puebla_de_sanabria villalpando #Zamora
-			salamanca alba_de_tormes matilla_de_canos ciudad_rodrigo coria ledesma san_felices yecla_de_yeltes #Salamanca
-			granadilla galisteo caceres alcantara arroyo brozas valencia_de_alcantara #Cáceres
-			badajoz albuquerque barcarrota jerez_de_los_caballeros villanueva_del_fresno merida montanchez #Badajoz
 		}
 
 		starting_technology_level = 3
@@ -13949,12 +13899,11 @@ countries = {
 	#Navarre
 	NAV = {
 		own_control_core = {
-			pamplona elizondo estella olite roncesvalles sanguesa tudela viana laguardia
+			pamplona elizondo estella olite roncesvalles sanguesa tudela viana
 			saint_jean_pied_de_port #Gascony
 		}
 
 		our_cores_conquered_by_others = {
-			bilbao anana durango onate salvatierra san_sebastian tolosa valmaseda vitoria
 		}
 
 		starting_technology_level = 3
@@ -61585,6 +61534,45 @@ countries = {
 		}
 	}
 
+	#Kingdom of Murcia - IB1
+	IB1 = {
+		own_control_core = {
+			murcia cartagena lorca mula
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_kingdom
+	}
+
+	#Marquessate of Villena - IB2
+	IB2 = {
+		own_control_core = {
+			hellin caravaca cieza segura_de_la_sierra segura_range
+			albacete chinchilla jumilla villena
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
 
 	#IB3
 	IB3 = {
@@ -61603,8 +61591,539 @@ countries = {
 		}
 
 		country_rank = rank_kingdom
-		capital = orihuela
 	}
 
+
+	#IB4
+	IB4 = {
+		own_control_core = {
+			alvalade alvito beja faro lagos mertola moura odemira ourique serpa silves sines tavira
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IB5
+	IB5 = {
+		own_control_core = {
+			avis crato elvas estremoz evora montemor mora_portugal ponte_sor portalegre portel salvaterra santarem tomar torres_novas vila_vicosa
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IB6
+	IB6 = {
+		own_control_core = {
+			aguiar besteiros braganca chaves estrela_mountains guarda lamego macedo meda miranda_de_i_douro mirandela moncorvo montalegre pinhel seia trancoso vila_real viseu
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IB7
+	IB7 = {
+		own_control_core = {
+			castelo_branco covilha idanha proenca_nova sabugal
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IB8
+	IB8 = {
+		own_control_core = {
+			albuquerque azuaga badajoz barcarrota jerez_de_los_caballeros llerena merida monesterio montanchez villanueva_del_fresno zafra
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IB9
+	IB9 = {
+		own_control_core = {
+			ciudad_rodrigo coria francia_mountains ledesma san_felices yecla_de_yeltes
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBA
+	IBA = {
+		own_control_core = {
+			alba_de_tormes bejar bejar_mountains matilla_de_canos piedrahita salamanca
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBB
+	IBB = {
+		own_control_core = {
+			alcantara arroyo brozas caceres galisteo granadilla jaraicejo plasencia valencia_de_alcantara valverde
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBC
+	IBC = {
+		own_control_core = {
+			belalcazar escurial herrera medellin puebla_de_alcocer trujillo villanueva_de_la_serena zalamea
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBD
+	IBD = {
+		own_control_core = {
+			alba_de_aliste fermoselle toro zamora
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBE
+	IBE = {
+		own_control_core = {
+			alcanices benavente cabrera_range puebla_de_sanabria villalpando
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBF
+	IBF = {
+		own_control_core = {
+			aviles cangas castropol llanes mieres oviedo tineo villaviciosa west_cantabrian_mountains
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBG
+	IBG = {
+		own_control_core = {
+			laredo picos_de_europa potes san_vicente_barquera santander
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBH
+	IBH = {
+		own_control_core = {
+			bilbao durango valmaseda
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBI
+	IBI = {
+		own_control_core = {
+			onate san_sebastian tolosa
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBJ
+	IBJ = {
+		own_control_core = {
+			alcaraz alhambra_location almaden almodovar_del_campo calatrava ciudad_real lezuza madrona_range malagon manzanares montiel puertollano villapalacios villarobledo
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBK
+	IBK = {
+		own_control_core = {
+			guadalupe illescas los_yebenes navalucillos puebla_de_montalban puente_arzobispo talavera_de_la_reina toledo
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBM
+	IBM = {
+		own_control_core = {
+			alcazar_de_san_juan chinchon consuegra ocana tomelloso ucles
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBN
+	IBN = {
+		own_control_core = {
+			alcala_de_henares colmenar el_escorial madrid maqueda
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBO
+	IBO = {
+		own_control_core = {
+			brihuega buitrago_de_lozoya cobeta guadalajara siguenza zorita
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBP
+	IBP = {
+		own_control_core = {
+			adrada arevalo avila las_navas oropesa villatoro western_central_system
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBQ
+	IBQ = {
+		own_control_core = {
+			cuellar eastern_central_system1 eastern_central_system2 eastern_central_system3 fuentiduena pedraza segovia sepulveda
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBR
+	IBR = {
+		own_control_core = {
+			medina_de_rioseco medina_del_campo penafiel tordesillas valladolid
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBS
+	IBS = {
+		own_control_core = {
+			aguilar_de_campoo carrion_de_los_condes monzon_campos palencia palenzuela reinosa saldana
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBT
+	IBT = {
+		own_control_core = {
+			aranda_de_duero castrojeriz lerma sto_domingo_silos villadiego
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBU
+	IBU = {
+		own_control_core = {
+			anana briviesca burgos demanda_range laguardia logrono miranda_de_ebro najera salvatierra villarcayo vitoria
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBV
+	IBV = {
+		own_control_core = {
+			agreda almazan arnedo berlanga burgo_de_osma calahorra calatanazor medinaceli soria urbion_peaks
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
+
+	#IBW
+	IBW = {
+		own_control_core = {
+			alarcon belmonte beteta canete cuenca huete iberian_system iniesta jorquera molina_de_aragon moya pareja requena san_clemente torralba
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+	}
 }
 }

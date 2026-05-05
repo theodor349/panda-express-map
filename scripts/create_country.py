@@ -11,7 +11,7 @@ Usage:
   python create_country.py --tag IB3 --name "Toledo" --adj "Toledan" \\
       --locations toledo talavera escalona \\
       [--color 180 120 30] [--culture castilian] [--religion catholic] \\
-      [--rank rank_duchy] [--capital toledo]
+      [--rank rank_duchy]
 """
 
 import argparse
@@ -87,7 +87,7 @@ def extract_locations(lines, block):
 
 # ── 10_countries.txt ──────────────────────────────────────────────────────────
 
-def update_countries_file(tag, locations, capital, rank, includes):
+def update_countries_file(tag, locations, rank, includes):
     text = COUNTRIES_FILE.read_text(encoding='utf-8')
     lines = text.splitlines(keepends=True)
 
@@ -158,7 +158,6 @@ def update_countries_file(tag, locations, capital, rank, includes):
         f'\t\t}}\n'
         f'\n'
         f'\t\tcountry_rank = {rank}\n'
-        f'\t\tcapital = {capital}\n'
         f'\t}}\n'
     )
 
@@ -248,7 +247,6 @@ def parse_args():
     p.add_argument('--rank',      default='rank_duchy',
                    choices=['rank_county', 'rank_duchy', 'rank_kingdom', 'rank_empire'],
                    help='Country rank (default: rank_duchy)')
-    p.add_argument('--capital',   help='Capital location (default: first location)')
     p.add_argument('--includes',  nargs='+',
                    default=['expl_mediterranean', 'expl_silk_road_west', 'iberian_monarchy'],
                    help='Include templates (default: expl_mediterranean expl_silk_road_west iberian_monarchy)')
@@ -259,17 +257,15 @@ def main():
     args = parse_args()
     tag       = args.tag.upper()
     locations = set(args.locations)
-    capital   = args.capital or args.locations[0]
 
     print(f"\n=== Creating country {tag} ({args.name}) ===")
     print(f"Locations : {sorted(locations)}")
-    print(f"Capital   : {capital}")
     print(f"Rank      : {args.rank}")
     print(f"Color     : rgb {args.color}")
     print(f"Culture   : {args.culture}")
     print(f"Religion  : {args.religion}\n")
 
-    update_countries_file(tag, locations, capital, args.rank, args.includes)
+    update_countries_file(tag, locations, args.rank, args.includes)
     update_definitions_file(tag, args.name, args.color, args.culture, args.religion)
     update_localization_file(tag, args.name, args.adj)
 
