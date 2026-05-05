@@ -4,74 +4,61 @@ description: Create a new country in an EU5 mod. Covers all required files and o
 
 # Create a New Country
 
-The mod directory is `<EU5-mods-dir>\<mod-name>` (e.g. `C:\Users\theod\Documents\Paradox Interactive\Europa Universalis V\mod\Fractured Europe`).
-The base game directory is `<EU5-game-dir>` (e.g. `e:\SteamLibrary\steamapps\common\Europa Universalis V\game`).
+The mod directory is `c:\Users\theod\Documents\Paradox Interactive\Europa Universalis V\mod\Panda Express Map`.
+The base game directory is `e:\SteamLibrary\steamapps\common\Europa Universalis V\game`.
 
 ## Before starting
 
-**Choose a 3-letter tag** that is not already in use. Grep the base game for `^\s*TAG\s*=\s*\{` across `in_game/setup/countries/` to confirm it is free.
+1. **Resolve province names to locations.** If the user gives province names (e.g. `murcia_province`), look them up in `e:\SteamLibrary\steamapps\common\Europa Universalis V\game\in_game\map_data\definitions.txt` to get the individual location names inside each province.
+
+2. **Choose a tag** that is not already in use. Grep the base game `in_game/setup/countries/` and the mod's `in_game/setup/countries/panda_express_map.txt` for the tag to confirm it is free.
+
+3. **Choose a name and adjective** for the country. Check the localization file `main_menu/localization/english/country_names_l_english.yml` to confirm the name is not already taken.
 
 ---
 
-## Required steps
+## Creating the country — use the script
 
-### 1. Assign locations — `main_menu/setup/start/10_countries.txt`
+Run `scripts/create_country.py` from the mod root. It handles `10_countries.txt`, `in_game/setup/countries/panda_express_map.txt`, and the localization file in one step:
 
-Use the `update-country-locations` skill to:
-- Add the new country block with `own_control_core = { <locations> }`
-- Remove those locations from any other country that currently owns them
-
-Minimum country block:
 ```
-#<Country Name>
-TAG = {
-    own_control_core = {
-        location1 location2 location3
-    }
-
-    starting_technology_level = 3
-    include = "expl_mediterranean"  # depends on region — take inspiration from the
-    include = "expl_silk_road_west" # countries whose locations were transferred to
-    include = "expl_silk_road_center" # this new country
-    include = "iberian_monarchy"    # or appropriate regional template
-
-    government = {
-        type = monarchy
-        heir_selection = cognatic_primogeniture
-    }
-
-    country_rank = rank_duchy    # rank_county / rank_duchy / rank_kingdom / rank_empire
-    capital = <capital_location>
-}
+python scripts/create_country.py \
+    --tag TAG \
+    --name "Country Name" \
+    --adj "Country Adjective" \
+    --locations loc1 loc2 loc3 \
+    [--color R G B] \
+    [--culture castilian] \
+    [--religion catholic] \
+    [--rank rank_duchy] \
+    [--capital loc1] \
+    [--includes expl_mediterranean expl_silk_road_west iberian_monarchy]
 ```
 
-### 2. Country name — `main_menu/localization/english/country_names_l_english.yml`
+**Defaults** (suitable for Iberian countries): culture `castilian`, religion `catholic`, rank `rank_duchy`, includes `expl_mediterranean expl_silk_road_west iberian_monarchy`.
 
-Add two lines near geographically related countries:
-```yaml
- TAG: "Country Name"
- TAG_ADJ: "Country Adjective"
-```
+The script will error if the tag or name already exists.
 
-### 3. Coat of arms — `main_menu/common/coat_of_arms/coat_of_arms/<mod-file>.txt`
+---
 
-Add an entry to the centralised mod coat of arms file. Minimum entry:
+## After running the script
+
+### Coat of arms — `main_menu/common/coat_of_arms/coat_of_arms/panda_express_map.txt`
+
+The script does **not** handle the CoA — add it manually:
+
 ```
 TAG = { # Country Name
     pattern = "pattern_solid.dds"
-    color1 = "blue"
+    color1 = "red"
     color2 = "yellow"
     color3 = "white"
 
     colored_emblem = {
-        texture = "ce_border.dds"
-        color1 = color2
-        color2 = color2
-    }
-    colored_emblem = {
         texture = "ce_castle_short.dds"
         color1 = color2
-        color2 = color1
+        color2 = color2
+        color3 = color3
     }
 }
 ```
@@ -79,25 +66,13 @@ TAG = { # Country Name
 Available patterns: `main_menu/gfx/coat_of_arms/patterns/`
 Available emblems: `main_menu/gfx/coat_of_arms/colored_emblems/`
 
-### 4. Country definition — `in_game/setup/countries/<mod-file>.txt`
-
-Add an entry to the centralised mod country definitions file:
-```
-TAG = {
-    color = rgb { R G B }
-
-    culture_definition = portuguese    # or appropriate culture
-    religion_definition = catholic     # or appropriate religion
-}
-```
-
 ---
 
 ## Optional steps
 
 ### International organizations — `main_menu/setup/start/15_international_organizations.txt`
 
-Required if the country should be a member of the HRE or another organization at game start. Add the tag inside the relevant organization block, e.g.:
+Required if the country should be a member of the HRE or another organization at game start:
 ```
 holy_roman_empire = {
     members = {
@@ -108,19 +83,18 @@ holy_roman_empire = {
 
 ### Advanced government setup
 
-Inside the `government = { }` block in `10_countries.txt`, you can add:
+Edit the country block in `10_countries.txt` directly after the script runs. Inside `government = { }` you can add:
 - `reforms = { reform_name ... }` — government reforms
 - `laws = { law_key = law_value ... }` — specific law overrides
 - Societal value sliders, e.g. `centralization_vs_decentralization = 15`
 - `tolerated_cultures = { culture1 culture2 }` — accepted minority cultures
-- `ruler = character_tag` + `ruler_term = { ... }` — historical rulers (requires entries in `05_characters.txt`)
-- `ai_advance_preference_tags = { exploration = 5 }` — AI behaviour hints
+- `ruler = character_tag` + `ruler_term = { ... }` — historical rulers
 
 ---
 
 ## Verification checklist
 
 - [ ] Tag does not conflict with any existing country in the base game or mod
-- [ ] All assigned locations appear in exactly one country's block (use `update-country-locations` skill)
-- [ ] Localization key matches the tag exactly (`TAG:` not `tag:`)
+- [ ] Script ran without errors
+- [ ] CoA entry added to `panda_express_map.txt`
 - [ ] Reload the mod fully in the launcher before testing — clicking "New Game" alone is not enough
