@@ -13313,13 +13313,13 @@ countries = {
 
 
 	CAT = {
-		own_control_core = {
-			barcelona sitges terrassa villafranca_del_penedes
-			girona besalu castellon_ampurias ripoll sant_feliu
-			tarragona flix lleida montblanc tarrega tortosa
-			vic berga cardona cervera manresa
-			perpignan prades puigcerda
-			seu_durgell agramunt balaguer talarn vielha
+		our_cores_conquered_by_others = {
+			barcelona sitges terrassa villafranca_del_penedes #Barcelona
+			girona besalu castellon_ampurias ripoll sant_feliu #Girona
+			tarragona flix lleida montblanc tarrega tortosa #New Catalonia
+			vic berga cardona cervera manresa #Osona
+			perpignan prades puigcerda lagoon_of_salses south_eastern_pyrenees #Rosello
+			seu_durgell agramunt andorra_la_vella balaguer talarn vielha central_pyrenees south_western_pyrenees3 #Urgell
 		}
 
 		starting_technology_level = 3
@@ -13374,7 +13374,7 @@ countries = {
 		}
 	}
 	ANR = {
-		own_control_core = {
+		our_cores_conquered_by_others = {
 			andorra_la_vella
 		}
 
@@ -13396,13 +13396,12 @@ countries = {
 			huesca ainsa almudevar anso barbastro benabarre ejea_de_los_caballeros fraga jaca monzon sarinena sos
 			teruel albarracin alcaniz alfambra cantavieja montalban mora_de_rubielos valderrobres
 			zaragoza ariza belchite carinena caspe calatayud daroca pina_de_ebro tarazona zuera
-		}
-
-		own_control_integrated = {
-			jumilla
-		}
-
-		own_control_conquered = {
+			barcelona sitges terrassa villafranca_del_penedes #Barcelona
+			girona besalu castellon_ampurias ripoll sant_feliu #Girona
+			tarragona flix lleida montblanc tarrega tortosa #New Catalonia
+			vic berga cardona cervera manresa #Osona
+			perpignan prades puigcerda lagoon_of_salses south_eastern_pyrenees #Rosello
+			seu_durgell agramunt andorra_la_vella balaguer talarn vielha central_pyrenees south_western_pyrenees3 #Urgell
 		}
 
 		our_cores_conquered_by_others = {
@@ -13643,13 +13642,54 @@ countries = {
 		
 	}
 
+	#Kingdom of Murcia - IB1
+	IB1 = {
+		own_control_core = {
+			murcia cartagena lorca mula
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_kingdom
+		capital = murcia_province
+	}
+
+	#Marquessate of Villena - IB2
+	IB2 = {
+		own_control_core = {
+			hellin caravaca cieza segura_de_la_sierra segura_range
+			albacete chinchilla jumilla villena
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "iberian_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		country_rank = rank_duchy
+		capital = albacete_province
+	}
+
 	POR = {
 		own_control_core = {
 			lagos faro silves tavira
 			evora alvalade alvito avis beja crato elvas estremoz mertola montemor mora_portugal moura odemira ourique ponte_sor portalegre portel salvaterra serpa sines vila_vicosa
 			coimbra besteiros castelo_branco covilha esgueira feira guarda idanha lamego meda pinhel proenca_nova sabugal seia trancoso viseu
 			lisbon alcacer_do_sal alcobaca chao_de_couce figueira leiria santarem setubal tomar torres_novas torres_vedras
-			porto aguiar barcelos braga guimaraes montalegre valenca viana_do_castelo
+			aguiar montalegre
 			braganca chaves macedo miranda_de_i_douro mirandela moncorvo vila_real
 		}
 
@@ -13818,6 +13858,7 @@ countries = {
 			lugo monforte_de_lemos navia_de_suarna sarria villalba #Lugo
 			ourense barco_de_valdeorras ginzo_de_limia monterrey ribadavia viana_bolo #Ourense
 			santiago_compostela finisterre lalin mellid noya pontevedra tuy #Santiago de Compostela
+			porto barcelos braga guimaraes valenca viana_do_castelo #Minho
 		}
 
 		starting_technology_level = 3
@@ -13849,7 +13890,7 @@ countries = {
 		own_control_core = {
 			almeria almanzora baza gergal mojacar velez_rubio
 			granada adra almunecar guadix huescar illora loja pinar orgiva
-			malaga antequera velez_malaga
+			malaga antequera marbella ronda velez_malaga
 		}
 
 		our_cores_conquered_by_others = {
@@ -18131,7 +18172,6 @@ countries = {
 			jerada taourirt debdou echemmaia sidi_bennour
 			nedroma tegeget kalaat_sraghna midelt
 			aouint_yghomane afso ifrane
-			ronda marbella
 		}
 
 		control = {
