@@ -31,7 +31,8 @@ LOCALIZATION_FILE = ROOT / "main_menu/localization/english/country_names_l_engli
 
 REGION_DEFAULTS = {
     'iberian': {
-        'includes': ['expl_mediterranean', 'expl_silk_road_west', 'iberian_monarchy'],
+        'includes': ['expl_mediterranean', 'expl_silk_road_west', 'expl_silk_road_center', 
+                     'expl_silk_road_east', 'expl_indian_trade_route', 'catholic_monarchy_not_present'],
         'culture':  'castilian',
     },
     'french': {
