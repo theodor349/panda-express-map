@@ -18,7 +18,8 @@ CONSOLIDATIONS_FILE = SCRIPTS_DIR.parent / "mod_changes" / "country_consolidatio
 def main() -> None:
     lines = CONSOLIDATIONS_FILE.read_text(encoding="utf-8").splitlines()
 
-    entries = [l.strip() for l in lines if l.strip() and not l.strip().startswith("#")]
+    entries = [l.partition("#")[0].strip() for l in lines if l.strip() and not l.strip().startswith("#")]
+    entries = [e for e in entries if e]
 
     if not entries:
         print("No consolidation entries found.")
