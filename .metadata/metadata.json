@@ -2,7 +2,7 @@
 	"name":	"Panda Express Map",
 	"id":	"panda-exp-map",
 	"version":	"0.1",
-	"supported_game_version":	"1.1.10",
+	"supported_game_version":	"1.2.0",
 	"short_description":	"Splits the map into a MP friedly version",
 	"tags":	["Map"],
 	"relationships":	[],
