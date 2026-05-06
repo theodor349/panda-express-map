@@ -189,30 +189,35 @@ def main() -> None:
     if skipped:
         print(f"[{target_tag}] skipping {len(skipped)} already-owned location(s).")
 
+    blocks = ['own_control_core','own_control_integrated','own_control_conquered','own_control_colony','own_core','own_conquered','own_integrated','own_colony','control_core','control','our_cores_conquered_by_others']
+
     # --- Pass 1: strip new_locations from source countries ---
     source_edits: list[tuple[str, list[str]]] = []
     for tag in all_tags:
         if tag == target_tag:
             continue
-        block = find_country_block(text, tag)
-        if not block:
+        country_block = find_country_block(text, tag)
+        if not country_block:
             continue
-        occ = find_named_block(text, block[0], block[1], 'own_control_core')
-        if not occ:
-            continue
-        in_occ = set(get_block_locations(text, *occ))
-        to_move = sorted(new_locations & in_occ)
-        if to_move:
-            source_edits.append((tag, to_move))
+
+        for b in blocks:
+            block = find_named_block(text, country_block[0], country_block[1], b)
+            if block:
+                in_block = set(get_block_locations(text, *block)) if block else set()
+                to_move = sorted(new_locations & (in_block))
+                if to_move:
+                    source_edits.append((tag, to_move))
 
     # Sort in reverse file order so edits don't shift subsequent offsets
     source_edits.sort(key=lambda e: find_country_block(text, e[0])[0], reverse=True)
 
     for tag, to_move in source_edits:
         c_open, c_close = find_country_block(text, tag)
-        occ = find_named_block(text, c_open, c_close, 'own_control_core')
-        assert occ
-        text = remove_locations_from_block(text, occ[0], occ[1], set(to_move))
+
+        for b in blocks:
+            block = find_named_block(text, c_open, c_close, b)
+            if block:
+                text = remove_locations_from_block(text, block[0], block[1], set(to_move))
 
         c_open, c_close = find_country_block(text, tag)
         conquered = find_named_block(text, c_open, c_close, 'our_cores_conquered_by_others')
