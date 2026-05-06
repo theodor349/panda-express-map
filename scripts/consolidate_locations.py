@@ -82,6 +82,17 @@ def find_country_block(text: str, tag: str) -> tuple[int, int] | None:
     return find_block_extent(text, open_brace)
 
 
+def index_country_blocks(text: str) -> dict[str, tuple[int, int]]:
+    """Build a tag -> (open, close) map in one pass."""
+    pattern = re.compile(r'^\t([A-Z]{3})\s*=\s*\{', re.MULTILINE)
+    index: dict[str, tuple[int, int]] = {}
+    for m in pattern.finditer(text):
+        tag = m.group(1)
+        open_brace = text.index('{', m.start())
+        index[tag] = find_block_extent(text, open_brace)
+    return index
+
+
 def find_named_block(text: str, search_start: int, search_end: int, name: str) -> tuple[int, int] | None:
     pattern = re.compile(r'\b' + re.escape(name) + r'\s*=\s*\{')
     m = pattern.search(text, search_start, search_end)
@@ -132,9 +143,8 @@ def resolve_locations(geo: dict, names: list[str], kind: str) -> set[str]:
     for name in names:
         locs = find_name(geo, name)
         if locs is None:
-            print(f"  WARNING: {kind} '{name}' not found in definitions.txt — skipped")
-        else:
-            result.update(locs)
+            sys.exit(f"ERROR: {kind} '{name}' not found in definitions.txt")
+        result.update(locs)
     return result
 
 
@@ -169,14 +179,13 @@ def main() -> None:
 
     text = countries_file.read_text(encoding="utf-8")
 
-    country_pattern = re.compile(r'^\t([A-Z]{3})\s*=\s*\{', re.MULTILINE)
-    all_tags = [m.group(1) for m in country_pattern.finditer(text)]
+    block_index = index_country_blocks(text)
 
-    if target_tag not in all_tags:
+    if target_tag not in block_index:
         sys.exit(f"ERROR: tag '{target_tag}' not found in {countries_file.name}")
 
     # Deduplicate against what the target already owns
-    c_open, c_close = find_country_block(text, target_tag)
+    c_open, c_close = block_index[target_tag]
     occ_block = find_named_block(text, c_open, c_close, 'own_control_core')
     already_owned = set(get_block_locations(text, *occ_block)) if occ_block else set()
     new_locations = locations_to_add - already_owned
@@ -191,53 +200,48 @@ def main() -> None:
 
     blocks = ['own_control_core','own_control_integrated','own_control_conquered','own_control_colony','own_core','own_conquered','own_integrated','own_colony','control_core','control','our_cores_conquered_by_others']
 
-    # --- Pass 1: strip new_locations from source countries ---
+    # --- Pass 1: find which source tags need edits, sorted reverse file order ---
     source_edits: list[tuple[str, list[str]]] = []
-    for tag in all_tags:
+    for tag, (cb_open, cb_close) in sorted(block_index.items(), key=lambda kv: kv[1][0], reverse=True):
         if tag == target_tag:
             continue
-        country_block = find_country_block(text, tag)
-        if not country_block:
-            continue
-
+        to_move: set[str] = set()
         for b in blocks:
-            block = find_named_block(text, country_block[0], country_block[1], b)
-            if block:
-                in_block = set(get_block_locations(text, *block)) if block else set()
-                to_move = sorted(new_locations & (in_block))
-                if to_move:
-                    source_edits.append((tag, to_move))
-
-    # Sort in reverse file order so edits don't shift subsequent offsets
-    source_edits.sort(key=lambda e: find_country_block(text, e[0])[0], reverse=True)
+            blk = find_named_block(text, cb_open, cb_close, b)
+            if blk:
+                to_move.update(new_locations & set(get_block_locations(text, *blk)))
+        if to_move:
+            source_edits.append((tag, sorted(to_move)))
 
     for tag, to_move in source_edits:
-        c_open, c_close = find_country_block(text, tag)
+        # Re-index after each mutation so offsets stay correct
+        block_index = index_country_blocks(text)
+        c_open, c_close = block_index[tag]
 
         for b in blocks:
-            block = find_named_block(text, c_open, c_close, b)
-            if block:
-                text = remove_locations_from_block(text, block[0], block[1], set(to_move))
+            blk = find_named_block(text, c_open, c_close, b)
+            if blk:
+                text = remove_locations_from_block(text, blk[0], blk[1], set(to_move))
 
-        c_open, c_close = find_country_block(text, tag)
+        block_index = index_country_blocks(text)
+        c_open, c_close = block_index[tag]
         conquered = find_named_block(text, c_open, c_close, 'our_cores_conquered_by_others')
         if conquered:
             text = append_to_block(text, conquered[1], to_move)
         else:
-            c_open, c_close = find_country_block(text, tag)
             text = insert_block_before_close(text, c_close, 'our_cores_conquered_by_others', to_move)
 
         print(f"  [{tag}] moved {len(to_move)} location(s) to our_cores_conquered_by_others: {' '.join(to_move)}")
 
     # --- Pass 2: add new locations to target ---
-    c_open, c_close = find_country_block(text, target_tag)
+    block_index = index_country_blocks(text)
+    c_open, c_close = block_index[target_tag]
     occ_block = find_named_block(text, c_open, c_close, 'own_control_core')
     sorted_new = sorted(new_locations)
 
     if occ_block:
         text = append_to_block(text, occ_block[1], sorted_new)
     else:
-        c_open, c_close = find_country_block(text, target_tag)
         text = insert_block_before_close(text, c_close, 'own_control_core', sorted_new)
 
     print(f"  [{target_tag}] added {len(sorted_new)} new location(s) to own_control_core")
