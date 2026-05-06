@@ -1,4 +1,5 @@
-tjp --areas north_borneo_area south_borneo_area
+# Indonesia 
+TJP --areas north_borneo_area south_borneo_area
 MDY --areas luzon_area mindanao_area visayas_area
 LUW --areas celebes_area
 JLO --provinces ternate_province --locations amassing tidore
@@ -7,12 +8,17 @@ MAJ --areas java_area
 PLB --areas south_sumatra_area
 ARU --areas north_sumatra_area
 
-SXI --areas guizhou_area liangjiang_area wuling_area chuannan_area liangjiang_area yunnan_area liangjiang_area --provinces youyang_province --locations shizhu
+# China & Southeast Asia
+SXI --areas guizhou_area liangjiang_area wuling_area chuannan_area yunnan_area --provinces youyang_province --locations shizhu
 PAH --areas malay_peninsula_area 
 ADH --areas chao_phraya_area irrawady_delta_area northern_tai_highland_area
 PIN --areas irrawady_area arakhan_area hill_area shan_highland_area dali_area kachin_area 
 SGN --areas bengal_area assam_area monyul_area --provinces purnia_province darbhanga_province 
+
+# Tibet
 TIB --areas tsang_area nepal_area u_area kham_area ngari_area changtang_area amdo_area chuanxi_area longyou_area
+
+# India 
 ORI --areas orissa_area chota_nagpur_area jharkhand_area gondwana_area --provinces arrah_province palamau_province
 RDY --areas andhra_area telingana_area vidarbha_area
 DBD --areas sailan
