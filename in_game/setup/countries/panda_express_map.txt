@@ -185,3 +185,123 @@ IBW = { # Cuenca
 	culture_definition = castilian
 	religion_definition = catholic
 }
+FR1 = { # Saintonge
+	color = rgb { 180 80 40 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FR2 = { # Limousin
+	color = rgb { 120 160 80 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FR3 = { # Bazadais
+	color = rgb { 60 100 160 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FR4 = { # Combraille
+	color = rgb { 200 150 60 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FR5 = { # Touraine
+	color = rgb { 100 60 160 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FR6 = { # Berry
+	color = rgb { 160 60 120 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FR7 = { # Vivarais
+	color = rgb { 80 160 150 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FR8 = { # Auvergne
+	color = rgb { 50 80 130 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FR9 = { # Bas-Poitou
+	color = rgb { 190 120 60 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRB = { # Perigord
+	color = rgb { 140 80 160 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRC = { # Turenne
+	color = rgb { 70 130 90 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRD = { # Comte-d-Auvergne
+	color = rgb { 210 170 50 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRF = { # Lyonnais
+	color = rgb { 90 50 140 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRG = { # Bassigny
+	color = rgb { 160 200 80 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRH = { # Perthois
+	color = rgb { 200 80 100 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRJ = { # Remois
+	color = rgb { 60 140 200 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRK = { # Laonnois
+	color = rgb { 80 170 120 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRL = { # Flandre
+	color = rgb { 240 200 40 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRO = { # Quercy
+	color = rgb { 130 60 170 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
+FRP = { # Agenais
+	color = rgb { 60 160 110 }
+
+	culture_definition = french
+	religion_definition = catholic
+}
