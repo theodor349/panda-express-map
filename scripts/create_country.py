@@ -9,9 +9,12 @@ Creates a new country in the mod by:
 
 Usage:
   python create_country.py --tag IB3 --name "Toledo" --adj "Toledan" \\
-      --locations toledo talavera escalona \\
+      --region iberian --locations toledo talavera escalona \\
       [--color 180 120 30] [--culture castilian] [--religion catholic] \\
       [--rank rank_duchy]
+
+  Regions: iberian (castilian culture, Mediterranean includes)
+           french  (french culture, western Europe includes)
 """
 
 import argparse
@@ -25,6 +28,17 @@ ROOT = Path(__file__).parent.parent
 COUNTRIES_FILE   = ROOT / "main_menu/setup/start/10_countries.txt"
 DEFINITIONS_FILE = ROOT / "in_game/setup/countries/panda_express_map.txt"
 LOCALIZATION_FILE = ROOT / "main_menu/localization/english/country_names_l_english.yml"
+
+REGION_DEFAULTS = {
+    'iberian': {
+        'includes': ['expl_mediterranean', 'expl_silk_road_west', 'iberian_monarchy'],
+        'culture':  'castilian',
+    },
+    'french': {
+        'includes': ['expl_western_europe', 'catholic_monarchy_no_coast'],
+        'culture':  'french',
+    },
+}
 
 LOCATION_KEYS = {
     "own_control_core", "own_control_integrated", "own_control_conquered",
@@ -242,14 +256,15 @@ def parse_args():
     p.add_argument('--locations', required=True, nargs='+', help='Location names to assign')
     p.add_argument('--color',     nargs=3, type=int, metavar=('R', 'G', 'B'),
                    default=[120, 80, 160], help='Map color as R G B (default: 120 80 160)')
-    p.add_argument('--culture',   default='castilian', help='Culture definition (default: castilian)')
+    p.add_argument('--region',    required=True, choices=['iberian', 'french'],
+                   help='Region preset: iberian or french')
+    p.add_argument('--culture',   default=None, help='Culture definition (overrides region default)')
     p.add_argument('--religion',  default='catholic',  help='Religion definition (default: catholic)')
     p.add_argument('--rank',      default='rank_duchy',
                    choices=['rank_county', 'rank_duchy', 'rank_kingdom', 'rank_empire'],
                    help='Country rank (default: rank_duchy)')
-    p.add_argument('--includes',  nargs='+',
-                   default=['expl_mediterranean', 'expl_silk_road_west', 'iberian_monarchy'],
-                   help='Include templates (default: expl_mediterranean expl_silk_road_west iberian_monarchy)')
+    p.add_argument('--includes',  nargs='+', default=None,
+                   help='Include templates (overrides region default)')
     return p.parse_args()
 
 
@@ -257,16 +272,20 @@ def main():
     args = parse_args()
     tag       = args.tag.upper()
     locations = set(args.locations)
+    region    = REGION_DEFAULTS[args.region]
+    includes  = args.includes if args.includes is not None else region['includes']
+    culture   = args.culture  if args.culture  is not None else region['culture']
 
     print(f"\n=== Creating country {tag} ({args.name}) ===")
+    print(f"Region    : {args.region}")
     print(f"Locations : {sorted(locations)}")
     print(f"Rank      : {args.rank}")
     print(f"Color     : rgb {args.color}")
-    print(f"Culture   : {args.culture}")
+    print(f"Culture   : {culture}")
     print(f"Religion  : {args.religion}\n")
 
-    update_countries_file(tag, locations, args.rank, args.includes)
-    update_definitions_file(tag, args.name, args.color, args.culture, args.religion)
+    update_countries_file(tag, locations, args.rank, includes)
+    update_definitions_file(tag, args.name, args.color, culture, args.religion)
     update_localization_file(tag, args.name, args.adj)
 
     print(f"\nDone. Remember to reload the mod fully in the launcher before testing.")

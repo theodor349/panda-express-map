@@ -26,16 +26,23 @@ python scripts/create_country.py \
     --tag TAG \
     --name "Country Name" \
     --adj "Country Adjective" \
+    --region iberian|french \
     --locations loc1 loc2 loc3 \
     [--color R G B] \
     [--culture castilian] \
     [--religion catholic] \
     [--rank rank_duchy] \
-    [--capital loc1] \
-    [--includes expl_mediterranean expl_silk_road_west iberian_monarchy]
+    [--includes template1 template2 ...]
 ```
 
-**Defaults** (suitable for Iberian countries): culture `castilian`, religion `catholic`, rank `rank_duchy`, includes `expl_mediterranean expl_silk_road_west iberian_monarchy`.
+**`--region` is required.** Choose based on the country's geographic region:
+
+| Region | Culture default | Includes default |
+|--------|----------------|-----------------|
+| `iberian` | `castilian` | `expl_mediterranean expl_silk_road_west iberian_monarchy` |
+| `french` | `french` | `expl_western_europe catholic_monarchy_no_coast` |
+
+Religion defaults to `catholic` for both regions. `--culture` and `--includes` override region defaults.
 
 The script will error if the tag or name already exists.
 
