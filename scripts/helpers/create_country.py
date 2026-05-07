@@ -21,14 +21,22 @@ Usage:
 """
 
 import argparse
+import os
 import random
 import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent.parent
-BASE_GAME = Path(r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game")
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parent.parent.parent / ".env")
+    load_dotenv(Path(__file__).parent.parent.parent / ".env.local", override=True)
+except ImportError:
+    pass
+
+ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent.parent))
+BASE_GAME = Path(os.environ.get("EU5_GAME_PATH", r"C:\Program Files (x86)\Steam\steamapps\common\Europa Universalis V\game"))
 
 COUNTRIES_FILE    = ROOT / "main_menu/setup/start/10_countries.txt"
 DEFINITIONS_FILE  = ROOT / "in_game/setup/countries/panda_express_map.txt"

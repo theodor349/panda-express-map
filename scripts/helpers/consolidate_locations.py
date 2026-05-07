@@ -24,8 +24,8 @@ from pathlib import Path
 
 try:
     from dotenv import load_dotenv
-    load_dotenv(Path(__file__).parent.parent / ".env")
-    load_dotenv(Path(__file__).parent.parent / ".env.local", override=True)
+    load_dotenv(Path(__file__).parent.parent.parent / ".env")
+    load_dotenv(Path(__file__).parent.parent.parent / ".env.local", override=True)
 except ImportError:
     pass
 

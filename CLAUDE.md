@@ -39,6 +39,57 @@ Panda Express Map/
 | `10_countries.txt` | `main_menu/setup/start/10_countries.txt` | Country setup blocks: `own_control_core`, `own_control_colony`, diplomacy includes, government, rulers, etc. |
 | `21_locations.txt` | `main_menu/setup/start/21_locations.txt` | Per-location timed modifiers at game start. |
 
+## Scripts
+
+All automation lives in `scripts/`. There are two categories:
+
+### `scripts/apply_*.py` — top-level orchestrators
+
+Each apply script runs one logical step of the mod build. They are invoked by `apply_all.py` in order.
+
+**Must contain:**
+- `dotenv` load block at the top (paths relative to `Path(__file__).parent.parent`, i.e. the mod root):
+  ```python
+  try:
+      from dotenv import load_dotenv
+      load_dotenv(Path(__file__).parent.parent / ".env")
+      load_dotenv(Path(__file__).parent.parent / ".env.local", override=True)
+  except ImportError:
+      pass
+  ```
+- Path constants resolved via `os.environ.get(...)` with sensible defaults.
+- A `main()` function guarded by `if __name__ == "__main__": main()`.
+- Print progress with `=== label ===` headers.
+- Exit with `sys.exit(1)` on failure; print a summary of all failures before exiting.
+
+**Convention:** delegate actual file edits to helpers via `subprocess.run([sys.executable, str(helper_path), ...])`. Exception: trivial scripts that write a single static file may do so inline.
+
+### `scripts/helpers/*.py` — reusable primitives
+
+Each helper does one thing (resolve locations, edit one file type, etc.) and can be run standalone.
+
+**Must contain:**
+- `dotenv` load block with paths relative to `Path(__file__).parent.parent.parent` (three levels up = mod root):
+  ```python
+  try:
+      from dotenv import load_dotenv
+      load_dotenv(Path(__file__).parent.parent.parent / ".env")
+      load_dotenv(Path(__file__).parent.parent.parent / ".env.local", override=True)
+  except ImportError:
+      pass
+  ```
+- Path constants using `os.environ.get("EU5_GAME_PATH", ...)` and `os.environ.get("EU5_MOD_PATH", ...)` with defaults.
+- A `main()` with `argparse` for CLI use, guarded by `if __name__ == "__main__": main()`.
+- `sys.exit(f"ERROR: ...")` for all fatal errors (never raise unhandled exceptions).
+- A module-level docstring with usage example.
+
+### Environment variables (`.env` / `.env.local`)
+
+| Variable | Purpose |
+|---|---|
+| `EU5_GAME_PATH` | Path to the base game `game/` directory |
+| `EU5_MOD_PATH` | Path to the mod root |
+
 ## Key rules
 
 - **English only** — no other localization files.

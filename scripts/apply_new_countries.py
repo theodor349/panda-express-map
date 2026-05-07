@@ -9,11 +9,19 @@ Line format (produced by generate_new_countries.py):
 The --tag from the file is ignored; create_country.py auto-generates a fresh tag.
 """
 
+import os
 import subprocess
 import sys
 from pathlib import Path
 
-ROOT       = Path(__file__).parent.parent
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parent.parent / ".env")
+    load_dotenv(Path(__file__).parent.parent / ".env.local", override=True)
+except ImportError:
+    pass
+
+ROOT       = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
 INPUT_FILE = ROOT / "mod_changes/new_countries.txt"
 SCRIPT     = Path(__file__).parent / "helpers" / "create_country.py"
 
@@ -56,7 +64,7 @@ def main():
             continue
 
         cmd = [sys.executable, str(SCRIPT)] + args
-        print(f"[{ok+1}/{total}] {' '.join(cmd)}")
+        print(f"=== [{ok+1}/{total}] {' '.join(args)} ===")
         result = subprocess.run(cmd, capture_output=False)
         if result.returncode != 0:
             print(f"ERROR on line {lineno}: {line}", file=sys.stderr)

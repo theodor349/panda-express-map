@@ -12,12 +12,21 @@ Location block types recognised (from the file header):
   own_colony, control_core, control, our_cores_conquered_by_others
 """
 
+import os
 import re
 import sys
-from pathlib import Path
 from collections import defaultdict
+from pathlib import Path
 
-FILE = Path(__file__).parent.parent / "main_menu/setup/start/10_countries.txt"
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parent.parent / ".env")
+    load_dotenv(Path(__file__).parent.parent / ".env.local", override=True)
+except ImportError:
+    pass
+
+ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
+FILE = ROOT / "main_menu/setup/start/10_countries.txt"
 
 LOCATION_KEYS = {
     "own_control_core",
