@@ -1,22 +1,26 @@
 # Indonesia 
 TJP --areas north_borneo_area south_borneo_area
-MDY --areas luzon_area mindanao_area visayas_area
-LUW --areas celebes_area
-JLO --provinces ternate_province --locations amassing tidore
-BLI --provinces bali_province sumbawa_province --locations lamakera larantuka
+MDY --areas luzon_area mindanao_area visayas_area --locations yap
+LUW --areas celebes_area --provinces ternate_province tidore_province --locations kaimana irarutu buruwai amassing tidore bula
+BLI --provinces bali_province sumbawa_province --locations lamakera larantuka balibo laran likusaen tutuala
 MAJ --areas java_area
 PLB --areas south_sumatra_area
 ARU --areas north_sumatra_area
 
 # China & Southeast Asia
-SXI --areas guizhou_area liangjiang_area wuling_area chuannan_area yunnan_area --provinces youyang_province --locations shizhu
+SXI --areas guizhou_area wuling_area liangjiang_area wuling_area chuannan_area yunnan_area --provinces youyang_province --locations shizhu
 PAH --areas malay_peninsula_area 
 ADH --areas chao_phraya_area irrawady_delta_area northern_tai_highland_area
 PIN --areas irrawady_area arakhan_area hill_area shan_highland_area dali_area kachin_area 
 SGN --areas bengal_area assam_area monyul_area --provinces purnia_province darbhanga_province 
+VTN --provinces vientiane_province muang_phuan_province 
+DAI --areas red_river_delta_area champa_area
 
 # Tibet
-TIB --areas tsang_area nepal_area u_area kham_area ngari_area changtang_area amdo_area chuanxi_area longyou_area
+TIB --areas tsang_area nepal_area u_area kham_area ngari_area changtang_area amdo_area chuanxi_area longyou_area --provinces kangra_province punjab_hills_province
+QUN --areas badakhshan_area upper_indus_area --provinces peshawar_province balkh_province hissar_province kelif_province maymana_province bukhara_province kunduz_province 
+QCH --tags MNL DGH 
+TRH --tags BAT KHD CRS OGE
 
 # India 
 ORI --areas orissa_area chota_nagpur_area jharkhand_area gondwana_area --provinces arrah_province palamau_province
@@ -24,6 +28,42 @@ RDY --areas andhra_area telingana_area vidarbha_area
 DBD --areas sailan
 MAB --areas tamil_land_area malabar_area 
 VIJ --areas konkan_area 
-CMN --areas gujarat_area 
-GDA --areas rajputana_area 
+GDA --areas rajputana_area gujarat_area --provinces bhattiana_province baglana --locations jabhua
 JNG --areas saurashtra_area 
+
+# Hawaii
+HAW --areas hawaii_area samoa_area 
+
+# Manchuria 
+MRE --areas ussuri_area songhua_area gwanbuk_area songnen_area --locations yangam boli
+
+# Japan
+JAP --provinces tamna_province ryuukyuu_province
+
+# North America
+KER --provinces shiewhibak_province
+ONY --areas haudenosaunee_area
+
+# Mexico 
+TNX --areas xalisco_area --provinces teulinchan_province
+TAR --areas michoacan_area
+HUX --areas mexihko_area 
+MIX --areas huaxyacac_area 
+PPT --areas xilotepec_area tlaxcala_area 
+TOZ --areas tochtepec_area 
+MMM --areas chilapan_area tezulutlan_area --provinces chorti_province kuskatan_province
+CKP --areas puuk_area mayaab_area --provinces tah_itza_province
+UAY --areas chactemal_area
+
+# South America
+ZAQ --provinces chunsa_province 
+CHM --provinces hatun_kanar_province ingatambo_province cocamas_province kuelap_province --locations pakatnamu sana farfan xllang apurlec illapa tantaricuy kaxa_marca llucho markahuamachuco
+CIC --locations rimaq ishma huarochiri collique cantamarca atico caraveli aruni tucssa chilca huarco incahuasi
+URC --locations tayaccasa tampu_machay churkampa allpas llacsapallanca wari_peru pariahuanca choccalpata paqwayranra willka_pampa auccapana yanahuara quillarumiyoc pisaq qusqu urupampa ullantaytampu yanatile pikillaqta waqrapukara sausaya soras 
+PCJ --provinces  ayaviri_province hatunqulla_province sura_province --locations karanka paititi ayopaya incarraqay sarkajpa sachchaa_mukku arque charka colquechaca achacachi
+
+# Africa
+MBT --provinces kinhasa_province mbanza_kongo_province --locations bula_kongo bungu_kongo nogui mbanza_kongo wembo wandu
+LDU --locations mwamasapa mankhamba nyangu
+BUG --provinces kafu_province katonga_province victoria_nile_province simivu_province upper_kagera_province --locations mumias ndorwa nyamwezi ruguru uvinza ujiji nikoma haya
+NTL --locations ambovontany talaky manabondro rasanga vohipeno fianarantsoa ihosy maneva antananarivo manahoro ambohidray ambatondrazaka maintirano mahajanga boeny antsohihy bemanevika vohemar irodo ambilobe mahilaka
