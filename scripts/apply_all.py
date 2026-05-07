@@ -27,12 +27,14 @@ BASE_GAME   = Path(os.environ.get("EU5_GAME_PATH", r"C:\Program Files (x86)\Stea
 BASE_GAME_COPIES = [
     "main_menu/setup/start/10_countries.txt",
     "main_menu/localization/english/country_names_l_english.yml",
+    "in_game/map_data/location_templates.txt",
 ]
 
 # mod_changes/ files that must exist before any step runs.
 REQUIRED_MOD_CHANGES = [
     "mod_changes/new_countries.txt",
     "mod_changes/country_consolidations.txt",
+    "mod_changes/resource_changes.txt",
 ]
 
 STEPS = [
@@ -41,6 +43,7 @@ STEPS = [
     "apply_new_countries.py",
     "apply_consolidations.py",
     "apply_misc.py",
+    "apply_resources.py",
 ]
 
 

@@ -41,7 +41,8 @@ BASE_GAME = Path(os.environ.get("EU5_GAME_PATH", r"C:\Program Files (x86)\Steam\
 COUNTRIES_FILE    = ROOT / "main_menu/setup/start/10_countries.txt"
 DEFINITIONS_FILE  = ROOT / "in_game/setup/countries/panda_express_map.txt"
 LOCALIZATION_FILE = ROOT / "main_menu/localization/english/country_names_l_english.yml"
-PROVINCE_MAP_FILE = BASE_GAME / "in_game/map_data/definitions.txt"
+PROVINCE_MAP_FILE    = BASE_GAME / "in_game/map_data/definitions.txt"
+LOCATION_TEMPLATES   = BASE_GAME / "in_game/map_data/location_templates.txt"
 
 TAG_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz'
 REGION_PREFIXES = {'iberian': 'IB', 'french': 'FR'}
@@ -115,6 +116,36 @@ def resolve_provinces(province_names: list[str]) -> list[str]:
         else:
             locations.extend(pmap[prov])
     return locations
+
+
+# ── location_templates.txt ───────────────────────────────────────────────────
+
+def load_location_templates() -> dict[str, dict]:
+    """Returns {location: {culture, religion, ...}} parsed from location_templates.txt."""
+    text = LOCATION_TEMPLATES.read_text(encoding='utf-8')
+    result = {}
+    for m in re.finditer(r'(\w+)\s*=\s*\{([^{}]*)\}', text):
+        name = m.group(1)
+        attrs = {}
+        for kv in re.finditer(r'(\w+)\s*=\s*(\S+)', m.group(2)):
+            attrs[kv.group(1)] = kv.group(2)
+        result[name] = attrs
+    return result
+
+
+def validate_locations(locations: set[str], templates: dict[str, dict]):
+    """Exits with error if any location is not in location_templates.txt."""
+    unknown = [loc for loc in sorted(locations) if loc not in templates]
+    if unknown:
+        sys.exit(f"ERROR: unknown location(s) not found in location_templates.txt: {', '.join(unknown)}")
+
+
+def infer_culture_religion(first_location: str, templates: dict[str, dict]) -> tuple[str, str]:
+    """Returns (culture, religion) from the first location's template entry."""
+    attrs = templates.get(first_location, {})
+    culture  = attrs.get('culture',  'castilian')
+    religion = attrs.get('religion', 'catholic')
+    return culture, religion
 
 
 # ── parser (shared with promote_cores) ───────────────────────────────────────
@@ -333,8 +364,9 @@ def parse_args():
                    default=None, help='Map color as R G B (default: random)')
     p.add_argument('--region',    required=True, choices=['iberian', 'french'],
                    help='Region preset: iberian or french')
-    p.add_argument('--culture',   default=None, help='Culture definition (overrides region default)')
-    p.add_argument('--religion',  default='catholic',  help='Religion definition (default: catholic)')
+    p.add_argument('--culture',   default=None, help='Culture definition (overrides inferred value from first location)')
+    p.add_argument('--religion',  default=None, dest='religion_explicit',
+                   help='Religion definition (default: inferred from first location)')
     p.add_argument('--rank',      default='rank_duchy',
                    choices=['rank_county', 'rank_duchy', 'rank_kingdom', 'rank_empire'],
                    help='Country rank (default: rank_duchy)')
@@ -353,18 +385,26 @@ def main():
         sys.exit(1)
     region    = REGION_DEFAULTS[args.region]
     includes  = args.includes if args.includes is not None else region['includes']
-    culture   = args.culture  if args.culture  is not None else region['culture']
+
+    templates = load_location_templates()
+    validate_locations(locations, templates)
+
+    # Infer culture/religion from the first explicit location (or first resolved location)
+    first_location = (args.locations or sorted(locations))[0]
+    inferred_culture, inferred_religion = infer_culture_religion(first_location, templates)
+    culture  = args.culture   if args.culture  is not None else inferred_culture
+    religion = args.religion_explicit if args.religion_explicit is not None else inferred_religion
 
     print(f"\n=== Creating country {tag} ({args.name}) ===")
     print(f"Region    : {args.region}")
     print(f"Locations : {sorted(locations)}")
     print(f"Rank      : {args.rank}")
     print(f"Color     : rgb {color}")
-    print(f"Culture   : {culture}")
-    print(f"Religion  : {args.religion}\n")
+    print(f"Culture   : {culture} (from {first_location})")
+    print(f"Religion  : {religion} (from {first_location})\n")
 
     update_countries_file(tag, locations, args.rank, includes)
-    update_definitions_file(tag, args.name, color, culture, args.religion)
+    update_definitions_file(tag, args.name, color, culture, religion)
     update_localization_file(tag, args.name, args.adj)
 
     print(f"\nDone. Remember to reload the mod fully in the launcher before testing.")
