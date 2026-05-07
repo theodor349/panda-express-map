@@ -90,6 +90,10 @@ Each helper does one thing (resolve locations, edit one file type, etc.) and can
 | `EU5_GAME_PATH` | Path to the base game `game/` directory |
 | `EU5_MOD_PATH` | Path to the mod root |
 
+## Debug mode
+
+Set `-debug_mode` in Steam launch options for EU5 to enable debug mode. This shows additional info about country and location tags in-game, useful for verifying mod changes.
+
 ## Key rules
 
 - **English only** — no other localization files.
