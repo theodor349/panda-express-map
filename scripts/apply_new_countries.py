@@ -21,18 +21,30 @@ try:
 except ImportError:
     pass
 
-ROOT       = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
-INPUT_FILE = ROOT / "mod_changes/new_countries.txt"
-SCRIPT     = Path(__file__).parent / "helpers" / "create_country.py"
+ROOT         = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
+INPUT_FILE   = ROOT / "mod_changes/new_countries.txt"
+LOCALIZATION = ROOT / "main_menu/localization/english/country_names_l_english.yml"
+SCRIPT       = Path(__file__).parent / "helpers" / "create_country.py"
 
 
-def parse_line(line: str) -> list[str] | None:
+def load_existing_names() -> set[str]:
+    """Return the set of country names already present in the localization file."""
+    if not LOCALIZATION.exists():
+        return set()
+    raw = LOCALIZATION.read_bytes()
+    text = raw[3:].decode("utf-8") if raw.startswith(b"\xef\xbb\xbf") else raw.decode("utf-8")
+    return {m.group(1) for m in __import__("re").finditer(r':\s*"([^"]+)"', text)}
+
+
+def parse_line(line: str) -> tuple[str, list[str]] | None:
+    """Return (name, args) for a valid entry line, or None to skip."""
     import shlex
     line = line.strip()
     if not line or line.startswith('#'):
         return None
 
     tokens = shlex.split(line.partition('#')[0])
+    name = None
     args = []
     i = 0
     while i < len(tokens):
@@ -40,38 +52,45 @@ def parse_line(line: str) -> list[str] | None:
         if tok == '--tag':
             i += 2  # skip --tag and its value
         elif tok.startswith('--'):
-            args.append(tok)
+            values = []
             i += 1
-            # collect subsequent non-flag values
             while i < len(tokens) and not tokens[i].startswith('--'):
-                args.append(tokens[i])
+                values.append(tokens[i])
                 i += 1
+            if tok == '--name' and values:
+                name = values[0]
+            args.append(tok)
+            args.extend(values)
         else:
             i += 1
 
-    return args if args else None
+    return (name, args) if name and args else None
 
 
 def main():
+    existing_names = load_existing_names()
+
     lines = INPUT_FILE.read_text(encoding='utf-8').splitlines()
-    total = sum(1 for l in lines if l.strip() and not l.strip().startswith('#'))
-    print(f"Applying {total} countries from {INPUT_FILE.name}\n")
+    entries = [parse_line(l) for l in lines]
+    entries = [e for e in entries if e is not None]
 
-    ok = 0
-    for lineno, line in enumerate(lines, 1):
-        args = parse_line(line)
-        if args is None:
-            continue
+    pending = [(name, args) for name, args in entries if name not in existing_names]
+    skipped = len(entries) - len(pending)
 
-        cmd = [sys.executable, str(SCRIPT)] + args
-        print(f"=== [{ok+1}/{total}] {' '.join(args)} ===")
-        result = subprocess.run(cmd, capture_output=False)
+    print(f"Found {len(entries)} entries — {skipped} already present, {len(pending)} to apply.\n")
+
+    if not pending:
+        print("Nothing to do.")
+        return
+
+    for i, (name, args) in enumerate(pending, 1):
+        print(f"=== [{i}/{len(pending)}] {name} ===")
+        result = subprocess.run([sys.executable, str(SCRIPT)] + args, capture_output=False)
         if result.returncode != 0:
-            print(f"ERROR on line {lineno}: {line}", file=sys.stderr)
+            print(f"ERROR applying '{name}'", file=sys.stderr)
             sys.exit(1)
-        ok += 1
 
-    print(f"\nAll {ok} countries applied successfully.")
+    print(f"\nAll {len(pending)} countries applied successfully.")
 
 
 if __name__ == '__main__':
