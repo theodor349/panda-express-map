@@ -8,26 +8,35 @@ Creates a new country in the mod by:
   3. Appending name/adj entries to the localization file (UTF-8 BOM preserved).
 
 Usage:
-  python create_country.py --tag IB3 --name "Toledo" --adj "Toledan" \\
+  python create_country.py --name "Toledo" --name-adj "Toledan" \\
       --region iberian --locations toledo talavera escalona \\
+      [--tag IB3] [--provinces salamanca_province] \\
       [--color 180 120 30] [--culture castilian] [--religion catholic] \\
       [--rank rank_duchy]
 
+  --tag is optional; if omitted a new tag is auto-generated.
+  --provinces resolves province names to their constituent locations.
   Regions: iberian (castilian culture, Mediterranean includes)
            french  (french culture, western Europe includes)
 """
 
 import argparse
+import random
 import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).parent.parent.parent
+BASE_GAME = Path(r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game")
 
-COUNTRIES_FILE   = ROOT / "main_menu/setup/start/10_countries.txt"
-DEFINITIONS_FILE = ROOT / "in_game/setup/countries/panda_express_map.txt"
+COUNTRIES_FILE    = ROOT / "main_menu/setup/start/10_countries.txt"
+DEFINITIONS_FILE  = ROOT / "in_game/setup/countries/panda_express_map.txt"
 LOCALIZATION_FILE = ROOT / "main_menu/localization/english/country_names_l_english.yml"
+PROVINCE_MAP_FILE = BASE_GAME / "in_game/map_data/definitions.txt"
+
+TAG_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz'
+REGION_PREFIXES = {'iberian': 'IB', 'french': 'FR'}
 
 REGION_DEFAULTS = {
     'iberian': {
@@ -46,6 +55,58 @@ LOCATION_KEYS = {
     "own_control_colony", "own_core", "own_conquered", "own_integrated",
     "own_colony", "control_core", "control", "our_cores_conquered_by_others",
 }
+
+
+# ── tag generation ───────────────────────────────────────────────────────────
+
+def used_tags():
+    """Returns set of all tags already in use across both mod files."""
+    tags = set()
+    for path in (COUNTRIES_FILE, DEFINITIONS_FILE):
+        if path.exists():
+            for m in re.finditer(r'^[ \t]*([A-Z0-9_]{2,6})\s*=\s*\{', path.read_text(encoding='utf-8'), re.MULTILINE):
+                tags.add(m.group(1))
+    return tags
+
+
+def generate_tag(region: str) -> str:
+    taken = used_tags()
+    prefix = REGION_PREFIXES.get(region, 'XX')
+    for c in TAG_CHARS:
+        candidate = (prefix + c).upper()
+        if candidate not in taken:
+            return candidate
+    # fallback: AAA, AAB, ...
+    import itertools, string
+    for combo in itertools.product(string.ascii_uppercase, repeat=3):
+        candidate = ''.join(combo)
+        if candidate not in taken:
+            return candidate
+    raise RuntimeError("No available tags found")
+
+
+# ── province → locations ──────────────────────────────────────────────────────
+
+def load_province_map() -> dict[str, list[str]]:
+    """Returns {province_name: [locations]} from base game definitions.txt."""
+    text = PROVINCE_MAP_FILE.read_text(encoding='utf-8')
+    result = {}
+    for m in re.finditer(r'(\w+)\s*=\s*\{([^{}]*)\}', text):
+        content = m.group(2)
+        if '=' not in content:
+            result[m.group(1)] = content.split()
+    return result
+
+
+def resolve_provinces(province_names: list[str]) -> list[str]:
+    pmap = load_province_map()
+    locations = []
+    for prov in province_names:
+        if prov not in pmap:
+            print(f"WARNING: province '{prov}' not found in definitions.txt", file=sys.stderr)
+        else:
+            locations.extend(pmap[prov])
+    return locations
 
 
 # ── parser (shared with promote_cores) ───────────────────────────────────────
@@ -216,6 +277,10 @@ def update_definitions_file(tag, name, color_rgb, culture, religion):
         f'\treligion_definition = {religion}\n'
         f'}}\n'
     )
+    if not DEFINITIONS_FILE.exists():
+        DEFINITIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        DEFINITIONS_FILE.write_text('', encoding='utf-8')
+        print(f"Created {DEFINITIONS_FILE.name}")
     existing = DEFINITIONS_FILE.read_text(encoding='utf-8')
     if re.search(rf'^{tag}\s*=', existing, re.MULTILINE):
         print(f"ERROR: tag {tag} already exists in {DEFINITIONS_FILE.name}", file=sys.stderr)
@@ -251,12 +316,13 @@ def update_localization_file(tag, name, adj):
 
 def parse_args():
     p = argparse.ArgumentParser(description="Create a new country in the Panda Express Map mod.")
-    p.add_argument('--tag',       required=True, help='3-4 letter country tag, e.g. IB3')
+    p.add_argument('--tag',       default=None, help='Country tag (auto-generated if omitted)')
     p.add_argument('--name',      required=True, help='Country name, e.g. "Toledo"')
-    p.add_argument('--adj',       required=True, help='Country adjective, e.g. "Toledan"')
-    p.add_argument('--locations', required=True, nargs='+', help='Location names to assign')
+    p.add_argument('--name-adj',  required=True, dest='adj', help='Country adjective, e.g. "Toledan"')
+    p.add_argument('--locations', nargs='+', default=[], help='Individual location names to assign')
+    p.add_argument('--provinces', nargs='+', default=[], help='Province names (resolved to locations)')
     p.add_argument('--color',     nargs=3, type=int, metavar=('R', 'G', 'B'),
-                   default=[120, 80, 160], help='Map color as R G B (default: 120 80 160)')
+                   default=None, help='Map color as R G B (default: random)')
     p.add_argument('--region',    required=True, choices=['iberian', 'french'],
                    help='Region preset: iberian or french')
     p.add_argument('--culture',   default=None, help='Culture definition (overrides region default)')
@@ -271,8 +337,12 @@ def parse_args():
 
 def main():
     args = parse_args()
-    tag       = args.tag.upper()
-    locations = set(args.locations)
+    tag       = (args.tag.upper() if args.tag else generate_tag(args.region))
+    color     = args.color if args.color is not None else [random.randint(0, 255) for _ in range(3)]
+    locations = set(args.locations) | set(resolve_provinces(args.provinces))
+    if not locations:
+        print("ERROR: no locations specified (use --locations and/or --provinces)", file=sys.stderr)
+        sys.exit(1)
     region    = REGION_DEFAULTS[args.region]
     includes  = args.includes if args.includes is not None else region['includes']
     culture   = args.culture  if args.culture  is not None else region['culture']
@@ -281,12 +351,12 @@ def main():
     print(f"Region    : {args.region}")
     print(f"Locations : {sorted(locations)}")
     print(f"Rank      : {args.rank}")
-    print(f"Color     : rgb {args.color}")
+    print(f"Color     : rgb {color}")
     print(f"Culture   : {culture}")
     print(f"Religion  : {args.religion}\n")
 
     update_countries_file(tag, locations, args.rank, includes)
-    update_definitions_file(tag, args.name, args.color, culture, args.religion)
+    update_definitions_file(tag, args.name, color, culture, args.religion)
     update_localization_file(tag, args.name, args.adj)
 
     print(f"\nDone. Remember to reload the mod fully in the launcher before testing.")
