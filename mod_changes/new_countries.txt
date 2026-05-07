@@ -1,0 +1,51 @@
+--region iberian --name "Murcia" --name-adj "Murcian" --provinces murcia_province
+--region iberian --name "Villena" --name-adj "Villenian" --provinces albacete_province hellin_province
+--region iberian --name "Xàtiva" --name-adj "Xàtivan" --provinces jativa_province orihuela_province
+--region iberian --name "Algarve" --name-adj "Algarve" --provinces algarve_province baixo_alentejo_province
+--region iberian --name "Alentejo" --name-adj "Alentejan" --provinces alto_alentejo_province ribatejo_province
+--region iberian --name "Tras-os-Montes" --name-adj "Transmontane" --provinces beira_alta_province tras_os_montes
+--region iberian --name "Beira Baixa" --name-adj "Beirense" --provinces beira_baixa_province
+--region iberian --name "Badajoz" --name-adj "Pacense" --provinces badajoz_province merida_province
+--region iberian --name "Ciudad Rodrigo" --name-adj "Mirobrigense" --provinces ciudad_rodrigo_province
+--region iberian --name "Salamanca" --name-adj "Salmantine" --provinces salamanca_province
+--region iberian --name "Caceres" --name-adj "Cacereno" --provinces caceres_province plasencia_province
+--region iberian --name "Trujillo" --name-adj "Trujillano" --provinces trujillo_province villanueva_de_la_serena_province
+--region iberian --name "Zamora" --name-adj "Zamorano" --provinces zamora_province
+--region iberian --name "Benavente" --name-adj "Benaventano" --provinces benavente_province
+--region iberian --name "Asturias" --name-adj "Asturian" --provinces east_asturias_province west_asturias_province
+--region iberian --name "La Montana" --name-adj "Montanes" --provinces montana_province
+--region iberian --name "Biscay" --name-adj "Biscayan" --provinces biscay_province
+--region iberian --name "Gipuzkoa" --name-adj "Gipuzkoan" --provinces gipuzkoa_province
+--region iberian --name "La Mancha" --name-adj "Manchan" --provinces east_mancha_province west_mancha_province
+--region iberian --name "Toledo" --name-adj "Toledan" --provinces toledo_province
+--region iberian --name "Ocana" --name-adj "Ocanan" --provinces ocana_province
+--region iberian --name "Madrid" --name-adj "Madrilian" --provinces madrid_province
+--region iberian --name "Guadalajara" --name-adj "Guadalajaran" --provinces guadalajara_province
+--region iberian --name "Avila" --name-adj "Avilan" --provinces avila_province
+--region iberian --name "Segovia" --name-adj "Segovian" --provinces segovia_province
+--region iberian --name "Valladolid" --name-adj "Vallisoletano" --provinces valladolid_province
+--region iberian --name "Palencia" --name-adj "Palentian" --provinces palencia_province
+--region iberian --name "Lerma" --name-adj "Lerman" --provinces lerma_province
+--region iberian --name "Burgos" --name-adj "Burgalese" --provinces burgos_province alava_province
+--region iberian --name "Soria" --name-adj "Sorian" --provinces soria_province
+--region iberian --name "Cuenca" --name-adj "Cuencan" --provinces alarcon_province cuenca_province
+--region french --name "Saintonge" --name-adj "Saintongeais" --locations aulnay la_rochelle lusignan st_jean_dangely
+--region french --name "Limousin" --name-adj "Limousin" --provinces limousin_province
+--region french --name "Bazadais" --name-adj "Bazadaisien" --provinces bazadais_province
+--region french --name "Combraille" --name-adj "Combraillais" --provinces combraille_province
+--region french --name "Touraine" --name-adj "Tourangeau" --provinces touraine_province
+--region french --name "Bas-Berry" --name-adj "Berrichon" --locations boussac brosse chateauroux lignieres
+--region french --name "Vivarais" --name-adj "Vivarais" --locations viviers
+--region french --name "Haute-Auvergne" --name-adj "Auvergnat" --locations allegre brioude chalancon clermont le_puy saint_flour
+--region french --name "Bas-Poitou" --name-adj "Poitevin" --locations beauvoir loudun mauleon_poitou talmont
+--region french --name "Perigord" --name-adj "Perigourdin" --locations bergerac limeuil marmande sarlat
+--region french --name "Turenne" --name-adj "Turennois" --locations tulle turenne
+--region french --name "Comte-d-Auvergne" --name-adj "Auvergnat" --locations mauriac riom vodable
+--region french --name "Lyonnais" --name-adj "Lyonnais" --locations beaujeu lyon macon perreux riverie trevoux
+--region french --name "Bassigny" --name-adj "Bassignot" --locations choiseul grancey langres
+--region french --name "Perthois" --name-adj "Perthoisien" --locations brienne joinville rosnay
+--region french --name "Remois" --name-adj "Remois" --locations chalons_champagne grandpre reims
+--region french --name "Laonnois" --name-adj "Laonnois" --locations braine coucy laon
+--region french --name "Flandre" --name-adj "Flamand" --provinces roman_flanders_province
+--region french --name "Quercy" --name-adj "Quercynois" --provinces quercy_province
+--region french --name "Agenais" --name-adj "Agenais" --locations agen lectoure lisle_jourdain montflanquin verdun_sur_garonne
