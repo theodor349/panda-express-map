@@ -50,6 +50,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--areas",     nargs="*", default=[], metavar="NAME", help="Area names")
     parser.add_argument("--provinces", nargs="*", default=[], metavar="NAME", help="Province names")
     parser.add_argument("--locations", nargs="*", default=[], metavar="NAME", help="Individual location names")
+    parser.add_argument("--tags",      nargs="*", default=[], metavar="TAG",  help="Take all locations from these country tags")
     parser.add_argument("--file", default=str(DEFAULT_FILE), help="Path to 10_countries.txt")
     parser.add_argument("--definitions", default=str(DEFINITIONS), help="Path to definitions.txt")
     return parser.parse_args()
@@ -103,8 +104,10 @@ def find_named_block(text: str, search_start: int, search_end: int, name: str) -
 
 
 def get_block_locations(text: str, open_brace: int, close_brace: int) -> list[str]:
-    """Extract leaf tokens from a block, ignoring nested sub-blocks."""
+    """Extract leaf tokens from a block, ignoring nested sub-blocks and # comments."""
     inner = text[open_brace + 1:close_brace]
+    # Strip line comments before tokenising
+    inner = re.sub(r'#[^\n]*', '', inner)
     depth = 0
     cleaned = []
     for ch in inner:
@@ -123,28 +126,55 @@ def remove_locations_from_block(text: str, open_brace: int, close_brace: int, to
     return text[:open_brace + 1] + new_inner + text[close_brace:]
 
 
+def _format_locations(locations: list[str], indent: str, chunk_size: int = 4) -> str:
+    rows = [locations[i:i + chunk_size] for i in range(0, len(locations), chunk_size)]
+    return '\n'.join(indent + ' '.join(row) for row in rows)
+
+
 def append_to_block(text: str, close_brace: int, locations: list[str]) -> str:
-    loc_str = '\t\t\t' + ' '.join(locations) + '\n\t\t'
+    loc_str = '\n' + _format_locations(locations, '\t\t\t') + '\n\t\t'
     return text[:close_brace] + loc_str + text[close_brace:]
 
 
 def insert_block_before_close(text: str, country_close: int, block_name: str, locations: list[str]) -> str:
-    loc_str = '\t\t' + ' '.join(locations)
+    loc_str = _format_locations(locations, '\t\t\t')
     new_block = f'\n\t\t{block_name} = {{\n{loc_str}\n\t\t}}\n\t'
     return text[:country_close] + new_block + text[country_close:]
+
+
+# ---------------------------------------------------------------------------
+# Tag-based location resolution
+# ---------------------------------------------------------------------------
+
+SOURCE_BLOCKS = ['own_control_core','own_control_integrated','own_control_conquered','own_control_colony','own_core','own_conquered','own_integrated','own_colony','control_core','control']
+
+def resolve_tag_locations(text: str, block_index: dict, tags: list[str], errors: list[str]) -> set[str]:
+    result: set[str] = set()
+    for tag in tags:
+        tag = tag.upper()
+        if tag not in block_index:
+            errors.append(f"  tag '{tag}' not found in 10_countries.txt")
+            continue
+        c_open, c_close = block_index[tag]
+        for b in SOURCE_BLOCKS:
+            blk = find_named_block(text, c_open, c_close, b)
+            if blk:
+                result.update(get_block_locations(text, *blk))
+    return result
 
 
 # ---------------------------------------------------------------------------
 # Geography resolution
 # ---------------------------------------------------------------------------
 
-def resolve_locations(geo: dict, names: list[str], kind: str) -> set[str]:
+def resolve_locations(geo: dict, names: list[str], kind: str, errors: list[str]) -> set[str]:
     result: set[str] = set()
     for name in names:
         locs = find_name(geo, name)
         if locs is None:
-            sys.exit(f"ERROR: {kind} '{name}' not found in definitions.txt")
-        result.update(locs)
+            errors.append(f"  {kind} '{name}' not found in definitions.txt")
+        else:
+            result.update(locs)
     return result
 
 
@@ -164,25 +194,40 @@ def main() -> None:
     if not countries_file.exists():
         sys.exit(f"ERROR: file not found: {countries_file}")
 
-    # Resolve all geography inputs into a single location set
+    # Resolve geography inputs
     geo = parse_definitions(definitions_path)
+    errors: list[str] = []
     locations_to_add: set[str] = set()
-    locations_to_add.update(resolve_locations(geo, args.regions,   "region"))
-    locations_to_add.update(resolve_locations(geo, args.areas,     "area"))
-    locations_to_add.update(resolve_locations(geo, args.provinces, "province"))
-    locations_to_add.update(args.locations)
+    locations_to_add.update(resolve_locations(geo, args.regions,   "region",   errors))
+    locations_to_add.update(resolve_locations(geo, args.areas,     "area",     errors))
+    locations_to_add.update(resolve_locations(geo, args.provinces, "province", errors))
+    locations_to_add.update(resolve_locations(geo, args.locations, "location", errors))
 
-    if not locations_to_add:
-        sys.exit("ERROR: no locations resolved from the provided inputs.")
-
-    print(f"Resolved {len(locations_to_add)} unique location(s) total.")
+    if errors:
+        for e in errors:
+            print(e, file=sys.stderr)
+        sys.exit("ERROR: one or more names not found in definitions.txt")
 
     text = countries_file.read_text(encoding="utf-8")
-
     block_index = index_country_blocks(text)
 
     if target_tag not in block_index:
         sys.exit(f"ERROR: tag '{target_tag}' not found in {countries_file.name}")
+
+    # Resolve --tags inputs (requires file to be loaded)
+    if args.tags:
+        tag_errors: list[str] = []
+        locations_to_add.update(resolve_tag_locations(text, block_index, args.tags, tag_errors))
+        if tag_errors:
+            for e in tag_errors:
+                print(e, file=sys.stderr)
+            sys.exit("ERROR: one or more tags not found in 10_countries.txt")
+
+    if not locations_to_add:
+        print(f"[{target_tag}] no locations to add — skipping.")
+        return
+
+    print(f"Resolved {len(locations_to_add)} unique location(s) total.")
 
     # Deduplicate against what the target already owns
     c_open, c_close = block_index[target_tag]
@@ -198,7 +243,7 @@ def main() -> None:
     if skipped:
         print(f"[{target_tag}] skipping {len(skipped)} already-owned location(s).")
 
-    blocks = ['own_control_core','own_control_integrated','own_control_conquered','own_control_colony','own_core','own_conquered','own_integrated','own_colony','control_core','control','our_cores_conquered_by_others']
+    blocks = SOURCE_BLOCKS
 
     # --- Pass 1: find which source tags need edits, sorted reverse file order ---
     source_edits: list[tuple[str, list[str]]] = []

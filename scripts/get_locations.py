@@ -38,7 +38,7 @@ def parse_definitions(path: Path) -> dict[str, list[str]]:
     (continent, sub-continent, region, area, province) to its flat list
     of leaf locations.
     """
-    text = path.read_text(encoding="utf-8")
+    text = re.sub(r'#[^\n]*', '', path.read_text(encoding="utf-8"))
     geo: dict[str, list[str]] = {}
     stack: list[tuple[str, list[str]]] = []  # (name, locations_list)
 
@@ -51,9 +51,11 @@ def parse_definitions(path: Path) -> dict[str, list[str]]:
             geo[block_name] = locations
             stack.append((block_name, locations))
         elif leaf:
-            # leaf location — add to all ancestor blocks
+            # leaf location — add to all ancestor blocks and register itself
             for _, loc_list in stack:
                 loc_list.append(leaf)
+            if leaf not in geo:
+                geo[leaf] = [leaf]
         else:
             # closing brace
             if stack:
