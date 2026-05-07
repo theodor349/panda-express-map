@@ -21,12 +21,13 @@ Usage:
 """
 
 import argparse
+import random
 import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).parent.parent.parent
 BASE_GAME = Path(r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game")
 
 COUNTRIES_FILE    = ROOT / "main_menu/setup/start/10_countries.txt"
@@ -276,6 +277,10 @@ def update_definitions_file(tag, name, color_rgb, culture, religion):
         f'\treligion_definition = {religion}\n'
         f'}}\n'
     )
+    if not DEFINITIONS_FILE.exists():
+        DEFINITIONS_FILE.parent.mkdir(parents=True, exist_ok=True)
+        DEFINITIONS_FILE.write_text('', encoding='utf-8')
+        print(f"Created {DEFINITIONS_FILE.name}")
     existing = DEFINITIONS_FILE.read_text(encoding='utf-8')
     if re.search(rf'^{tag}\s*=', existing, re.MULTILINE):
         print(f"ERROR: tag {tag} already exists in {DEFINITIONS_FILE.name}", file=sys.stderr)
@@ -317,7 +322,7 @@ def parse_args():
     p.add_argument('--locations', nargs='+', default=[], help='Individual location names to assign')
     p.add_argument('--provinces', nargs='+', default=[], help='Province names (resolved to locations)')
     p.add_argument('--color',     nargs=3, type=int, metavar=('R', 'G', 'B'),
-                   default=[120, 80, 160], help='Map color as R G B (default: 120 80 160)')
+                   default=None, help='Map color as R G B (default: random)')
     p.add_argument('--region',    required=True, choices=['iberian', 'french'],
                    help='Region preset: iberian or french')
     p.add_argument('--culture',   default=None, help='Culture definition (overrides region default)')
@@ -333,6 +338,7 @@ def parse_args():
 def main():
     args = parse_args()
     tag       = (args.tag.upper() if args.tag else generate_tag(args.region))
+    color     = args.color if args.color is not None else [random.randint(0, 255) for _ in range(3)]
     locations = set(args.locations) | set(resolve_provinces(args.provinces))
     if not locations:
         print("ERROR: no locations specified (use --locations and/or --provinces)", file=sys.stderr)
@@ -345,12 +351,12 @@ def main():
     print(f"Region    : {args.region}")
     print(f"Locations : {sorted(locations)}")
     print(f"Rank      : {args.rank}")
-    print(f"Color     : rgb {args.color}")
+    print(f"Color     : rgb {color}")
     print(f"Culture   : {culture}")
     print(f"Religion  : {args.religion}\n")
 
     update_countries_file(tag, locations, args.rank, includes)
-    update_definitions_file(tag, args.name, args.color, culture, args.religion)
+    update_definitions_file(tag, args.name, color, culture, args.religion)
     update_localization_file(tag, args.name, args.adj)
 
     print(f"\nDone. Remember to reload the mod fully in the launcher before testing.")

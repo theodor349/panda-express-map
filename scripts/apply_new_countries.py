@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT       = Path(__file__).parent.parent
 INPUT_FILE = ROOT / "mod_changes/new_countries.txt"
-SCRIPT     = Path(__file__).parent / "create_country.py"
+SCRIPT     = Path(__file__).parent / "helpers" / "create_country.py"
 
 
 def parse_line(line: str) -> list[str] | None:

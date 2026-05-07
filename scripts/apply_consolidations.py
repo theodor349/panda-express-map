@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 SCRIPTS_DIR = Path(__file__).parent
-CONSOLIDATE = SCRIPTS_DIR / "consolidate_locations.py"
+CONSOLIDATE = SCRIPTS_DIR / "helpers" / "consolidate_locations.py"
 CONSOLIDATIONS_FILE = SCRIPTS_DIR.parent / "mod_changes" / "country_consolidations.txt"
 
 
