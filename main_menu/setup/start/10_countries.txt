@@ -14464,12 +14464,12 @@ countries = {
 
 	CAT = {
 		own_control_core = {
-			barcelona sitges terrassa villafranca_del_penedes
-			girona besalu castellon_ampurias ripoll sant_feliu
-			tarragona flix lleida montblanc tarrega tortosa
-			vic berga cardona cervera manresa
-			perpignan prades puigcerda
-			seu_durgell agramunt balaguer talarn vielha
+			   
+			    
+			     
+			    
+			  
+			    
 		}
 
 		starting_technology_level = 3
@@ -14522,6 +14522,16 @@ countries = {
 				name_james = 2
 			}
 		}
+	
+		our_cores_conquered_by_others = {
+			agramunt balaguer barcelona berga
+			besalu cardona castellon_ampurias cervera
+			flix girona lleida manresa
+			montblanc perpignan prades puigcerda
+			ripoll sant_feliu seu_durgell sitges
+			talarn tarragona tarrega terrassa
+			tortosa vic vielha villafranca_del_penedes
+		}
 	}
 	ANR = {
 		own_control_core = {
@@ -14546,6 +14556,14 @@ countries = {
 			huesca ainsa almudevar anso barbastro benabarre ejea_de_los_caballeros fraga jaca monzon sarinena sos
 			teruel albarracin alcaniz alfambra cantavieja montalban mora_de_rubielos valderrobres
 			zaragoza ariza belchite carinena caspe calatayud daroca pina_de_ebro tarazona zuera
+		
+			agramunt balaguer barcelona berga
+			besalu cardona castellon_ampurias cervera
+			flix girona lleida manresa
+			montblanc perpignan prades puigcerda
+			ripoll sant_feliu seu_durgell sitges
+			talarn tarragona tarrega terrassa
+			tortosa vic vielha villafranca_del_penedes
 		}
 
 		own_control_integrated = {

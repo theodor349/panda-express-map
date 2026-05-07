@@ -40,6 +40,7 @@ STEPS = [
     "apply_promote_cores_to_countries.py",
     "apply_new_countries.py",
     "apply_consolidations.py",
+    "apply_misc.py",
 ]
 
 
