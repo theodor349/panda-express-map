@@ -259,23 +259,23 @@ def main() -> None:
             source_edits.append((tag, sorted(to_move)))
 
     for tag, to_move in source_edits:
-        # Re-index after each mutation so offsets stay correct
-        block_index = index_country_blocks(text)
+        # Work on a substring so we never need to re-index the full file.
+        # Processing in reverse file order keeps unvisited block offsets valid.
         c_open, c_close = block_index[tag]
+        blk_text = text[c_open:c_close + 1]
 
         for b in blocks:
-            blk = find_named_block(text, c_open, c_close, b)
-            if blk:
-                text = remove_locations_from_block(text, blk[0], blk[1], set(to_move))
+            sub = find_named_block(blk_text, 0, len(blk_text), b)
+            if sub:
+                blk_text = remove_locations_from_block(blk_text, sub[0], sub[1], set(to_move))
 
-        block_index = index_country_blocks(text)
-        c_open, c_close = block_index[tag]
-        conquered = find_named_block(text, c_open, c_close, 'our_cores_conquered_by_others')
+        conquered = find_named_block(blk_text, 0, len(blk_text), 'our_cores_conquered_by_others')
         if conquered:
-            text = append_to_block(text, conquered[1], to_move)
+            blk_text = append_to_block(blk_text, conquered[1], to_move)
         else:
-            text = insert_block_before_close(text, c_close, 'our_cores_conquered_by_others', to_move)
+            blk_text = insert_block_before_close(blk_text, len(blk_text) - 1, 'our_cores_conquered_by_others', to_move)
 
+        text = text[:c_open] + blk_text + text[c_close + 1:]
         print(f"  [{tag}] moved {len(to_move)} location(s) to our_cores_conquered_by_others: {' '.join(to_move)}")
 
     # --- Pass 2: add new locations to target ---
