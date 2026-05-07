@@ -1,0 +1,14 @@
+# Format: <location_id> <resource>
+# Example:
+# villafranca_bierzo silver
+
+# Iberia
+villafranca_bierzo livestock
+flix gold
+
+# France
+aulnay wheat
+st_gerand livestock
+brie_comte_robert gold
+ales silver
+
