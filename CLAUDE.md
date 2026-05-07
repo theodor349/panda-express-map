@@ -29,6 +29,16 @@ Panda Express Map/
 └── scripts/                                # Python automation
 ```
 
+## Base game file reference
+
+| File | Path (relative to game root) | Contents |
+|---|---|---|
+| `definitions.txt` | `in_game/map_data/definitions.txt` | Hierarchy: region > area > province > locations. Leaf nodes (no `=` in body) are provinces mapping to their location names. |
+| `location_templates.txt` | `in_game/map_data/location_templates.txt` | Per-location attributes: topography, vegetation, climate, culture, religion, raw_material. |
+| `default.map` | `in_game/map_data/default.map` | Top-level map config: references to locations.png, rivers.png, definitions.txt, ports.csv, etc. Also defines straits and volcanoes. |
+| `10_countries.txt` | `main_menu/setup/start/10_countries.txt` | Country setup blocks: `own_control_core`, `own_control_colony`, diplomacy includes, government, rulers, etc. |
+| `21_locations.txt` | `main_menu/setup/start/21_locations.txt` | Per-location timed modifiers at game start. |
+
 ## Key rules
 
 - **English only** — no other localization files.
