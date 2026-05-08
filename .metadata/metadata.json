@@ -1,9 +1,9 @@
 ﻿{
 	"name":	"Panda Express Map",
-	"id":	"panda-exp-map",
-	"version":	"0.1",
+	"id":	"panda-express-map",
+	"version":	"0.3",
 	"supported_game_version":	"1.2.0",
-	"short_description":	"Splits the map into a MP friedly version",
+	"short_description":	"MP-focused map overhaul: consolidates non-European countries to reduce compute while keeping economies intact; releases all releasable nations and subjects in Europe; splits Iberia and France into many smaller and larger countries for a more balanced multiplayer experience; redistributes gold and silver so each region's dominant country gets one precious metal mine while others do not, preventing any single player from snowballing due to lucky resource placement.",
 	"tags":	["Map"],
 	"relationships":	[],
 	"game_custom_data":	{
