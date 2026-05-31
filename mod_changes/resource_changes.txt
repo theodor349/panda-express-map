@@ -4,11 +4,11 @@
 
 # Iberia
 villafranca_bierzo livestock
-flix gold
+flix goods_gold
 
 # France
 aulnay wheat
 st_gerand livestock
-brie_comte_robert gold
+brie_comte_robert goods_gold
 ales silver
 
