@@ -1,3 +1,6 @@
+# Europe
+TRO --locations trebinje
+
 # Indonesia 
 TJP --areas north_borneo_area south_borneo_area
 MDY --areas luzon_area mindanao_area visayas_area --locations yap
@@ -64,6 +67,6 @@ PCJ --provinces  ayaviri_province hatunqulla_province sura_province --locations 
 
 # Africa
 MBT --provinces kinhasa_province mbanza_kongo_province --locations bula_kongo bungu_kongo nogui mbanza_kongo wembo wandu
-LDU --locations mwamasapa mankhamba nyangu
+LDU --locations kasungu mchinji msinja mwamasapa mankhamba nyangu
 BUG --provinces kafu_province katonga_province victoria_nile_province simivu_province upper_kagera_province --locations mumias ndorwa nyamwezi ruguru uvinza ujiji nikoma haya
 NTL --locations ambovontany talaky manabondro rasanga vohipeno fianarantsoa ihosy maneva antananarivo manahoro ambohidray ambatondrazaka maintirano mahajanga boeny antsohihy bemanevika vohemar irodo ambilobe mahilaka

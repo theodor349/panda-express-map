@@ -25,6 +25,7 @@ import os
 import random
 import re
 import sys
+import time
 from collections import defaultdict
 from pathlib import Path
 
@@ -46,6 +47,18 @@ LOCATION_TEMPLATES   = BASE_GAME / "in_game/map_data/location_templates.txt"
 
 TAG_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz'
 REGION_PREFIXES = {'iberian': 'IB', 'french': 'FR'}
+
+
+def write_text_with_retry(path: Path, text: str, attempts: int = 5) -> None:
+    """Write text, retrying transient Windows file-open failures."""
+    for attempt in range(1, attempts + 1):
+        try:
+            path.write_text(text, encoding='utf-8')
+            return
+        except OSError as exc:
+            if attempt == attempts:
+                sys.exit(f"ERROR: could not write {path} after {attempts} attempts: {exc}")
+            time.sleep(0.25 * attempt)
 
 REGION_DEFAULTS = {
     'iberian': {
@@ -296,7 +309,7 @@ def update_countries_file(tag, locations, rank, includes):
         else:
             new_lines.append(line)
 
-    COUNTRIES_FILE.write_text(''.join(new_lines), encoding='utf-8')
+    write_text_with_retry(COUNTRIES_FILE, ''.join(new_lines))
     print(f"Updated {COUNTRIES_FILE.name}: added {tag}, removed {len(removal_map)} locations from other countries")
     for loc, entries in removal_map.items():
         for owner_tag, _ in entries:

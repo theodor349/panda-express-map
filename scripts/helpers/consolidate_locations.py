@@ -20,6 +20,7 @@ import argparse
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 try:
@@ -35,6 +36,18 @@ DEFAULT_FILE = _MOD_PATH / r"main_menu\setup\start\10_countries.txt"
 
 sys.path.insert(0, str(Path(__file__).parent))
 from get_locations import parse_definitions, find_name, DEFINITIONS
+
+
+def write_text_with_retry(path: Path, text: str, attempts: int = 5) -> None:
+    """Write text, retrying transient Windows file-open failures."""
+    for attempt in range(1, attempts + 1):
+        try:
+            path.write_text(text, encoding="utf-8")
+            return
+        except OSError as exc:
+            if attempt == attempts:
+                sys.exit(f"ERROR: could not write {path} after {attempts} attempts: {exc}")
+            time.sleep(0.25 * attempt)
 
 
 # ---------------------------------------------------------------------------
@@ -235,10 +248,6 @@ def main() -> None:
     already_owned = set(get_block_locations(text, *occ_block)) if occ_block else set()
     new_locations = locations_to_add - already_owned
 
-    if not new_locations:
-        print(f"[{target_tag}] already owns all resolved locations — nothing to do.")
-        return
-
     skipped = locations_to_add & already_owned
     if skipped:
         print(f"[{target_tag}] skipping {len(skipped)} already-owned location(s).")
@@ -254,7 +263,10 @@ def main() -> None:
         for b in blocks:
             blk = find_named_block(text, cb_open, cb_close, b)
             if blk:
-                to_move.update(new_locations & set(get_block_locations(text, *blk)))
+                # Remove resolved locations from every other owner, including
+                # locations the target already owns. This repairs overlap
+                # inherited from base-game core-only country definitions.
+                to_move.update(locations_to_add & set(get_block_locations(text, *blk)))
         if to_move:
             source_edits.append((tag, sorted(to_move)))
 
@@ -284,14 +296,16 @@ def main() -> None:
     occ_block = find_named_block(text, c_open, c_close, 'own_control_core')
     sorted_new = sorted(new_locations)
 
-    if occ_block:
-        text = append_to_block(text, occ_block[1], sorted_new)
-    else:
-        text = insert_block_before_close(text, c_close, 'own_control_core', sorted_new)
+    if sorted_new:
+        if occ_block:
+            text = append_to_block(text, occ_block[1], sorted_new)
+        else:
+            text = insert_block_before_close(text, c_close, 'own_control_core', sorted_new)
+        print(f"  [{target_tag}] added {len(sorted_new)} new location(s) to own_control_core")
+    elif not source_edits:
+        print(f"[{target_tag}] already owns all resolved locations exclusively — nothing to do.")
 
-    print(f"  [{target_tag}] added {len(sorted_new)} new location(s) to own_control_core")
-
-    countries_file.write_text(text, encoding="utf-8")
+    write_text_with_retry(countries_file, text)
     print(f"\nDone. Written to {countries_file}")
 
 
