@@ -2174,7 +2174,7 @@ clermont_en_beauvaisis = { topography = flatland vegetation = grasslands climate
 crepy = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = french raw_material = fur}
 senlis = { topography = flatland vegetation = farmland climate = oceanic religion = catholic culture = french raw_material = millet}
 nemours = { topography = flatland vegetation = grasslands climate = oceanic religion = catholic culture = french raw_material = wheat}
-brie_comte_robert = { topography = flatland vegetation = farmland climate = oceanic religion = catholic culture = french raw_material = gold}
+brie_comte_robert = { topography = flatland vegetation = farmland climate = oceanic religion = catholic culture = french raw_material = goods_gold}
 melun = { topography = flatland vegetation = woods climate = oceanic religion = catholic culture = french raw_material = wild_game}
 paris = { topography = flatland vegetation = farmland climate = oceanic religion = catholic culture = french raw_material = wine}
 corbeil = { topography = flatland vegetation = farmland climate = oceanic religion = catholic culture = french raw_material = silk}
@@ -2664,7 +2664,7 @@ castellon_ampurias = { topography = flatland vegetation = sparse climate = medit
 ripoll = { topography = mountains vegetation = forest climate = oceanic religion = catholic culture = catalan raw_material = iron}
 sant_feliu = { topography = flatland vegetation = grasslands climate = mediterranean religion = catholic culture = catalan raw_material = wheat natural_harbor_suitability = 0.25}
 tarragona = { topography = flatland vegetation = grasslands climate = mediterranean religion = catholic culture = catalan raw_material = wine natural_harbor_suitability = 0.25}
-flix = { topography = hills vegetation = woods climate = cold_arid religion = catholic culture = catalan raw_material = gold}
+flix = { topography = hills vegetation = woods climate = cold_arid religion = catholic culture = catalan raw_material = goods_gold}
 lleida = { topography = flatland vegetation = farmland climate = cold_arid religion = catholic culture = catalan raw_material = fruit}
 montblanc = { topography = hills vegetation = woods climate = oceanic religion = catholic culture = catalan raw_material = alum}
 tarrega = { topography = flatland vegetation = grasslands climate = cold_arid religion = catholic culture = catalan raw_material = wheat}

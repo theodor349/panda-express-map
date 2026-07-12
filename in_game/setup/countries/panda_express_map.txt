@@ -1,306 +1,306 @@
 
 IB0 = { # Murcia
-	color = rgb { 42 23 116 }
+	color = rgb { 192 142 67 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IB1 = { # Villena
-	color = rgb { 229 142 1 }
+	color = rgb { 131 35 226 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IB2 = { # Xàtiva
-	color = rgb { 233 114 249 }
+	color = rgb { 212 199 36 }
 
 	culture_definition = catalan
 	religion_definition = catholic
 }
 IB3 = { # Algarve
-	color = rgb { 70 231 44 }
+	color = rgb { 56 55 118 }
 
 	culture_definition = portuguese
 	religion_definition = catholic
 }
 IB4 = { # Alentejo
-	color = rgb { 88 182 158 }
+	color = rgb { 180 163 161 }
 
 	culture_definition = portuguese
 	religion_definition = catholic
 }
 IB5 = { # Tras-os-Montes
-	color = rgb { 133 196 224 }
+	color = rgb { 131 9 251 }
 
 	culture_definition = portuguese
 	religion_definition = catholic
 }
 IB6 = { # Beira Baixa
-	color = rgb { 5 170 11 }
+	color = rgb { 194 93 160 }
 
 	culture_definition = portuguese
 	religion_definition = catholic
 }
 IB7 = { # Badajoz
-	color = rgb { 67 127 94 }
+	color = rgb { 15 182 240 }
 
 	culture_definition = leonese
 	religion_definition = catholic
 }
 IB8 = { # Ciudad Rodrigo
-	color = rgb { 87 127 84 }
+	color = rgb { 52 186 239 }
 
 	culture_definition = leonese
 	religion_definition = catholic
 }
 IB9 = { # Salamanca
-	color = rgb { 27 55 204 }
+	color = rgb { 67 89 23 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBA = { # Caceres
-	color = rgb { 1 116 147 }
+	color = rgb { 23 60 173 }
 
 	culture_definition = leonese
 	religion_definition = catholic
 }
 IBB = { # Trujillo
-	color = rgb { 32 29 215 }
+	color = rgb { 79 142 197 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBC = { # Zamora
-	color = rgb { 50 174 180 }
+	color = rgb { 10 131 208 }
 
 	culture_definition = leonese
 	religion_definition = catholic
 }
 IBD = { # Benavente
-	color = rgb { 73 65 65 }
+	color = rgb { 98 197 154 }
 
 	culture_definition = leonese
 	religion_definition = catholic
 }
 IBE = { # Asturias
-	color = rgb { 235 58 102 }
+	color = rgb { 87 152 201 }
 
 	culture_definition = leonese
 	religion_definition = catholic
 }
 IBF = { # La Montana
-	color = rgb { 42 24 165 }
+	color = rgb { 91 48 84 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBG = { # Biscay
-	color = rgb { 42 224 125 }
+	color = rgb { 206 17 28 }
 
 	culture_definition = basque
 	religion_definition = catholic
 }
 IBH = { # Gipuzkoa
-	color = rgb { 181 142 192 }
+	color = rgb { 111 10 221 }
 
 	culture_definition = basque
 	religion_definition = catholic
 }
 IBI = { # La Mancha
-	color = rgb { 20 161 23 }
+	color = rgb { 204 197 105 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBJ = { # Toledo
-	color = rgb { 217 196 19 }
+	color = rgb { 218 136 167 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBK = { # Ocana
-	color = rgb { 166 181 88 }
+	color = rgb { 160 90 123 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBM = { # Madrid
-	color = rgb { 223 210 156 }
+	color = rgb { 111 249 8 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBN = { # Guadalajara
-	color = rgb { 179 81 85 }
+	color = rgb { 80 123 189 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBO = { # Avila
-	color = rgb { 204 14 117 }
+	color = rgb { 56 84 195 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBP = { # Segovia
-	color = rgb { 145 229 197 }
+	color = rgb { 235 75 164 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBQ = { # Valladolid
-	color = rgb { 162 187 106 }
+	color = rgb { 255 70 53 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBR = { # Palencia
-	color = rgb { 6 197 35 }
+	color = rgb { 188 146 225 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBS = { # Lerma
-	color = rgb { 148 252 74 }
+	color = rgb { 166 152 189 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBT = { # Burgos
-	color = rgb { 195 15 26 }
+	color = rgb { 151 94 80 }
 
 	culture_definition = basque
 	religion_definition = catholic
 }
 IBU = { # Soria
-	color = rgb { 98 78 165 }
+	color = rgb { 111 90 118 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 IBV = { # Cuenca
-	color = rgb { 210 61 132 }
+	color = rgb { 59 144 233 }
 
 	culture_definition = castilian
 	religion_definition = catholic
 }
 FR0 = { # Saintonge
-	color = rgb { 87 180 64 }
+	color = rgb { 200 55 34 }
 
 	culture_definition = poitevin
 	religion_definition = catholic
 }
 FR1 = { # Limousin
-	color = rgb { 175 41 57 }
+	color = rgb { 10 184 130 }
 
 	culture_definition = limousin
 	religion_definition = catholic
 }
 FR2 = { # Bazadais
-	color = rgb { 232 122 14 }
+	color = rgb { 245 159 0 }
 
 	culture_definition = gascon
 	religion_definition = catholic
 }
 FR3 = { # Combraille
-	color = rgb { 11 246 94 }
+	color = rgb { 247 190 147 }
 
 	culture_definition = limousin
 	religion_definition = catholic
 }
 FR4 = { # Touraine
-	color = rgb { 91 189 173 }
+	color = rgb { 146 201 133 }
 
 	culture_definition = french
 	religion_definition = catholic
 }
 FR5 = { # Bas-Berry
-	color = rgb { 135 84 170 }
+	color = rgb { 164 157 253 }
 
 	culture_definition = berrichon
 	religion_definition = catholic
 }
 FR6 = { # Vivarais
-	color = rgb { 154 135 138 }
+	color = rgb { 61 58 7 }
 
 	culture_definition = auvergnat
 	religion_definition = catholic
 }
 FR7 = { # Haute-Auvergne
-	color = rgb { 50 235 55 }
+	color = rgb { 37 45 235 }
 
 	culture_definition = auvergnat
 	religion_definition = catholic
 }
 FR8 = { # Bas-Poitou
-	color = rgb { 149 170 82 }
+	color = rgb { 160 4 160 }
 
 	culture_definition = poitevin
 	religion_definition = catholic
 }
 FR9 = { # Perigord
-	color = rgb { 25 157 54 }
+	color = rgb { 34 42 18 }
 
 	culture_definition = languedocien
 	religion_definition = catholic
 }
 FRB = { # Turenne
-	color = rgb { 234 31 46 }
+	color = rgb { 209 88 102 }
 
 	culture_definition = limousin
 	religion_definition = catholic
 }
 FRC = { # Comte-d-Auvergne
-	color = rgb { 102 25 83 }
+	color = rgb { 29 116 216 }
 
 	culture_definition = auvergnat
 	religion_definition = catholic
 }
 FRD = { # Lyonnais
-	color = rgb { 172 42 251 }
+	color = rgb { 138 138 19 }
 
 	culture_definition = arpitan
 	religion_definition = catholic
 }
 FRF = { # Bassigny
-	color = rgb { 153 10 51 }
+	color = rgb { 1 58 10 }
 
 	culture_definition = franc_comtois
 	religion_definition = catholic
 }
 FRG = { # Perthois
-	color = rgb { 249 43 78 }
+	color = rgb { 93 126 17 }
 
 	culture_definition = champenais
 	religion_definition = catholic
 }
 FRH = { # Remois
-	color = rgb { 34 221 228 }
+	color = rgb { 176 65 93 }
 
 	culture_definition = champenais
 	religion_definition = catholic
 }
 FRJ = { # Laonnois
-	color = rgb { 71 27 83 }
+	color = rgb { 226 216 9 }
 
 	culture_definition = picard
 	religion_definition = catholic
 }
 FRK = { # Flandre
-	color = rgb { 253 142 11 }
+	color = rgb { 147 253 216 }
 
 	culture_definition = picard
 	religion_definition = catholic
 }
 FRL = { # Quercy
-	color = rgb { 113 245 107 }
+	color = rgb { 244 171 200 }
 
 	culture_definition = languedocien
 	religion_definition = catholic
 }
 FRO = { # Agenais
-	color = rgb { 134 16 63 }
+	color = rgb { 115 250 107 }
 
 	culture_definition = languedocien
 	religion_definition = catholic
