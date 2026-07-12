@@ -305,3 +305,21 @@ FRO = { # Agenais
 	culture_definition = languedocien
 	religion_definition = catholic
 }
+IT0 = { # Abruzzi
+	color = rgb { 63 240 133 }
+
+	culture_definition = median
+	religion_definition = catholic
+}
+IT1 = { # Apulia
+	color = rgb { 11 195 190 }
+
+	culture_definition = neapolitan
+	religion_definition = catholic
+}
+IT2 = { # Calabria
+	color = rgb { 116 17 67 }
+
+	culture_definition = neapolitan
+	religion_definition = catholic
+}

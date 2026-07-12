@@ -11325,11 +11325,7 @@ countries = {
 	#Naples
 	NAP = {
 		own_control_core = {
-			aquila atri celano cittaducale csantangelo sulmona teramo chieti lanciano vasto bojano
-			isernia larino trivento altamura andria bari barletta monopoli bovino foggia lucera
-			manfredonia rotondo sansevero brindisi francavilla gallipoliita lecce martinafr taranto
-			acerenza lagonegro matera melfi montepeloso potenza santarcangelo catanzaro cotrone gerace
-			monteleone nicastro palmi reggiocal cassano castrovillari cosenza scalea paola rossano caserta
+			caserta
 			gaeta naples nola piedimonte sora venafro campagna salacon salerno vallo ariano avellino santangelo
 		}
 		our_cores_conquered_by_others = {
@@ -17387,7 +17383,7 @@ countries = {
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
-			ruler = fra_jean_ii_valois
+			ruler = random
 
 			ruler_term = { character = anj_geoffroy_v_anjou start_date = 1129.1.1 end_date = 1151.9.7 regnal_number = 2 }
 			ruler_term = { character = eng_henry_ii_curtmantle start_date = 1151.9.7 end_date = 1189.7.6 regnal_number = 1 }
@@ -17786,7 +17782,7 @@ countries = {
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
-			ruler = fra_jean_ii_valois
+			ruler = random
 			reforms = {
 				french_appanage_reform
 			}
@@ -18058,7 +18054,7 @@ countries = {
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
-			ruler = fra_jean_ii_valois
+			ruler = random
 
 			ruler_term = { character = eng_william_the_conquerer start_date = 1035.7.2 end_date = 1087.9.9 regnal_number = 1 }
 			ruler_term = { character = eng_henry_i start_date = 1106.9.28 end_date = 1135.12.1 regnal_number = 1 }
@@ -67775,6 +67771,75 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
+		country_rank = rank_duchy
+	}
+
+	#IT0
+	IT0 = {
+		own_control_core = {
+			aquila atri bojano celano central_apennines2 central_apennines3 central_apennines4 central_apennines5 central_apennines6 central_apennines7 chieti cittaducale csantangelo isernia lake_fucine lanciano larino sulmona teramo trivento vasto
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "expl_silk_road_center"
+		include = "expl_silk_road_east"
+		include = "expl_indian_trade_route"
+		include = "catholic_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = aquila
+		country_rank = rank_duchy
+	}
+
+	#IT1
+	IT1 = {
+		own_control_core = {
+			altamura andria bari barletta bovino brindisi foggia francavilla gallipoliita lake_varano lecce lucera manfredonia martinafr monopoli rotondo sansevero taranto
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "expl_silk_road_center"
+		include = "expl_silk_road_east"
+		include = "expl_indian_trade_route"
+		include = "catholic_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = bari
+		country_rank = rank_duchy
+	}
+
+	#IT2
+	IT2 = {
+		own_control_core = {
+			acerenza cassano castrovillari catanzaro cosenza cotrone gerace lagonegro matera melfi monteleone montepeloso nicastro palmi paola potenza reggiocal rossano santarcangelo scalea southern_apennines
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "expl_silk_road_center"
+		include = "expl_silk_road_east"
+		include = "expl_indian_trade_route"
+		include = "catholic_monarchy"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = cosenza
 		country_rank = rank_duchy
 	}
 }

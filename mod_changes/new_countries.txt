@@ -49,3 +49,6 @@
 --region french --name "Flandre" --name-adj "Flamand" --provinces roman_flanders_province
 --region french --name "Quercy" --name-adj "Quercynois" --provinces quercy_province
 --region french --name "Agenais" --name-adj "Agenais" --locations agen lectoure lisle_jourdain montflanquin verdun_sur_garonne
+--region italien --name "Abruzzi" --name-adj "Abruzzese" --culture median --capital aquila --provinces abruzzo_citra_province abruzzo_ultra_province molise_province
+--region italien --name "Apulia" --name-adj "Apulian" --culture neapolitan --capital bari --provinces bari_province capitanata_province otranto_province
+--region italien --name "Calabria" --name-adj "Calabrian" --culture neapolitan --capital cosenza --provinces basilicata_province calabria_ultra_province calabria_citra_province

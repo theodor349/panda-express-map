@@ -19,15 +19,16 @@ The base game directory is `e:\SteamLibrary\steamapps\common\Europa Universalis 
 
 ## Creating the country — use the script
 
-Run `scripts/create_country.py` from the mod root. It handles `10_countries.txt`, `in_game/setup/countries/panda_express_map.txt`, and the localization file in one step:
+Run `scripts/helpers/create_country.py` from the mod root. It handles `10_countries.txt`, `in_game/setup/countries/panda_express_map.txt`, and the localization file in one step:
 
 ```
-python scripts/create_country.py \
+python scripts/helpers/create_country.py \
     --tag TAG \
     --name "Country Name" \
-    --adj "Country Adjective" \
-    --region iberian|french \
+    --name-adj "Country Adjective" \
+    --region iberian|french|italien \
     --locations loc1 loc2 loc3 \
+    [--capital loc1] \
     [--color R G B] \
     [--culture castilian] \
     [--religion catholic] \
@@ -37,12 +38,13 @@ python scripts/create_country.py \
 
 **`--region` is required.** Choose based on the country's geographic region:
 
-| Region | Culture default | Includes default |
-|--------|----------------|-----------------|
-| `iberian` | `castilian` | `expl_mediterranean expl_silk_road_west iberian_monarchy` |
-| `french` | `french` | `expl_western_europe catholic_monarchy_no_coast` |
+| Region | Culture behavior | Includes default |
+|--------|------------------|-----------------|
+| `iberian` | Inferred from first location | `expl_mediterranean` plus western/central/eastern Silk Road, Indian trade route, and `catholic_monarchy_not_present` |
+| `french` | Inferred from first location | `expl_western_europe catholic_monarchy_no_coast` |
+| `italien` | Inferred from first location | `expl_mediterranean` plus western/central/eastern Silk Road, Indian trade route, and `catholic_monarchy` |
 
-Religion defaults to `catholic` for both regions. `--culture` and `--includes` override region defaults.
+Culture and religion are inferred from the first location. `--culture`, `--religion`, and `--includes` override the inferred or regional defaults. When supplied, `--capital` must name one of the assigned locations.
 
 The script will error if the tag or name already exists.
 

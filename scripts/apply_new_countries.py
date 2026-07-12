@@ -4,7 +4,8 @@ apply_new_countries.py
 Reads mod_changes/new_countries.txt and dispatches each line to create_country.py.
 
 Line format (produced by generate_new_countries.py):
-  "Name" "NameAdj" --tag TAG --region REGION [--provinces p1 p2] [--locations l1 l2]
+  --name "Name" --name-adj "NameAdj" --region REGION
+  [--provinces p1 p2] [--locations l1 l2] [--capital LOCATION] [--culture CULTURE]
 
 The --tag from the file is ignored; create_country.py auto-generates a fresh tag.
 """

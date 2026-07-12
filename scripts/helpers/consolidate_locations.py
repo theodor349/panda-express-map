@@ -30,7 +30,7 @@ try:
 except ImportError:
     pass
 
-_DEFAULT_MOD_PATH = Path(__file__).parent.parent
+_DEFAULT_MOD_PATH = Path(__file__).parent.parent.parent
 _MOD_PATH = Path(os.environ.get("EU5_MOD_PATH", _DEFAULT_MOD_PATH))
 DEFAULT_FILE = _MOD_PATH / r"main_menu\setup\start\10_countries.txt"
 

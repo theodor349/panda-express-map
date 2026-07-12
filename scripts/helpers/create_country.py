@@ -11,13 +11,15 @@ Usage:
   python create_country.py --name "Toledo" --name-adj "Toledan" \\
       --region iberian --locations toledo talavera escalona \\
       [--tag IB3] [--provinces salamanca_province] \\
+      [--capital toledo] \\
       [--color 180 120 30] [--culture castilian] [--religion catholic] \\
       [--rank rank_duchy]
 
   --tag is optional; if omitted a new tag is auto-generated.
   --provinces resolves province names to their constituent locations.
-  Regions: iberian (castilian culture, Mediterranean includes)
-           french  (french culture, western Europe includes)
+  Regions: iberian (Mediterranean includes)
+           french  (western Europe includes)
+           italien (Mediterranean and Catholic coastal monarchy includes)
 """
 
 import argparse
@@ -37,7 +39,7 @@ except ImportError:
     pass
 
 ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent.parent))
-BASE_GAME = Path(os.environ.get("EU5_GAME_PATH", r"C:\Program Files (x86)\Steam\steamapps\common\Europa Universalis V\game"))
+BASE_GAME = Path(os.environ.get("EU5_GAME_PATH", r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game"))
 
 COUNTRIES_FILE    = ROOT / "main_menu/setup/start/10_countries.txt"
 DEFINITIONS_FILE  = ROOT / "in_game/setup/countries/panda_express_map.txt"
@@ -46,7 +48,7 @@ PROVINCE_MAP_FILE    = BASE_GAME / "in_game/map_data/definitions.txt"
 LOCATION_TEMPLATES   = BASE_GAME / "in_game/map_data/location_templates.txt"
 
 TAG_CHARS = '0123456789abcdefghijklmnopqrstuvwxyz'
-REGION_PREFIXES = {'iberian': 'IB', 'french': 'FR'}
+REGION_PREFIXES = {'iberian': 'IB', 'french': 'FR', 'italien': 'IT'}
 
 
 def write_text_with_retry(path: Path, text: str, attempts: int = 5) -> None:
@@ -69,6 +71,10 @@ REGION_DEFAULTS = {
     'french': {
         'includes': ['expl_western_europe', 'catholic_monarchy_no_coast'],
         'culture':  'french',
+    },
+    'italien': {
+        'includes': ['expl_mediterranean', 'expl_silk_road_west', 'expl_silk_road_center',
+                     'expl_silk_road_east', 'expl_indian_trade_route', 'catholic_monarchy'],
     },
 }
 
@@ -215,7 +221,7 @@ def extract_locations(lines, block):
 
 # ── 10_countries.txt ──────────────────────────────────────────────────────────
 
-def update_countries_file(tag, locations, rank, includes):
+def update_countries_file(tag, locations, capital, rank, includes):
     text = COUNTRIES_FILE.read_text(encoding='utf-8')
     lines = text.splitlines(keepends=True)
 
@@ -269,6 +275,7 @@ def update_countries_file(tag, locations, rank, includes):
     # Build the new country block
     loc_line = '\t\t\t' + ' '.join(sorted(locations)) + '\n'
     include_lines = ''.join(f'\t\tinclude = "{inc}"\n' for inc in includes)
+    capital_line = f'\t\tcapital = {capital}\n' if capital else ''
     new_block = (
         f'\n'
         f'\t#{tag}\n'
@@ -285,6 +292,7 @@ def update_countries_file(tag, locations, rank, includes):
         f'\t\t\their_selection = cognatic_primogeniture\n'
         f'\t\t}}\n'
         f'\n'
+        f'{capital_line}'
         f'\t\tcountry_rank = {rank}\n'
         f'\t}}\n'
     )
@@ -373,10 +381,11 @@ def parse_args():
     p.add_argument('--name-adj',  required=True, dest='adj', help='Country adjective, e.g. "Toledan"')
     p.add_argument('--locations', nargs='+', default=[], help='Individual location names to assign')
     p.add_argument('--provinces', nargs='+', default=[], help='Province names (resolved to locations)')
+    p.add_argument('--capital',    default=None, help='Capital location (must be one of the assigned locations)')
     p.add_argument('--color',     nargs=3, type=int, metavar=('R', 'G', 'B'),
                    default=None, help='Map color as R G B (default: random)')
-    p.add_argument('--region',    required=True, choices=['iberian', 'french'],
-                   help='Region preset: iberian or french')
+    p.add_argument('--region',    required=True, choices=['iberian', 'french', 'italien'],
+                   help='Region preset: iberian, french, or italien')
     p.add_argument('--culture',   default=None, help='Culture definition (overrides inferred value from first location)')
     p.add_argument('--religion',  default=None, dest='religion_explicit',
                    help='Religion definition (default: inferred from first location)')
@@ -402,6 +411,9 @@ def main():
     templates = load_location_templates()
     validate_locations(locations, templates)
 
+    if args.capital is not None and args.capital not in locations:
+        sys.exit(f"ERROR: capital '{args.capital}' is not one of the assigned locations")
+
     # Infer culture/religion from the first explicit location (or first resolved location)
     first_location = (args.locations or sorted(locations))[0]
     inferred_culture, inferred_religion = infer_culture_religion(first_location, templates)
@@ -411,12 +423,13 @@ def main():
     print(f"\n=== Creating country {tag} ({args.name}) ===")
     print(f"Region    : {args.region}")
     print(f"Locations : {sorted(locations)}")
+    print(f"Capital   : {args.capital or '(not specified)'}")
     print(f"Rank      : {args.rank}")
     print(f"Color     : rgb {color}")
     print(f"Culture   : {culture} (from {first_location})")
     print(f"Religion  : {religion} (from {first_location})\n")
 
-    update_countries_file(tag, locations, args.rank, includes)
+    update_countries_file(tag, locations, args.capital, args.rank, includes)
     update_definitions_file(tag, args.name, color, culture, religion)
     update_localization_file(tag, args.name, args.adj)
 

@@ -22,7 +22,7 @@ try:
 except ImportError:
     pass
 
-_DEFAULT_GAME_PATH = r"C:\Program Files (x86)\Steam\steamapps\common\Europa Universalis V\game"
+_DEFAULT_GAME_PATH = r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game"
 _GAME_PATH = Path(os.environ.get("EU5_GAME_PATH", _DEFAULT_GAME_PATH))
 _DEFAULT_MOD_PATH = Path(__file__).parent.parent.parent
 _MOD_PATH = Path(os.environ.get("EU5_MOD_PATH", _DEFAULT_MOD_PATH))

@@ -20,7 +20,7 @@ except ImportError:
 
 ROOT        = Path(os.environ.get("EU5_MOD_PATH",  Path(__file__).parent.parent))
 SCRIPTS_DIR = Path(__file__).parent
-BASE_GAME   = Path(os.environ.get("EU5_GAME_PATH", r"C:\Program Files (x86)\Steam\steamapps\common\Europa Universalis V\game"))
+BASE_GAME   = Path(os.environ.get("EU5_GAME_PATH", r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game"))
 
 # Files to copy from base game if absent in the mod (src relative to BASE_GAME,
 # dst relative to ROOT — paths are identical by convention).
@@ -35,10 +35,12 @@ REQUIRED_MOD_CHANGES = [
     "mod_changes/new_countries.txt",
     "mod_changes/country_consolidations.txt",
     "mod_changes/resource_changes.txt",
+    "mod_changes/ruler_changes.txt",
 ]
 
 STEPS = [
     "apply_no_diplomacy.py",
+    "apply_ruler_changes.py",
     "apply_promote_cores_to_countries.py",
     "apply_new_countries.py",
     "apply_consolidations.py",

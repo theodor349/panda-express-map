@@ -1,0 +1,9 @@
+# Format: <country_tag> <ruler_character_or_random>
+# Example:
+# FRA fra_philip_vi_valois
+
+# France: prevent Jean II Valois from bringing three independent crowns into
+# a marriage union when he succeeds Philip VI.
+MIE random
+ANJ random
+NRM random
