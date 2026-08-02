@@ -1,34 +1,36 @@
---region iberian --name "Murcia" --name-adj "Murcian" --provinces murcia_province
---region iberian --name "Villena" --name-adj "Villenian" --provinces albacete_province hellin_province
---region iberian --name "Xàtiva" --name-adj "Xàtivan" --provinces jativa_province orihuela_province
---region iberian --name "Algarve" --name-adj "Algarve" --provinces algarve_province baixo_alentejo_province
---region iberian --name "Alentejo" --name-adj "Alentejan" --provinces alto_alentejo_province ribatejo_province
---region iberian --name "Tras-os-Montes" --name-adj "Transmontane" --provinces beira_alta_province tras_os_montes
---region iberian --name "Beira Baixa" --name-adj "Beirense" --provinces beira_baixa_province
---region iberian --name "Badajoz" --name-adj "Pacense" --provinces badajoz_province merida_province
---region iberian --name "Ciudad Rodrigo" --name-adj "Mirobrigense" --provinces ciudad_rodrigo_province
---region iberian --name "Salamanca" --name-adj "Salmantine" --provinces salamanca_province
---region iberian --name "Caceres" --name-adj "Cacereno" --provinces caceres_province plasencia_province
---region iberian --name "Trujillo" --name-adj "Trujillano" --provinces trujillo_province villanueva_de_la_serena_province
---region iberian --name "Zamora" --name-adj "Zamorano" --provinces zamora_province
---region iberian --name "Benavente" --name-adj "Benaventano" --provinces benavente_province
---region iberian --name "Asturias" --name-adj "Asturian" --provinces east_asturias_province west_asturias_province
---region iberian --name "La Montana" --name-adj "Montanes" --provinces montana_province
---region iberian --name "Biscay" --name-adj "Biscayan" --provinces biscay_province
---region iberian --name "Gipuzkoa" --name-adj "Gipuzkoan" --provinces gipuzkoa_province
---region iberian --name "La Mancha" --name-adj "Manchan" --provinces east_mancha_province west_mancha_province
---region iberian --name "Toledo" --name-adj "Toledan" --provinces toledo_province
---region iberian --name "Ocana" --name-adj "Ocanan" --provinces ocana_province
---region iberian --name "Madrid" --name-adj "Madrilian" --provinces madrid_province
---region iberian --name "Guadalajara" --name-adj "Guadalajaran" --provinces guadalajara_province
---region iberian --name "Avila" --name-adj "Avilan" --provinces avila_province
---region iberian --name "Segovia" --name-adj "Segovian" --provinces segovia_province
---region iberian --name "Valladolid" --name-adj "Vallisoletano" --provinces valladolid_province
---region iberian --name "Palencia" --name-adj "Palentian" --provinces palencia_province
---region iberian --name "Lerma" --name-adj "Lerman" --provinces lerma_province
---region iberian --name "Burgos" --name-adj "Burgalese" --provinces burgos_province alava_province
---region iberian --name "Soria" --name-adj "Sorian" --provinces soria_province
---region iberian --name "Cuenca" --name-adj "Cuencan" --provinces alarcon_province cuenca_province
+--region iberian --preset commercial --name "Murcia" --name-adj "Murcian" --capital murcia --provinces murcia_province
+--region iberian --preset frontier --name "Villena" --name-adj "Villenian" --capital villena --provinces albacete_province hellin_province
+--region iberian --preset commercial --name "Xàtiva" --name-adj "Xàtivan" --capital jativa --provinces jativa_province orihuela_province
+--region iberian --preset commercial --name "Algarve" --name-adj "Algarve" --capital faro --provinces algarve_province baixo_alentejo_province
+--region iberian --preset feudal --name "Alentejo" --name-adj "Alentejan" --capital evora --provinces alto_alentejo_province ribatejo_province
+--region iberian --preset fueros --name "Tras-os-Montes" --name-adj "Transmontane" --capital braganca --provinces beira_alta_province tras_os_montes
+--region iberian --preset feudal_no_coast --name "Beira Baixa" --name-adj "Beirense" --capital castelo_branco --provinces beira_baixa_province
+--region iberian --preset frontier --name "Badajoz" --name-adj "Pacense" --capital badajoz --provinces badajoz_province merida_province
+--region iberian --preset fueros --name "Ciudad Rodrigo" --name-adj "Mirobrigense" --capital ciudad_rodrigo --provinces ciudad_rodrigo_province
+--region iberian --preset fueros --name "Salamanca" --name-adj "Salmantine" --capital salamanca --culture leonese --provinces salamanca_province
+--region iberian --preset frontier --name "Caceres" --name-adj "Cacereno" --capital caceres --provinces caceres_province plasencia_province
+--region iberian --preset frontier --name "Trujillo" --name-adj "Trujillano" --capital trujillo --provinces trujillo_province villanueva_de_la_serena_province
+--region iberian --preset fueros --name "Zamora" --name-adj "Zamorano" --capital zamora --provinces zamora_province
+--region iberian --preset fueros --name "Benavente" --name-adj "Benaventano" --capital benavente --provinces benavente_province
+--region iberian --preset fueros --name "Asturias" --name-adj "Asturian" --capital oviedo --provinces east_asturias_province west_asturias_province
+--region iberian --preset fueros --name "La Montana" --name-adj "Montanes" --capital santander --provinces montana_province
+--region iberian --preset fueros --name "Biscay" --name-adj "Biscayan" --capital bilbao --provinces biscay_province
+--region iberian --preset fueros --name "Gipuzkoa" --name-adj "Gipuzkoan" --capital san_sebastian --provinces gipuzkoa_province
+--region iberian --preset frontier --name "La Mancha" --name-adj "Manchan" --capital ciudad_real --provinces east_mancha_province west_mancha_province
+--region iberian --preset clerical --name "Toledo" --name-adj "Toledan" --capital toledo --provinces toledo_province
+--region iberian --preset frontier --name "Ocana" --name-adj "Ocanan" --capital ocana --provinces ocana_province
+--region iberian --preset feudal_no_coast --name "Madrid" --name-adj "Madrilian" --capital madrid --provinces madrid_province
+--region iberian --preset feudal_no_coast --name "Guadalajara" --name-adj "Guadalajaran" --capital guadalajara --provinces guadalajara_province
+--region iberian --preset frontier --name "Avila" --name-adj "Avilan" --capital avila --provinces avila_province
+--region iberian --preset feudal_no_coast --name "Segovia" --name-adj "Segovian" --capital segovia --provinces segovia_province
+--region iberian --preset feudal_no_coast --name "Valladolid" --name-adj "Vallisoletano" --capital valladolid --provinces valladolid_province
+--region iberian --preset feudal_no_coast --name "Palencia" --name-adj "Palentian" --capital palencia --provinces palencia_province
+--region iberian --preset feudal_no_coast --name "Lerma" --name-adj "Lerman" --capital lerma --provinces lerma_province
+--region iberian --preset fueros --name "Burgos" --name-adj "Burgalese" --capital burgos --culture castilian --provinces burgos_province alava_province
+--region iberian --preset frontier --name "Soria" --name-adj "Sorian" --capital soria --provinces soria_province
+--region iberian --preset frontier --name "Cuenca" --name-adj "Cuencan" --capital cuenca --provinces alarcon_province cuenca_province
+--region iberian --preset frontier --name "Jaén" --name-adj "Jaenese" --capital jaen --culture castilian --religion catholic --provinces jaen_province
+--region iberian --preset feudal --name "Lugo" --name-adj "Lucense" --capital lugo --culture galician --religion catholic --provinces coruna_province lugo_province
 --region french --name "Saintonge" --name-adj "Saintongeais" --locations aulnay la_rochelle lusignan st_jean_dangely
 --region french --name "Limousin" --name-adj "Limousin" --provinces limousin_province
 --region french --name "Bazadais" --name-adj "Bazadaisien" --provinces bazadais_province

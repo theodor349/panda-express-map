@@ -1,0 +1,12 @@
+include = iberian_monarchy
+
+government = {
+	centralization_vs_decentralization = 0
+	serfdom_vs_free_subjects = -20
+
+	privilege = {
+		peasants_allowed_weapons_privilege
+		peasants_free_peasantry
+		noble_fortification_licenses
+	}
+}

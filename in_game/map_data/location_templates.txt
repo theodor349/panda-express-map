@@ -2885,7 +2885,7 @@ almunecar = { topography = hills vegetation = grasslands climate = cold_arid rel
 guadix = { topography = plateau vegetation = grasslands climate = cold_arid religion = sunni culture = andalusi raw_material = saffron}
 illora = { topography = plateau vegetation = woods climate = cold_arid religion = sunni culture = andalusi raw_material = stone}
 loja = { topography = mountains vegetation = woods climate = oceanic religion = sunni culture = andalusi raw_material = legumes}
-pinar = { topography = plateau vegetation = woods climate = cold_arid religion = sunni culture = andalusi raw_material = wheat}
+pinar = { topography = plateau vegetation = woods climate = cold_arid religion = sunni culture = andalusi raw_material = goods_gold}
 orgiva = { topography = mountains vegetation = woods climate = cold_arid religion = sunni culture = andalusi raw_material = silk}
 nevada_range = { topography = mountain_wasteland vegetation = sparse climate = continental}
 subbetic_range = { topography = mountain_wasteland vegetation = sparse climate = oceanic}

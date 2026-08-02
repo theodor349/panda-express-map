@@ -43,6 +43,7 @@ STEPS = [
     "apply_ruler_changes.py",
     "apply_promote_cores_to_countries.py",
     "apply_new_countries.py",
+    "apply_country_presets.py",
     "apply_consolidations.py",
     "apply_misc.py",
     "apply_resources.py",

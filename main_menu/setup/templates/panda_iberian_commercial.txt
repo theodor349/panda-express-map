@@ -1,0 +1,19 @@
+include = catholic_monarchy
+
+government = {
+	aristocracy_vs_plutocracy = 40
+	mercantilism_vs_free_trade = -40
+	land_vs_naval = 30
+
+	privilege = {
+		market_fairs
+		formal_guilds
+		building_rights
+		sponsor_maritime_contracts
+	}
+
+	laws = {
+		maritime_law = protect_trade_routes
+		piracy_law = anti_piracy_policy
+	}
+}

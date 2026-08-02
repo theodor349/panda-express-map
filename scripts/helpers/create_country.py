@@ -17,6 +17,8 @@ Usage:
 
   --tag is optional; if omitted a new tag is auto-generated.
   --provinces resolves province names to their constituent locations.
+  Iberian countries support --preset choices for feudal, inland feudal,
+  fueros, commercial, clerical, frontier, and Muslim governments.
   Regions: iberian (Mediterranean includes)
            french  (western Europe includes)
            italien (Mediterranean and Catholic coastal monarchy includes)
@@ -77,6 +79,32 @@ REGION_DEFAULTS = {
                      'expl_silk_road_east', 'expl_indian_trade_route', 'catholic_monarchy'],
     },
 }
+
+IBERIAN_PRESETS = {
+    'feudal':          'panda_iberian_feudal',
+    'feudal_no_coast': 'panda_iberian_feudal_no_coast',
+    'fueros':          'panda_iberian_fueros',
+    'commercial':      'panda_iberian_commercial',
+    'clerical':        'panda_iberian_clerical',
+    'frontier':        'panda_iberian_frontier',
+    'muslim':          'panda_iberian_muslim',
+}
+
+
+def resolve_includes(region: str, preset: str | None, explicit: list[str] | None) -> list[str]:
+    """Resolve exploration and government templates for a country."""
+    if explicit is not None:
+        return explicit
+
+    defaults = list(REGION_DEFAULTS[region]['includes'])
+    if region != 'iberian':
+        if preset is not None:
+            sys.exit("ERROR: --preset is currently supported only with --region iberian")
+        return defaults
+
+    selected = preset or 'feudal'
+    government_template = IBERIAN_PRESETS[selected]
+    return defaults[:-1] + [government_template]
 
 LOCATION_KEYS = {
     "own_control_core", "own_control_integrated", "own_control_conquered",
@@ -394,6 +422,8 @@ def parse_args():
                    help='Country rank (default: rank_duchy)')
     p.add_argument('--includes',  nargs='+', default=None,
                    help='Include templates (overrides region default)')
+    p.add_argument('--preset', choices=sorted(IBERIAN_PRESETS), default=None,
+                   help='Iberian government/estate preset (default: feudal; overridden by --includes)')
     return p.parse_args()
 
 
@@ -406,7 +436,7 @@ def main():
         print("ERROR: no locations specified (use --locations and/or --provinces)", file=sys.stderr)
         sys.exit(1)
     region    = REGION_DEFAULTS[args.region]
-    includes  = args.includes if args.includes is not None else region['includes']
+    includes  = resolve_includes(args.region, args.preset, args.includes)
 
     templates = load_location_templates()
     validate_locations(locations, templates)
@@ -425,6 +455,7 @@ def main():
     print(f"Locations : {sorted(locations)}")
     print(f"Capital   : {args.capital or '(not specified)'}")
     print(f"Rank      : {args.rank}")
+    print(f"Preset    : {args.preset or ('feudal' if args.region == 'iberian' else '(region default)')}")
     print(f"Color     : rgb {color}")
     print(f"Culture   : {culture} (from {first_location})")
     print(f"Religion  : {religion} (from {first_location})\n")

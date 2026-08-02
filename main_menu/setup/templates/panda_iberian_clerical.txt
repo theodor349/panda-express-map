@@ -1,0 +1,11 @@
+include = iberian_monarchy_no_coast
+
+government = {
+	spiritualist_vs_humanist = -70
+
+	privilege = {
+		clergy_powerful_dioceses
+		clergy_literacy_rights
+		clergy_enforced_unity
+	}
+}

@@ -1,0 +1,8 @@
+include = muslim_monarchy_no_abrahamic_dhimmi
+
+government = {
+	privilege = {
+		dhimmi_promote_tolerance
+		dhimmi_administrative_posts
+	}
+}

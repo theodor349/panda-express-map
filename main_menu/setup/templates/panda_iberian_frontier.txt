@@ -1,0 +1,13 @@
+include = iberian_monarchy_no_coast
+
+government = {
+	offensive_vs_defensive = -40
+	land_vs_naval = -30
+
+	privilege = {
+		general_privilege
+		clergy_military_orders
+		noble_fortification_licenses
+		peasants_allowed_weapons_privilege
+	}
+}

@@ -7,3 +7,7 @@
 MIE random
 ANJ random
 NRM random
+
+# England: give Aquitaine an independent ruler instead of sharing Edward III
+# with England at game start.
+AQN random

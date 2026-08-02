@@ -98,7 +98,7 @@ def find_country_block(text: str, tag: str) -> tuple[int, int] | None:
 
 def index_country_blocks(text: str) -> dict[str, tuple[int, int]]:
     """Build a tag -> (open, close) map in one pass."""
-    pattern = re.compile(r'^\t([A-Z]{3})\s*=\s*\{', re.MULTILINE)
+    pattern = re.compile(r'^\t([A-Z0-9]{3})\s*=\s*\{', re.MULTILINE)
     index: dict[str, tuple[int, int]] = {}
     for m in pattern.finditer(text):
         tag = m.group(1)
@@ -137,6 +137,20 @@ def remove_locations_from_block(text: str, open_brace: int, close_brace: int, to
     inner = text[open_brace + 1:close_brace]
     new_inner = re.sub(r'\b(' + '|'.join(re.escape(l) for l in to_remove) + r')\b', '', inner)
     return text[:open_brace + 1] + new_inner + text[close_brace:]
+
+
+def remove_named_block_if_empty(text: str, name: str) -> str:
+    """Remove a location block whose body contains no remaining locations."""
+    block = find_named_block(text, 0, len(text), name)
+    if not block or get_block_locations(text, *block):
+        return text
+    line_match = re.search(r'^[ \t]*' + re.escape(name) + r'\s*=\s*\{', text[:block[0] + 1], re.MULTILINE)
+    if not line_match:
+        return text
+    end = block[1] + 1
+    if end < len(text) and text[end] == '\n':
+        end += 1
+    return text[:line_match.start()] + text[end:]
 
 
 def _format_locations(locations: list[str], indent: str, chunk_size: int = 4) -> str:
@@ -280,6 +294,7 @@ def main() -> None:
             sub = find_named_block(blk_text, 0, len(blk_text), b)
             if sub:
                 blk_text = remove_locations_from_block(blk_text, sub[0], sub[1], set(to_move))
+                blk_text = remove_named_block_if_empty(blk_text, b)
 
         conquered = find_named_block(blk_text, 0, len(blk_text), 'our_cores_conquered_by_others')
         if conquered:
@@ -305,6 +320,7 @@ def main() -> None:
     elif not source_edits:
         print(f"[{target_tag}] already owns all resolved locations exclusively — nothing to do.")
 
+    text = re.sub(r'[ \t]+(?=\r?$)', '', text, flags=re.MULTILINE)
     write_text_with_retry(countries_file, text)
     print(f"\nDone. Written to {countries_file}")
 

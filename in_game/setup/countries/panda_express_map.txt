@@ -56,7 +56,7 @@ IB8 = { # Ciudad Rodrigo
 IB9 = { # Salamanca
 	color = rgb { 60 62 217 }
 
-	culture_definition = castilian
+	culture_definition = leonese
 	religion_definition = catholic
 }
 IBA = { # Caceres
@@ -170,7 +170,7 @@ IBS = { # Lerma
 IBT = { # Burgos
 	color = rgb { 63 139 0 }
 
-	culture_definition = basque
+	culture_definition = castilian
 	religion_definition = catholic
 }
 IBU = { # Soria
@@ -321,5 +321,17 @@ IT2 = { # Calabria
 	color = rgb { 116 17 67 }
 
 	culture_definition = neapolitan
+	religion_definition = catholic
+}
+IBW = { # Jaén
+	color = rgb { 103 238 220 }
+
+	culture_definition = castilian
+	religion_definition = catholic
+}
+IBX = { # Lugo
+	color = rgb { 14 43 197 }
+
+	culture_definition = galician
 	religion_definition = catholic
 }

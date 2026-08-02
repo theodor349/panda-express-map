@@ -5,9 +5,9 @@
 # Iberia
 villafranca_bierzo livestock
 flix goods_gold
+pinar goods_gold
 
 # France
 aulnay wheat
 st_gerand livestock
 ales silver
-
