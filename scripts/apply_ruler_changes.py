@@ -2,7 +2,7 @@
 apply_ruler_changes.py -- apply ruler changes from mod_changes/ruler_changes.txt.
 
 Each non-blank, non-comment line has the format:
-    <country_tag> <ruler_character_or_random>
+    <country_tag> <ruler_character_or_random> [clear_family]
 """
 
 import os
@@ -27,8 +27,8 @@ _TAG_RE = re.compile(r"^[A-Z0-9]{3}$")
 _RULER_RE = re.compile(r"^[A-Za-z0-9_.:-]+$")
 
 
-def parse_entries(lines: list[str]) -> tuple[list[tuple[str, str]], list[str]]:
-    entries: list[tuple[str, str]] = []
+def parse_entries(lines: list[str]) -> tuple[list[tuple[str, str, bool]], list[str]]:
+    entries: list[tuple[str, str, bool]] = []
     errors: list[str] = []
     seen_tags: set[str] = set()
 
@@ -37,9 +37,12 @@ def parse_entries(lines: list[str]) -> tuple[list[tuple[str, str]], list[str]]:
         if not line:
             continue
         parts = line.split()
-        if len(parts) != 2:
+        if len(parts) not in (2, 3) or (
+            len(parts) == 3 and parts[2] != "clear_family"
+        ):
             errors.append(
-                f"line {line_number}: expected '<country_tag> <ruler>', got {line!r}"
+                f"line {line_number}: expected '<country_tag> <ruler> "
+                f"[clear_family]', got {line!r}"
             )
             continue
 
@@ -55,7 +58,7 @@ def parse_entries(lines: list[str]) -> tuple[list[tuple[str, str]], list[str]]:
             continue
 
         seen_tags.add(tag)
-        entries.append((tag, ruler))
+        entries.append((tag, ruler, len(parts) == 3))
 
     return entries, errors
 
@@ -95,18 +98,21 @@ def main() -> None:
         return
 
     failures: list[str] = []
-    for tag, ruler in entries:
+    for tag, ruler, clear_family in entries:
         print(f"=== {tag}: {ruler} ===")
         try:
+            command = [
+                sys.executable,
+                str(HELPER),
+                tag,
+                ruler,
+                "--file",
+                str(COUNTRIES_FILE),
+            ]
+            if clear_family:
+                command.append("--clear-family")
             result = subprocess.run(
-                [
-                    sys.executable,
-                    str(HELPER),
-                    tag,
-                    ruler,
-                    "--file",
-                    str(COUNTRIES_FILE),
-                ],
+                command,
                 capture_output=True,
                 text=True,
             )

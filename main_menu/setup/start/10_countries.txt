@@ -11379,7 +11379,7 @@ countries = {
 		dynasty = anjou_dynasty
 	}
 
-	#Provence (Union with Naples)
+	#Provence
 	PRO = {
 		own_control_core = {
 			aix_en_provence arles brignoles marseille toulon tarascon
@@ -11397,9 +11397,7 @@ countries = {
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
-			ruler = nap_robert_i_anjou
-			consort = nap_sancha_aragon
-			heir = nap_giovanna_i_anjou
+			ruler = random
 
 			ruler_term = { character = cat_ramon_berenguer_iii_barcelona start_date = 1127.1.1 end_date = 1131.7.19 regnal_number = 1 }
 			ruler_term = { character = pro_berenguier_ramon_barcelona start_date = 1131.7.19 end_date = 1144.3.1 regnal_number = 1 }
@@ -14358,7 +14356,7 @@ countries = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
 
-			ruler = hun_karoly_robert
+			ruler = random
 
 			ruler_term = { character = hun_bela_iv_arpad start_date = 1235.9.21 end_date = 1270.5.3 }
 			ruler_term = { character = hun_stephen_v_arpad start_date = 1270.5.3 end_date = 1272.1.1 }
@@ -18371,7 +18369,7 @@ countries = {
 		include = "catholic_monarchy_no_coast"
 		include = "german_principality"
 		government = {
-			ruler = boh_john_luxembourg
+			ruler = random
 
 			ruler_term = { character = fcb_otton_hohenstaufen start_date = 1196.8.14 end_date = 1197.1.1 regnal_number = 1 }
 

@@ -1,4 +1,4 @@
-# Format: <country_tag> <ruler_character_or_random>
+# Format: <country_tag> <ruler_character_or_random> [clear_family]
 # Example:
 # FRA fra_philip_vi_valois
 
@@ -11,3 +11,12 @@ NRM random
 # England: give Aquitaine an independent ruler instead of sharing Edward III
 # with England at game start.
 AQN random
+
+# Bohemia: Luxembourg no longer shares John of Luxembourg as its ruler.
+LUX random
+
+# Hungary: Croatia no longer shares Charles Robert as its ruler.
+CRO random
+
+# Naples: Provence gets its own ruler, with no Neapolitan consort or heir.
+PRO random clear_family
