@@ -22,7 +22,7 @@ except ImportError:
 
 _DEFAULT_GAME_PATH = r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game"
 GAME_PATH = Path(os.environ.get("EU5_GAME_PATH", _DEFAULT_GAME_PATH))
-_DEFAULT_MOD_PATH = Path(__file__).parent.parent.parent / "mod"
+_DEFAULT_MOD_PATH = Path(__file__).parent.parent.parent
 MOD_PATH = Path(os.environ.get("EU5_MOD_PATH", _DEFAULT_MOD_PATH))
 DEFAULT_COUNTRIES_FILE = MOD_PATH / "main_menu" / "setup" / "1337" / "10_countries.txt"
 

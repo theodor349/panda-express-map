@@ -17,7 +17,7 @@ try:
 except ImportError:
     pass
 
-ROOT       = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent / "mod"))
+ROOT       = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
 INPUT_FILE = Path(__file__).parent.parent / "mod_changes/resource_changes.txt"
 SCRIPT     = Path(__file__).parent / "helpers" / "set_resource.py"
 

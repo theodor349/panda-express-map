@@ -14,9 +14,9 @@ An **Europa Universalis V** mod that splits the map into a multiplayer-friendly 
 
 ## Installation
 
-1. Clone this repository, then link its `mod` folder into your EU5 mods folder from PowerShell:
-   ```powershell
-   New-Item -ItemType Junction -Path "$HOME\Documents\Paradox Interactive\Europa Universalis V\mod\Panda Express Map" -Target "<repo>\mod"
+1. Download or clone this repository into your EU5 mods folder:
+   ```
+   Documents\Paradox Interactive\Europa Universalis V\mod\Panda Express Map\
    ```
 2. Launch EU5 and enable **Panda Express Map** in the mod manager.
 
@@ -29,7 +29,7 @@ An **Europa Universalis V** mod that splits the map into a multiplayer-friendly 
 
 ### Setup
 
-Create a `.env.local` file in the repo root to override default paths:
+Create a `.env.local` file in the mod root to override default paths:
 
 ```env
 EU5_GAME_PATH=E:\SteamLibrary\steamapps\common\Europa Universalis V\game
@@ -37,7 +37,7 @@ EU5_GAME_PATH=E:\SteamLibrary\steamapps\common\Europa Universalis V\game
 
 ### Applying changes
 
-Delete `10_countries.txt`, `12_diplomacy.txt`, `country_names_l_english.yml` and `location_templates.txt` from `mod/` so the build starts from fresh base files, then run the orchestrator to apply all mod changes in order:
+Delete `10_countries.txt`, `12_diplomacy.txt`, `country_names_l_english.yml` and `location_templates.txt` so the build starts from fresh base files, then run the orchestrator to apply all mod changes in order:
 
 ```bash
 python scripts/apply_all.py

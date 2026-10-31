@@ -24,7 +24,7 @@ try:
 except ImportError:
     pass
 
-ROOT         = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent / "mod"))
+ROOT         = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
 INPUT_FILE   = Path(__file__).parent.parent / "mod_changes/new_countries.txt"
 COUNTRIES    = ROOT / "main_menu/setup/1337/10_countries.txt"
 DEFINITIONS  = ROOT / "in_game/setup/countries/panda_express_map.txt"

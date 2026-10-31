@@ -12,7 +12,7 @@ try:
 except ImportError:
     pass
 
-ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent / "mod"))
+ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
 HELPER = Path(__file__).parent / "helpers/sync_country_presets.py"
 
 

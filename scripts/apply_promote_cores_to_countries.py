@@ -25,7 +25,7 @@ try:
 except ImportError:
     pass
 
-ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent / "mod"))
+ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
 FILE = ROOT / "main_menu/setup/1337/10_countries.txt"
 
 LOCATION_KEYS = {
