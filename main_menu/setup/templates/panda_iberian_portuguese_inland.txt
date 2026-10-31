@@ -1,0 +1,10 @@
+include = iberian_monarchy_no_coast
+
+government = {
+	laws = {
+		administrative_system = central_councils
+		cultural_traditions_law = civil_society
+		feudal_de_jure_law = by_blood
+		medieval_levy_law = noble_levies
+	}
+}

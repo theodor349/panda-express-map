@@ -1,0 +1,13 @@
+include = iberian_monarchy_no_coast
+
+government = {
+	centralization_vs_decentralization = 35
+
+	privilege = {
+		clergy_military_orders
+	}
+
+	laws = {
+		administrative_system = local_courts_administration
+	}
+}

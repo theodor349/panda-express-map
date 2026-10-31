@@ -1,0 +1,16 @@
+include = iberian_monarchy
+
+government = {
+	centralization_vs_decentralization = 40
+	land_vs_naval = 40
+
+	reforms = {
+		pyrenean_fueros_reform
+	}
+
+	laws = {
+		administrative_system = merindad_policy
+		legal_code_law = pyrenean_law_policy
+		distribution_of_power_law = dop_law_navarrese_courts
+	}
+}

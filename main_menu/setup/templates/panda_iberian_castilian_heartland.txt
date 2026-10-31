@@ -1,0 +1,9 @@
+include = iberian_monarchy_no_coast
+
+government = {
+	laws = {
+		administrative_system = merindad_policy
+		legal_code_law = siete_partidas_law
+		medieval_levy_law = alarde
+	}
+}

@@ -156,7 +156,10 @@ def main() -> None:
         if not tag:
             failures.append(f"{name}: no generated tag found")
             continue
-        preset = entry.get("preset", "feudal")
+        preset = entry.get("preset")
+        if preset is None:
+            failures.append(f"{name}: missing --preset")
+            continue
         if preset not in IBERIAN_PRESETS:
             failures.append(f"{name}: unknown preset {preset!r}")
             continue

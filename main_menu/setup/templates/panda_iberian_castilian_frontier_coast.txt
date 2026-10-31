@@ -1,0 +1,14 @@
+include = iberian_monarchy
+
+government = {
+	offensive_vs_defensive = -60
+	land_vs_naval = -30
+
+	privilege = {
+		clergy_military_orders
+	}
+
+	laws = {
+		medieval_levy_law = alarde
+	}
+}

@@ -19,8 +19,8 @@ Usage:
   --base-tag gives the land to a country the base game already defines. Its setup block is
   replaced, and its base color, culture, religion and names stay in use.
   --provinces resolves province names to their constituent locations.
-  Iberian countries support --preset choices for feudal, inland feudal,
-  fueros, commercial, clerical, frontier, and Muslim governments.
+  Iberian countries must set --preset (or --includes) to choose a government setup.
+  The presets include the Castilian, Leonese, Basque and Portuguese setups in IBERIAN_PRESETS.
   Regions: iberian (Mediterranean includes)
            french  (western Europe includes)
            italien (Mediterranean and Catholic coastal monarchy includes)
@@ -95,13 +95,14 @@ REGION_DEFAULTS = {
 }
 
 IBERIAN_PRESETS = {
-    'feudal':          'panda_iberian_feudal',
-    'feudal_no_coast': 'panda_iberian_feudal_no_coast',
-    'fueros':          'panda_iberian_fueros',
-    'commercial':      'panda_iberian_commercial',
-    'clerical':        'panda_iberian_clerical',
-    'frontier':        'panda_iberian_frontier',
-    'muslim':          'panda_iberian_muslim',
+    'castilian_heartland':      'panda_iberian_castilian_heartland',
+    'castilian_frontier':       'panda_iberian_castilian_frontier',
+    'castilian_frontier_coast': 'panda_iberian_castilian_frontier_coast',
+    'leonese_towns':            'panda_iberian_leonese_towns',
+    'basque':                   'panda_iberian_basque',
+    'portuguese_inland':        'panda_iberian_portuguese_inland',
+    'maritime':                 'panda_iberian_maritime',
+    'clerical':                 'panda_iberian_clerical',
 }
 
 
@@ -116,8 +117,9 @@ def resolve_includes(region: str, preset: str | None, explicit: list[str] | None
             sys.exit("ERROR: --preset is currently supported only with --region iberian")
         return defaults
 
-    selected = preset or 'feudal'
-    government_template = IBERIAN_PRESETS[selected]
+    if preset is None:
+        sys.exit("ERROR: --region iberian requires --preset or --includes")
+    government_template = IBERIAN_PRESETS[preset]
     return defaults[:-1] + [government_template]
 
 LOCATION_KEYS = {
@@ -456,7 +458,7 @@ def parse_args():
     p.add_argument('--includes',  nargs='+', default=None,
                    help='Include templates (overrides region default)')
     p.add_argument('--preset', choices=sorted(IBERIAN_PRESETS), default=None,
-                   help='Iberian government/estate preset (default: feudal; overridden by --includes)')
+                   help='Iberian government/estate preset (required for --region iberian unless --includes is set)')
     return p.parse_args()
 
 
@@ -492,7 +494,7 @@ def main():
     print(f"Locations : {sorted(locations)}")
     print(f"Capital   : {args.capital or '(not specified)'}")
     print(f"Rank      : {args.rank}")
-    print(f"Preset    : {args.preset or ('feudal' if args.region == 'iberian' else '(region default)')}")
+    print(f"Preset    : {args.preset or '(region default)'}")
     print(f"Color     : rgb {color}")
     print(f"Culture   : {culture} (from {first_location})")
     print(f"Religion  : {religion} (from {first_location})\n")

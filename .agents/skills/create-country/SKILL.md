@@ -33,7 +33,7 @@ python scripts/helpers/create_country.py \
     [--culture castilian] \
     [--religion catholic] \
     [--rank rank_duchy] \
-    [--preset feudal|feudal_no_coast|fueros|commercial|clerical|frontier|muslim] \
+    [--preset castilian_heartland|castilian_frontier|castilian_frontier_coast|leonese_towns|basque|portuguese_inland|maritime|clerical] \
     [--includes template1 template2 ...]
 ```
 
@@ -41,14 +41,18 @@ python scripts/helpers/create_country.py \
 
 | Region | Culture behavior | Includes default |
 |--------|------------------|-----------------|
-| `iberian` | Inferred from first location | Mediterranean/trade-route exploration plus the selected Iberian government/estate preset (`feudal` by default) |
+| `iberian` | Inferred from first location | Mediterranean/trade-route exploration plus the required Iberian government/estate preset |
 | `french` | Inferred from first location | `expl_western_europe catholic_monarchy_no_coast` |
 | `italien` | Inferred from first location | `expl_mediterranean` plus western/central/eastern Silk Road, Indian trade route, and `catholic_monarchy` |
 
 Culture and religion are inferred from the first location. `--culture`, `--religion`, and `--includes` override the inferred or regional defaults. When supplied, `--capital` must name one of the assigned locations.
 
-Iberian presets are `feudal`, `feudal_no_coast`, `fueros`, `commercial`,
-`clerical`, `frontier`, and `muslim`. Supplying `--includes` overrides the preset.
+Iberian presets are `castilian_heartland`, `castilian_frontier`,
+`castilian_frontier_coast`, `leonese_towns`, `basque`, `portuguese_inland`,
+`maritime`, and `clerical`. Each preset is either coastal or inland, so pick one
+that matches whether the country has a port in `ports.csv`. The `castilian_*`
+presets need Castilian culture and `basque` needs Basque culture. Supplying
+`--includes` overrides the preset.
 
 The script will error if the tag or name already exists.
 

@@ -5,7 +5,9 @@ government = {
 
 	privilege = {
 		clergy_powerful_dioceses
-		clergy_literacy_rights
-		clergy_enforced_unity
+	}
+
+	laws = {
+		distribution_of_power_law = dop_favor_the_clergy_catholic
 	}
 }

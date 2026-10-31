@@ -64683,7 +64683,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_castilian_frontier_coast"
 
 		government = {
 			ruler = random
@@ -64707,7 +64707,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_commercial"
+		include = "panda_iberian_maritime"
 
 		government = {
 			ruler = random
@@ -64731,7 +64731,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_commercial"
+		include = "panda_iberian_maritime"
 
 		government = {
 			ruler = random
@@ -64755,7 +64755,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal"
+		include = "panda_iberian_portuguese_inland"
 
 		government = {
 			ruler = random
@@ -64779,7 +64779,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_portuguese_inland"
 
 		government = {
 			ruler = random
@@ -64803,7 +64803,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal_no_coast"
+		include = "panda_iberian_portuguese_inland"
 
 		government = {
 			ruler = random
@@ -64827,7 +64827,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_leonese_towns"
 
 		government = {
 			ruler = random
@@ -64851,7 +64851,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_leonese_towns"
 
 		government = {
 			ruler = random
@@ -64875,7 +64875,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_leonese_towns"
 
 		government = {
 			ruler = random
@@ -64899,7 +64899,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_leonese_towns"
 
 		government = {
 			ruler = random
@@ -64923,7 +64923,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_castilian_frontier"
 
 		government = {
 			ruler = random
@@ -64947,7 +64947,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_leonese_towns"
 
 		government = {
 			ruler = random
@@ -64971,7 +64971,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_leonese_towns"
 
 		government = {
 			ruler = random
@@ -64995,7 +64995,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_maritime"
 
 		government = {
 			ruler = random
@@ -65019,7 +65019,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_maritime"
 
 		government = {
 			ruler = random
@@ -65043,7 +65043,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_basque"
 
 		government = {
 			ruler = random
@@ -65067,7 +65067,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_basque"
 
 		government = {
 			ruler = random
@@ -65091,7 +65091,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_castilian_frontier"
 
 		government = {
 			ruler = random
@@ -65139,7 +65139,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_castilian_frontier"
 
 		government = {
 			ruler = random
@@ -65163,7 +65163,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal_no_coast"
+		include = "panda_iberian_castilian_heartland"
 
 		government = {
 			ruler = random
@@ -65187,7 +65187,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal_no_coast"
+		include = "panda_iberian_castilian_heartland"
 
 		government = {
 			ruler = random
@@ -65211,7 +65211,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_castilian_heartland"
 
 		government = {
 			ruler = random
@@ -65235,7 +65235,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal_no_coast"
+		include = "panda_iberian_castilian_heartland"
 
 		government = {
 			ruler = random
@@ -65259,7 +65259,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal_no_coast"
+		include = "panda_iberian_castilian_heartland"
 
 		government = {
 			ruler = random
@@ -65283,7 +65283,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal_no_coast"
+		include = "panda_iberian_castilian_heartland"
 
 		government = {
 			ruler = random
@@ -65307,7 +65307,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal_no_coast"
+		include = "panda_iberian_castilian_heartland"
 
 		government = {
 			ruler = random
@@ -65331,7 +65331,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_fueros"
+		include = "panda_iberian_castilian_heartland"
 
 		government = {
 			ruler = random
@@ -65355,7 +65355,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_castilian_heartland"
 
 		government = {
 			ruler = random
@@ -65379,7 +65379,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_castilian_frontier"
 
 		government = {
 			ruler = random
@@ -65403,7 +65403,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
+		include = "panda_iberian_castilian_frontier"
 
 		government = {
 			ruler = random
@@ -65427,7 +65427,7 @@ countries = {
 		include = "expl_silk_road_center"
 		include = "expl_silk_road_east"
 		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal"
+		include = "panda_iberian_maritime"
 
 		government = {
 			ruler = random

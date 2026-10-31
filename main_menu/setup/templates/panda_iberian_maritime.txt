@@ -1,0 +1,11 @@
+include = iberian_monarchy
+
+government = {
+	land_vs_naval = 30
+
+	privilege = {
+		building_rights
+		sponsor_maritime_contracts
+		shipwright_contracts
+	}
+}
