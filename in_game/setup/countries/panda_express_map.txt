@@ -683,3 +683,15 @@ ACU = { # West Riding
 	culture_definition = northumbrian
 	religion_definition = catholic
 }
+ACV = { # Beja
+	color = rgb { 166 17 121 }
+
+	culture_definition = tunisian
+	religion_definition = sunni
+}
+ACY = { # Kairouan
+	color = rgb { 203 239 84 }
+
+	culture_definition = tunisian
+	religion_definition = sunni
+}

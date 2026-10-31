@@ -1,8 +1,9 @@
 """
-set_country_fields.py — set capitals and ranks in 10_countries.txt.
+set_country_fields.py — set capitals, ranks and cores in 10_countries.txt.
 
-Reads lines of `<TAG> capital <location>` and `<TAG> rank <rank>` from mod_changes/country_fields.txt,
-then gives every other country with land and no capital of its own its most populated location.
+Reads lines of `<TAG> capital <location>`, `<TAG> rank <rank>` and `<TAG> remove_cores <location> ...`
+from mod_changes/country_fields.txt, then gives every other country with land and no capital of its
+own its most populated location.
 
 Usage:
     python scripts/helpers/set_country_fields.py [--spec PATH]
@@ -41,9 +42,11 @@ def load_spec(path: Path) -> dict[str, dict[str, str]]:
         if not line:
             continue
         parts = line.split()
-        if len(parts) != 3 or parts[1] not in ("capital", "rank"):
+        if len(parts) < 3 or parts[1] not in ("capital", "rank", "remove_cores"):
             sys.exit(f"ERROR: bad line {number} in {path.name}: {raw}")
-        fields.setdefault(parts[0], {})[parts[1]] = parts[2]
+        if parts[1] != "remove_cores" and len(parts) != 3:
+            sys.exit(f"ERROR: bad line {number} in {path.name}: {raw}")
+        fields.setdefault(parts[0], {})[parts[1]] = " ".join(parts[2:])
     return fields
 
 
@@ -63,8 +66,21 @@ def set_field(body: str, key: str, value: str) -> str:
     return body.rstrip() + f"\n\t\t{key} = {value}\n\t"
 
 
+def remove_cores(tag: str, body: str, locations: list[str]) -> str:
+    match = re.search(r"(?m)^\t\tour_cores_conquered_by_others\s*=\s*\{", body)
+    if not match:
+        sys.exit(f"ERROR: {tag} has no our_cores_conquered_by_others block")
+    start, end = find_block_extent(body, match.end() - 1)
+    block = body[start:end]
+    for location in locations:
+        block, count = re.subn(rf"(?<![\w#]){location}(?!\w)", "", block)
+        if not count:
+            sys.exit(f"ERROR: {tag} has no core on {location}")
+    return body[:start] + block + body[end:]
+
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Set capitals and ranks in 10_countries.txt.")
+    parser = argparse.ArgumentParser(description="Set capitals, ranks and cores in 10_countries.txt.")
     parser.add_argument("--spec", default=str(DEFAULT_SPEC), help="Path to the fields file")
     args = parser.parse_args()
 
@@ -87,6 +103,8 @@ def main() -> None:
         for key, value in (("capital", wanted.get("capital")), ("country_rank", wanted.get("rank"))):
             if value:
                 body = set_field(body, key, value)
+        if "remove_cores" in wanted:
+            body = remove_cores(tag, body, wanted["remove_cores"].split())
         current = re.search(r"(?m)^\t\tcapital\s*=\s*(\w+)", strip_comments(body))
         if owned and "capital" not in wanted and (not current or current.group(1) not in owned):
             capital = max(sorted(owned), key=lambda location: populations.get(location, 0))

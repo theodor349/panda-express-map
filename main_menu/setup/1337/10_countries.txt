@@ -14432,7 +14432,7 @@ countries = {
 		}
 
 		our_cores_conquered_by_others = {
-			palma ciudadela_de_menorca ibiza manacor pollensa #Majorca
+			     #Majorca
 		}
 
 		starting_technology_level = 3
@@ -17737,7 +17737,7 @@ countries = {
 		own_control_core = {
 			evreux harcourt #Normandy
 			mantes #Ile de France
-			longueville #Longueville
+			 #Longueville
 
 			argentan bernay laigle
 		}
@@ -17780,6 +17780,10 @@ countries = {
 		}
 
 		capital = evreux
+
+		our_cores_conquered_by_others = {
+			longueville
+		}
 	}
 
 	#Normandy
@@ -17788,6 +17792,8 @@ countries = {
 			  louviers pont_audemer
 			 lisieux
 			rouen arques fecamp gisors tancarville
+
+			longueville
 		}
 
 		our_cores_conquered_by_others = {
@@ -19499,16 +19505,12 @@ countries = {
 
 	TUN = { #Tunis
 		own_control_core = {
-			madjul mahres bou_hajla sfaqes chebba
-			kairouan
+			chebba
 			mahdia sousse el_jem monastir
-			bizerte tabarka sejnane mateur beja_TUN souk_el_arba el_kef thagaste
-			tunis tebourba el_fahs zaghouan nabeul kelibia hammamet kesra
-			jama_TUN
-			el_ksour medjez_el_bab sbikha
+			bizerte tabarka sejnane mateur
+			tunis tebourba el_fahs zaghouan nabeul kelibia hammamet
 		}
 		own_control_conquered = {
-			sidi_fredj #Recently reconquered from Aragonese
 		}
 
 		starting_technology_level = 3
@@ -67273,6 +67275,48 @@ countries = {
 		}
 
 		capital = pontefract
+		country_rank = rank_duchy
+	}
+
+	#ACV
+	ACV = {
+		own_control_core = {
+			beja_TUN el_kef el_ksour jama_TUN medjez_el_bab souk_el_arba thagaste
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = beja_TUN
+		religious_school = maliki_school
+		country_rank = rank_duchy
+	}
+
+	#ACY
+	ACY = {
+		own_control_core = {
+			bou_hajla kairouan kesra madjul mahres sbikha sfaqes sidi_fredj
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = kairouan
+		religious_school = maliki_school
 		country_rank = rank_duchy
 	}
 }
