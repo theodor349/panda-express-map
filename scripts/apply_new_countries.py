@@ -83,6 +83,8 @@ def parse_line(line: str) -> tuple[str, list[str]] | None:
 
 
 def main():
+    # Country names can hold letters the Windows console encoding can't print.
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
     pinned = load_pinned_countries()
     existing_tags = load_existing_tags()
 

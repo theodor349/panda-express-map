@@ -2217,7 +2217,7 @@ lodeve = { topography = hills vegetation = grasslands climate = mediterranean re
 saint_pons = { topography = hills vegetation = woods climate = mediterranean religion = catholic culture = languedocien raw_material = wool}
 lagoon_of_bages_sigean = { topography = lakes climate = mediterranean}
 nimes = { topography = flatland vegetation = grasslands climate = mediterranean religion = catholic culture = provencal raw_material = olives natural_harbor_suitability = 0.00}
-french_ales = { topography = mountains vegetation = woods climate = oceanic religion = catholic culture = languedocien raw_material = silk}
+french_ales = { topography = mountains vegetation = woods climate = oceanic religion = catholic culture = languedocien raw_material = silver}
 melgueil = { topography = flatland vegetation = grasslands climate = mediterranean religion = catholic culture = languedocien raw_material = medicaments natural_harbor_suitability = 0.00}
 montpellier = { topography = flatland vegetation = grasslands climate = mediterranean religion = catholic culture = languedocien raw_material = dyes natural_harbor_suitability = 0.00}
 st_ambroix = { topography = hills vegetation = woods climate = mediterranean religion = catholic culture = auvergnat raw_material = millet}
@@ -3196,7 +3196,7 @@ cuneo = { topography = hills vegetation = woods climate = continental religion =
 cottian_alps2 = { topography = mountain_wasteland vegetation = sparse climate = subpolar}
 cottian_alps3 = { topography = mountain_wasteland vegetation = sparse climate = arctic}
 oristano = { topography = flatland vegetation = grasslands climate = mediterranean religion = catholic culture = sardinian raw_material = wool natural_harbor_suitability = 0.50}
-ales = { topography = hills vegetation = woods climate = mediterranean religion = catholic culture = sardinian raw_material = silver}
+ales = { topography = hills vegetation = woods climate = mediterranean religion = catholic culture = sardinian raw_material = wool}
 sorgono = { topography = hills vegetation = forest climate = mediterranean religion = catholic culture = sardinian raw_material = fur}
 terralba = { topography = flatland vegetation = grasslands climate = mediterranean religion = catholic culture = sardinian raw_material = wheat natural_harbor_suitability = 0.00}
 cagliari = { topography = flatland vegetation = grasslands climate = mediterranean religion = catholic culture = sardinian raw_material = salt natural_harbor_suitability = 0.75}

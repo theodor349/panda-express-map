@@ -1302,7 +1302,7 @@ countries = {
 		}
 
 		country_rank = rank_county
-		capital = brandenburg
+		capital = osterburg
 		dynasty = wittelsbach_dynasty
 	}
 
@@ -1810,13 +1810,13 @@ countries = {
 
 	BOH = {	#Bohemia
 		own_control_core = {
-			prague slany rakovnik zatec tepla loket cheb tachov domazlice
-			klatovy plzen jachymov most husinec usti_nad_labem decin
-			litomerice beroun turnov frydlant prachen krumlov pisek
-			budejovice j_hradec benesov mlada_boleslav kourim kutna_hora
-			bechyne jicin podebrady caslav nachod nemecky_brod
-			chrudim hradec_kralove klodzko litomysl trebon
-			bautzen gorlitz hoyerswerda rothenburg_oberlausitz marienstern
+			prague slany rakovnik zatec tepla tachov domazlice
+			klatovy plzen most usti_nad_labem decin
+			litomerice beroun turnov frydlant
+			benesov mlada_boleslav kourim kutna_hora
+			caslav nemecky_brod
+			chrudim litomysl
+
 		}
 
 		starting_technology_level = 3
@@ -1877,6 +1877,11 @@ countries = {
 		#Setup to accurately portray the starting situation
 		currency_data = {
 			war_exhaustion = 5
+		}
+
+		our_cores_conquered_by_others = {
+			bautzen gorlitz hoyerswerda marienstern
+			rothenburg_oberlausitz
 		}
 	}
 
@@ -4117,7 +4122,7 @@ countries = {
 				sharia_law = hanafi_policy
 			}
 		}
-		capital = sarai_al_jadid
+		capital = kazan
 		religious_school = hanafi_school
 		government = { mysticism_vs_jurisprudence = -15 }
 
@@ -4293,8 +4298,8 @@ countries = {
 
 	ENG = { # England
 		own_control_core = {
-			hythe barnstaple bedford dunstable birmingham boston bosworth shoreham lewes bristol buckingham bury glossop cambridge canterbury rochester cheltenham chelmsford chesterfield chichester chippenham colchester kettering coventry cirencester derby dorchester dover exeter gloucester grimsby guildford reigate harrow hastings hedingham hertford huntingdon ipswich grantham kidderminster leicester lincoln london loughborough lowestoft lynn daventry newark northampton norwich nottingham oxford ely plymouth bideford bampton okehampton poole portsmouth amesbury lymington retford rutland salisbury southampton prittlewell kingston stafford stoke stratford trowbridge taunton wells barking weymouth shaftesbury wight winchester windsor worcester yarmouth tamworth louth thetford fakenham reading tonbridge minehead portishead bath henley royston aylesbury wycombe lavenham abingdon st_albans banbury walden spalding woking basingstoke
-			shrewsbury hereford
+			hythe  bedford dunstable shoreham lewes buckingham cambridge canterbury rochester chelmsford chichester colchester dover  guildford reigate harrow hastings hedingham hertford huntingdon  london oxford ely     portsmouth lymington southampton prittlewell kingston barking wight winchester windsor  reading tonbridge henley royston aylesbury wycombe abingdon st_albans banbury walden woking basingstoke
+
 		}
 		own_control_integrated = {
 			montreuil #Ponthieu
@@ -4429,6 +4434,13 @@ countries = {
 		ai_advance_preference_tags = {
 			exploration = 5
 		}
+
+		our_cores_conquered_by_others = {
+			hereford kidderminster shrewsbury worcester
+
+			bampton barnstaple bideford exeter
+			okehampton plymouth
+		}
 	}
 
 	GWR = { # Gower Marcher Lordship
@@ -4468,6 +4480,8 @@ countries = {
 		include = "catholic_monarchy_english_lordship_welsh_marcher_lord"
 		own_control_core = {
 			wigmore ludlow
+
+			hereford kidderminster shrewsbury worcester
 		}
 		our_cores_conquered_by_others = {
 		}
@@ -4716,6 +4730,9 @@ countries = {
 	CRN = { # Cornwall
 		own_control_core = {
 			launceston truro bodmin
+
+			bampton barnstaple bideford exeter
+			okehampton plymouth
 		}
 
 		include = "expl_western_europe"
@@ -4829,11 +4846,7 @@ countries = {
 		own_control_core = {
 			newcastle hexham alnwick morpeth billingham
 			carlisle cockermouth penrith egremont
-			kendal appleby
 			durham darlington stockton
-			york scarborough bedale richmond whitby
-			hull bridlington selby norton
-			leeds pontefract skipton wakefield doncaster ripon
 		}
 		government = {
 			type = monarchy
@@ -5293,7 +5306,7 @@ countries = {
 			}
 		}
 		include = "catholic_monarchy_english_lordship"
-		capital = dublin
+		capital = new_ross
 		accepted_cultures = { anglo_irish }
 		tolerated_cultures = { irish }
 		country_rank = rank_duchy
@@ -5455,7 +5468,7 @@ countries = {
 			ruler_term = {	 character = lei_domhnall_mac_art_caomhanach start_date = 1323.1.1	}
 		}
 		country_rank = rank_duchy # remnants of an old provincial kingdom
-		capital = wicklow
+		capital = ferns
 	}
 	TRY = {
 		own_control_core = {
@@ -5546,7 +5559,7 @@ countries = {
 		include = "gaelic_tribe_not_present"
 		include = "expl_western_europe"
 		country_rank = rank_duchy # remnants of an old provincial kingdom
-		capital = athlone
+		capital = dublin
 		government = {
 			ruler = random
 		}
@@ -8479,7 +8492,7 @@ countries = {
 		country_rank = rank_kingdom
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
-		capital = tiruvannamalai
+		capital = haleri
 		government = {
 			ruler_term = { character = hsl_vinayaditya_i_hoysala start_date = 1047.1.1 end_date = 1098.1.1 regnal_number = 1 }
 			ruler_term = { character = hsl_ereyanga_i_hoysala start_date = 1098.1.1 end_date = 1102.1.1 regnal_number = 1 }
@@ -11133,7 +11146,7 @@ countries = {
 		}
 
 		capital = marseille
-		country_rank = rank_county
+		country_rank = rank_duchy
 	}
 
 	PAD = {
@@ -13000,6 +13013,8 @@ countries = {
 		own_control_core = {
 			angelokastron arta preveza parga ioannina kleisoura_epirus
 			argyrokastro avlonya karpenisi konitsa
+
+			pyli
 		}
 		our_cores_conquered_by_others = {
 			ballsh berat
@@ -13144,57 +13159,34 @@ countries = {
 			traianopolis demotica lemnos imbros molyvos mitilene gallipoli kesan
 			edirne hayrabolu corlu
 			rodoscuk enez kiyikoy ahtopol constantinople silivri catalca luleburgaz kirklareli
-			malgara alasehir
+			malgara
 			ostrovo
-			uskudar silli biga eregli
 			chios ikaria samos vize
 			ormenio
 		}
 		own_control_integrated = {
-			bukelon devol ustra berat plovdiv stanimaka tsepina beden perperek smolyan haskovo melnik dospat bansko krupnik nevrokop
+			bukelon  ustra  plovdiv stanimaka tsepina beden perperek smolyan haskovo melnik dospat bansko krupnik nevrokop
 		}
 		own_control_conquered = {
-			siatista pyli grevena
+			siatista  grevena
 		}
 		our_cores_conquered_by_others = {
-			#Vardar Province - lost in 1285
-			kocani strumica
-
-			#Rodos Province
 			kos rodos
-
-			#Prilep Province
-			kicevo prilep bitola ohrid florina tetovo
-
-			#Albania Province - lost in late 1272
 			elbasan tirana kruje debar durres
-
-			#Bolu Province - partially lost in 1304
-			akcasehir konrapa akyazi
-
-			#Kocaeli Province
 			izmit atpazari
-
-			#Hudavendigar Province - Mostly lost in 1328 except for Nicaea which fell around 1331
-			iznik  bursa adranos harmancik dursunbey
-
-			#Biga Province - substantial loss in 1306 / near-total loss in 1328
+			iznik bursa adranos harmancik dursunbey
 			bandirma gonen can bayramic ayvacik canakkale lapseki
-
-			#Karasi Province - lost most of it around 1297
 			mihalic manyas susurluk balya balikesir bigadic edremit bergama
-
-			#Saruhan Province - lost in 1300
 			demirci kula gordes akhisar soma manisa foca
-
-			#Smyrna Province - lost around 1311
 			menemen smyrna ayasuluk urla cesme
-
-			#Aydin Province - partially lost in 1274 / completely in 1300
 			birgi tire guzelhisar nazilli cine balat milas
-
-			#Mugla Province - lost in late 1270
 			gokabat marmaris bodrum mugla
+
+			berat devol
+
+			pyli
+
+			alasehir
 		}
 
 		starting_technology_level = 3
@@ -13525,6 +13517,9 @@ countries = {
 	ALB = {
 		own_control_core = {
 			durres
+
+			berat debar devol dukagjini
+			has koman lezha
 		}
 
 		own_control_integrated = {
@@ -13705,20 +13700,18 @@ countries = {
 
 	SER = {
 		own_control_core = {
-			peja prizren bitola prilep kicevo tetovo onogost
-			budimlja brskovo gjakova mitrovica pristina novo_brdo skopje kumanovo veles prosek
-			kratovo vranje prijepolje visegrad ustikolina soko_grad
-			glubocica nis prokuplje stalac ravno jagodina ohrid
-			krusevac kucevo branicevo rudnik smederevo krupanj valjevo uzice pljevlja
-			gradac zica trgoviste_SER sjenica velbuzd
-			arilje brvenik medveda
-		}
-		own_control_integrated = {
-			koman has dukagjini lezha florina debar
-			kocani strumica shtip
+			peja prizren onogost
+			budimlja brskovo gjakova mitrovica pristina novo_brdo
+			prijepolje visegrad ustikolina soko_grad
+			uzice pljevlja
+			gradac trgoviste_SER sjenica
+			arilje brvenik
 		}
 		our_cores_conquered_by_others = {
-			konjic belgrad debrc sabac
+			konjic
+
+			debar dukagjini has koman
+			lezha
 		}
 		starting_technology_level = 3
 		include = "expl_mediterranean"
@@ -14083,56 +14076,26 @@ countries = {
 		country_rank = rank_kingdom
 	}
 
-	SVN = {
-		own_control_core = {
-		}
-		our_cores_conquered_by_others = {
-			zagreb karlovac petrinja sisak slunj varazdin
-			bjelovar koprivnica kutina pakrac vaska virovitica
-			gradiski_brod dubica
-		}
-		starting_technology_level = 3
-		include = "expl_mediterranean"
-		include = "catholic_monarchy_not_present"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = random
-		}
-
-		tolerated_cultures = {
-			hungarian
-		}
-
-		capital = zagreb
-		country_rank = rank_duchy
-	}
 
 	BUL = {
 		own_control_core = {
-			sredets samokov stipon ovech
 			hiambouli rusokastro lardeja boruy
-			tarnovo drastar tutrakan cherven razgrad shumen aytos targoviste_BUL sliven kran
-			lovech nikopol pleven oryahovo bozhenitsa hotalich tryavna
-			anhialo varna karvuna pangalia kaliakra
-			tulcea harsova
-			gigen dobrolak svoge kostenets strelcha ruse kladentsi lyaskovets veliki_preslav ktenia constantia_bul elhovo
-			babadag cernavoda constanta enisala isaccea
-			pirot tsaribrod
-			zemlungrad dupnitsa
+			tarnovo cherven aytos sliven
+			nikopol tryavna
+			anhialo
+			ruse lyaskovets constantia_bul elhovo
 		}
 		own_control_integrated = {
 			burgas sozopol
 		}
 
 		our_cores_conquered_by_others = {
-			nis glubocica velbuzd
 		}
 
 		starting_technology_level = 3
 		include = "expl_mediterranean"
 		include = "eastern_european_monarchy"
-		country_rank = rank_empire
+		country_rank = rank_kingdom
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
@@ -14300,32 +14263,6 @@ countries = {
 		}
 	}
 
-	KVN = {
-		own_control_core = {
-
-		}
-
-		starting_technology_level = 3
-		include = "expl_mediterranean"
-		include = "eastern_european_monarchy_not_present"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = random
-
-			regnal_numbers = {
-			}
-
-			land_vs_naval = 40
-		}
-
-		tolerated_cultures = {
-			wallachian
-		}
-
-		country_rank = rank_duchy
-		capital = karvuna
-	}
 
 	MOE = {
 		own_control_core = {
@@ -14747,7 +14684,7 @@ countries = {
 		}
 
 		country_rank = rank_kingdom
-		capital = valladolid
+		capital = sevilla
 
 		ai_advance_preference_tags = {
 			exploration = 5
@@ -14971,8 +14908,7 @@ countries = {
 			granada adra almunecar guadix huescar illora loja pinar orgiva
 			malaga antequera velez_malaga
 
-			algeciras cartagena gibraltar lorca
-			marbella mula murcia ronda
+			algeciras gibraltar marbella ronda
 		}
 
 		our_cores_conquered_by_others = {
@@ -15196,21 +15132,6 @@ countries = {
 	}
 
 
-	MUC = {
-		include = "expl_western_europe"
-		include = "catholic_monarchy_not_present"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = random
-		}
-		country_rank = rank_kingdom
-		capital = murcia
-
-		our_cores_conquered_by_others = {
-			cartagena lorca mula murcia
-		}
-	}
 
 	SEV = {
 		include = "expl_western_europe"
@@ -15245,24 +15166,29 @@ countries = {
 	FRA = {
 		own_control_core = {
 			paris brie_comte_robert corbeil montmorency
-			breteuil corbie nesle peronne
-			montargis sens saint_florentin senlis nemours melun
+
+			 sens saint_florentin senlis nemours melun
 			beauvais
 			chaumont_vexin
 			bar_sur_seine
 			crepy #Valois (Own by the ruler)
-			chartres auneau #C. Chartres
-			sully vitry_aux_loges #D. de Orleans, Appanage in 1344
-			sancoins vierzon #Berry(On October 1360, King John II created the title)
+			  #C. Chartres
+			  #D. de Orleans, Appanage in 1344
+			  #Berry(On October 1360, King John II created the title)
 		}
 		own_control_integrated = {
 			villemaur
 		}
 
-		own_control_conquered = {
-		}
 
 		our_cores_conquered_by_others = {
+
+			breteuil corbie nesle peronne
+
+			auneau chartres montargis sully
+			vitry_aux_loges
+
+			sancoins vierzon
 		}
 
 		starting_technology_level = 3
@@ -15406,8 +15332,7 @@ countries = {
 	#Britanny
 	BRI = {
 		own_control_core = {
-			brest carhaix chateaulin chatelaudren le_faou quimper quimperle saint_brieuc st_pol_de_leon treguier
-			nantes blain chateaubriant guerande machecoul
+			carhaix chateaulin le_faou quimper quimperle
 			rennes dol fougeres monfort_sur_meu saint_malo vitre
 			vannes hennebont josselin ploermel redon rohan
 		}
@@ -15688,7 +15613,7 @@ countries = {
 			burgundian
 		}
 
-		capital = belleme
+		capital = alencon
 	}
 
 	#Auvergne (Appanage)
@@ -16112,10 +16037,12 @@ countries = {
 	#Foix (Vassal, Fief Mouvant of France) Special case
 	FOI = {
 		own_control_core = {
+
+			foix mirepoix pamiers
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
-		include = "panda_landless_catholic_monarchy_no_coast"
+		include = "catholic_monarchy_no_coast"
 		government = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
@@ -16150,9 +16077,6 @@ countries = {
 		}
 
 		capital = foix
-		our_cores_conquered_by_others = {
-			foix pamiers
-		}
 	}
 
 	#Béarn (In PU with Foix)
@@ -16295,7 +16219,7 @@ countries = {
 			languedocien
 		}
 
-		capital = auch
+		capital = nogaro
 	}
 
 
@@ -16735,7 +16659,7 @@ countries = {
 			reforms = {
 			}
 		}
-		capital = muret
+		capital = aspet
 	}
 
 	#Isle de Jourdan (Vassal, Fief Mouvant)
@@ -17178,6 +17102,8 @@ countries = {
 	BER = {
 		own_control_core = {
 			issoudun bourges
+
+			sancoins vierzon
 		}
 
 		starting_technology_level = 3
@@ -17591,6 +17517,7 @@ countries = {
 			}
 		}
 		capital = poitiers
+		country_rank = rank_duchy
 	}
 
 	#Anjou
@@ -17690,6 +17617,7 @@ countries = {
 			}
 		}
 		capital = auch
+		country_rank = rank_duchy
 	}
 
 	#Nevers
@@ -17810,6 +17738,8 @@ countries = {
 			evreux harcourt #Normandy
 			mantes #Ile de France
 			longueville #Longueville
+
+			argentan bernay laigle
 		}
 
 		starting_technology_level = 3
@@ -17855,16 +17785,17 @@ countries = {
 	#Normandy
 	NRM = {
 		own_control_core = {
-			bernay laigle louviers pont_audemer
-			caen argentan bayeux domfront falaise lisieux pont_douilly
-			cherbourg coutances avranches st_sauveur vire
+			  louviers pont_audemer
+			 lisieux
 			rouen arques fecamp gisors tancarville
 		}
 
 		our_cores_conquered_by_others = {
 			evreux harcourt mortain #Evreux
 			longueville #Longueville
-			alencon domfront argentan #Alencon
+			alencon argentan #Alencon
+
+			argentan bernay laigle
 		}
 
 		starting_technology_level = 3
@@ -17961,6 +17892,9 @@ countries = {
 	ORL = {
 		own_control_core = {
 			orleans beaugency
+
+			auneau chartres montargis sully
+			vitry_aux_loges
 		}
 
 		starting_technology_level = 3
@@ -17979,6 +17913,8 @@ countries = {
 		own_control_core = {
 			calais boulogne_sur_mer abbeville amiens saint_quentin guise hirson marle
 			ribemont noyon
+
+			breteuil corbie nesle peronne
 		}
 
 		starting_technology_level = 3
@@ -17990,16 +17926,17 @@ countries = {
 			ruler = random
 		}
 		capital = boulogne_sur_mer
+		country_rank = rank_duchy
 	}
 
 	#Toulouse (Revolter)
 	TOU = {
 		own_control_core = {
 			toulouse narbonne lavaur castelnaudary saint_pons beziers agde lodeve melgueil
-			nimes uzes french_ales castres rodez villefranche peyrusse entraigues peyre mende
-			albi villemur lautrec pamiers foix
-			mirepoix limoux carcassonne fenouillet montpellier chateauneuf_de_randon st_affrique millau
-			florac st_ambroix
+			nimes uzes french_ales castres rodez villefranche peyrusse entraigues
+			albi villemur lautrec
+			 limoux carcassonne fenouillet montpellier st_affrique millau
+			st_ambroix
 		}
 
 		starting_technology_level = 3
@@ -18030,6 +17967,11 @@ countries = {
 			}
 		}
 		capital = toulouse
+
+		our_cores_conquered_by_others = {
+			foix mirepoix pamiers
+		}
+		country_rank = rank_duchy
 	}
 
 	#Champagne (Revolter)
@@ -18078,6 +18020,7 @@ countries = {
 			}
 		}
 		capital = troyes
+		country_rank = rank_duchy
 	}
 
 	#-------------------- HRE -------------------
@@ -18323,6 +18266,7 @@ countries = {
 		}
 		capital = bruges
 		court_language = french_language
+		country_rank = rank_duchy
 	}
 
 	#Holland - Union under Hainaut
@@ -18608,51 +18552,22 @@ countries = {
 
 	HUN = {	#Hungary
 		own_control_core = {
-			osijek
-			mezhorje sighet
-			carei hodod
-			recas semlacu_mare
-			cheresig ineu lipova mako oradea szarvas
-			baja_hungary
-			csurgo simontornya kaposvar mohacs nagykanizsa siklos zalaegerszeg
-			kapuvar kormend papa szombathely tata
+			szarvas
+			papa tata
 			abrahamtelke heves kecskemet adony solt
-			hajduszoboszlo miskolc szabolcs
-			gonc mukachevo satoraljaujhely velikyi_bereznyi
-			bardejov podmuran roznava
+			miskolc
+			podmuran roznava
 			kremnica krupina nograd salgotarjan zvolen
-			prievidza trnava
-			povazska_bystrica zilina
-			pancevo
-			kikinda titel modos
-			belgrad debrc sabac
-			gradiski_brod dubica
-			buda pest kalocsa felegyhaza
-			sopron vasvar magyarovar zalavar
-			veszprem gyor komarom fehervar esztergom
-			somogyvar tolna pecs segesd
-			bacs zenta bodrog halas
-			samorin nitra hlohovec holic
+			buda pest kalocsa
+			veszprem komarom fehervar esztergom
 			hont balassagyarmat stary_tekov banska_bystrica
-			trencin oravsky_podzamok turciansky_svaty_martin liptovsky_mikulas
-			gemer rimavska_sobota levoca lubica presov turna
-			zemplin kosice humenne uzhorod beregovo
-			cuhea rakhiv khust
-			caransebes lugoj
-			bihar beius crasna
-			debrecen nagyboszormeny nagykallo nagyecsed varda szatmar syvlyush zalau baia_mare
+			gemer rimavska_sobota
 			szolnok eger karcag borsod
-			bekes csanad szeged
-			kovin veliky_beckerek carasova mihalt
-			timisoara arad zarand
-			baia_crisului
-			bjelovar koprivnica kutina pakrac vaska virovitica
-			vukovar ilok pozega sremska_mitrovica petrovaradin
-			zagreb cakovec karlovac petrinja sisak slunj varazdin
+			bekes
 		}
 
 		own_control_integrated = {
-			bratislava olsnica jaszbereny
+			jaszbereny
 		}
 
 		starting_technology_level = 3
@@ -19037,7 +18952,7 @@ countries = {
 
 		country_rank = rank_duchy
 		court_language = catalan_dialect
-		capital = neopatras
+		capital = zetounion
 	}
 
 	BOD = {	#Bodonitsa
@@ -19365,20 +19280,16 @@ countries = {
 	MOR = { #Morocco
 		own_control_core = {
 			tangier ceuta asilah basra_al_hamra larache
-			badis tizgane al_mazamma
-			melilla ras_kebdana ghassasa temsamane tabarida
 			ksar_el_kebir tazroute
 			la_mamora tefelfelt
 			anfa azemmour bejaad thagia rabat settat mrirah
 			asfi mazaghan tit boulaouane miatbir aguz
-			tednest ait_daoud mogador
-			azilal
-			chichaoua
-			guercif ameskour terrest
-			jarawah_abu_al_aysh oujda
-			jerada taourirt debdou echemmaia sidi_bennour
-			nedroma tegeget kalaat_sraghna midelt
-			aouint_yghomane afso ifrane
+
+
+
+			echemmaia sidi_bennour
+			tegeget
+
 
 		}
 
@@ -19477,10 +19388,13 @@ countries = {
 		religious_school = maliki_school
 		government = { mysticism_vs_jurisprudence = -5 }
 
-		capital = fez
+		capital = rabat
 		dynasty = marinid_dynasty
 
 		our_cores_conquered_by_others = {
+			ait_daoud aouint_yghomane azilal chichaoua
+			ifrane kalaat_sraghna mogador tednest
+
 			marbella ronda
 		}
 	}
@@ -19503,11 +19417,8 @@ countries = {
 		own_control_core = {
 			tessala mascara tlemcen
 			tamazaghrane oran arzew ksar_ibn_senane
-			tahert djelfa zenina asir_ALG tissemsilt
-			el_bayadh ain_sefra naama messaad ksar_el_boukhari el_abiodh_sidi_cheikh brezina
 			al_khadra_ALG
-			laghouat ksar_el_kaoua medrissa
-			charef qutb ain_madhi
+			ksar_el_kaoua
 		}
 
 		own_core = {
@@ -19588,13 +19499,12 @@ countries = {
 
 	TUN = { #Tunis
 		own_control_core = {
-			bir_el_alter
 			madjul mahres bou_hajla sfaqes chebba
-			kairouan sbiba kasserine subaytila thala
+			kairouan
 			mahdia sousse el_jem monastir
 			bizerte tabarka sejnane mateur beja_TUN souk_el_arba el_kef thagaste
 			tunis tebourba el_fahs zaghouan nabeul kelibia hammamet kesra
-			feriana jama_TUN
+			jama_TUN
 			el_ksour medjez_el_bab sbikha
 		}
 		own_control_conquered = {
@@ -19677,7 +19587,6 @@ countries = {
 		own_control_core = {
 			bejaia mansouria bouira
 			annaba cheffia jijel el_milia skikda el_kala guelma collo tekouch
-			constantine_ALG mila ngaous baghai dufanat bazer_sakhra tiffech tebessa meskiana tijis ikjan
 		}
 
 		starting_technology_level = 3
@@ -19754,7 +19663,7 @@ countries = {
 
 	FEZ = {
 		own_control_core = {
-			volubilis ouezzane taunat amergo meknes fez namalata taza sefrou tezerghe baht azrou
+			volubilis ouezzane taunat amergo meknes fez baht azrou
 		}
 
 		starting_technology_level = 3
@@ -19773,11 +19682,15 @@ countries = {
 		government = { mysticism_vs_jurisprudence = -5 }
 
 		capital = fez
+		country_rank = rank_duchy
 	}
 
 	MRK = {
 		own_control_core = {
 			tafedna naffis tinmel tamdegost marrakesh aghmat hanimmei demnate bzou tadla khenifra
+
+			ait_daoud aouint_yghomane azilal chichaoua
+			ifrane kalaat_sraghna mogador tednest
 		}
 
 		starting_technology_level = 3
@@ -19899,9 +19812,8 @@ countries = {
 
 	ALG = {
 		own_control_core = {
-			mostaganem brashk cherchell tenes
 			tamentfoust medea algiers tablat
-			mazouna miliana qal_at_ibn_salama yellel chlef
+			qal_at_ibn_salama
 		}
 
 		starting_technology_level = 3
@@ -20003,7 +19915,6 @@ countries = {
 		}
 
 		our_cores_conquered_by_others = {
-			laghouat
 		}
 
 		starting_technology_level = 3
@@ -20960,7 +20871,7 @@ countries = {
 			dogon
 		}
 
-		capital = djenne
+		capital = segou
 		religious_school = maliki_school
 		government = { mysticism_vs_jurisprudence = -5 }
 	}
@@ -22123,7 +22034,7 @@ countries = {
 			offensive_vs_defensive = -30
 			outward_vs_inward = 0
 		}
-		capital = ankober #Marade/Tegulet, made capital by Amda Seyon I
+		capital = lalibela
 		country_rank = rank_empire
 
 		liturgical_language = geez_language
@@ -22609,7 +22520,7 @@ countries = {
 		government = { mysticism_vs_jurisprudence = 20 }
 
 		country_rank = rank_kingdom
-		capital = merca
+		capital = rasini
 	}
 
 	#Mogadishu - MDI
@@ -22913,7 +22824,7 @@ countries = {
 		religious_school = maliki_school
 		government = { mysticism_vs_jurisprudence = -5 }
 
-		capital = deraheib
+		capital = khawr_nubt
 	}
 
 	#Qata - QTA
@@ -23067,37 +22978,12 @@ countries = {
 	#Mamluk Sultanate - MAM
 	MAM = {
 		own_control_core = {
-			alexandria el_alamein damanhur ramsis kafr_saqr kharibta rashid wadi_el_natrun
-			cairo atfih beni_suef faiyum giza dakahla
-			damietta al_mima el_burullus el_mahalla fuwa menouf samanoud tidah
-			mansoura bilbeis faqus ushmum_tannah qalyub tarrana tinnis
-			suez saint_anthony saint_paul_anchorite
-			el_tor
-			edfu esna qena hiw qus
-			asyut el_balyana el_buwit akhmim manfalut
-			minya ashmunayn el_bahnasa sharuna tahna
-			kharga bahariyya baris el_qasr qasr_farafra siwa
+			cairo atfih giza
+			menouf
+			qalyub
 		}
 
-		own_control_integrated = {
-			el_arish nekhel qatya warrada
-			matruh sallum tobruk
-			el_qoseir ras_gharib safaga
-			el_jundi faran nuweiba saint_katrine
-			ayntab dluk
-			jerusalem acre amman aqaba beersheba gaza hebron karak maan majdal nablus safed sughar jaffa al_quwayrah
-			beirut baalbek deir_qamar sidon tripoli_syria shoubak madaba
-			damascus al_bab aleppo antioch arsuz artah baniyas dabiq hama homs idlib jabbul jableh kafartab latakia manbij maskanah masyaf nabek qusayr tartus zardana
-			umluj al_hawra al_manjur al_maramiyah
-			al_ula al_bleiteh al_farah_ula al_marwa az_zubayir mughayra
-			duba ad_disah al_azlam al_wajh bada_yaqub bir_al_qurr
-			tabuk_arabia al_khanbarah al_muazzam al_ukhaydir bajdah bir_ibn_hermas dhat_al_hajj
-			aynuna al_bad al_muwaylih haql makna
-		}
 
-		own_control_conquered = {
-			iskenderun
-		}
 
 		include = "expl_muslim_mediterranean"
 		include = "expl_horn_of_africa"
@@ -23166,6 +23052,10 @@ countries = {
 		}
 
 		capital = cairo
+
+		our_cores_conquered_by_others = {
+			tobruk
+		}
 	}
 
 	#Banu Kanz - BKZ
@@ -23224,6 +23114,8 @@ countries = {
 		own_control_core = {
 			benghazi ajdabiya al_bayda al_khuimat barca derna mechili msus qaminis suluntah tmimi
 			awjila el_agheila
+
+			tobruk
 		}
 
 		starting_technology_level = 3
@@ -33432,6 +33324,8 @@ countries = {
 		own_control_core = {
 			smyrna ayasuluk cesme urla
 			tire balat birgi guzelhisar nazilli
+
+			alasehir
 		}
 
 		starting_technology_level = 3
@@ -33508,11 +33402,8 @@ countries = {
 		our_cores_conquered_by_others = {
 			silifke anamur ermenek mut
 			selinti
-			nigde bor_tur
 			develi
-			ayntab
 			kilis trapessac
-			iskenderun
 		}
 
 		starting_technology_level = 3
@@ -33787,15 +33678,10 @@ countries = {
 	#Eretnids - ERE https://en.wikipedia.org/wiki/Eretnids
 	ERE = {
 		own_control_core = {
-			akdagmadeni aydincik koyulhisar sulusaray tokat zile
-			bozok baliseyh candir dinek_keskin sorgun
-			corum huseyinabad sungurlu
-			divrigi arapgir egin arguvan
-			kayseri bogazliyan comana_cil develi tomarza
+			kayseri bogazliyan develi tomarza
 			hacibektas urgup
 			sivas darende dasmenda deliktash gemerek gurun hafik sarkisla zara
-			erzincan ilic kelkit kemah sebinkarahisar siran
-			yahyali malatya
+			yahyali
 			}
 
 		our_cores_conquered_by_others = {
@@ -33980,16 +33866,14 @@ countries = {
 	#Karamanids - KAR https://en.wikipedia.org/wiki/Karamanids
 	KAR = {
 		own_control_core = {
-			aksaray kochisar insuyu
-			kirsehir nevsehir sariyahsi
 			konya celtik eregli_kar eskil hatunsaray karapinar ladik larende pirloganda
-			bekarlar bor_tur ermenek
+			ermenek
 			beysehir aksehir sarkikaraagac seydisehir
-			ilgin turgut suluklu kulu_turkey obruk altinekin cumra
+			ilgin turgut suluklu obruk altinekin cumra
 		}
 
 		own_control_integrated = {
-			silifke anamur mut nigde
+			silifke anamur mut
 		}
 
 		include = "expl_eastern_europe"
@@ -34016,6 +33900,7 @@ countries = {
 
 		capital = konya
 		religious_school = maturidi_school #Widespread among the Turks together with Hanafi
+		country_rank = rank_duchy
 	}
 
 	#Kubadids - KBD https://tr.wikipedia.org/wiki/Kubado%C4%9Fullar%C4%B1_Emirli%C4%9Fi
@@ -34781,7 +34666,6 @@ countries = {
 	TUR = {
 		own_control_core = {
 			beypazari kibrus kizilca
-			bolu akcasehir akyazi konrapa gerede mengen mudurnu
 			bursa adranos iznik
 			izmit atpazari
 			domanic
@@ -38578,7 +38462,7 @@ countries = {
 		}
 
 		country_rank = rank_county
-		capital = strasbourg
+		capital = benfeld
 	}
 
 	FRT = { #Ferrette
@@ -38889,6 +38773,9 @@ countries = {
 	SOR = { #Lusatia
 		own_control_core = {
 			cottbus guben lubben luckau calau zossen
+
+			bautzen gorlitz hoyerswerda marienstern
+			rothenburg_oberlausitz
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -41941,7 +41828,7 @@ countries = {
 			moravian
 		}
 
-		capital = raciborz
+		capital = opava
 		dynasty = premyslid_dynasty
 	}
 
@@ -42931,7 +42818,7 @@ countries = {
 			polesian_culture
 		}
 
-		capital = lviv
+		capital = belz
 		country_rank = rank_kingdom
 	}
 
@@ -61635,7 +61522,7 @@ countries = {
 		tolerated_cultures = {
 		}
 
-		capital = shanjir
+		capital = khadyzhi
 	}
 
 	KDA = { #Kabardia
@@ -62183,7 +62070,7 @@ countries = {
 		government = { mysticism_vs_jurisprudence = 40 }
 
 
-		capital = dumat_al_jandal
+		capital = khaybar
 
 	}
 
@@ -64385,6 +64272,7 @@ countries = {
 			ruler_term = {	 character = haw_kalaunuiohua_pili start_date = 1300.1.1 regnal_number = 1	}
 			ruler = haw_kalaunuiohua_pili
 		}
+		capital = o_ahu
 	}
 
 	#MUI - Maui
@@ -64711,7 +64599,7 @@ countries = {
 		government = {
 			ruler = random
 		}
-		capital = yap
+		capital = ulithi_atoll
 
 		our_cores_conquered_by_others = {
 			yap
@@ -64781,10 +64669,10 @@ countries = {
 	}
 
 
-	#IB1
-	IB1 = {
+	#MUC
+	MUC = {
 		own_control_core = {
-			albacete caravaca chinchilla cieza hellin jumilla segura_de_la_sierra villena
+			albacete caravaca cartagena chinchilla cieza hellin jumilla lorca mula murcia segura_de_la_sierra villena
 		}
 
 		starting_technology_level = 3
@@ -64801,7 +64689,7 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		capital = villena
+		capital = murcia
 		country_rank = rank_duchy
 	}
 
@@ -65566,6 +65454,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = st_jean_dangely
 	}
 
 	#FR1
@@ -65585,6 +65474,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = thiviers
 	}
 
 	#FR2
@@ -65604,6 +65494,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = sauveterre_de_guyenne
 	}
 
 	#FR3
@@ -65623,6 +65514,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = herment
 	}
 
 	#FR4
@@ -65642,6 +65534,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = tours
 	}
 
 	#FR5
@@ -65661,6 +65554,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = chateauroux
 	}
 
 	#FR6
@@ -65680,6 +65574,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = viviers
 	}
 
 	#FR7
@@ -65699,6 +65594,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = brioude
 	}
 
 	#FR8
@@ -65718,6 +65614,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = loudun
 	}
 
 	#FR9
@@ -65737,6 +65634,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = bergerac
 	}
 
 	#FRB
@@ -65756,6 +65654,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = turenne
 	}
 
 	#FRC
@@ -65775,6 +65674,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = mauriac
 	}
 
 	#FRD
@@ -65794,6 +65694,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = lyon
 	}
 
 	#FRF
@@ -65813,6 +65714,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = langres
 	}
 
 	#FRG
@@ -65832,6 +65734,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = joinville
 	}
 
 	#FRH
@@ -65851,6 +65754,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = reims
 	}
 
 	#FRJ
@@ -65870,6 +65774,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = laon
 	}
 
 	#FRK
@@ -65889,6 +65794,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = lille
 	}
 
 	#FRL
@@ -65908,6 +65814,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = cahors
 	}
 
 	#FRO
@@ -65927,6 +65834,7 @@ countries = {
 		}
 
 		country_rank = rank_duchy
+		capital = lectoure
 	}
 
 	#IT0
@@ -65998,6 +65906,1373 @@ countries = {
 		}
 
 		capital = cosenza
+		country_rank = rank_duchy
+	}
+
+	#FRR
+	FRR = {
+		own_control_core = {
+			bury fakenham ipswich lavenham lowestoft lynn norwich thetford yarmouth
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = norwich
+		country_rank = rank_duchy
+	}
+
+	#FRS
+	FRS = {
+		own_control_core = {
+			bayeux caen domfront falaise pont_douilly vire
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = caen
+		country_rank = rank_duchy
+	}
+
+	#FRU
+	FRU = {
+		own_control_core = {
+			avranches cherbourg coutances st_sauveur
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = coutances
+		country_rank = rank_duchy
+	}
+
+	#FRV
+	FRV = {
+		own_control_core = {
+			brest chatelaudren saint_brieuc st_pol_de_leon treguier
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = saint_brieuc
+		country_rank = rank_duchy
+	}
+
+	#FRW
+	FRW = {
+		own_control_core = {
+			blain chateaubriant guerande machecoul nantes
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = nantes
+		country_rank = rank_duchy
+	}
+
+	#FRX
+	FRX = {
+		own_control_core = {
+			chateauneuf_de_randon florac mende peyre
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = mende
+		country_rank = rank_duchy
+	}
+
+	#FRY
+	FRY = {
+		own_control_core = {
+			bechyne budejovice husinec j_hradec krumlov pisek prachen trebon
+		}
+
+		starting_technology_level = 3
+		include = "catholic_monarchy_no_coast"
+		include = "expl_northern_europe"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = krumlov
+		country_rank = rank_duchy
+	}
+
+	#AAA
+	AAA = {
+		own_control_core = {
+			hradec_kralove jicin klodzko nachod podebrady
+		}
+
+		starting_technology_level = 3
+		include = "catholic_monarchy_no_coast"
+		include = "expl_northern_europe"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = hradec_kralove
+		country_rank = rank_duchy
+	}
+
+	#AAB
+	AAB = {
+		own_control_core = {
+			cheb jachymov loket
+		}
+
+		starting_technology_level = 3
+		include = "catholic_monarchy_no_coast"
+		include = "expl_northern_europe"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = cheb
+		country_rank = rank_duchy
+	}
+
+	#FRP
+	FRP = {
+		own_control_core = {
+			alexandria el_alamein matruh sallum
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = alexandria
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#FRQ
+	FRQ = {
+		own_control_core = {
+			damanhur ramsis rashid
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = damanhur
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAF
+	AAF = {
+		own_control_core = {
+			el_mahalla samanoud
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = el_mahalla
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAG
+	AAG = {
+		own_control_core = {
+			al_mima el_burullus fuwa tidah
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = fuwa
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAH
+	AAH = {
+		own_control_core = {
+			damietta mansoura
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = damietta
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAJ
+	AAJ = {
+		own_control_core = {
+			bilbeis kafr_saqr
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = bilbeis
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAK
+	AAK = {
+		own_control_core = {
+			el_arish el_jundi el_tor faqus faran nekhel nuweiba qatya saint_katrine suez warrada
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = suez
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAM
+	AAM = {
+		own_control_core = {
+			beni_suef el_bahnasa faiyum sharuna
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = faiyum
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAN
+	AAN = {
+		own_control_core = {
+			ashmunayn bahariyya baris el_qasr kharga manfalut minya qasr_farafra siwa tahna
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = minya
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAO
+	AAO = {
+		own_control_core = {
+			akhmim asyut el_balyana el_buwit
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = asyut
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAP
+	AAP = {
+		own_control_core = {
+			el_qoseir hiw qena qus ras_gharib safaga saint_anthony saint_paul_anchorite
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = qus
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAQ
+	AAQ = {
+		own_control_core = {
+			edfu esna
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = edfu
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAS
+	AAS = {
+		own_control_core = {
+			baalbek damascus nabek
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = damascus
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAT
+	AAT = {
+		own_control_core = {
+			beirut deir_qamar sidon
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = beirut
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAU
+	AAU = {
+		own_control_core = {
+			baniyas tartus tripoli_syria
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = tripoli_syria
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAV
+	AAV = {
+		own_control_core = {
+			jableh latakia
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = latakia
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAW
+	AAW = {
+		own_control_core = {
+			hama homs kafartab masyaf qusayr
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = hama
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAX
+	AAX = {
+		own_control_core = {
+			al_bab aleppo dabiq jabbul manbij maskanah zardana
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = aleppo
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAY
+	AAY = {
+		own_control_core = {
+			antioch arsuz artah ayntab dluk idlib iskenderun
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = antioch
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#AAZ
+	AAZ = {
+		own_control_core = {
+			acre jaffa nablus safed
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = safed
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#ABC
+	ABC = {
+		own_control_core = {
+			beersheba gaza hebron jerusalem majdal
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = gaza
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#ABE
+	ABE = {
+		own_control_core = {
+			ad_disah al_azlam al_bad al_bleiteh al_farah_ula al_hawra al_khanbarah al_manjur al_maramiyah al_marwa al_muazzam al_muwaylih al_quwayrah al_ukhaydir al_ula al_wajh amman aqaba aynuna az_zubayir bada_yaqub bajdah bir_al_qurr bir_ibn_hermas dhat_al_hajj duba haql karak maan madaba makna mughayra shoubak sughar tabuk_arabia umluj
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = karak
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#ABF
+	ABF = {
+		own_control_core = {
+			bir_el_alter feriana kasserine sbiba subaytila thala
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = feriana
+		religious_school = maliki_school
+		country_rank = rank_duchy
+	}
+
+	#ABG
+	ABG = {
+		own_control_core = {
+			baghai bazer_sakhra constantine_ALG dufanat ikjan meskiana mila ngaous tebessa tiffech tijis
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = constantine_ALG
+		religious_school = maliki_school
+		country_rank = rank_duchy
+	}
+
+	#ABH
+	ABH = {
+		own_control_core = {
+			ain_madhi ain_sefra asir_ALG brezina charef djelfa el_abiodh_sidi_cheikh el_bayadh ksar_el_boukhari laghouat medrissa messaad naama qutb tahert tissemsilt zenina
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = tahert
+		religious_school = maliki_school
+		country_rank = rank_duchy
+	}
+
+	#ABI
+	ABI = {
+		own_control_core = {
+			namalata sefrou taza tezerghe
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = taza
+		religious_school = maliki_school
+		country_rank = rank_duchy
+	}
+
+	#ABJ
+	ABJ = {
+		own_control_core = {
+			brashk cherchell chlef mazouna miliana mostaganem tenes yellel
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = miliana
+		religious_school = maliki_school
+		country_rank = rank_duchy
+	}
+
+	#AAE
+	AAE = {
+		own_control_core = {
+			ameskour debdou guercif jarawah_abu_al_aysh jerada midelt nedroma oujda tabarida taourirt terrest
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = oujda
+		religious_school = maliki_school
+		country_rank = rank_duchy
+	}
+
+	#ABK
+	ABK = {
+		own_control_core = {
+			afso al_mazamma badis ghassasa melilla ras_kebdana temsamane tizgane
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = ghassasa
+		religious_school = maliki_school
+		country_rank = rank_duchy
+	}
+
+	#ABM
+	ABM = {
+		own_control_core = {
+			akcasehir akyazi bolu eregli gerede konrapa mengen mudurnu
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "expl_muslim_mediterranean"
+		include = "turkish_beylik"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = bolu
+		religious_school = maturidi_school
+		country_rank = rank_duchy
+	}
+
+	#ABN
+	ABN = {
+		own_control_core = {
+			akdagmadeni aydincik baliseyh bozok candir corum dinek_keskin huseyinabad koyulhisar sorgun sulusaray sungurlu tokat zile
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "expl_muslim_mediterranean"
+		include = "turkish_beylik_no_coast_no_greek"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = tokat
+		religious_school = maturidi_school
+		country_rank = rank_duchy
+	}
+
+	#ABO
+	ABO = {
+		own_control_core = {
+			arapgir arguvan comana_cil divrigi egin erzincan ilic kelkit kemah malatya sebinkarahisar siran
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "expl_muslim_mediterranean"
+		include = "turkish_beylik_no_coast_no_greek"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = erzincan
+		religious_school = maturidi_school
+		country_rank = rank_duchy
+	}
+
+	#ABP
+	ABP = {
+		own_control_core = {
+			aksaray bekarlar bor_tur insuyu kirsehir kochisar kulu_turkey nevsehir nigde sariyahsi
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "expl_muslim_mediterranean"
+		include = "turkish_beylik_no_coast_no_greek"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = nigde
+		religious_school = maturidi_school
+		country_rank = rank_duchy
+	}
+
+	#ABQ
+	ABQ = {
+		own_control_core = {
+			biga silli uskudar
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "eastern_european_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = silli
+		country_rank = rank_duchy
+	}
+
+	#ABR
+	ABR = {
+		own_control_core = {
+			bitola florina kicevo kocani kratovo kumanovo ohrid prilep prosek shtip skopje strumica tetovo velbuzd veles
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "eastern_european_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = skopje
+		country_rank = rank_duchy
+	}
+
+	#ABS
+	ABS = {
+		own_control_core = {
+			branicevo glubocica jagodina krupanj krusevac kucevo medveda nis prokuplje ravno rudnik smederevo stalac valjevo vranje zica
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "eastern_european_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = smederevo
+		country_rank = rank_duchy
+	}
+
+	#KVN
+	KVN = {
+		own_control_core = {
+			babadag cernavoda constanta drastar enisala harsova isaccea kaliakra karvuna kladentsi ktenia ovech pangalia razgrad shumen targoviste_BUL tulcea tutrakan varna veliki_preslav
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "eastern_european_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = karvuna
+		country_rank = rank_duchy
+	}
+
+	#ABU
+	ABU = {
+		own_control_core = {
+			bozhenitsa dobrolak dupnitsa gigen hotalich kostenets kran lovech oryahovo pirot pleven samokov sredets stipon strelcha svoge tsaribrod zemlungrad
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "eastern_european_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = sredets
+		country_rank = rank_duchy
+	}
+
+	#SVN
+	SVN = {
+		own_control_core = {
+			bjelovar dubica gradiski_brod karlovac koprivnica kutina pakrac petrinja sisak slunj varazdin vaska virovitica zagreb
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "eastern_european_catholic_monarchy_no_auxilium_no_coast"
+		include = "eastern_european_catholic"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = zagreb
+		country_rank = rank_duchy
+	}
+
+	#ABX
+	ABX = {
+		own_control_core = {
+			belgrad debrc ilok osijek petrovaradin pozega sabac sremska_mitrovica vukovar
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "eastern_european_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = belgrad
+		country_rank = rank_duchy
+	}
+
+	#ABY
+	ABY = {
+		own_control_core = {
+			arad baia_crisului caransebes carasova ineu kovin lipova lugoj mihalt modos pancevo recas semlacu_mare timisoara veliky_beckerek zarand
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "eastern_european_catholic_monarchy_no_auxilium_no_coast"
+		include = "eastern_european_catholic"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = timisoara
+		country_rank = rank_duchy
+	}
+
+	#ABZ
+	ABZ = {
+		own_control_core = {
+			bacs baja_hungary bodrog csanad felegyhaza halas kikinda mako szeged titel zenta
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "eastern_european_catholic_monarchy_no_auxilium_no_coast"
+		include = "eastern_european_catholic"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = bacs
+		country_rank = rank_duchy
+	}
+
+	#ACB
+	ACB = {
+		own_control_core = {
+			baia_mare beius bihar carei cheresig crasna debrecen hajduszoboszlo hodod nagyboszormeny nagyecsed nagykallo oradea syvlyush szabolcs szatmar varda zalau
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "eastern_european_catholic_monarchy_no_auxilium_no_coast"
+		include = "eastern_european_catholic"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = oradea
+		country_rank = rank_duchy
+	}
+
+	#ACD
+	ACD = {
+		own_control_core = {
+			bardejov beregovo cuhea gonc humenne khust kosice levoca lubica mezhorje mukachevo presov rakhiv satoraljaujhely sighet turna uzhorod velikyi_bereznyi zemplin
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "eastern_european_catholic_monarchy_no_auxilium_no_coast"
+		include = "eastern_european_catholic"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = kosice
+		country_rank = rank_duchy
+	}
+
+	#ACE
+	ACE = {
+		own_control_core = {
+			bratislava hlohovec holic liptovsky_mikulas nitra oravsky_podzamok povazska_bystrica prievidza samorin trencin trnava turciansky_svaty_martin zilina
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "eastern_european_catholic_monarchy_no_auxilium_no_coast"
+		include = "eastern_european_catholic"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = trencin
+		country_rank = rank_duchy
+	}
+
+	#ACF
+	ACF = {
+		own_control_core = {
+			csurgo kaposvar mohacs pecs segesd siklos simontornya somogyvar tolna
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "eastern_european_catholic_monarchy_no_auxilium_no_coast"
+		include = "eastern_european_catholic"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = pecs
+		country_rank = rank_duchy
+	}
+
+	#ACG
+	ACG = {
+		own_control_core = {
+			cakovec gyor kapuvar kormend magyarovar nagykanizsa olsnica sopron szombathely vasvar zalaegerszeg zalavar
+		}
+
+		starting_technology_level = 3
+		include = "expl_eastern_europe"
+		include = "eastern_european_catholic_monarchy_no_auxilium_no_coast"
+		include = "eastern_european_catholic"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = szombathely
+		country_rank = rank_duchy
+	}
+
+	#ACI
+	ACI = {
+		own_control_core = {
+			kharibta tarrana wadi_el_natrun
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = tarrana
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#ACJ
+	ACJ = {
+		own_control_core = {
+			dakahla tinnis ushmum_tannah
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = tinnis
+		religious_school = shafii_school
+		country_rank = rank_duchy
+	}
+
+	#ACK
+	ACK = {
+		own_control_core = {
+			boston grantham grimsby lincoln louth spalding
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = boston
+		country_rank = rank_duchy
+	}
+
+	#ACM
+	ACM = {
+		own_control_core = {
+			chesterfield derby glossop newark nottingham retford stafford stoke tamworth
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = nottingham
+		country_rank = rank_duchy
+	}
+
+	#ACN
+	ACN = {
+		own_control_core = {
+			birmingham bosworth coventry daventry kettering leicester loughborough northampton rutland stratford
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy_no_coast"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = leicester
+		country_rank = rank_duchy
+	}
+
+	#ACP
+	ACP = {
+		own_control_core = {
+			bristol cheltenham cirencester gloucester
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = bristol
+		country_rank = rank_duchy
+	}
+
+	#ACQ
+	ACQ = {
+		own_control_core = {
+			bath minehead portishead taunton wells
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = bath
+		country_rank = rank_duchy
+	}
+
+	#ACR
+	ACR = {
+		own_control_core = {
+			amesbury chippenham dorchester poole salisbury shaftesbury trowbridge weymouth
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = salisbury
+		country_rank = rank_duchy
+	}
+
+	#ACS
+	ACS = {
+		own_control_core = {
+			bedale bridlington hull norton richmond scarborough selby whitby york
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = york
+		country_rank = rank_duchy
+	}
+
+	#ACU
+	ACU = {
+		own_control_core = {
+			appleby doncaster kendal leeds pontefract ripon skipton wakefield
+		}
+
+		starting_technology_level = 3
+		include = "expl_western_europe"
+		include = "catholic_monarchy"
+
+		government = {
+			ruler = random
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = pontefract
 		country_rank = rank_duchy
 	}
 }

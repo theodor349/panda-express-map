@@ -2,8 +2,8 @@
 build_international_organizations.py — write the mod's 15_international_organizations.txt.
 
 Reads the base file on every run, so game updates carry over, and removes members the game would
-drop on day 1 because they have no land. Also removes the Lordship of Ireland, which has no valid
-leader once The Pale has its own ruler.
+drop on day 1 because they have no land. Adds mod countries split from HRE members to the HRE.
+Also removes the Lordship of Ireland, which has no valid leader once The Pale has its own ruler.
 
 Usage:
     python scripts/helpers/build_international_organizations.py
@@ -32,8 +32,11 @@ _DEFAULT_MOD_PATH = Path(__file__).parent.parent.parent
 _MOD_PATH = Path(os.environ.get("EU5_MOD_PATH", _DEFAULT_MOD_PATH))
 BASE_FILE = _GAME_PATH / "main_menu/setup/1337/15_international_organizations.txt"
 COUNTRIES_FILE = _MOD_PATH / "main_menu/setup/1337/10_countries.txt"
+DEFINITIONS_FILE = _MOD_PATH / "in_game/setup/countries/panda_express_map.txt"
 DEFAULT_OUTPUT = _MOD_PATH / "main_menu/setup/1337/15_international_organizations.txt"
 
+# Mod countries split from HRE members. New countries otherwise start outside the HRE.
+HRE_NEW_MEMBERS = {"Rosenberg", "Hradec", "Eger"}
 # Pop-based countries that fail the game's check even though their locations are unchanged.
 ALWAYS_REMOVE = {"TVA", "DDI"}
 # Lists other than members that name countries the game drops on day 1.
@@ -76,6 +79,23 @@ def edit_named_blocks(text: str, name: str, tags: set[str]) -> tuple[str, int]:
     return "".join(parts), removed
 
 
+def add_hre_members(text: str) -> str:
+    definitions = DEFINITIONS_FILE.read_text(encoding="utf-8-sig")
+    tags = {
+        match.group(2).strip(): match.group(1)
+        for match in re.finditer(r"(?m)^([A-Z0-9]{3})\s*=\s*\{\s*#\s*(.+?)\s*$", definitions)
+    }
+    missing = HRE_NEW_MEMBERS - set(tags)
+    if missing:
+        sys.exit(f"ERROR: no tag found for {sorted(missing)} in {DEFINITIONS_FILE.name}")
+    organization = re.search(r"(?m)^[ \t]*type\s*=\s*hre\b", text)
+    members = re.compile(r"(?m)^[ \t]*members\s*=\s*\{").search(text, organization.end()) if organization else None
+    if not members:
+        sys.exit("ERROR: could not find the HRE members block")
+    new_members = " ".join(sorted(tags[name] for name in HRE_NEW_MEMBERS))
+    return text[:members.end()] + f"\n\t\t\t{new_members}" + text[members.end():]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Write the mod's 15_international_organizations.txt.")
     parser.add_argument("--output", default=str(DEFAULT_OUTPUT), help="Path to write")
@@ -96,6 +116,7 @@ def main() -> None:
     for name, tags in HRE_LISTS.items():
         text, _ = edit_named_blocks(text, name, tags)
     text = remove_organizations(text)
+    text = add_hre_members(text)
 
     write_text_with_retry(Path(args.output), text)
     print(f"Removed {members} organization member(s) with no land; wrote {Path(args.output).name}.")

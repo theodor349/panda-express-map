@@ -1,10 +1,4 @@
 ﻿
-IB1 = { # Villena
-	color = rgb { 87 153 0 }
-
-	culture_definition = castilian
-	religion_definition = catholic
-}
 IB2 = { # Xàtiva
 	color = rgb { 188 167 192 }
 
@@ -303,5 +297,389 @@ IBX = { # Lugo
 	color = rgb { 14 43 197 }
 
 	culture_definition = galician
+	religion_definition = catholic
+}
+FRR = { # Norfolk
+	color = rgb { 24 143 62 }
+
+	culture_definition = english
+	religion_definition = catholic
+}
+FRS = { # Caen
+	color = rgb { 226 208 0 }
+
+	culture_definition = norman
+	religion_definition = catholic
+}
+FRU = { # Cotentin
+	color = rgb { 44 50 4 }
+
+	culture_definition = norman
+	religion_definition = catholic
+}
+FRV = { # Penthièvre
+	color = rgb { 207 233 254 }
+
+	culture_definition = breton
+	religion_definition = catholic
+}
+FRW = { # Nantes
+	color = rgb { 233 192 248 }
+
+	culture_definition = gallo
+	religion_definition = catholic
+}
+FRX = { # Gévaudan
+	color = rgb { 115 157 145 }
+
+	culture_definition = auvergnat
+	religion_definition = catholic
+}
+FRY = { # Rosenberg
+	color = rgb { 108 23 163 }
+
+	culture_definition = czech
+	religion_definition = catholic
+}
+AAA = { # Hradec
+	color = rgb { 115 188 167 }
+
+	culture_definition = czech
+	religion_definition = catholic
+}
+AAB = { # Eger
+	color = rgb { 155 15 118 }
+
+	culture_definition = czech
+	religion_definition = catholic
+}
+AAE = { # Oujda
+	color = rgb { 167 132 238 }
+
+	culture_definition = zenati
+	religion_definition = sunni
+}
+FRP = { # Alexandria
+	color = rgb { 55 47 215 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+FRQ = { # Damanhur
+	color = rgb { 151 119 37 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+AAF = { # Mahalla
+	color = rgb { 16 155 38 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+AAG = { # Fuwa
+	color = rgb { 189 142 33 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+AAH = { # Damietta
+	color = rgb { 81 43 173 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+AAJ = { # Bilbeis
+	color = rgb { 143 196 79 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+AAK = { # Suez
+	color = rgb { 78 216 102 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+AAM = { # Faiyum
+	color = rgb { 123 129 182 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+AAN = { # Minya
+	color = rgb { 136 246 163 }
+
+	culture_definition = upper_egyptian_culture
+	religion_definition = sunni
+}
+AAO = { # Asyut
+	color = rgb { 166 33 168 }
+
+	culture_definition = upper_egyptian_culture
+	religion_definition = sunni
+}
+AAP = { # Qus
+	color = rgb { 74 55 234 }
+
+	culture_definition = upper_egyptian_culture
+	religion_definition = sunni
+}
+AAQ = { # Edfu
+	color = rgb { 153 53 149 }
+
+	culture_definition = upper_egyptian_culture
+	religion_definition = sunni
+}
+AAS = { # Damascus
+	color = rgb { 227 152 25 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+AAT = { # Beirut
+	color = rgb { 53 222 38 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+AAU = { # Tarabulus
+	color = rgb { 2 179 255 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+AAV = { # Latakia
+	color = rgb { 10 157 129 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+AAW = { # Hama
+	color = rgb { 79 129 170 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+AAX = { # Aleppo
+	color = rgb { 155 102 101 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+AAY = { # Antioch
+	color = rgb { 162 112 13 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+AAZ = { # Safed
+	color = rgb { 152 183 248 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+ABC = { # Gaza
+	color = rgb { 68 180 20 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+ABE = { # Karak
+	color = rgb { 111 200 104 }
+
+	culture_definition = levantine_culture
+	religion_definition = sunni
+}
+ABF = { # Qamuda
+	color = rgb { 80 244 205 }
+
+	culture_definition = chaoui
+	religion_definition = sunni
+}
+ABG = { # Constantine
+	color = rgb { 13 26 199 }
+
+	culture_definition = chaoui
+	religion_definition = sunni
+}
+ABH = { # Tahert
+	color = rgb { 201 150 114 }
+
+	culture_definition = zenati
+	religion_definition = sunni
+}
+ABI = { # Taza
+	color = rgb { 214 158 94 }
+
+	culture_definition = zenati
+	religion_definition = sunni
+}
+ABJ = { # Miliana
+	color = rgb { 114 157 121 }
+
+	culture_definition = zenati
+	religion_definition = sunni
+}
+ABK = { # Rif
+	color = rgb { 92 64 172 }
+
+	culture_definition = sanhaja
+	religion_definition = sunni
+}
+ABM = { # Bolu
+	color = rgb { 75 240 253 }
+
+	culture_definition = turkish_culture
+	religion_definition = sunni
+}
+ABN = { # Tokat
+	color = rgb { 78 12 171 }
+
+	culture_definition = turkish_culture
+	religion_definition = sunni
+}
+ABO = { # Erzincan
+	color = rgb { 254 74 179 }
+
+	culture_definition = turkish_culture
+	religion_definition = sunni
+}
+ABP = { # Nigde
+	color = rgb { 230 101 237 }
+
+	culture_definition = turkish_culture
+	religion_definition = sunni
+}
+ABQ = { # Nicomedia
+	color = rgb { 244 243 204 }
+
+	culture_definition = greek_culture
+	religion_definition = orthodox
+}
+ABR = { # Macedonia
+	color = rgb { 187 3 217 }
+
+	culture_definition = bulgarian
+	religion_definition = orthodox
+}
+ABS = { # Morava
+	color = rgb { 127 151 117 }
+
+	culture_definition = serbian
+	religion_definition = orthodox
+}
+ABU = { # Sofia
+	color = rgb { 23 130 85 }
+
+	culture_definition = bulgarian
+	religion_definition = orthodox
+}
+ABX = { # Macsó
+	color = rgb { 241 244 43 }
+
+	culture_definition = serbian
+	religion_definition = orthodox
+}
+ABY = { # Temes
+	color = rgb { 234 200 32 }
+
+	culture_definition = hungarian
+	religion_definition = catholic
+}
+ABZ = { # Bács
+	color = rgb { 168 195 109 }
+
+	culture_definition = hungarian
+	religion_definition = catholic
+}
+ACB = { # Bihar
+	color = rgb { 154 54 229 }
+
+	culture_definition = hungarian
+	religion_definition = catholic
+}
+ACD = { # Kassa
+	color = rgb { 130 111 208 }
+
+	culture_definition = slovak
+	religion_definition = catholic
+}
+ACE = { # Trencsén
+	color = rgb { 247 66 76 }
+
+	culture_definition = slovak
+	religion_definition = catholic
+}
+ACF = { # Pécs
+	color = rgb { 193 141 8 }
+
+	culture_definition = hungarian
+	religion_definition = catholic
+}
+ACG = { # Kőszeg
+	color = rgb { 159 183 99 }
+
+	culture_definition = hungarian
+	religion_definition = catholic
+}
+ACI = { # Tarrana
+	color = rgb { 146 190 19 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+ACJ = { # Tinnis
+	color = rgb { 18 67 38 }
+
+	culture_definition = lower_egyptian_culture
+	religion_definition = sunni
+}
+ACK = { # Lincoln
+	color = rgb { 157 109 87 }
+
+	culture_definition = english
+	religion_definition = catholic
+}
+ACM = { # Nottingham
+	color = rgb { 187 175 10 }
+
+	culture_definition = english
+	religion_definition = catholic
+}
+ACN = { # Leicester
+	color = rgb { 73 114 69 }
+
+	culture_definition = english
+	religion_definition = catholic
+}
+ACP = { # Gloucester
+	color = rgb { 107 85 5 }
+
+	culture_definition = english
+	religion_definition = catholic
+}
+ACQ = { # Somerset
+	color = rgb { 162 51 54 }
+
+	culture_definition = english
+	religion_definition = catholic
+}
+ACR = { # Salisbury
+	color = rgb { 74 122 95 }
+
+	culture_definition = english
+	religion_definition = catholic
+}
+ACS = { # York
+	color = rgb { 168 75 47 }
+
+	culture_definition = northumbrian
+	religion_definition = catholic
+}
+ACU = { # West Riding
+	color = rgb { 230 237 54 }
+
+	culture_definition = northumbrian
 	religion_definition = catholic
 }

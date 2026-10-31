@@ -19,6 +19,7 @@ HELPERS = [
     "strip_subject_reforms.py",
     "sanitize_landless_countries.py",
     "ensure_random_rulers.py",
+    "set_country_fields.py",
     "build_international_organizations.py",
     "build_wars.py",
     "build_cities_and_buildings.py",

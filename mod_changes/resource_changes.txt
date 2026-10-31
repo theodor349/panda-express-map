@@ -10,4 +10,4 @@ pinar goods_gold
 # France
 aulnay wheat
 st_gerand livestock
-ales silver
+french_ales silver

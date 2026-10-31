@@ -1,0 +1,14 @@
+# Format: <TAG> capital <location> or <TAG> rank <rank>
+# Countries with land and no capital of their own get their most populated location automatically.
+CAS capital sevilla
+MOR capital rabat
+TOU rank rank_duchy
+GUY rank rank_duchy
+CHP rank rank_duchy
+POI rank rank_duchy
+PIC rank rank_duchy
+FLA rank rank_duchy
+PRO rank rank_duchy
+KAR rank rank_duchy
+FEZ rank rank_duchy
+BUL rank rank_kingdom

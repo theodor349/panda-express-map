@@ -130,12 +130,16 @@ LOCATION_KEYS = {
 # ── tag generation ───────────────────────────────────────────────────────────
 
 def used_tags():
-    """Returns set of all tags already in use across both mod files."""
+    """Returns set of all tags already in use across both mod files and the localization file."""
     tags = set()
     for path in (COUNTRIES_FILE, DEFINITIONS_FILE):
         if path.exists():
             for m in re.finditer(r'^[ \t]*([A-Z0-9_]{2,6})\s*=\s*\{', path.read_text(encoding='utf-8'), re.MULTILINE):
                 tags.add(m.group(1))
+    # The base game names some tags that have no setup block or definition, e.g. ACT Alcántara.
+    if LOCALIZATION_FILE.exists():
+        text = LOCALIZATION_FILE.read_text(encoding='utf-8-sig')
+        tags.update(re.findall(r'^ ([A-Z0-9_]{2,6}):', text, re.MULTILINE))
     return tags
 
 
@@ -265,7 +269,7 @@ def extract_locations(lines, block):
 
 # ── 10_countries.txt ──────────────────────────────────────────────────────────
 
-def update_countries_file(tag, locations, capital, rank, includes, replace_existing=False):
+def update_countries_file(tag, locations, capital, rank, includes, replace_existing=False, religious_school=None):
     text = COUNTRIES_FILE.read_text(encoding='utf-8')
     lines = text.splitlines(keepends=True)
 
@@ -327,6 +331,7 @@ def update_countries_file(tag, locations, capital, rank, includes, replace_exist
     loc_line = '\t\t\t' + ' '.join(sorted(locations)) + '\n'
     include_lines = ''.join(f'\t\tinclude = "{inc}"\n' for inc in includes)
     capital_line = f'\t\tcapital = {capital}\n' if capital else ''
+    school_line = f'\t\treligious_school = {religious_school}\n' if religious_school else ''
     new_block = (
         f'\n'
         f'\t#{tag}\n'
@@ -344,6 +349,7 @@ def update_countries_file(tag, locations, capital, rank, includes, replace_exist
         f'\t\t}}\n'
         f'\n'
         f'{capital_line}'
+        f'{school_line}'
         f'\t\tcountry_rank = {rank}\n'
         f'\t}}\n'
     )
@@ -442,6 +448,8 @@ def parse_args():
     p.add_argument('--culture',   default=None, help='Culture definition (overrides inferred value from first location)')
     p.add_argument('--religion',  default=None, dest='religion_explicit',
                    help='Religion definition (default: inferred from first location)')
+    p.add_argument('--religious-school', default=None, dest='religious_school',
+                   help='Religious school, required by the game for Muslim countries')
     p.add_argument('--rank',      default='rank_duchy',
                    choices=['rank_county', 'rank_duchy', 'rank_kingdom', 'rank_empire'],
                    help='Country rank (default: rank_duchy)')
@@ -453,6 +461,8 @@ def parse_args():
 
 
 def main():
+    # Country names can hold letters the Windows console encoding can't print.
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
     args = parse_args()
     if args.tag and args.base_tag:
         sys.exit("ERROR: use --tag or --base-tag, not both")
@@ -487,7 +497,8 @@ def main():
     print(f"Culture   : {culture} (from {first_location})")
     print(f"Religion  : {religion} (from {first_location})\n")
 
-    update_countries_file(tag, locations, args.capital, args.rank, includes, replace_existing=bool(args.base_tag))
+    update_countries_file(tag, locations, args.capital, args.rank, includes, replace_existing=bool(args.base_tag),
+                          religious_school=args.religious_school)
     if not args.base_tag:
         update_definitions_file(tag, args.name, color, culture, religion)
         update_localization_file(tag, args.name, args.adj)

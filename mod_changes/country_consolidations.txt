@@ -1,8 +1,29 @@
 # Europe
 TRO --locations trebinje
 
+# Western Europe
+PIC --locations corbie breteuil nesle peronne
+ORL --locations sully vitry_aux_loges montargis chartres auneau
+BER --locations sancoins vierzon
+FOI --locations foix pamiers mirepoix
+EVR --locations argentan bernay laigle
+MAC --locations worcester kidderminster shrewsbury hereford
+SOR --locations bautzen gorlitz hoyerswerda rothenburg_oberlausitz marienstern
+
+# British Isles
+CRN --locations plymouth exeter okehampton bideford barnstaple bampton
+
+# Balkans and Anatolia
+ALB --locations berat devol debar dukagjini has koman lezha
+EPI --locations pyli
+AYD --locations alasehir
+
+# North Africa
+BQA --locations tobruk
+MRK --locations ait_daoud aouint_yghomane azilal chichaoua ifrane kalaat_sraghna mogador tednest
+
 # Iberia
-GRA --provinces murcia_province --locations ronda marbella algeciras gibraltar
+GRA --locations ronda marbella algeciras gibraltar
 CAS --tags SEV CRD
 
 # Indonesia 
