@@ -1,10 +1,4 @@
 
-IB0 = { # Murcia
-	color = rgb { 168 243 204 }
-
-	culture_definition = castilian
-	religion_definition = catholic
-}
 IB1 = { # Villena
 	color = rgb { 87 153 0 }
 

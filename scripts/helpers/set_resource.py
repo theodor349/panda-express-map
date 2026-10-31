@@ -22,6 +22,9 @@ try:
 except ImportError:
     pass
 
+sys.path.insert(0, str(Path(__file__).parent))
+from create_country import write_text_with_retry
+
 _DEFAULT_GAME_PATH = r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game"
 _GAME_PATH = Path(os.environ.get("EU5_GAME_PATH", _DEFAULT_GAME_PATH))
 _DEFAULT_MOD_PATH = Path(__file__).parent.parent.parent
@@ -67,7 +70,7 @@ def set_resource(location: str, resource: str) -> None:
     if not found:
         sys.exit(f"ERROR: location '{location}' not found in {MOD_TEMPLATES}")
 
-    MOD_TEMPLATES.write_text("".join(lines), encoding="utf-8")
+    write_text_with_retry(MOD_TEMPLATES, "".join(lines))
     print(f"Set {location} raw_material = {resource}")
 
 

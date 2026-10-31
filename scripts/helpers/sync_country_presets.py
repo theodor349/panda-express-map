@@ -29,7 +29,7 @@ DEFAULT_COUNTRIES = ROOT / "main_menu/setup/1337/10_countries.txt"
 DEFAULT_DEFINITIONS = ROOT / "in_game/setup/countries/panda_express_map.txt"
 
 sys.path.insert(0, str(Path(__file__).parent))
-from create_country import IBERIAN_PRESETS
+from create_country import IBERIAN_PRESETS, write_text_with_retry
 
 
 def parse_args() -> argparse.Namespace:
@@ -183,8 +183,8 @@ def main() -> None:
             print(f"  {failure}", file=sys.stderr)
         sys.exit(1)
 
-    countries_path.write_text(countries, encoding="utf-8")
-    definitions_path.write_text(definitions, encoding="utf-8")
+    write_text_with_retry(countries_path, countries)
+    write_text_with_retry(definitions_path, definitions)
     print(f"Synchronized {len(entries)} Iberian countries.")
 
 

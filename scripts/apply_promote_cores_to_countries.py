@@ -25,6 +25,9 @@ try:
 except ImportError:
     pass
 
+sys.path.insert(0, str(Path(__file__).parent / "helpers"))
+from create_country import write_text_with_retry
+
 ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
 FILE = ROOT / "main_menu/setup/1337/10_countries.txt"
 
@@ -245,7 +248,7 @@ def main():
 
     # Step 6: write output
     output = ''.join(new_lines)
-    FILE.write_text(output, encoding='utf-8')
+    write_text_with_retry(FILE, output)
     print(f"\nWrote {len(new_lines)} lines (removed {len(lines) - len(new_lines)} empty lines)")
 
     # Step 7: report

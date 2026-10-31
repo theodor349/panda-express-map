@@ -258,8 +258,11 @@ def main() -> None:
 
     # Deduplicate against what the target already owns
     c_open, c_close = block_index[target_tag]
-    occ_block = find_named_block(text, c_open, c_close, 'own_control_core')
-    already_owned = set(get_block_locations(text, *occ_block)) if occ_block else set()
+    already_owned: set[str] = set()
+    for b in SOURCE_BLOCKS:
+        blk = find_named_block(text, c_open, c_close, b) if b.startswith('own_') else None
+        if blk:
+            already_owned.update(get_block_locations(text, *blk))
     new_locations = locations_to_add - already_owned
 
     skipped = locations_to_add & already_owned

@@ -1,4 +1,3 @@
---region iberian --preset commercial --name "Murcia" --name-adj "Murcian" --capital murcia --provinces murcia_province
 --region iberian --preset frontier --name "Villena" --name-adj "Villenian" --capital villena --provinces albacete_province hellin_province
 --region iberian --preset commercial --name "Xàtiva" --name-adj "Xàtivan" --capital jativa --provinces jativa_province orihuela_province
 --region iberian --preset commercial --name "Algarve" --name-adj "Algarve" --capital faro --provinces algarve_province baixo_alentejo_province

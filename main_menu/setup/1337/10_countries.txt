@@ -5868,22 +5868,19 @@ countries = {
 			adams_bridge angadippuram arcot bhavani
 			biligiriranga cardamom_hills coimbatore denkanikottai
 			dharapuram dharmapuri edappaly erode
-			gingee jagadevipalayam jayankondam kallakurichi
-			kanchipuram kannur kanyakumari karaikal
-			karikkode karkala karur kasaragod
-			kayal kochi kodungallur kollam
-			kottarakkara kozhikode krishnagiri madras
-			maduranthakam malapuram mangalore manikandapuram
-			nagapattinam nilgiri padaividu palani
+			gingee jagadevipalayam kanchipuram kannur
+			kanyakumari karikkode karkala karur
+			kasaragod kayal kochi kodungallur
+			kollam kottarakkara kozhikode krishnagiri
+			madras maduranthakam malapuram mangalore
+			manikandapuram nilgiri padaividu palani
 			palghat palni_hills pandalam pandalam_hills
-			parangipettai pennadam pennagaram perambalur
-			pondicherry ponnani prakkad puddokothai
-			s_cardamom_hills salem satyamanagalam sendamangalam
-			srirangam tenkasi thalassery thanjavur
-			thiruvananthapuram thoothukudi thrissur tiruccirapalli
-			tirukoilur tirunelveli tiruppur tiruvannamalai
-			udupi uppinangady vellore vembanad_lake
-			wayanad western_ghats_karkala western_ghats_kozhikode western_ghats_siruvani
+			pennagaram ponnani prakkad s_cardamom_hills
+			salem satyamanagalam sendamangalam tenkasi
+			thalassery thiruvananthapuram thoothukudi thrissur
+			tirunelveli tiruppur tiruvannamalai udupi
+			uppinangady vellore vembanad_lake wayanad
+			western_ghats_karkala western_ghats_kozhikode western_ghats_siruvani
 		}
 		own_control_conquered = {
 			nagapattinam puddokothai tiruccirapalli thanjavur srirangam pennadam jayankondam karaikal #cola_nadu
@@ -15236,8 +15233,6 @@ countries = {
 	}
 
 	MUC = {
-		own_control_core = {
-		}
 		include = "expl_western_europe"
 		include = "catholic_monarchy_not_present"
 		government = {
@@ -15247,6 +15242,10 @@ countries = {
 		}
 		country_rank = rank_kingdom
 		capital = murcia
+
+		our_cores_conquered_by_others = {
+			cartagena lorca mula murcia
+		}
 	}
 
 	SEV = {
@@ -44320,13 +44319,13 @@ countries = {
 			tututepec juchatengo   amoltepec
 			manialtepec tonameca huamelula comitlan
 
-			chimalapan coatlan coixtlahuacan cuauhtolco
-			guiigu_yudxi ixtlan jaltepec juxtlahuaca
-			miahuatlan mictlan nochixtlan nube_flan
-			poctlan sosola tehuantepec teozacualco
-			tillantonco tlachquiauhco tlacolula totolapan
-			yautepec yodzocahi yucucui yucundaa
-			yucundeq zaachila zanatepec
+			chimalapan coatlan coixtlahuacan guiigu_yudxi
+			ixtlan jaltepec juxtlahuaca miahuatlan
+			mictlan nochixtlan nube_flan poctlan
+			sosola tehuantepec teozacualco tillantonco
+			tlachquiauhco tlacolula totolapan yautepec
+			yodzocahi yucucui yucundaa yucundeq
+			zaachila zanatepec
 		}
 
 		own_control_integrated = {
@@ -47030,9 +47029,9 @@ countries = {
 			ocosingo ocotepec opoa otzoya
 			pismachi pochutla quechula queiquin
 			seacal shalatenan tatahuitalpan tenamitl
-			tencoa tila tonala_chiapas toquegua
-			tzunun_kaab usulutan xelahuh zahuatan
-			zapaluta zinacantan
+			tencoa tila toquegua tzunun_kaab
+			usulutan xelahuh zahuatan zapaluta
+			zinacantan
 		}
 		own_control_integrated = {
 			tonala_chiapas
@@ -55033,18 +55032,17 @@ countries = {
 
 			anambas_islands barisan_mountains1 barisan_mountains2 barisan_mountains3
 			baru batang_tabir batang_tebo batang_tembesi
-			batu berbak bingin daik
-			dharmasraya enggano gunung_sahilan inderapura
-			jambi kampar karang_brahi kuala_kampar
-			kuantan_riau lake_maninjau lake_ranau lake_singkarak
-			lakitan leko luaha muara_sabak
-			mukomuko musi natuna_islands padang
-			pagai pagaruyung pangkalan_kerinci pariaman
-			pasaman pelalawan peranap rantau_benar
-			rengat riau_jungle siberut simeulue
-			singingi sipura solok sontang
-			subi_islands sungai_jujuhan sungai_penuh talang_mamak
-			tanjungpinang tembesi tingkip tungkal
+			batu berbak daik dharmasraya
+			enggano gunung_sahilan inderapura jambi
+			kampar karang_brahi kuala_kampar kuantan_riau
+			lake_maninjau lake_ranau lake_singkarak luaha
+			muara_sabak natuna_islands padang pagai
+			pagaruyung pangkalan_kerinci pariaman pasaman
+			pelalawan peranap rantau_benar rengat
+			riau_jungle siberut simeulue singingi
+			sipura solok sontang subi_islands
+			sungai_jujuhan sungai_penuh talang_mamak tanjungpinang
+			tembesi tungkal
 		}
 
 		own_control_integrated = {
@@ -55134,16 +55132,15 @@ countries = {
 			paser pegalan pelaihari pinoh
 			plieran rejang rungan sabangau
 			samarahan samba sambaliung sambas
-			sampit sandakan sandaran sangata
-			sanggau santubong saribas sarikei
-			sebuku sebuyau segah sekadau
-			sekayam selimbau sepauk sepinang
-			seruyan sesayap sibumbong sigam
-			silat sintang sugut sungai_lati
-			tandang_sari tanjung_palas tanjungpuri tarakan
-			tatau tawau telen tenggarong
-			teweh tinjar tong_talun trusan
-			tutong tuyuk
+			sandakan sandaran sangata sanggau
+			santubong saribas sarikei sebuku
+			sebuyau segah sekadau sekayam
+			selimbau sepauk sepinang sesayap
+			sibumbong sigam silat sintang
+			sugut sungai_lati tandang_sari tanjung_palas
+			tanjungpuri tarakan tatau tawau
+			telen tenggarong teweh tinjar
+			tong_talun trusan tutong tuyuk
 		}
 
 		own_control_integrated = {
@@ -55613,23 +55610,21 @@ countries = {
 			amassing amurang andolo atinggola
 			balanipa banggai bantayan barru
 			belang boalemo bone buki
-			bula bulakan bungku buruwai
-			butung cenrana daratan donggala
-			gane gori_gori gorontalo gowa
-			guamonial irarutu jailolo kaimana
-			kalisusu karakaralong_islands karatung_island kendari
-			kolumba kotano_muna kulawi lake_limboto
-			lake_matano lake_poso lake_tempe lake_tondano
-			lake_towuti lingketeng loloda loree
-			maba_celebes mamudju manado managalang
-			misool mori_celebes moro paguat
-			parigi pendau poso sambandete
-			sangihe_islands sengkae sidenreng sigi
-			solimandungan sulawesi_jungle1 sulawesi_jungle2 sulawesi_jungle3
-			sulawesi_jungle4 tabukan tanahjampea taubonto
-			ternate tidore tinco tojo
-			toli_toli tomini tosora tukangbesi_islands
-			una_una unaaha waigeo wasilei
+			bula bulakan buruwai butung
+			cenrana daratan donggala gane
+			gori_gori gorontalo gowa guamonial
+			irarutu jailolo kaimana kalisusu
+			karakaralong_islands karatung_island kendari kolumba
+			kotano_muna lake_limboto lake_matano lake_poso
+			lake_tempe lake_tondano lake_towuti lingketeng
+			loloda maba_celebes mamudju manado
+			misool moro paguat parigi
+			pendau sambandete sangihe_islands sengkae
+			sidenreng sigi solimandungan sulawesi_jungle1
+			sulawesi_jungle2 sulawesi_jungle3 sulawesi_jungle4 tabukan
+			tanahjampea taubonto ternate tidore
+			tinco toli_toli tomini tosora
+			tukangbesi_islands unaaha waigeo wasilei
 			weda
 		}
 
@@ -60907,42 +60902,40 @@ countries = {
 			araska
 
 			agror aiwanj akhsisek altit
-			andkhoy aqca arkhan asadabad_kunar
-			astore attock bajaur baligram
-			balkh banihal baramulla basand
-			behali boyena_qara bukhara bunji
-			chilas chiras chiroqchi chitral
-			daroot_korgon darzanji dasu dawlat_abad
-			dengizkul_lake denov dir farkhor
-			fayzabad firabr ganderbal gharm
-			gilgit gunt guzor hajiabad
-			hindu_kush10 hindu_kush2 hindu_kush3 hindu_kush4
-			hindu_kush5 hindu_kush6 hindu_kush7 hindu_kush8
-			hindu_kush9 hissar hulbuk ishkashim
-			ishkoman jijial jurm kalam_swat
-			kandia karakol karakul_lake kashmiri_himalayas
-			kelif kerki kham_bahar khamyab
-			khoja_idat_kala khulm kish_shahrisabz kohat
-			koson kulob kupwara lalpur
-			malakand mardan marwah mastuj
-			maymana mazar_i_sharif misgar muborak
-			muksu mulkhow munk murghab
+			andkhoy aqca arkhan astore
+			attock bajaur baligram balkh
+			banihal baramulla basand behali
+			boyena_qara bukhara bunji chilas
+			chiras chiroqchi chitral daroot_korgon
+			darzanji dasu dawlat_abad dengizkul_lake
+			denov dir farkhor fayzabad
+			firabr ganderbal gharm gilgit
+			gunt guzor hindu_kush10 hindu_kush2
+			hindu_kush3 hindu_kush4 hindu_kush5 hindu_kush6
+			hindu_kush7 hindu_kush8 hindu_kush9 hissar
+			hulbuk ishkashim ishkoman jijial
+			jurm kalam_swat kandia karakol
+			karakul_lake kashmiri_himalayas kelif kerki
+			kham_bahar khamyab khoja_idat_kala khulm
+			kish_shahrisabz kohat koson kupwara
+			lalpur malakand mardan marwah
+			mastuj maymana mazar_i_sharif misgar
+			muborak muksu mulkhow murghab
 			nagar nanga_parbat nasaf navidakh
 			oksu paikend pamir3 pamir4
 			pamir5 pamir6 pamir7 pamir8
-			pangi_range paropamisus_mountains1 parun passu
-			peshawar phander pir_panjal_range pir_panjal_range_2
-			pir_panjal_range_3 poonch pulawama punial
-			qaisar qalai_khumb qila_panjeh qubodijon
-			ragh rajouri rasyal rawalakot
-			roshtqala samangan sangcharak sangvor
-			sar_pol sar_sang sarhad sharda
-			sheberghan sherwan shighnan shiveh
-			shuman srinagar tangir termez
-			tim_samarkand timergara udabhanda urtsun
-			vakhs vamar vanch wesgird
-			wular_lake yarkhun yasin zadian
-			zebak
+			pangi_range paropamisus_mountains1 passu peshawar
+			phander pir_panjal_range pir_panjal_range_2 pir_panjal_range_3
+			poonch pulawama punial qaisar
+			qalai_khumb qila_panjeh qubodijon ragh
+			rajouri rasyal rawalakot roshtqala
+			samangan sangcharak sangvor sar_pol
+			sar_sang sarhad sharda sheberghan
+			sherwan shighnan shiveh shuman
+			srinagar tangir termez tim_samarkand
+			timergara udabhanda urtsun vakhs
+			vamar vanch wesgird wular_lake
+			yarkhun yasin zadian zebak
 		}
 
 		own_control_integrated = {
@@ -64838,30 +64831,6 @@ countries = {
 		}
 	}
 
-
-	#IB0
-	IB0 = {
-
-		starting_technology_level = 3
-		include = "expl_mediterranean"
-		include = "expl_silk_road_west"
-		include = "expl_silk_road_center"
-		include = "expl_silk_road_east"
-		include = "expl_indian_trade_route"
-		include = "panda_iberian_commercial"
-
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-		}
-
-		capital = murcia
-		country_rank = rank_duchy
-
-		our_cores_conquered_by_others = {
-			cartagena lorca mula murcia
-		}
-	}
 
 	#IB1
 	IB1 = {

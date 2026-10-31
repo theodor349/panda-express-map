@@ -20,6 +20,9 @@ try:
 except ImportError:
     pass
 
+sys.path.insert(0, str(Path(__file__).parent))
+from create_country import write_text_with_retry
+
 _DEFAULT_GAME_PATH = r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game"
 GAME_PATH = Path(os.environ.get("EU5_GAME_PATH", _DEFAULT_GAME_PATH))
 _DEFAULT_MOD_PATH = Path(__file__).parent.parent.parent
@@ -242,7 +245,7 @@ def set_country_ruler(
         return
 
     try:
-        path.write_text(updated, encoding="utf-8")
+        write_text_with_retry(path, updated)
     except OSError as exc:
         sys.exit(f"ERROR: could not write {path}: {exc}")
     if old_ruler != ruler:

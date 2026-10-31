@@ -5,7 +5,6 @@ government = {
 	land_vs_naval = -30
 
 	privilege = {
-		general_privilege
 		clergy_military_orders
 		noble_fortification_licenses
 		peasants_allowed_weapons_privilege
