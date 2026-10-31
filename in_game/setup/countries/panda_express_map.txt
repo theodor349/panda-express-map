@@ -11,12 +11,6 @@ IB2 = { # Xàtiva
 	culture_definition = catalan
 	religion_definition = catholic
 }
-IB3 = { # Algarve
-	color = rgb { 186 40 254 }
-
-	culture_definition = portuguese
-	religion_definition = catholic
-}
 IB4 = { # Alentejo
 	color = rgb { 14 137 43 }
 
@@ -77,12 +71,6 @@ IBD = { # Benavente
 	culture_definition = leonese
 	religion_definition = catholic
 }
-IBE = { # Asturias
-	color = rgb { 162 214 172 }
-
-	culture_definition = leonese
-	religion_definition = catholic
-}
 IBF = { # La Montana
 	color = rgb { 54 151 60 }
 
@@ -103,12 +91,6 @@ IBH = { # Gipuzkoa
 }
 IBI = { # La Mancha
 	color = rgb { 234 40 180 }
-
-	culture_definition = castilian
-	religion_definition = catholic
-}
-IBJ = { # Toledo
-	color = rgb { 173 189 141 }
 
 	culture_definition = castilian
 	religion_definition = catholic
@@ -315,12 +297,6 @@ IT2 = { # Calabria
 	color = rgb { 116 17 67 }
 
 	culture_definition = neapolitan
-	religion_definition = catholic
-}
-IBW = { # Jaén
-	color = rgb { 103 238 220 }
-
-	culture_definition = castilian
 	religion_definition = catholic
 }
 IBX = { # Lugo

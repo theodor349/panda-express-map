@@ -36,7 +36,6 @@ REQUIRED_MOD_CHANGES = [
     "mod_changes/country_consolidations.txt",
     "mod_changes/resource_changes.txt",
     "mod_changes/ruler_changes.txt",
-    "mod_changes/base_country_renames.txt",
 ]
 
 STEPS = [

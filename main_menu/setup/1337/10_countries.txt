@@ -15175,33 +15175,7 @@ countries = {
 	}
 
 	#Nominal Iberian kingdoms (titular claimants; cores held by conquerors in 1337)
-	ALV = {
-		own_control_core = {
-		}
-		include = "expl_western_europe"
-		include = "catholic_monarchy_not_present"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = random
-		}
-		country_rank = rank_kingdom
-		capital = faro
-	}
 
-	ATU = {
-		own_control_core = {
-		}
-		include = "expl_western_europe"
-		include = "catholic_monarchy_not_present"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = random
-		}
-		country_rank = rank_kingdom
-		capital = oviedo
-	}
 
 	CRD = {
 		include = "expl_western_europe"
@@ -15221,19 +15195,6 @@ countries = {
 		}
 	}
 
-	JAE = {
-		own_control_core = {
-		}
-		include = "expl_western_europe"
-		include = "catholic_monarchy_not_present"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = random
-		}
-		country_rank = rank_kingdom
-		capital = jaen
-	}
 
 	MUC = {
 		include = "expl_western_europe"
@@ -15274,19 +15235,6 @@ countries = {
 		}
 	}
 
-	TOL = {
-		own_control_core = {
-		}
-		include = "expl_western_europe"
-		include = "catholic_monarchy_not_present"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = random
-		}
-		country_rank = rank_kingdom
-		capital = toledo
-	}
 
 
 	#----------------------------- France -------------------------------
@@ -64881,8 +64829,8 @@ countries = {
 		country_rank = rank_duchy
 	}
 
-	#IB3
-	IB3 = {
+	#ALV
+	ALV = {
 		own_control_core = {
 			alvalade alvito beja faro lagos mertola moura odemira ourique serpa silves sines tavira
 		}
@@ -65145,8 +65093,8 @@ countries = {
 		country_rank = rank_duchy
 	}
 
-	#IBE
-	IBE = {
+	#ATU
+	ATU = {
 		own_control_core = {
 			aviles cangas castropol llanes mieres oviedo tineo villaviciosa
 		}
@@ -65265,8 +65213,8 @@ countries = {
 		country_rank = rank_duchy
 	}
 
-	#IBJ
-	IBJ = {
+	#TOL
+	TOL = {
 		own_control_core = {
 			guadalupe illescas los_yebenes navalucillos puebla_de_montalban puente_arzobispo talavera_de_la_reina toledo
 		}
@@ -65553,8 +65501,8 @@ countries = {
 		country_rank = rank_duchy
 	}
 
-	#IBW
-	IBW = {
+	#JAE
+	JAE = {
 		own_control_core = {
 			andujar baeza cazorla jaen jodar martos ubeda
 		}

@@ -6,6 +6,9 @@ Reads mod_changes/new_countries.txt and dispatches each line to create_country.p
 Line format (produced by generate_new_countries.py):
   --name "Name" --name-adj "NameAdj" --region REGION
   [--provinces p1 p2] [--locations l1 l2] [--capital LOCATION] [--culture CULTURE]
+  [--base-tag TAG]
+
+A line with --base-tag gives the land to that existing base game country.
 
 The --tag from the file is ignored. A country already in panda_express_map.txt keeps
 its tag and color; otherwise create_country.py auto-generates a fresh tag.

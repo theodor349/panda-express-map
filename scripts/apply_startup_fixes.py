@@ -16,7 +16,6 @@ except ImportError:
 
 HELPERS_DIR = Path(__file__).parent / "helpers"
 HELPERS = [
-    "rename_base_countries.py",
     "strip_subject_reforms.py",
     "sanitize_landless_countries.py",
     "ensure_random_rulers.py",

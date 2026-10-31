@@ -10,12 +10,14 @@ Creates a new country in the mod by:
 Usage:
   python create_country.py --name "Toledo" --name-adj "Toledan" \\
       --region iberian --locations toledo talavera escalona \\
-      [--tag IB3] [--provinces salamanca_province] \\
+      [--tag IB3] [--base-tag TOL] [--provinces salamanca_province] \\
       [--capital toledo] \\
       [--color 180 120 30] [--culture castilian] [--religion catholic] \\
       [--rank rank_duchy]
 
   --tag is optional; if omitted a new tag is auto-generated.
+  --base-tag gives the land to a country the base game already defines. Its setup block is
+  replaced, and its base color, culture, religion and names stay in use.
   --provinces resolves province names to their constituent locations.
   Iberian countries support --preset choices for feudal, inland feudal,
   fueros, commercial, clerical, frontier, and Muslim governments.
@@ -263,7 +265,7 @@ def extract_locations(lines, block):
 
 # ── 10_countries.txt ──────────────────────────────────────────────────────────
 
-def update_countries_file(tag, locations, capital, rank, includes):
+def update_countries_file(tag, locations, capital, rank, includes, replace_existing=False):
     text = COUNTRIES_FILE.read_text(encoding='utf-8')
     lines = text.splitlines(keepends=True)
 
@@ -272,7 +274,10 @@ def update_countries_file(tag, locations, capital, rank, includes):
     countries = parse_countries(lines)
     print(f"Parsed {len(countries)} country blocks")
 
-    if tag in countries:
+    if replace_existing and tag not in countries:
+        print(f"ERROR: base tag {tag} not found in {COUNTRIES_FILE.name}", file=sys.stderr)
+        sys.exit(1)
+    if tag in countries and not replace_existing:
         print(f"ERROR: tag {tag} already exists in {COUNTRIES_FILE.name}", file=sys.stderr)
         sys.exit(1)
 
@@ -313,6 +318,10 @@ def update_countries_file(tag, locations, capital, rank, includes):
                 new_line = ''
             if new_line != original:
                 edits[li] = new_line
+
+    if replace_existing:
+        for li in range(countries[tag]['start'], countries[tag]['end'] + 1):
+            edits[li] = ''
 
     # Build the new country block
     loc_line = '\t\t\t' + ' '.join(sorted(locations)) + '\n'
@@ -419,6 +428,8 @@ def update_localization_file(tag, name, adj):
 def parse_args():
     p = argparse.ArgumentParser(description="Create a new country in the Panda Express Map mod.")
     p.add_argument('--tag',       default=None, help='Country tag (auto-generated if omitted)')
+    p.add_argument('--base-tag',  default=None, dest='base_tag',
+                   help='Existing base game tag to give the land to, e.g. TOL')
     p.add_argument('--name',      required=True, help='Country name, e.g. "Toledo"')
     p.add_argument('--name-adj',  required=True, dest='adj', help='Country adjective, e.g. "Toledan"')
     p.add_argument('--locations', nargs='+', default=[], help='Individual location names to assign')
@@ -443,7 +454,9 @@ def parse_args():
 
 def main():
     args = parse_args()
-    tag       = (args.tag.upper() if args.tag else generate_tag(args.region))
+    if args.tag and args.base_tag:
+        sys.exit("ERROR: use --tag or --base-tag, not both")
+    tag       = (args.base_tag or args.tag or generate_tag(args.region)).upper()
     color     = args.color if args.color is not None else [random.randint(0, 255) for _ in range(3)]
     locations = set(args.locations) | set(resolve_provinces(args.provinces))
     if not locations:
@@ -474,9 +487,10 @@ def main():
     print(f"Culture   : {culture} (from {first_location})")
     print(f"Religion  : {religion} (from {first_location})\n")
 
-    update_countries_file(tag, locations, args.capital, args.rank, includes)
-    update_definitions_file(tag, args.name, color, culture, religion)
-    update_localization_file(tag, args.name, args.adj)
+    update_countries_file(tag, locations, args.capital, args.rank, includes, replace_existing=bool(args.base_tag))
+    if not args.base_tag:
+        update_definitions_file(tag, args.name, color, culture, religion)
+        update_localization_file(tag, args.name, args.adj)
 
     print(f"\nDone. Remember to reload the mod fully in the launcher before testing.")
 

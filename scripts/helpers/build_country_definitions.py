@@ -1,9 +1,8 @@
 """
 build_country_definitions.py — write the mod's copies of base country definition files.
 
-Reads the base files on every run, so game updates carry over, then:
-  - marks dormant countries is_historic, because the mod replaces them with its own countries
-  - sets a country's culture where its core locations no longer hold any of its base culture
+Reads the base files on every run, so game updates carry over, then sets a country's culture
+where its core locations no longer hold any of its base culture.
 
 Usage:
     python scripts/helpers/build_country_definitions.py
@@ -35,7 +34,6 @@ BASE_DIR = _GAME_PATH / "in_game/setup/countries"
 DEFAULT_OUTPUT = _MOD_PATH / "in_game/setup/countries"
 COUNTRIES_FILE = _MOD_PATH / "main_menu/setup/1337/10_countries.txt"
 
-HISTORIC = {"iberia.txt": ["ALV", "ATU", "JAE", "TOL"]}
 CULTURES = {
     "british_isles.txt": {"CMS": "welsh"},
     "east_asia.txt": {"LNG": "yi_culture"},
@@ -79,18 +77,13 @@ def main() -> None:
     parser.add_argument("--countries", default=str(COUNTRIES_FILE), help="Path to 10_countries.txt")
     args = parser.parse_args()
 
-    for name in sorted(set(HISTORIC) | set(CULTURES)):
+    for name in sorted(CULTURES):
         path = BASE_DIR / name
         if not path.exists():
             sys.exit(f"ERROR: file not found: {path}")
         text = path.read_bytes().decode("utf-8-sig").replace("\r\n", "\n")
 
-        for tag in HISTORIC.get(name, []):
-            start, end = tag_block(text, tag, name)
-            if "is_historic" not in text[start:end]:
-                text = text[:end].rstrip() + "\n\tis_historic = yes\n" + text[end:]
-
-        for tag, culture in CULTURES.get(name, {}).items():
+        for tag, culture in CULTURES[name].items():
             start, end = tag_block(text, tag, name)
             block, count = re.subn(r"\bculture_definition\s*=\s*\w+", f"culture_definition = {culture}", text[start:end])
             if count != 1:

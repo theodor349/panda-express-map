@@ -53,10 +53,6 @@ COUNTRY_DEFINITIONS = _GAME_PATH / "in_game/setup/countries"
 
 VARIANT_PREFIX = "panda_landless_"
 
-# Countries the base game keeps dormant and the mod replaces with its own: their cores would
-# overlap several mod countries.
-SKIP_CORES = {"ALV", "ATU", "JAE", "TOL"}
-
 NEEDS_LAND = [
     re.compile(r"\beducation_masses_law\s*=\s*\w+"),
     re.compile(r"\bdistribution_of_power_law\s*=\s*dop_law_english_parliament\b"),
@@ -155,7 +151,7 @@ def main() -> None:
             stats["stripped"] += cleaned != body
             body = cleaned
 
-        if kind is None and not core_locations(body) and tag not in historic and tag not in SKIP_CORES:
+        if kind is None and not core_locations(body) and tag not in historic:
             source = owned_locations(base.get(tag, "")) or core_locations(base.get(tag, ""))
             cores = sorted(source - unownable)
             if cores:

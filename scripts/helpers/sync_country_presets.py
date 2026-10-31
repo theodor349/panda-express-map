@@ -151,7 +151,8 @@ def main() -> None:
 
     for entry in entries:
         name = entry["name"]
-        tag = tags.get(name)
+        base_tag = entry.get("base-tag")
+        tag = base_tag or tags.get(name)
         if not tag:
             failures.append(f"{name}: no generated tag found")
             continue
@@ -161,8 +162,8 @@ def main() -> None:
             continue
 
         country_extent = find_block(countries, rf"^\t{re.escape(tag)}\s*=\s*\{{")
-        definition_extent = find_block(definitions, rf"^{re.escape(tag)}\s*=\s*\{{")
-        if not country_extent or not definition_extent:
+        definition_extent = None if base_tag else find_block(definitions, rf"^{re.escape(tag)}\s*=\s*\{{")
+        if not country_extent or not (definition_extent or base_tag):
             failures.append(f"{name} ({tag}): country or definition block not found")
             continue
 
@@ -170,11 +171,12 @@ def main() -> None:
         updated = update_country_block(countries[start:end], preset, entry.get("capital"))
         countries = countries[:start] + updated + countries[end:]
 
-        start, end = definition_extent
-        updated = update_definition_block(
-            definitions[start:end], entry.get("culture"), entry.get("religion")
-        )
-        definitions = definitions[:start] + updated + definitions[end:]
+        if definition_extent:
+            start, end = definition_extent
+            updated = update_definition_block(
+                definitions[start:end], entry.get("culture"), entry.get("religion")
+            )
+            definitions = definitions[:start] + updated + definitions[end:]
         print(f"  {tag} {name}: preset={preset}, capital={entry.get('capital', '(unchanged)')}")
 
     if failures:
