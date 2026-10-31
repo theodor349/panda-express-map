@@ -15,7 +15,9 @@
 
 ```
 Panda Express Map/
-├── .metadata/metadata.json
+├── .metadata/
+│   ├── metadata.json
+│   └── thumbnail.png                       # Workshop image; must be in .metadata/, not the mod root
 ├── main_menu/
 │   ├── common/coat_of_arms/coat_of_arms/   
 │   │   └── panda_express_map.txt           # Mod COA definitions: color, culture, religion
