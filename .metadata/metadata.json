@@ -1,7 +1,7 @@
 ﻿{
 	"name":	"Panda Express Map",
 	"id":	"panda-express-map",
-	"version":	"0.7",
+	"version":	"0.8",
 	"supported_game_version":	"1.4.6",
 	"short_description":	"MP-focused map overhaul: consolidates non-European countries to reduce compute while keeping economies intact; releases all releasable nations and subjects in Europe; splits Iberia, France, Italy, the British Isles, Bohemia, Hungary, the Balkans, Anatolia, North Africa, Egypt and the Levant into regional bosses, mini bosses and many smaller countries for a more balanced multiplayer experience; removes cores on land split away from a country; redistributes some gold and silver mines in Iberia and France.",
 	"tags":	["Balance","Map"],

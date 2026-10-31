@@ -2,7 +2,7 @@
 
 ## Project
 
-**Panda Express Map** — EU5 mod (`id: panda-express-map`, v0.7, game v1.4.6) that splits the map into a multiplayer-friendly version. Scope: English only, map changes only.
+**Panda Express Map** — EU5 mod (`id: panda-express-map`, v0.8, game v1.4.6) that splits the map into a multiplayer-friendly version. Scope: English only, map changes only.
 
 ## Paths
 
