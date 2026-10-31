@@ -316,42 +316,6 @@ international_organization_manager = {
 		}
 	}
 
-	add_international_organization = {
-		type = lordship_of_ireland
-		creation_date = 1177.1.1
-		members = {
-			# leader
-			PLE
-			# core earldoms
-			DMS ORD KID CWM ULS DCI
-			# lapsed earldoms
-			CLR MYO GLS
-			# bishop
-			AMA
-			# gaelic			
-		 	#CLA MCM BEA TYR LEI TRY OIL CMA OSS FMA BFN UMH THO SLN FLY ARD CNN HYM ANN KEE IVG IMA TGH FCL ELY	CVN AMH INI
-		}
-		lord_of_ireland = { PLE }
-		lieutenant = {  } # was not one of the Earls in 1337
-		loyalist = { 
-			# core earldoms
-			DMS ORD KID CWM ULS DCI
-		}
-		regions = { ireland_region }
-		
-
-		laws = {
-			lordship_of_ireland_rule_laudabiliter_policy
-		}
-
-		ruler_term = { character = eng_john_lackland start_date = 1177.1.1 end_date = 1216.10.19 regnal_number = 1 }  # became Lord of Ireland before being King of England
-		ruler_term = { character = eng_henry_iii start_date = 1216.10.28 end_date = 1272.11.16 regnal_number = 3 }
-		ruler_term = { character = eng_edward_i start_date = 1272.11.20 end_date = 1307.7.8 regnal_number = 1 }
-		ruler_term = { character = eng_edward_ii start_date = 1307.7.8 end_date = 1327.1.20 regnal_number = 2 }
-		variables = { 
-		}
-	}
-
 	#################################################################
 	# 				Japanese Shogunate								#
 	#################################################################

@@ -22,6 +22,8 @@ HELPERS = [
     "ensure_random_rulers.py",
     "build_international_organizations.py",
     "build_wars.py",
+    "build_cities_and_buildings.py",
+    "build_country_definitions.py",
 ]
 
 

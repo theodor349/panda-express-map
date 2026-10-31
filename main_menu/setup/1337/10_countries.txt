@@ -1112,7 +1112,7 @@ countries = {
 		starting_technology_level = 3
 
 		capital = lubeck
-		include = "hansa"
+		include = "panda_hansa_no_education"
 		government = {
 			type = republic
 			heir_selection = oligarchic_elective
@@ -4556,7 +4556,7 @@ countries = {
 			ruler_term = { character = eng_james_audley_2nd_baron_audley start_date = 1331.1.1 regnal_number = 1 }
 			ruler = eng_james_audley_2nd_baron_audley
 		}
-		tolerated_cultures = { welsh }
+		tolerated_cultures = {  }
 		our_cores_conquered_by_others = {
 			fishguard
 		}
@@ -19030,7 +19030,7 @@ countries = {
 		starting_technology_level = 3
 		include = "expl_mediterranean"
 		include = "panda_landless_catholic_monarchy_no_coast"
-		include = "german_principality"
+		include = "panda_german_principality_no_hre"
 		government = {
 			ruler = random
 		}
@@ -31613,7 +31613,7 @@ countries = {
 
 		}
 		tolerated_cultures = {
-			yi_culture
+			
 			lahu_culture
 		}
 		court_language = northern_mandarin_dialect
@@ -37766,7 +37766,7 @@ countries = {
 		include = "expl_western_europe"
 		include = "expl_northern_europe"
 		include = "panda_landless_catholic_monarchy_no_coast"
-		include = "german_principality"
+		include = "panda_german_principality_no_hre"
 		government = { ruler = random }
 		country_rank = rank_county
 		capital = feldkirchen
@@ -53638,9 +53638,9 @@ countries = {
 			 yuanjiang_yuanjiang talang tongguan_yuanjiang kunming lufeng yiliang songming fumin
 			 weiyuan mengtong mengban_weiyuan hequ_wuding luquan rende yuanmou runyan mala
 			 pingchuan zuosuo bozhou zizhou shaxi yunlian qijiang dechang
-			 huili huichuan_dechang mingyi dongchuan qiaojia tangdan zhehai emei muli kheong waerhdje
+			 huili  mingyi dongchuan qiaojia tangdan zhehai emei muli kheong waerhdje
 			 hanyuan suzhou lugu qiongbu shimian zhenxi_lizhou mahu lizhou_mahu
-			 leibo mabian muchuan jianchang_sichuan kuozhou puge beishe wumeng daguan luozuoguan
+			 leibo mabian muchuan jianchang_sichuan kuozhou  beishe wumeng daguan luozuoguan
 			 yongshan wusa zhaoban heizhang baurang yongning gulin luojiao mangbu guihua
 		}
 
@@ -56524,7 +56524,7 @@ countries = {
 
 		tolerated_cultures = {
 			blaan_culture
-			maguindanao_culture
+			
 			tboli_culture
 		}
 
@@ -64369,7 +64369,7 @@ countries = {
 		type = pop
 
 		add_pops_from_locations = {
-			msinja kasungu mchinji mankhamba nyani matengo nyanja matope mbewe nyangu massanza muchena tembue kaphirintiwa
+			 kasungu mchinji mankhamba nyani matengo nyanja matope mbewe nyangu massanza muchena tembue kaphirintiwa
 		}
 
 		discovered_areas = {

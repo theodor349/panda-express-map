@@ -2,8 +2,8 @@
 build_international_organizations.py — write the mod's 15_international_organizations.txt.
 
 Reads the base file on every run, so game updates carry over, and removes members the game would
-drop on day 1 because they have no land. Also removes Lordship of Ireland's open-ended term for
-Edward III, because the mod gives The Pale its own ruler.
+drop on day 1 because they have no land. Also removes the Lordship of Ireland, which has no valid
+leader once The Pale has its own ruler.
 
 Usage:
     python scripts/helpers/build_international_organizations.py
@@ -38,7 +38,23 @@ DEFAULT_OUTPUT = _MOD_PATH / "main_menu/setup/1337/15_international_organization
 ALWAYS_REMOVE = {"TVA", "DDI"}
 # Lists other than members that name countries the game drops on day 1.
 HRE_LISTS = {"imperial_prince": {"ORT", "GRK"}}
-OPEN_TERM = re.compile(r"(?m)^[ \t]*ruler_term\s*=\s*\{\s*character\s*=\s*eng_edward_iii\s+start_date\s*=\s*1327\.1\.25\s+regnal_number\s*=\s*3\s*\}[ \t]*\n")
+# The Lordship of Ireland's leader must be a scripted character, and it disbands without one. The mod
+# gives The Pale a random ruler instead of Edward III.
+REMOVE_ORGANIZATIONS = {"lordship_of_ireland"}
+
+
+def remove_organizations(text: str) -> str:
+    found: set[str] = set()
+    for match in reversed(list(re.finditer(r"(?m)^[ \t]*add_international_organization\s*=\s*\{", text))):
+        start, end = find_block_extent(text, match.end() - 1)
+        kind = re.search(r"\btype\s*=\s*(\w+)", text[start:end])
+        if kind and kind.group(1) in REMOVE_ORGANIZATIONS:
+            found.add(kind.group(1))
+            text = text[:match.start()] + text[end + 1:].lstrip("\n")
+    missing = REMOVE_ORGANIZATIONS - found
+    if missing:
+        sys.exit(f"ERROR: organizations to remove not found: {sorted(missing)}")
+    return text
 
 
 def edit_named_blocks(text: str, name: str, tags: set[str]) -> tuple[str, int]:
@@ -79,9 +95,7 @@ def main() -> None:
     text, members = edit_named_blocks(text, "members", gone)
     for name, tags in HRE_LISTS.items():
         text, _ = edit_named_blocks(text, name, tags)
-    text, terms = OPEN_TERM.subn("", text)
-    if terms != 1:
-        sys.exit(f"ERROR: expected one open-ended Edward III term, found {terms}")
+    text = remove_organizations(text)
 
     write_text_with_retry(Path(args.output), text)
     print(f"Removed {members} organization member(s) with no land; wrote {Path(args.output).name}.")
