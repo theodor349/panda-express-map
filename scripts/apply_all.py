@@ -18,14 +18,14 @@ try:
 except ImportError:
     pass
 
-ROOT        = Path(os.environ.get("EU5_MOD_PATH",  Path(__file__).parent.parent))
+ROOT        = Path(os.environ.get("EU5_MOD_PATH",  Path(__file__).parent.parent / "mod"))
 SCRIPTS_DIR = Path(__file__).parent
 BASE_GAME   = Path(os.environ.get("EU5_GAME_PATH", r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game"))
 
 # Files to copy from base game if absent in the mod (src relative to BASE_GAME,
 # dst relative to ROOT — paths are identical by convention).
 BASE_GAME_COPIES = [
-    "main_menu/setup/start/10_countries.txt",
+    "main_menu/setup/1337/10_countries.txt",
     "main_menu/localization/english/country_names_l_english.yml",
     "in_game/map_data/location_templates.txt",
 ]
@@ -71,7 +71,7 @@ def check_mod_changes_inputs() -> list[str]:
     """Verify required mod_changes/ inputs exist. Returns list of error messages."""
     errors = []
     for rel in REQUIRED_MOD_CHANGES:
-        path = ROOT / rel
+        path = Path(__file__).parent.parent / rel
         if not path.exists():
             errors.append(f"Missing input file: {rel}")
     return errors

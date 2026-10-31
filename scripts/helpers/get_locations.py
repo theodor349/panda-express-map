@@ -39,6 +39,8 @@ def parse_definitions(path: Path) -> dict[str, list[str]]:
     of leaf locations.
     """
     text = re.sub(r'#[^\n]*', '', path.read_text(encoding="utf-8"))
+    # Blocks can carry attributes (e.g. not_eligible_for_dynamic_country_name = yes); these are not locations.
+    text = re.sub(r'\w+\s*=\s*(?:yes|no)\b', '', text)
     geo: dict[str, list[str]] = {}
     stack: list[tuple[str, list[str]]] = []  # (name, locations_list)
 

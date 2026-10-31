@@ -3,6 +3,7 @@ TRO --locations trebinje
 
 # Iberia
 GRA --provinces murcia_province --locations ronda marbella algeciras gibraltar
+CAS --tags SEV CRD
 
 # Indonesia 
 TJP --areas north_borneo_area south_borneo_area

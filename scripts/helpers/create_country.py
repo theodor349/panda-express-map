@@ -40,10 +40,10 @@ try:
 except ImportError:
     pass
 
-ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent.parent))
+ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent.parent / "mod"))
 BASE_GAME = Path(os.environ.get("EU5_GAME_PATH", r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game"))
 
-COUNTRIES_FILE    = ROOT / "main_menu/setup/start/10_countries.txt"
+COUNTRIES_FILE    = ROOT / "main_menu/setup/1337/10_countries.txt"
 DEFINITIONS_FILE  = ROOT / "in_game/setup/countries/panda_express_map.txt"
 LOCALIZATION_FILE = ROOT / "main_menu/localization/english/country_names_l_english.yml"
 PROVINCE_MAP_FILE    = BASE_GAME / "in_game/map_data/definitions.txt"
@@ -58,6 +58,18 @@ def write_text_with_retry(path: Path, text: str, attempts: int = 5) -> None:
     for attempt in range(1, attempts + 1):
         try:
             path.write_text(text, encoding='utf-8')
+            return
+        except OSError as exc:
+            if attempt == attempts:
+                sys.exit(f"ERROR: could not write {path} after {attempts} attempts: {exc}")
+            time.sleep(0.25 * attempt)
+
+
+def write_bytes_with_retry(path: Path, data: bytes, attempts: int = 5) -> None:
+    """Write bytes, retrying transient Windows file-open failures."""
+    for attempt in range(1, attempts + 1):
+        try:
+            path.write_bytes(data)
             return
         except OSError as exc:
             if attempt == attempts:
@@ -146,6 +158,8 @@ def generate_tag(region: str) -> str:
 def load_province_map() -> dict[str, list[str]]:
     """Returns {province_name: [locations]} from base game definitions.txt."""
     text = PROVINCE_MAP_FILE.read_text(encoding='utf-8')
+    # Blocks can carry attributes (e.g. not_eligible_for_dynamic_country_name = yes); these are not locations.
+    text = re.sub(r'\w+\s*=\s*(?:yes|no)\b', '', text)
     result = {}
     for m in re.finditer(r'(\w+)\s*=\s*\{([^{}]*)\}', text):
         content = m.group(2)
@@ -370,10 +384,13 @@ def update_definitions_file(tag, name, color_rgb, culture, religion):
         DEFINITIONS_FILE.write_text('', encoding='utf-8')
         print(f"Created {DEFINITIONS_FILE.name}")
     existing = DEFINITIONS_FILE.read_text(encoding='utf-8')
+    if re.search(rf'^{tag}\s*=\s*\{{\s*#\s*{re.escape(name)}\s*$', existing, re.MULTILINE):
+        print(f"Kept {DEFINITIONS_FILE.name} entry for {tag}")
+        return
     if re.search(rf'^{tag}\s*=', existing, re.MULTILINE):
         print(f"ERROR: tag {tag} already exists in {DEFINITIONS_FILE.name}", file=sys.stderr)
         sys.exit(1)
-    DEFINITIONS_FILE.write_text(existing.rstrip() + entry, encoding='utf-8')
+    write_text_with_retry(DEFINITIONS_FILE, existing.rstrip() + entry)
     print(f"Updated {DEFINITIONS_FILE.name}: added {tag}")
 
 
@@ -388,15 +405,12 @@ def update_localization_file(tag, name, adj):
     if re.search(rf'^ {tag}:', text, re.MULTILINE):
         print(f"ERROR: tag {tag} already exists in {LOCALIZATION_FILE.name}", file=sys.stderr)
         sys.exit(1)
-    if re.search(rf':\s*"{re.escape(name)}"', text):
-        print(f"ERROR: name \"{name}\" already exists in {LOCALIZATION_FILE.name}", file=sys.stderr)
-        sys.exit(1)
 
     entry = f' {tag}: "{name}"\n {tag}_ADJ: "{adj}"\n'
     updated = text.rstrip() + '\n' + entry
 
     out_bytes = (b'\xef\xbb\xbf' if has_bom else b'') + updated.encode('utf-8')
-    LOCALIZATION_FILE.write_bytes(out_bytes)
+    write_bytes_with_retry(LOCALIZATION_FILE, out_bytes)
     print(f"Updated {LOCALIZATION_FILE.name}: added {tag} / {tag}_ADJ")
 
 

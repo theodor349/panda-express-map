@@ -18,9 +18,9 @@ try:
 except ImportError:
     pass
 
-ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
-INPUT_FILE = ROOT / "mod_changes" / "ruler_changes.txt"
-COUNTRIES_FILE = ROOT / "main_menu" / "setup" / "start" / "10_countries.txt"
+ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent / "mod"))
+INPUT_FILE = Path(__file__).parent.parent / "mod_changes" / "ruler_changes.txt"
+COUNTRIES_FILE = ROOT / "main_menu" / "setup" / "1337" / "10_countries.txt"
 HELPER = Path(__file__).parent / "helpers" / "set_country_ruler.py"
 
 _TAG_RE = re.compile(r"^[A-Z0-9]{3}$")

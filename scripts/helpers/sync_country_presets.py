@@ -19,13 +19,13 @@ try:
 except ImportError:
     pass
 
-ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent.parent))
+ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent.parent / "mod"))
 BASE_GAME = Path(os.environ.get(
     "EU5_GAME_PATH",
     r"E:\SteamLibrary\steamapps\common\Europa Universalis V\game",
 ))
-DEFAULT_SPEC = ROOT / "mod_changes/new_countries.txt"
-DEFAULT_COUNTRIES = ROOT / "main_menu/setup/start/10_countries.txt"
+DEFAULT_SPEC = Path(__file__).parent.parent.parent / "mod_changes/new_countries.txt"
+DEFAULT_COUNTRIES = ROOT / "main_menu/setup/1337/10_countries.txt"
 DEFAULT_DEFINITIONS = ROOT / "in_game/setup/countries/panda_express_map.txt"
 
 sys.path.insert(0, str(Path(__file__).parent))

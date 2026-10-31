@@ -263,6 +263,7 @@ countries = {
 			privilege = {
 				#Nobles
 				primacy_of_nobility
+				noble_private_armies_privilege
 				#Clergy
 				#Peasants
 				peasants_free_peasantry
@@ -1010,6 +1011,7 @@ countries = {
 
 		include = "catholic_bishopric"
 		include = "expl_northern_europe"
+		country_rank = rank_duchy
 
 		government = {
 			type = theocracy
@@ -2075,6 +2077,7 @@ countries = {
 				banal_lordship
 				noble_serfdom_rights
 				nobles_land_rights
+				noble_private_armies_privilege
 				kormlenije
 
 				#clergy
@@ -3087,7 +3090,7 @@ countries = {
 		}
 
 		starting_technology_level = 3
-		country_rank = rank_kingdom
+		country_rank = rank_duchy
 
 		government = {
 			type = monarchy
@@ -3321,6 +3324,7 @@ countries = {
 				banal_lordship
 				noble_serfdom_rights
 				nobles_land_rights
+				noble_private_armies_privilege
 				kormlenije
 
 				#clergy
@@ -3408,6 +3412,7 @@ countries = {
 				banal_lordship
 				noble_serfdom_rights
 				nobles_land_rights
+				noble_private_armies_privilege
 				kormlenije
 
 				#clergy
@@ -5264,6 +5269,7 @@ countries = {
 		capital = dublin
 		accepted_cultures = { anglo_irish }
 		tolerated_cultures = { irish }
+		country_rank = rank_duchy
 	}
 	TYR = {
 		own_control_core = {
@@ -5459,6 +5465,7 @@ countries = {
 
 		include = "catholic_bishopric"
 		include = "expl_western_europe"
+		country_rank = rank_duchy
 
 		government = {
 			type = theocracy
@@ -5917,9 +5924,6 @@ countries = {
 
 	#TNK - Pandya
 	TNK = {
-		own_control_core = {
-
-		}
 
 		our_cores_conquered_by_others = {
 			kayattar sankaranayinarkoil madurai vembar ramesvaram #pandya_nadu
@@ -6009,9 +6013,6 @@ countries = {
 
 	#DRP - Ramnagar
 	DRP = { #https://en.wikipedia.org/wiki/Dharampur_State
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -6041,9 +6042,6 @@ countries = {
 
 	#JWR - Jawhar
 	JWR = { #https://en.wikipedia.org/wiki/Jawhar_State
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -6182,6 +6180,10 @@ countries = {
 				peasants_fewer_levies
 				peasants_protected_faith
 			}
+			bureaucracies = {
+				# The Persian-style chancery was the defining institution of Delhi's administration.
+				{ type = diwan_al_insha_bureaucracy date = 1320.1.1 entrenchment = 60 }
+			}
 
 		}
 		tolerated_cultures = {
@@ -6237,9 +6239,6 @@ countries = {
 	#Reestablished in 1327 by the conquest of the fort in Mandrael. Karauli (city) founded nearby in 1348.
 	#At that time Dholpur and Bayana had also been reclaimed.
 
-		own_control_core = {
-
-		}
 
 		capital = karauli #Mandrael
 
@@ -6266,9 +6265,6 @@ countries = {
 
 	#DRW - Dadrewa
 	DRW = { #Dadrewa - Chauhans of Dadrewa, converts in 1350s and becomes known as the Qaimkhani dynasty
-		own_control_core = {
-
-		}
 
 		capital = taranagar
 
@@ -6293,9 +6289,6 @@ countries = {
 
 	PNA = { #Punia in Jangladesh
 		#Small Nagavamsi Jat principality that remained independent until conquered by Rao Bika (founder of Bikaner)
-		own_control_core = {
-			 #Jhansal
-		}
 
 		capital = sidhmukh #Jhansal
 
@@ -6372,9 +6365,6 @@ countries = {
 
 	JHI = { #Johiya
 		#Second Biggest of the Principalities in Jangladesh prior to unification under Bikaner
-		own_control_core = {
-
-		}
 
 		capital = suratgarh #Bhurupal
 
@@ -6399,9 +6389,6 @@ countries = {
 
 	#BHA - Bhatnir
 	BHA = {
-		own_control_core = {
-
-		}
 		our_cores_conquered_by_others = {
 			bathinda muktsar hisar hansi
 
@@ -6432,9 +6419,6 @@ countries = {
 
 	#DOG - Dogra Kingdom
 	DOG = {
-		own_control_core = {
-
-		}
 
 		capital = kathua
 
@@ -6460,9 +6444,6 @@ countries = {
 
 	#RJR - Rajouri
 	RJR = {
-		own_control_core = {
-
-		}
 
 		capital = rajouri
 		religious_school = hanafi_school
@@ -6502,9 +6483,6 @@ countries = {
 
 	#PNC - Poonch
 	PNC = {
-		own_control_core = {
-
-		}
 
 		capital = poonch
 
@@ -6529,9 +6507,6 @@ countries = {
 
 	#KGR - Kangra
 	KGR = { #https://en.wikipedia.org/wiki/Kangra_State
-		own_control_core = {
-
-		}
 
 		capital = nagarkot
 
@@ -6559,9 +6534,6 @@ countries = {
 	#CBH - Bhimber
 	CBH = {
 		#Taken over by the Chibhal/Jibhal dynasty around 1400
-		own_control_core = {
-
-		}
 
 		capital = bhimber
 
@@ -6588,9 +6560,6 @@ countries = {
 
 	#SKT - Suket
 	SKT = { #https://en.wikipedia.org/wiki/Suket_State
-		own_control_core = {
-
-		}
 
 		capital = suket
 
@@ -6615,9 +6584,6 @@ countries = {
 
 	#BSP - Bilaspur
 	BSP = { #https://en.wikipedia.org/wiki/Bilaspur_State_(princely_state)
-		own_control_core = {
-
-		}
 
 		capital = kahlur
 
@@ -6663,9 +6629,6 @@ countries = {
 
 	#NRP - Nurpur
 	NRP = { #https://en.wikipedia.org/wiki/Nurpur_kingdom
-		own_control_core = {
-
-		}
 
 		capital = nurpur
 
@@ -6689,9 +6652,6 @@ countries = {
 
 	#KTL - Kutlehar
 	KTL = { #https://en.wikipedia.org/wiki/Kutlehar_State
-		own_control_core = {
-
-		}
 
 		capital = kutlehar
 
@@ -6714,9 +6674,6 @@ countries = {
 
 	#LHL - Lahul
 	LHL = {
-		own_control_core = {
-
-		}
 
 		capital = keylong
 
@@ -6739,10 +6696,6 @@ countries = {
 
 	#KSW - Kishtwar
 	KSW = {
-		own_control_core = {
-
-			 #Unclear
-		}
 
 		capital = kishtwar
 
@@ -6772,9 +6725,6 @@ countries = {
 
 	#CAB - Chamba
 	CAB = { #https://en.wikipedia.org/wiki/Chamba_State
-		own_control_core = {
-
-		}
 
 		capital = chamba_india
 
@@ -6810,9 +6760,6 @@ countries = {
 
 	#KLU - Kullu
 	KLU = {
-		own_control_core = {
-
-		}
 
 		capital = naggar
 
@@ -6837,9 +6784,6 @@ countries = {
 
 	#CTR - Chitral
 	CTR = { #https://en.wikipedia.org/wiki/Chitral_(princely_state)
-		own_control_core = {
-
-		}
 
 		capital = chitral
 
@@ -6867,19 +6811,7 @@ countries = {
 
 	#SWT - Swat kingdom of Bajaur
 	SWT = { #https://en.wikipedia.org/wiki/Sultanate_of_Swat
-		own_control_core = {
 
-
-
-
-			#Indus Kohistan:
-			#Autonomous and perhaps better shown as independent, with one state per location/valley
-
-		}
-
-		own_control_integrated = {
-
-		}
 
 		capital = bajaur
 
@@ -6895,7 +6827,6 @@ countries = {
 		}
 
 		tolerated_cultures = {
-			afghan_culture
 			kohistani
 		 }
 		religious_school = hanafi_school
@@ -6912,9 +6843,6 @@ countries = {
 
 	#CRL - Urtsun
 	CRL = {
-		own_control_core = {
-
-		}
 
 		capital = urtsun
 
@@ -6944,11 +6872,6 @@ countries = {
 
 	#GLI - Gilgit
 	GLI = { #https://en.wikipedia.org/wiki/Gilgit
-		own_control_core = {
-
-
-
-		}
 
 		capital = gilgit
 		#Ruler: Rau Sau Malik II
@@ -6999,9 +6922,6 @@ countries = {
 
 	#HNZ - Hunza
 	HNZ = { #https://en.wikipedia.org/wiki/Hunza_(princely_state)
-		own_control_core = {
-
-		}
 
 		capital = altit
 
@@ -7044,9 +6964,6 @@ countries = {
 
 	#NAG - Nagar
 	NAG = { #Nagar
-		own_control_core = {
-
-		}
 
 		capital = nagar
 
@@ -7073,10 +6990,6 @@ countries = {
 	KSH = { #https://en.wikipedia.org/wiki/History_of_Kashmir
 		#Taken over by the Muslim Shah Mir dynasty in 1339 after killing the remaining Loharas.
 		#This needs some early game events to make sense
-		own_control_core = {
-
-
-		}
 
 		capital = srinagar
 
@@ -7113,9 +7026,6 @@ countries = {
 	#BWL - Beniwal
 	BWL = {
 		#Small Principaly in Jangladesh prior to unification under Bikaner
-		own_control_core = {
-			 #Raisalana
-		}
 
 		capital = rawatsar
 
@@ -7139,9 +7049,6 @@ countries = {
 	#SHR - Saharan
 	SHR = {
 		#Small Principality in Jangladesh prior to unification under Bikaner
-		own_control_core = {
-			 #Bharang
-		}
 
 		capital = churu
 
@@ -7164,9 +7071,6 @@ countries = {
 
 	#JLW - Jhalawar / Limbdi
 	JLW = {
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -7186,9 +7090,6 @@ countries = {
 
 	#GHL - Gohilvad
 	GHL = {
-		own_control_core = {
-
-		}
 
 		include = "indian_hindu_monarchy_jain"
 		capital = danduka
@@ -7215,9 +7116,6 @@ countries = {
 
 	#PLT - Palitana
 	PLT = {#https://en.wikipedia.org/wiki/Palitana_State
-		own_control_core = {
-
-		}
 
 		include = "indian_hindu_monarchy_jain"
 		capital = palitana
@@ -7272,9 +7170,6 @@ countries = {
 
 	#BHD - Bhanvad - Remnants of what was formerly Ghumli
 	BHD = {
-		own_control_core = {
-
-		}
 		our_cores_conquered_by_others = {
 			dwarka chhaya
 
@@ -7295,9 +7190,6 @@ countries = {
 
 	#RNP - Ranpur, later relocated and rebranded as Porbandar State
 	RNP = { #https://en.wikipedia.org/wiki/Ranpur_State
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -7317,10 +7209,6 @@ countries = {
 
 	#KUT - Kutch
 	KUT = {#https://en.wikipedia.org/wiki/Cutch_State
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -7417,9 +7305,6 @@ countries = {
 
 	#JJK - Jejakabhukti
 	JJK = { #What remains of the Chandella dynasty. Would linger on until the 1600s but had already lost most real power except for these last disconnected strongholds.
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -7459,10 +7344,6 @@ countries = {
 
 	#BND - Bundelkhand
 	BND = {#https://en.wikipedia.org/wiki/Bundelkhand https://en.wikipedia.org/wiki/Chedi_Kingdom
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
@@ -7486,11 +7367,6 @@ countries = {
 
 	#BGK - Baghelas
 	BGK = {
-		own_control_core = {
-
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -7517,9 +7393,6 @@ countries = {
 
 	#MAU - Mau Ganj
 	MAU = {
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -7539,11 +7412,6 @@ countries = {
 
 	#RTP - Haihaya https://en.wikipedia.org/wiki/Heheya_Kingdom
 	RTP = {	#The remains of the ancient Haihaya/Chedi/Kalachuri Kingdom. Remains a relevant regional power for some time into the era.
-		own_control_core = {
-
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -7572,9 +7440,6 @@ countries = {
 
 	#BNA - Bonaigarh
 	BNA = { #https://en.wikipedia.org/wiki/Bonai_State
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -7601,9 +7466,6 @@ countries = {
 
 	#PLA - Pal Lahara
 	PLA = {#https://en.wikipedia.org/wiki/Pal_Lahara_State
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -7627,13 +7489,7 @@ countries = {
 	SRG = {
 		#Gond Subject State of the Haihayas of Ratnapura
 		#This region would have been full of small Gond subject states of which sadly very little is known. Sarangarh therefore controls their land as well.
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -7658,12 +7514,6 @@ countries = {
 
 	#PTN- Patna Kingdom
 	PTN = {	#https://en.wikipedia.org/wiki/Patna_State https://www.indianrajputs.com/view/patna
-		own_control_core = {
-
-
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -7696,10 +7546,6 @@ countries = {
 	#BAD - Baud State
 	BAD = {	#https://en.wikipedia.org/wiki/Baudh_State
 		#Founded in the 7th century
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -7726,9 +7572,6 @@ countries = {
 	#NRS - Narsinghpur
 	NRS = { #https://en.wikipedia.org/wiki/Narsinghpur
 		#Founded in the 7th century
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -7754,12 +7597,6 @@ countries = {
 		#After the Delhi destruction of most of their land this state is home to a great number of Chauhans that have taken refuge here.
 		#Was ultimately destroyed by the Gujarat Sultanate, and most of its artisans, etc, were relocated to Ahmedabad.
 
-		own_control_core = {
-
-
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
@@ -7782,9 +7619,6 @@ countries = {
 
 	#IDR - Idar
 	IDR = { #https://en.wikipedia.org/wiki/Idar,_Gujarat
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -7812,9 +7646,6 @@ countries = {
 
 	#DGR - Bagar
 	DGR = {#https://www.indianrajputs.com/view/dungarpur
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
@@ -7843,9 +7674,6 @@ countries = {
 
 	#CMN - Champaner
 	CMN = {
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
@@ -7867,9 +7695,6 @@ countries = {
 
 	#RJI - Rajpipla
 	RJI = { #https://en.wikipedia.org/wiki/Rajpipla_State https://www.indianrajputs.com/view/rajpipla
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -7891,9 +7716,6 @@ countries = {
 
 	#MRW - Marwar
 	MRW = { #https://en.wikipedia.org/wiki/Kingdom_of_Marwar
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
@@ -7922,9 +7744,6 @@ countries = {
 
 	#MEW - Mewar
 	MEW = { #https://en.wikipedia.org/wiki/Mewar
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
@@ -7947,9 +7766,6 @@ countries = {
 
 	#HAD - Hadoti / Bundi
 	HAD = {
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
@@ -7972,10 +7788,6 @@ countries = {
 
 	#DHU- Dhundhar / Amber state
 	DHU = { #https://en.wikipedia.org/wiki/Kingdom_of_Amber
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
@@ -8004,9 +7816,6 @@ countries = {
 		#Had lost Mandore to Delhi in 1292 after which they became a minor subject of the Bhattis of Jaisalmer.
 		#Would retake it from Delhi in 1395, after which it passed to the Rathores.
 
-		own_control_core = {
-
-		}
 
 		our_cores_conquered_by_others = {
 			mandore osian nagaur khed pali kurki ajmer merta
@@ -8029,10 +7838,6 @@ countries = {
 
 	#GWA - Gwalior
 	GWA = {	#https://en.wikipedia.org/wiki/Tomaras_of_Gwalior
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_jain_no_coast"
@@ -8052,9 +7857,6 @@ countries = {
 
 	#PGL - Pugal
 	PGL = {#https://www.indianrajputs.com/view/pugal
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8080,9 +7882,6 @@ countries = {
 
 	#JSL - Jaisalmer State
 	JSL = { #https://en.wikipedia.org/wiki/History_of_Jaisalmer
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8108,9 +7907,6 @@ countries = {
 
 	#HNV - Honnavara
 	HNV = {#https://en.wikipedia.org/wiki/Honnavar
-		own_control_core = {
-
-		}
 
 		religious_school = maliki_school
 		government = { mysticism_vs_jurisprudence = -5 }
@@ -8144,9 +7940,6 @@ countries = {
 
 	#GOA - Goa
 	GOA = { #https://en.wikipedia.org/wiki/History_of_Goa
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -8171,9 +7964,6 @@ countries = {
 
 	#KPL - Koppula
 	KPL = { #https://en.wikipedia.org/wiki/Pithapuram
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -8198,10 +7988,6 @@ countries = {
 
 	#MSN - Musuniri
 	MSN = { #https://en.wikipedia.org/wiki/Musunuri_Nayakas
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -8230,9 +8016,6 @@ countries = {
 
 	#RCH - Recherla
 	RCH = {#https://en.wikipedia.org/wiki/Recherla_Nayakas
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -8257,9 +8040,6 @@ countries = {
 
 	#BGL - Baglana
 	BGL = { #https://en.wikipedia.org/wiki/Baglana
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8284,9 +8064,6 @@ countries = {
 
 	#KHR - Kherla
 	KHR = { #https://en.wikipedia.org/wiki/Kingdom_of_Kherla
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8317,9 +8094,6 @@ countries = {
 
 	#GHR - Garha-Mandla
 	GHR = { #https://en.wikipedia.org/wiki/Garha_Kingdom
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8349,9 +8123,6 @@ countries = {
 
 	#BGR - Bandhugara
 	BGR = {
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -8371,13 +8142,7 @@ countries = {
 
 	#WRG - Wairagarh
 	WRG = { #https://en.wikipedia.org/wiki/Vairagad_Fort
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8401,9 +8166,6 @@ countries = {
 
 	#KLH - Kalahandi
 	KLH = { #https://en.wikipedia.org/wiki/History_of_Kalahandi
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8518,9 +8280,6 @@ countries = {
 
 	#KJA - Keonjhar
 	KJA = { #https://en.wikipedia.org/wiki/Keonjhar_State
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8548,9 +8307,6 @@ countries = {
 
 	#MJU - Mayurbhanj
 	MJU = { #https://en.wikipedia.org/wiki/Mayurbhanj_State
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8578,9 +8334,6 @@ countries = {
 
 	#BST - Bastar
 	BST = { #https://en.wikipedia.org/wiki/Bastar_State Nagavamsa Dynasty
-		own_control_core = {
-
-		}
 
 		#Ruler: Annan Deo (1324-1369)
 
@@ -8610,9 +8363,6 @@ countries = {
 
 	#JPO - Nandapur
 	JPO = { #https://en.wikipedia.org/wiki/Jeypore_Estate
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8641,9 +8391,6 @@ countries = {
 
 	#KNK - Kanker
 	KNK = { #https://en.wikipedia.org/wiki/Kanker_State
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8665,11 +8412,6 @@ countries = {
 
 	#SMV - Sambuvarayar
 	SMV = {
-		own_control_core = {
-
-
-
-		}
 
 		include = "indian_hindu_monarchy_jain"
 		capital = padaividu
@@ -8701,13 +8443,7 @@ countries = {
 
 	#CHD - Chanda
 	CHD = { #https://en.wikipedia.org/wiki/Kingdom_of_Chanda
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "india_limited_monarchy"
@@ -8853,9 +8589,6 @@ countries = {
 
 	#YDR - Yadavaraya
 	YDR = {
-		own_control_core = 	{
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -8882,9 +8615,6 @@ countries = {
 
 	#ZMR - Kozhikode
 	ZMR = {
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -8908,9 +8638,6 @@ countries = {
 
 	#KLT - Kolathunadu
 	KLT = { #https://en.wikipedia.org/wiki/Kolathunadu
-		own_control_core = {
-			  #also Laccadives
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -8934,9 +8661,6 @@ countries = {
 
 	#PDU - Cochin
 	PDU = { #https://en.wikipedia.org/wiki/Kingdom_of_Cochin
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -8960,9 +8684,6 @@ countries = {
 
 	#VND - Venad
 	VND = { #https://en.wikipedia.org/wiki/Venad_(kingdom)
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -8987,9 +8708,6 @@ countries = {
 
 	#KTN - Kuttanad
 	KTN = { #https://en.wikipedia.org/wiki/Ponnani
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -9012,9 +8730,6 @@ countries = {
 
 	#KDU - Kodungallur
 	KDU = { #https://en.wikipedia.org/wiki/Kodungallur
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -9037,9 +8752,6 @@ countries = {
 
 	#KYA - Kottayam
 	KYA = { #https://en.wikipedia.org/wiki/Kingdom_of_Kottayam
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -9059,9 +8771,6 @@ countries = {
 
 	#VLD - Valluvanad
 	VLD = { #https://en.wikipedia.org/wiki/Kingdom_of_Valluvanad
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -9086,9 +8795,6 @@ countries = {
 
 	#ELA - Elayadathu
 	ELA = { #https://en.wikipedia.org/wiki/Kottarakkara
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -9108,9 +8814,6 @@ countries = {
 
 	#TKU - Tekkumkur
 	TKU = { #https://en.wikipedia.org/wiki/Thekkumkur
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -9133,9 +8836,6 @@ countries = {
 
 	#VDK - Vadakkumkur
 	VDK = { #https://en.wikipedia.org/wiki/Vadakkumkur
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -9154,12 +8854,6 @@ countries = {
 	}
 
 	ALU = { #Alupa
-		own_control_core = {
-
-		}
-		own_control_integrated = {
-
-		}
 
 		include = "indian_hindu_monarchy_jain"
 		capital = kasaragod
@@ -9191,9 +8885,6 @@ countries = {
 
 	#STR - Santara
 	STR = { #https://en.wikipedia.org/wiki/Santara_dynasty
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -9224,9 +8915,6 @@ countries = {
 
 	#JFN - Jaffna
 	JFN = { #https://en.wikipedia.org/wiki/Jaffna_kingdom
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -9521,7 +9209,7 @@ countries = {
 				name_barisone = 2
 				name_marianus = 3
 				name_orzocorre = 3
-				name_torbjon = 1
+				name_torbjorn = 1
 				name_constantine = 3
 				name_barisone = 1
 				name_peter = 3
@@ -9739,7 +9427,7 @@ countries = {
 			heir_selection = cognatic_primogeniture
 
 			regnal_numbers = {
-				Barisone = 1
+				name_barisone = 1
 				name_constantine = 2
 				name_john = 1
 				name_william = 3
@@ -10205,7 +9893,6 @@ countries = {
 			}
 
 			ruler = fae_ricciardo_manfredi
-			consort = for_cia_ubaldini
 
 			ruler_term = { character = fae_francesco_manfredi start_date = 1313.1.1	end_date = 1327.1.1 regnal_number = 0 }
 			ruler_term = { character = fae_alberghettino_ii_manfredi start_date = 1327.1.1 end_date = 1329.1.1 regnal_number = 2 }
@@ -10542,7 +10229,7 @@ countries = {
 				Saltaro = 1
 				#Ittocorre = 1
 				name_comita = 1
-				Barisone = 1
+				name_barisone = 1
 				name_helen = 1
 				name_lambert = 1
 				name_adelaide = 1
@@ -11379,7 +11066,7 @@ countries = {
 		dynasty = anjou_dynasty
 	}
 
-	#Provence
+	#Provence (Union with Naples)
 	PRO = {
 		own_control_core = {
 			aix_en_provence arles brignoles marseille toulon tarascon
@@ -12381,7 +12068,7 @@ countries = {
 
 			regnal_numbers = {
 				name_conrad = 3
-				Rainaldo = 2
+				name_reginald = 2
 				name_henry = 2
 				name_welf = 2
 			}
@@ -12503,10 +12190,10 @@ countries = {
 			regnal_numbers = {
 				name_adelaide = 1
 				name_andrea = 1
-				Barisone = 3
+				name_barisone = 3
 				name_comita = 2
 				name_constantine = 4
-				Enzo = 1
+				name_henry = 1
 				Gonario = 2
 				name_marianus = 2
 				name_peter = 2
@@ -12562,8 +12249,6 @@ countries = {
 		government = {
 			type = republic
 			heir_selection = podesta_elective
-
-			ruler_term = { character = gor_john_henry_iv_gorizia start_date = 1332.12.1 end_date = 1333.12.1 regnal_number = 0 }
 
 			reforms = {
 				signoria_reform
@@ -13334,7 +13019,7 @@ countries = {
 			heir_selection = cognatic_primogeniture
 
 			ruler = epi_theodoros_synadenos
-			consort = epi_eudokia_doukania_kommene
+			consort = epi_eudokia_doukaina_komnene
 
 			ruler_term = { character = epi_michael_i_komnenos_doukas start_date = 1205.1.1 end_date = 1215.1.1 regnal_number = 1 }
 			ruler_term = { character = the_theodoros_komnenos_doukas start_date = 1215.1.1 end_date = 1230.1.1 regnal_number = 1 }
@@ -13745,7 +13430,7 @@ countries = {
 				name_eudokia = 1
 				name_alexis = 5
 				name_emmanuel = 1
-				name_andonikos = 3
+				name_andronikos = 3
 				name_theodore = 2
 			}
 
@@ -14045,7 +13730,7 @@ countries = {
 			heir_selection = cognatic_primogeniture
 
 			ruler = ser_stefan_dusan
-			consort = ser_helena
+			consort = ser_helena_sratsimir
 
 			ruler_term = { character = ser_stefan_nemanja start_date = 1166.1.1 end_date = 1196.1.1 regnal_number = 0 }
 			ruler_term = { character = ser_stefan_nemanjic start_date = 1196.1.1 end_date = 1202.1.1 regnal_number = 1 }
@@ -14700,14 +14385,6 @@ countries = {
 
 
 	CAT = {
-		own_control_core = {
-
-
-
-
-
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mediterranean"
@@ -14758,6 +14435,11 @@ countries = {
 				name_peter = 3
 				name_james = 2
 			}
+
+			reforms = {
+				has_dlc = "d009_across_the_pillars"
+				cat_corts_catalanes_reform
+			}
 		}
 
 		our_cores_conquered_by_others = {
@@ -14784,9 +14466,14 @@ countries = {
 			type = theocracy
 
 			ruler_term = { character = anr_arnau_de_llorda start_date = 1326.6.27 }
+
+			reforms = {
+				has_dlc = "d009_across_the_pillars"
+				anr_coprincipality_reform
+			}
 		}
 		capital = andorra_la_vella
-		country_rank = rank_duchy
+		country_rank = rank_county
 	}
 	ARA = {
 		own_control_core = {
@@ -14933,21 +14620,56 @@ countries = {
 				name_james = 3
 				name_sancho = 1
 			}
+
+			reforms = {
+				autocracy
+			}
+
+			privilege = {
+				#Noblity
+				jewish_letters_of_protection
+				noble_sponsored_navy
+				#Burghers
+				shipwright_contracts
+				sponsor_maritime_contracts
+				allow_trade_center_sponsorship
+			}
+			privilege = {
+				has_dlc = "d009_across_the_pillars"
+				mll_consolat_de_mar
+			}
+
+			land_vs_naval = 50
 		}
 
 		tolerated_cultures = {
-			languedocien
 			sephardi
 			andalusi
+		}
+
+		accepted_cultures = {
+			languedocien
+		}
+
+		currency_data = {
+			stability = 40
+			gold = 100
+			war_exhaustion = 2
 		}
 
 	}
 
 	CAS = {
 		own_control_core = {
-			cordoba baena carpio espiel fuenteovejuna lucena palma_del_rio pedroche santa_eufemia
-			sevilla arcos_de_la_frontera cadiz carmona constantina ecija jerez_de_la_frontera medina_sidonia moron olvera osuna sanlucar tarifa
-			huelva almonaster_la_real aracena aroche ayamonte coria_del_rio niebla puebla_de_guzman sanlucar_la_mayor
+
+			almonaster_la_real aracena arcos_de_la_frontera aroche
+			ayamonte baena cadiz carmona
+			carpio constantina cordoba coria_del_rio
+			ecija espiel fuenteovejuna huelva
+			jerez_de_la_frontera lucena medina_sidonia moron
+			niebla olvera osuna palma_del_rio
+			pedroche puebla_de_guzman sanlucar sanlucar_la_mayor
+			santa_eufemia sevilla tarifa
 		}
 
 		our_cores_conquered_by_others = {
@@ -15007,6 +14729,7 @@ countries = {
 				clergy_military_orders
 				#Commoners
 				cas_caballeros_villanos
+				ayuntamientos
 			}
 
 			laws = {
@@ -15088,6 +14811,7 @@ countries = {
 				clergy_military_orders
 				#Burghers
 				land_of_commerce
+				shipwright_contracts
 			}
 			laws = {
 				administrative_system = central_councils
@@ -15105,7 +14829,7 @@ countries = {
 
 			centralization_vs_decentralization = 15
 			mercantilism_vs_free_trade = -20
-			land_vs_naval = -10
+			land_vs_naval = 10
 			quality_vs_quantity = -10
 			capital_economy_vs_traditional_economy = 80
 		}
@@ -15198,6 +14922,12 @@ countries = {
 				name_urraca = 1
 				name_henry = 1
 			}
+
+			reforms = {
+				has_dlc = "d009_across_the_pillars"
+				lon_cortes_de_leon_reform
+			}
+
 		}
 
 		country_rank = rank_kingdom
@@ -15241,13 +14971,11 @@ countries = {
 			granada adra almunecar guadix huescar illora loja pinar orgiva
 			malaga antequera velez_malaga
 
-			cartagena lorca mula murcia
-
-			algeciras gibraltar marbella ronda
+			algeciras cartagena gibraltar lorca
+			marbella mula murcia ronda
 		}
 
 		our_cores_conquered_by_others = {
-			olvera
 		}
 
 		starting_technology_level = 3
@@ -15283,13 +15011,44 @@ countries = {
 			reforms = {
 				the_jewel_of_alandalus_reform
 			}
+			reforms = {
+				has_dlc = "d009_across_the_pillars"
+				gra_hajib_reform
+			}
 			laws = {
 				sharia_law = maliki_policy
+				slave_conversion = allow_slave_religion
+			}
+			laws = {
+				has_dlc = "d009_across_the_pillars"
+				dhimmi_regulations_law = dhimmi_status_policy
+			}
+			privilege = {
+				noble_sponsored_navy
+				jewish_court_financier_charter
+				jewish_physician_exemption
+				dhimmi_pact_of_umar
+				al_caid
+				andalusi_elite
+				treasury_rights
+			}
+			privilege = {
+				has_dlc = "d009_across_the_pillars"
+				gra_visirate
+				gra_ulema_council
+				gra_volunteers_of_faith
+			}
+			parliament = {
+				has_dlc = "d009_across_the_pillars"
+				parliament_type = jamaa_parliament
 			}
 		}
 		court_language = maghrebi_dialect
 		religious_school = maliki_school
-		government = { mysticism_vs_jurisprudence = -5 }
+		government = {
+			mysticism_vs_jurisprudence = -5
+			offensive_vs_defensive = 40
+		}
 
 		country_rank = rank_duchy
 
@@ -15379,10 +15138,11 @@ countries = {
 
 			reforms = {
 				pyrenean_fueros_reform
-				sons_of_the_oak_reform
 			}
-
-
+			reforms = {
+				has_dlc = "d009_across_the_pillars"
+				nav_cortes_navarra_reform
+			}
 			laws = {
 				administrative_system = merindad_policy
 				legal_code_law = pyrenean_law_policy
@@ -15394,6 +15154,7 @@ countries = {
 			mercantilism_vs_free_trade = -30
 			quality_vs_quantity = -20
 			capital_economy_vs_traditional_economy = 80
+
 		}
 
 		accepted_cultures = {
@@ -15411,6 +15172,118 @@ countries = {
 		capital = pamplona
 		dynasty = de_evreux_dynasty
 
+	}
+
+	#Nominal Iberian kingdoms (titular claimants; cores held by conquerors in 1337)
+	ALV = {
+		own_control_core = {
+		}
+		include = "expl_western_europe"
+		include = "catholic_monarchy_not_present"
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
+		}
+		country_rank = rank_kingdom
+		capital = faro
+	}
+
+	ATU = {
+		own_control_core = {
+		}
+		include = "expl_western_europe"
+		include = "catholic_monarchy_not_present"
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
+		}
+		country_rank = rank_kingdom
+		capital = oviedo
+	}
+
+	CRD = {
+		include = "expl_western_europe"
+		include = "catholic_monarchy_not_present"
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
+		}
+		country_rank = rank_kingdom
+		capital = cordoba
+
+		our_cores_conquered_by_others = {
+			baena carpio cordoba espiel
+			fuenteovejuna lucena palma_del_rio pedroche
+			santa_eufemia
+		}
+	}
+
+	JAE = {
+		own_control_core = {
+		}
+		include = "expl_western_europe"
+		include = "catholic_monarchy_not_present"
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
+		}
+		country_rank = rank_kingdom
+		capital = jaen
+	}
+
+	MUC = {
+		own_control_core = {
+		}
+		include = "expl_western_europe"
+		include = "catholic_monarchy_not_present"
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
+		}
+		country_rank = rank_kingdom
+		capital = murcia
+	}
+
+	SEV = {
+		include = "expl_western_europe"
+		include = "catholic_monarchy_not_present"
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
+		}
+		country_rank = rank_kingdom
+		capital = sevilla
+
+		our_cores_conquered_by_others = {
+			algeciras gibraltar
+
+			almonaster_la_real aracena arcos_de_la_frontera aroche
+			ayamonte cadiz carmona constantina
+			coria_del_rio ecija huelva jerez_de_la_frontera
+			medina_sidonia moron niebla olvera
+			osuna puebla_de_guzman sanlucar sanlucar_la_mayor
+			sevilla tarifa
+		}
+	}
+
+	TOL = {
+		own_control_core = {
+		}
+		include = "expl_western_europe"
+		include = "catholic_monarchy_not_present"
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
+		}
+		country_rank = rank_kingdom
+		capital = toledo
 	}
 
 
@@ -15495,7 +15368,7 @@ countries = {
 				#Clodomir = 1
 				name_theodoric = 4
 				#Thibert = 2
-				name_thobald = 1
+				name_theobald = 1
 				#Childebert = 4
 				#Clotaire = 5
 				#Caribert = 1
@@ -15547,6 +15420,7 @@ countries = {
 				clergy_literacy_rights
 				auxilium_et_consilium
 				nobles_land_rights
+				noble_private_armies_privilege
 				noble_leaders_only
 				primacy_of_nobility
 				noble_armies
@@ -15555,14 +15429,17 @@ countries = {
 			}
 		}
 
+		accepted_cultures = {
+			picard
+			champenais
+		}
+
 		tolerated_cultures = {
 			arpitan
 			languedocien
-			picard
 			gascon
 			burgundian
 			auvergnat
-			champenais
 			limousin
 			poitevin
 			saintongeais
@@ -15571,6 +15448,9 @@ countries = {
 
 		country_rank = rank_kingdom
 		capital = paris
+		ai_advance_preference_tags = {
+			exploration = 5
+		}
 	}
 
 	#Britanny
@@ -16267,7 +16147,7 @@ countries = {
 
 			regnal_numbers = {
 				name_roger = 1
-				name_eudes = 1
+				name_otto = 1
 				name_theobald = 2
 				name_stephen.name_henry = 1
 				name_stephen = 2
@@ -16438,7 +16318,7 @@ countries = {
 
 			ruler_term = { character = amg_arnaud_odon_lomagne start_date = 1246.3.25 end_date = 1255.1.1 regnal_number = 1 }
 			ruler_term = {
-				character = amg_mascarose_ii_lomagne start_date = 1255.1.1 end_date = 1256.1.1 regnal_number = 2
+				character = amg_mascorose_ii_lomagne start_date = 1255.1.1 end_date = 1256.1.1 regnal_number = 2
 				character = fra_eschivat_iv_chabanais start_date = 1255.1.1 end_date = 1256.1.1 regnal_number = 1
 			}
 
@@ -17331,7 +17211,7 @@ countries = {
 				#Begon = 1
 				#Ramnulf = 2
 				#Acfred = 1
-				name_ebles = 1
+				name_eblo = 1
 				name_raymond = 2
 				name_otto = 2
 				name_eleanor = 1
@@ -17412,7 +17292,7 @@ countries = {
 				name_godfrey = 3
 				#Ragenold = 1
 				name_roger = 1
-				name_joceline = 1
+				name_jocelyn = 1
 				name_hugh = 5
 				name_herbert = 2
 				name_walter = 1
@@ -17754,7 +17634,7 @@ countries = {
 				#Émenon = 1
 				name_reginald = 1
 				#Ramnulf = 2
-				name_ebles = 1
+				name_eblo = 1
 				name_aimar = 1
 				name_william = 8
 				name_otto = 1
@@ -18675,7 +18555,7 @@ countries = {
 			champenais
 		}
 
-		country_rank = rank_duchy
+		country_rank = rank_county
 		capital = liege
 	}
 
@@ -18859,7 +18739,7 @@ countries = {
 				name_samuel = 1
 				name_andrew = 3
 				name_bela = 4
-				name_solomon = 1
+				name_salomon = 1
 				name_geza = 2
 				name_vladislav = 4
 				name_kalman = 1
@@ -19591,7 +19471,7 @@ countries = {
 				name_abu.name_john = 1
 				name_joseph = 1
 				name_salomon = 1
-				Ali = 1
+				name_ali = 1
 			}
 
 			#https://en.wikipedia.org/wiki/Barbary_Coast
@@ -19610,16 +19490,37 @@ countries = {
 				#Burghers
 				land_of_commerce
 				allow_trade_center_sponsorship
+				al_caid
+				andalusi_elite
+				treasury_rights
 				#Dhimmi
 				dhimmi_pact_of_umar
 				#Tribes
 				tribes_tribal_levies
 				tribes_allow_gatherings
 				local_tribal_strongholds
+				desert_power
+			}
+			privilege = {
+				has_dlc = "d009_across_the_pillars"
+				mor_andalusian_refugees
+				mor_makhzen_caids
+				mor_marabout_patronage
+				mor_gharb_war_tribes
+			}
+			reforms = {
+				has_dlc = "d009_across_the_pillars"
+				mor_marinid_zenata_confederation_reform
 			}
 			laws = {
 				amazigh_familial_connections = reliance_on_local_tribes
 				sharia_law = maliki_policy
+				distribution_of_power_law = dop_favor_the_nobles
+			}
+			laws = {
+				has_dlc = "d009_across_the_pillars"
+				bled_makhzen_siba_law = negotiated_authority_policy
+				bayaa_succession_law = bayaa_tribal_assembly_policy
 			}
 		}
 
@@ -19638,8 +19539,22 @@ countries = {
 		dynasty = marinid_dynasty
 
 		our_cores_conquered_by_others = {
-			algeciras gibraltar marbella ronda
+			marbella ronda
 		}
+	}
+
+	ALM = {
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_not_present"
+		country_rank = rank_empire
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = marrakesh
+		religious_school = maliki_school
+		government = { mysticism_vs_jurisprudence = -5 }
 	}
 
 	TLE = { #Tlemcen
@@ -19678,6 +19593,11 @@ countries = {
 				Abu_Tashufin = 1
 			}
 
+			reforms = {
+				tle_support_of_banu_al_wad
+				catalan_merchant_privileges
+			}
+
 			#https://en.wikipedia.org/wiki/Barbary_Coast
 			land_vs_naval = 30
 			laws = {
@@ -19691,15 +19611,22 @@ countries = {
 				#Burghers
 				land_of_commerce
 				allow_trade_center_sponsorship
+				al_caid
+				andalusi_elite
 				#Dhimmi
 				dhimmi_pact_of_umar
 				#Tribes
 				tribes_tribal_levies
 				tribes_allow_gatherings
+				desert_power
 			}
 			laws = {
 				amazigh_familial_connections = reliance_on_local_tribes
 				sharia_law = maliki_policy
+			}
+			bureaucracies = {
+				# Tlemcen's Zayyanid court maintained the Maghrebi muhtasib tradition.
+				{ type = hisba_bureaucracy date = 1250.1.1 entrenchment = 50 }
 			}
 		}
 		religious_school = maliki_school
@@ -19720,17 +19647,16 @@ countries = {
 	TUN = { #Tunis
 		own_control_core = {
 			bir_el_alter
-			madjul mahres sidi_fredj bou_hajla sfaqes chebba
+			madjul mahres bou_hajla sfaqes chebba
 			kairouan sbiba kasserine subaytila thala
 			mahdia sousse el_jem monastir
-			bejaia mansouria bouira
-			annaba cheffia jijel el_milia skikda el_kala guelma collo tekouch
 			bizerte tabarka sejnane mateur beja_TUN souk_el_arba el_kef thagaste
 			tunis tebourba el_fahs zaghouan nabeul kelibia hammamet kesra
-			constantine_ALG mila ngaous baghai dufanat bazer_sakhra tiffech tebessa meskiana tijis ikjan
-			feriana
-			jama_TUN
+			feriana jama_TUN
 			el_ksour medjez_el_bab sbikha
+		}
+		own_control_conquered = {
+			sidi_fredj #Recently reconquered from Aragonese
 		}
 
 		starting_technology_level = 3
@@ -19761,6 +19687,10 @@ countries = {
 
 			#https://en.wikipedia.org/wiki/Barbary_Coast
 			land_vs_naval = 30
+			reforms = {
+				guardians_of_ifriqiya
+			}
+			land_vs_naval = 30 # https://en.wikipedia.org/wiki/Hafsids_of_B%C3%A9ja%C3%AFa and subjects
 			laws = {
 				piracy_law = state_piracy_policy
 			}
@@ -19772,17 +19702,21 @@ countries = {
 				#Burghers
 				land_of_commerce
 				allow_trade_center_sponsorship
+				al_caid
+				andalusi_elite
 				#Dhimmi
 				dhimmi_pact_of_umar
 				#Tribes
 				tribes_tribal_levies
 				tribes_allow_gatherings
+				desert_power
 			}
 			laws = {
 				amazigh_familial_connections = reliance_on_local_tribes
 				sharia_law = maliki_policy
 			}
 		}
+		include = "hafsid_state"
 		religious_school = maliki_school
 		government = { mysticism_vs_jurisprudence = -5 }
 
@@ -19794,6 +19728,85 @@ countries = {
 		}
 
 		capital = tunis
+		dynasty = hafsid_dynasty
+	}
+
+	BIJ = {
+		own_control_core = {
+			bejaia mansouria bouira
+			annaba cheffia jijel el_milia skikda el_kala guelma collo tekouch
+			constantine_ALG mila ngaous baghai dufanat bazer_sakhra tiffech tebessa meskiana tijis ikjan
+		}
+
+		starting_technology_level = 3
+		include = "expl_muslim_mediterranean"
+		include = "muslim_monarchy_no_abrahamic_dhimmi"
+		country_rank = rank_duchy
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+
+			ruler = tun_abu_zakariya_yahya
+
+			regnal_numbers = {
+				Abd_al-Wahid = 1
+				name_abdullah = 1
+				name_john = 2
+				name_muhammad = 2
+				name_abraham = 1
+				name_abd_al_aziz = 1
+				name_omar = 1
+				Khalid = 1
+				name_zechariah = 1
+				name_abu_bakr = 1
+			}
+
+			laws = {
+				piracy_law = state_piracy_policy
+			}
+			privilege = {
+				#Nobles
+				noble_sponsored_navy
+				#Ulama
+				waqf_payments
+				#Burghers
+				land_of_commerce
+				allow_trade_center_sponsorship
+				al_caid
+				andalusi_elite
+				#Dhimmi
+				dhimmi_pact_of_umar
+				#Tribes
+				tribes_tribal_levies
+				tribes_allow_gatherings
+				desert_power
+			}
+			laws = {
+				amazigh_familial_connections = reliance_on_local_tribes
+				sharia_law = maliki_policy
+			}
+			bureaucracies = {
+				# The Hafsid court upheld the western-Mediterranean muhtasib tradition.
+				{ type = hisba_bureaucracy date = 1250.1.1 entrenchment = 50 }
+			}
+		}
+		include = "hafsid_state"
+
+		religious_school = maliki_school
+		government = { mysticism_vs_jurisprudence = -5 }
+
+		accepted_cultures = {
+			tunisian
+		}
+
+		tolerated_cultures = {
+			kabyle
+			chaoui
+			mustaarabi
+		}
+
+		capital = bejaia
 		dynasty = hafsid_dynasty
 	}
 
@@ -19984,6 +19997,7 @@ countries = {
 				sharia_law = ibadi_policy
 			}
 		}
+		include = "maghrebi_ibadi"
 
 		religious_school = ibadi_school
 
@@ -20062,6 +20076,7 @@ countries = {
 				sharia_law = ibadi_policy
 			}
 		}
+		include = "maghrebi_ibadi"
 		religious_school = ibadi_school
 
 		tolerated_cultures = {
@@ -20125,6 +20140,7 @@ countries = {
 				sharia_law = ibadi_policy
 			}
 		}
+		include = "maghrebi_ibadi"
 		religious_school = ibadi_school
 
 		tolerated_cultures = {
@@ -20155,6 +20171,8 @@ countries = {
 		}
 		religious_school = maliki_school
 		government = { mysticism_vs_jurisprudence = -5 }
+
+		include = "hafsid_state"
 
 		tolerated_cultures = {
 			chaoui
@@ -20221,6 +20239,7 @@ countries = {
 				sharia_law = ibadi_policy
 			}
 		}
+		include = "maghrebi_ibadi"
 
 		religious_school = ibadi_school
 
@@ -21337,14 +21356,117 @@ countries = {
 		government = { mysticism_vs_jurisprudence = -5 }
 	}
 
-	TRG = {
+	KAY = {
+		type = pop
+
+		add_pops_from_locations = {
+			agadez assode iferouane in_gall marandet
+		}
+
+		include = "expl_west_africa_muslim"
+		include = "subsaharan_muslim_tribe"
+
+		religious_school = maliki_school
+		government = { mysticism_vs_jurisprudence = -5 }
+		government = {
+			ruler = random
+
+			laws = {
+				sharia_law = maliki_policy
+			}
+		}
+	}
+
+	AHG = {
+		type = pop
+
+		add_pops_from_locations = {
+			abalessa
+		}
+
+		include = "expl_west_africa_muslim"
+		include = "subsaharan_muslim_tribe"
+
+		religious_school = maliki_school
+		government = { mysticism_vs_jurisprudence = -5 }
+		government = {
+			ruler = random
+
+			laws = {
+				sharia_law = maliki_policy
+			}
+		}
+	}
+
+	AJJ = {
+		type = pop
+
+		add_pops_from_locations = {
+			djanet ghat in_amenas
+		}
+
+		include = "expl_west_africa_muslim"
+		include = "subsaharan_muslim_tribe"
+
+		religious_school = maliki_school
+		government = { mysticism_vs_jurisprudence = -5 }
+		government = {
+			ruler = random
+
+			laws = {
+				sharia_law = maliki_policy
+			}
+		}
+	}
+
+	KAH = {
+		type = pop
+
+		add_pops_from_locations = {
+			tadmekka takedda
+		}
+
+		include = "expl_west_africa_muslim"
+		include = "subsaharan_muslim_tribe"
+
+		religious_school = maliki_school
+		government = { mysticism_vs_jurisprudence = -5 }
+		government = {
+			ruler = random
+
+			laws = {
+				sharia_law = maliki_policy
+			}
+		}
+	}
+
+	IWL = {
 		type = pop
 
 		add_pops_from_locations = {
 			walata gotheye boubon ouallam goudel hamdallaye tondikandia koure loga dongondoutchi kaouara
-			birni_ader tahoua kalfou abalak marandet aderbissinat ollelewa zinder guidimouni kelle in_gall agadez
-			takedda assode iferouane abalessa djanet ghat in_amenas
-			tadmekka
+			birni_ader tahoua kalfou abalak
+		}
+
+		include = "expl_west_africa_muslim"
+		include = "subsaharan_muslim_tribe"
+
+		religious_school = maliki_school
+		government = { mysticism_vs_jurisprudence = -5 }
+		government = {
+			ruler = random
+
+			laws = {
+				sharia_law = maliki_policy
+			}
+		}
+	}
+
+	KGS = {
+		type = pop
+
+		add_pops_from_locations = {
+			zinder guidimouni kelle aderbissinat ollelewa
 		}
 
 		include = "expl_west_africa_muslim"
@@ -21769,6 +21891,9 @@ countries = {
 
 			laws = {
 				sharia_law = maliki_policy
+			}
+			bureaucracies = {
+				{ type = bayt_al_mal_bureaucracy date = 1250.1.1 entrenchment = 50 }
 			}
 		}
 
@@ -22240,6 +22365,9 @@ countries = {
 			laws = {
 				sharia_law = shafii_policy
 			}
+			bureaucracies = {
+				{ type = bayt_al_mal_bureaucracy date = 1250.1.1 entrenchment = 50 }
+			}
 		}
 		religious_school = shafii_school
 		government = { mysticism_vs_jurisprudence = 20 }
@@ -22522,6 +22650,9 @@ countries = {
 			laws = {
 				sharia_law = shafii_policy
 			}
+			bureaucracies = {
+				{ type = bayt_al_mal_bureaucracy date = 1250.1.1 entrenchment = 50 }
+			}
 		}
 		religious_school = shafii_school
 		government = { mysticism_vs_jurisprudence = 20 }
@@ -22793,6 +22924,9 @@ countries = {
 			laws = {
 				sharia_law = shafii_policy
 			}
+			bureaucracies = {
+				{ type = bayt_al_mal_bureaucracy date = 1250.1.1 entrenchment = 50 }
+			}
 		}
 		religious_school = shafii_school
 		government = { mysticism_vs_jurisprudence = 20 }
@@ -23058,6 +23192,11 @@ countries = {
 				administrative_system = local_courts_administration
 				iqta_law = lenient_taxation
 			}
+			bureaucracies = {
+				{ type = bayt_al_mal_bureaucracy date = 1250.1.1 entrenchment = 75 }
+				# Baybars I refined the Mamluk barid into a sophisticated relay-and-intelligence network.
+				{ type = barid_bureaucracy date = 1261.1.1 entrenchment = 75 }
+			}
 		}
 		religious_school = shafii_school #While Egypt today is mostly Hanafi, the $mamluks$ favored Shaafi over the rest
 		government = { mysticism_vs_jurisprudence = 20 }
@@ -23071,8 +23210,6 @@ countries = {
 			eastern_amazigh
 			mizrahi
 		}
-
-		currency_data = { complacency = 15 }
 
 		capital = cairo
 	}
@@ -23694,9 +23831,6 @@ countries = {
 
 	#Tumbuka - TBK (Revolter, Stateless)
 	TBK = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -23716,9 +23850,6 @@ countries = {
 
 	#Maravi - MRA (Stateless)
 	MRA = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -23799,9 +23930,6 @@ countries = {
 
 	#Imerina - MIR (Formable)
 	MIR = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -23848,9 +23976,6 @@ countries = {
 
 	#Maintirano - MTO (Only Buildings Tag, Vassal of Kilwa)
 	MTO = {
-		own_control_core = {
-
-		}
 
 		include = "expl_east_africa"
 		include = "malagasy_muslim_trade_port"
@@ -23871,9 +23996,6 @@ countries = {
 
 	#Antsohihy - AHY https://en.wikipedia.org/wiki/Antsohihy
 	AHY = {
-		own_control_core = {
-
-		}
 
 		include = "expl_east_africa"
 		include = "malagasy_muslim_trade_port"
@@ -23894,9 +24016,6 @@ countries = {
 
 	#Mahilaka - MHL https://de.wikipedia.org/wiki/Mahilaka
 	MHL = {
-		own_control_core = {
-
-		}
 
 		include = "expl_east_africa"
 		include = "malagasy_muslim_trade_port"
@@ -23917,9 +24036,6 @@ countries = {
 
 	#Vohemar - VOH
 	VOH = { #https://en.wikipedia.org/wiki/Vohemar
-		own_control_core = {
-
-		}
 
 		include = "expl_east_africa"
 		include = "malagasy_muslim_trade_port"
@@ -23940,9 +24056,6 @@ countries = {
 
 	#Boeny - NYM
 	NYM = {
-		own_control_core = {
-
-		}
 
 		include = "expl_east_africa"
 		include = "malagasy_muslim_trade_port"
@@ -23987,9 +24100,6 @@ countries = {
 		#Should migrate to its current location in the 1600s
 		#https://de.wikipedia.org/wiki/Ambovombe_(Stadt)
 		#https://en.wikipedia.org/wiki/Zafiraminia
-		own_control_core = {
-
-		}
 
 		include = "expl_east_africa"
 		include = "malagasy_muslim_trade_port"
@@ -24031,9 +24141,6 @@ countries = {
 
 	#Irodo - IRD
 	IRD = {
-		own_control_core = {
-
-		}
 
 		include = "expl_east_africa"
 		include = "malagasy_muslim_trade_port"
@@ -24054,9 +24161,6 @@ countries = {
 
 	#Bemanevika - BMK
 	BMK = {
-		own_control_core = {
-
-		}
 
 		include = "expl_east_africa"
 		include = "malagasy_muslim_trade_port"
@@ -24120,9 +24224,6 @@ countries = {
 
 	#Sakalava - SKA (Stateless, Formable)
 	SKA = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24142,9 +24243,6 @@ countries = {
 
 	#Menabe - MNB (Formable)
 	MNB = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24164,9 +24262,6 @@ countries = {
 
 	#Boina - BOI (Formable)
 	BOI = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24186,9 +24281,6 @@ countries = {
 
 	#Antankarana - ANK (Stateless, Revolter)
 	ANK = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24215,9 +24307,6 @@ countries = {
 
 	#Bezanozano - BEZ (Stateless, Revolter)
 	BEZ = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24237,9 +24326,6 @@ countries = {
 
 	#Sihanaka - SIH (Stateless, Revolter)
 	SIH = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24259,9 +24345,6 @@ countries = {
 
 	#Tandroy - TND (Stateless, Revolter)
 	TND = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24281,9 +24364,6 @@ countries = {
 
 	#Antesaka - ATK (Stateless, Revolter)
 	ATK = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24303,9 +24383,6 @@ countries = {
 
 	#Bara - BAA (Stateless, Revolter)
 	BAA = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24325,9 +24402,6 @@ countries = {
 
 	#Antemoro - ATM (Stateless, Revolter)
 	ATM = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24347,9 +24421,6 @@ countries = {
 
 	#Antaifasy - ATF (Stateless, Revolter)
 	ATF = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24369,9 +24440,6 @@ countries = {
 
 	#Antambahoaka - ATB (Stateless, Revolter)
 	ATB = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24391,9 +24459,6 @@ countries = {
 
 	#Tanala - TAL (Stateless, Revolter)
 	TAL = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24413,9 +24478,6 @@ countries = {
 
 	#Betsileo - BET (Stateless, Revolter)
 	BET = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_east_africa"
@@ -24435,9 +24497,6 @@ countries = {
 
 	#Kitara - KIT
 	KIT = {
-		own_control_core = {
-
-		}
 
 
 		starting_technology_level = 3
@@ -24459,9 +24518,6 @@ countries = {
 
 	#Wanga - WNA
 	WNA = { #https://en.m.wikipedia.org/wiki/Wanga_Kingdom
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_central_africa"
@@ -24481,10 +24537,6 @@ countries = {
 
 	#Bunyoro - BNY (Formable)
 	BNY = {
-		own_control_core = {
-
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_central_africa"
@@ -24536,10 +24588,6 @@ countries = {
 
 	#Busoga - BSG (Formable)
 	BSG = {
-		own_control_core = {
-
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_central_africa"
@@ -24559,9 +24607,6 @@ countries = {
 
 	#Nkore - NKO (Formable)
 	NKO = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_central_africa"
@@ -24581,9 +24626,6 @@ countries = {
 
 	#Rwanda - RWA (Formable)
 	RWA = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_central_africa"
@@ -24603,9 +24645,6 @@ countries = {
 
 	#Karagwe - KRW (Formable)
 	KRW = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_central_africa"
@@ -24625,9 +24664,6 @@ countries = {
 
 	#Buha - UBH (Formable)
 	UBH = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_central_africa"
@@ -24647,9 +24683,6 @@ countries = {
 
 	#Burundi - BUU (Formable)
 	BUU = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_central_africa"
@@ -24733,18 +24766,10 @@ countries = {
 			goseong tongcheon ingnyeong
 		}
 
-		own_control_integrated = {
-			ganggye huju chosan
-
-			  linjiang_jurchen
-		}
-
 		our_cores_conquered_by_others = {
 			deungju munju goju hwaju north_jeongju
 			yangam
 			tamna seongwi
-
-			gapsan jangjin samsu
 		}
 
 		include = "far_east_asia_monarchy"
@@ -24807,10 +24832,6 @@ countries = {
 
 	#Ssangseong https://en.wikipedia.org/wiki/Ssangseong_Prefecture
 	SSG = {
-		own_control_core = {
-
-
-		}
 
 		include = "far_east_asia_monarchy"
 
@@ -24863,9 +24884,6 @@ countries = {
 
 	#Tamna https://en.wikipedia.org/wiki/Tamna_Prefectures
 	TMN = {
-		own_control_core = {
-
-		}
 
 		include = "far_east_asia_monarchy"
 
@@ -30264,9 +30282,6 @@ countries = {
 	}
 
 	HKZ = {
-		own_control_core = {
-
-		}
 
 		include = "east_asia_monarchy"
 		government = {
@@ -30281,9 +30296,6 @@ countries = {
 	}
 
 	CHZ = {
-		own_control_core = {
-
-		}
 
 		include = "east_asia_monarchy"
 		government = {
@@ -30302,9 +30314,6 @@ countries = {
 	}
 
 	NZN = {
-		own_control_core = {
-
-		}
 
 		include = "east_asia_monarchy"
 		government = {
@@ -30529,10 +30538,10 @@ countries = {
 			selemde burunda buse kogan mamyn nehru ulma
 			upper_nioman akishma olongki tujun tyrma urgal
 			djee argi dep kupuri mulmuga tok
+
+			ganggye huju chosan    linjiang_jurchen
 		}
 
-		own_control_conquered = {
-		}
 
 		include = "far_east_asia_monarchy"
 		include = "expl_mongols"
@@ -30675,10 +30684,6 @@ countries = {
 			size = 1
 		}
 
-		currency_data = {
-			complacency = 25
-		}
-
 		our_cores_conquered_by_others = {
 			anfu_li anxiang bafan bazhai_duyun
 			changning_changning chenxi cili danleng
@@ -30721,8 +30726,9 @@ countries = {
 			ziyang_zizhong
 
 			bikinka chalin dobkuri gan
-			kuile menlu mergen namunka
-			non noto_ussuri taowen xunka
+			gapsan jangjin kuile menlu
+			mergen namunka non noto_ussuri
+			samsu taowen xunka
 		}
 	}
 
@@ -31071,18 +31077,7 @@ countries = {
 
 	OGE = { #Ögedei Horde
 		type = army
-		own_control_core = {
 
-
-
-
-		}
-
-		own_control_integrated = {
-
-
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mongols"
@@ -31119,16 +31114,6 @@ countries = {
 
 	BAT = { #Baatud Horde
 		type = army
-		own_control_core = {
-
-
-
-
-
-		}
-		own_control_integrated = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mongols"
@@ -31161,22 +31146,7 @@ countries = {
 
 	CRS = { #Choros Horde
 		type = army
-		own_control_core = {
 
-
-
-
-
-
-
-
-		}
-
-		own_control_integrated = {
-
-
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mongols"
@@ -31214,12 +31184,6 @@ countries = {
 
 	KHD = { #Khoid Horde
 		type = army
-		own_control_core = {
-
-
-
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mongols"
@@ -31413,12 +31377,6 @@ countries = {
 
 		}
 
-		own_control_integrated = {
-
-
-
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mongols"
@@ -31495,12 +31453,6 @@ countries = {
 
 	DGH = { #Dughlats
 		type = army
-		own_control_core = {
-
-
-
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mongols"
@@ -31535,12 +31487,6 @@ countries = {
 	}
 
 	BKH = { #Badakhshan
-		own_control_core = {
-
-
-
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mongols"
@@ -31565,9 +31511,6 @@ countries = {
 	}
 
 	KRG = { #Karategin
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mongols"
@@ -31613,12 +31556,6 @@ countries = {
 	}
 
 	MMA = { #Mong Mao
-		own_control_core = {
-
-
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31643,14 +31580,7 @@ countries = {
 
 	LNG = { #Liang
 
-		own_control_core = {
 
-
-
-		}
-
-		own_control_integrated = {
-		}
 
 		capital = kunming
 		include = "far_east_asia_monarchy_no_coast"
@@ -31690,15 +31620,7 @@ countries = {
 
 	CDL = { #Dali
 
-		own_control_core = {
 
-
-
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "far_east_asia_monarchy_no_coast"
 
@@ -31722,12 +31644,6 @@ countries = {
 	}
 
 	CHH = { #Chiang Hung
-		own_control_core = {
-
-
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 
@@ -31753,9 +31669,6 @@ countries = {
 	}
 
 	MHK = { #Möng Hkeng
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31772,9 +31685,6 @@ countries = {
 	}
 
 	MHN = { #Möng Hten
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31791,9 +31701,6 @@ countries = {
 	}
 
 	MTG = { #Möng Ting
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31807,9 +31714,6 @@ countries = {
 	}
 
 	MGN = { #Möng Ngum
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31827,9 +31731,6 @@ countries = {
 	}
 
 	MHA = { #Möng Hsa
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31843,9 +31744,6 @@ countries = {
 	}
 
 	MWO = { #Möng Wo
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31863,9 +31761,6 @@ countries = {
 	}
 
 	MGK = { #Möng Ku
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31882,13 +31777,7 @@ countries = {
 	}
 
 	YNJ = { #Yuanjiang
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31906,9 +31795,6 @@ countries = {
 	}
 
 	NWU = { #Niuwu
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31925,9 +31811,6 @@ countries = {
 	}
 
 	NYZ = { #Níngyuǎnzhōu
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31944,13 +31827,7 @@ countries = {
 	}
 
 	NLU = { #Nalou
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31967,13 +31844,7 @@ countries = {
 	}
 
 	YJI = { #Yánjǐng
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -31990,9 +31861,6 @@ countries = {
 	}
 
 	BZH = { #Běishèng
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32010,9 +31878,6 @@ countries = {
 	}
 
 	YAN = { #Yáo'ān
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32029,9 +31894,6 @@ countries = {
 	}
 
 	HQG = { #Heqing
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32045,9 +31907,6 @@ countries = {
 	}
 
 	NNN = { #Annan
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32061,9 +31920,6 @@ countries = {
 	}
 
 	AGN = { #Aning
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32081,9 +31937,6 @@ countries = {
 	}
 
 	MLE = { #Mile
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32100,9 +31953,6 @@ countries = {
 	}
 
 	JSI = { #Jianshui
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32119,9 +31969,6 @@ countries = {
 	}
 
 	SPG = { #Shiping
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32135,9 +31982,6 @@ countries = {
 	}
 
 	NGZ = { #Ningzhou
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32154,9 +31998,6 @@ countries = {
 	}
 
 	LLS = { #Luóluósī
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32174,9 +32015,6 @@ countries = {
 	}
 
 	CGZ = { #Chāngzhōu
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32190,9 +32028,6 @@ countries = {
 	}
 
 	XLG = { #Xianlong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32206,9 +32041,6 @@ countries = {
 	}
 
 	WDG = { #Wǔdìng
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32225,9 +32057,6 @@ countries = {
 	}
 
 	RND = { #Réndé
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32241,9 +32070,6 @@ countries = {
 	}
 
 	DCN = { #Dongchuan
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32260,9 +32086,6 @@ countries = {
 	}
 
 	WNG = { #Wumeng
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32279,9 +32102,6 @@ countries = {
 	}
 
 	MHU = { #Mahu
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32298,9 +32118,6 @@ countries = {
 	}
 
 	LBO = { #Leibo
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32317,9 +32134,6 @@ countries = {
 	}
 
 	YNL = { #Yunlian
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32336,9 +32150,6 @@ countries = {
 	}
 
 	ZNX = { #Zhenxiong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32356,9 +32167,6 @@ countries = {
 	}
 
 	WSA = { #Wusa
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32375,9 +32183,6 @@ countries = {
 	}
 
 	ZYI = { #Zhanyi
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32394,9 +32199,6 @@ countries = {
 	}
 
 	QJG = { #Qujing
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32413,9 +32215,6 @@ countries = {
 	}
 
 	YZO = { #Yizuo
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32429,9 +32228,6 @@ countries = {
 	}
 
 	MLG = { #Malong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32448,9 +32244,6 @@ countries = {
 	}
 
 	LLN = { #Luliang
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32464,9 +32257,6 @@ countries = {
 	}
 
 	LXG = { #Luoxiong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32483,9 +32273,6 @@ countries = {
 	}
 
 	GGX = { #Guangxi
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32504,9 +32291,6 @@ countries = {
 	}
 
 	SZG = { #Shizong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32617,9 +32401,6 @@ countries = {
 	}
 
 	CLE = { #Chelei
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32636,9 +32417,6 @@ countries = {
 	}
 
 	BZU = { #Bozhou
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32672,9 +32450,6 @@ countries = {
 	}
 
 	RNG = { #Rong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32691,9 +32466,6 @@ countries = {
 	}
 
 	GNG = { #Gong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32710,9 +32482,6 @@ countries = {
 	}
 
 	ZNZ = { #Zhenzhou
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32730,9 +32499,6 @@ countries = {
 	}
 
 	SZU = { #Shizu
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32746,9 +32512,6 @@ countries = {
 	}
 
 	ZGL = { #Zhonglu
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32762,9 +32525,6 @@ countries = {
 	}
 
 	TGY = { #Tangya
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32778,9 +32538,6 @@ countries = {
 	}
 
 	GLU = { #Gaoluo
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32794,9 +32551,6 @@ countries = {
 	}
 
 	RGM = { #Rongmei
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32810,9 +32564,6 @@ countries = {
 	}
 
 	TNP = { #Tianping
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32826,9 +32577,6 @@ countries = {
 	}
 
 	SGZ = { #Sangzhi
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32842,9 +32590,6 @@ countries = {
 	}
 
 	DWG = { #Dawang
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32858,9 +32603,6 @@ countries = {
 	}
 
 	YGS = { #Yongshun
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32874,9 +32616,6 @@ countries = {
 	}
 
 	BJG = { #Baojing
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32890,9 +32629,6 @@ countries = {
 	}
 
 	YYG = { #Youyang
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32906,9 +32642,6 @@ countries = {
 	}
 
 	PCD = { #Pingchadong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32922,9 +32655,6 @@ countries = {
 	}
 
 	SZH = { #Sizhou
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32944,9 +32674,6 @@ countries = {
 	}
 
 	YNH = { #Yanhe
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32960,9 +32687,6 @@ countries = {
 	}
 
 	TXI = { #Tixi
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32976,9 +32700,6 @@ countries = {
 	}
 
 	TGR = { #Tongren
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -32992,9 +32713,6 @@ countries = {
 	}
 
 	QGS = { #Qiongshui
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33008,9 +32726,6 @@ countries = {
 	}
 
 	WZH = { #Wuzhai
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33024,9 +32739,6 @@ countries = {
 	}
 
 	PTZ = { #Pingtouzheke
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33040,9 +32752,6 @@ countries = {
 	}
 
 	LGQ = { #Longquan
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33056,9 +32765,6 @@ countries = {
 	}
 
 	RGS = { #Rongshan
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33072,9 +32778,6 @@ countries = {
 	}
 
 	BNI = { #Baini
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33088,9 +32791,6 @@ countries = {
 	}
 
 	COG = { #Caotang
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33108,9 +32808,6 @@ countries = {
 	}
 
 	XNL = { #Xinlong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33124,9 +32821,6 @@ countries = {
 	}
 
 	ALI = { #Kaili
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33140,9 +32834,6 @@ countries = {
 	}
 
 	SDG = { #Shuidong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33160,9 +32851,6 @@ countries = {
 	}
 
 	PYE = { #Pingyue
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33179,9 +32867,6 @@ countries = {
 	}
 
 	DZH = { #Dizhai
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33195,9 +32880,6 @@ countries = {
 	}
 
 	XNG = { #Xianning
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33211,9 +32893,6 @@ countries = {
 	}
 
 	PDG = { #Pingding
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33230,9 +32909,6 @@ countries = {
 	}
 
 	PDN = { #Puding
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33250,9 +32926,6 @@ countries = {
 	}
 
 	PGB = { #Pingba
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33269,9 +32942,6 @@ countries = {
 	}
 
 	PAN = { #Pu'an
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33290,9 +32960,6 @@ countries = {
 	}
 
 	YNN = { #Yongning
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33309,9 +32976,6 @@ countries = {
 	}
 
 	LIN = { #Lai'an
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33328,9 +32992,6 @@ countries = {
 	}
 
 	NLG = { #Anlong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33348,9 +33009,6 @@ countries = {
 	}
 
 	SHG = { #Shanglin
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33364,9 +33022,6 @@ countries = {
 	}
 
 	QYN = { #Qingyuan
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33385,9 +33040,6 @@ countries = {
 	}
 
 	NDN = { #Nandan
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33404,9 +33056,6 @@ countries = {
 	}
 
 	DLN = { #Donglan
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33423,9 +33072,6 @@ countries = {
 	}
 
 	XCG = { #Xincheng
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33439,9 +33085,6 @@ countries = {
 	}
 
 	YSN = { #Yongshun
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33455,9 +33098,6 @@ countries = {
 	}
 
 	TNZ = { #Tianzhou
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33475,9 +33115,6 @@ countries = {
 	}
 
 	ADG = { #Anding
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33491,9 +33128,6 @@ countries = {
 	}
 
 	DYG = { #Duyang
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33507,9 +33141,6 @@ countries = {
 	}
 
 	ZNN = { #Zhen'an
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33526,9 +33157,6 @@ countries = {
 	}
 
 	TPG = { #Taiping
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33543,9 +33171,6 @@ countries = {
 	}
 
 	SMG = { #Siming
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33559,9 +33184,6 @@ countries = {
 	}
 
 	SGS = { #Shangsi
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33575,9 +33197,6 @@ countries = {
 	}
 
 	GNN = { #Guangnan
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33594,9 +33213,6 @@ countries = {
 	}
 
 	LZO = { #Luozuo
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33610,9 +33226,6 @@ countries = {
 	}
 
 	FZH = { #Fuzhou
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33626,9 +33239,6 @@ countries = {
 	}
 
 	LZI = { #Liangzhai
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33645,9 +33255,6 @@ countries = {
 	}
 
 	SZI = { #Shezi
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33664,9 +33271,6 @@ countries = {
 	}
 
 	DYN = { #Duyun
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33683,9 +33287,6 @@ countries = {
 	}
 
 	LTU = { #Lantu
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33699,9 +33300,6 @@ countries = {
 	}
 
 	GZH = { #Guzhou
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33715,9 +33313,6 @@ countries = {
 	}
 
 	LPG = { #Liping
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33731,9 +33326,6 @@ countries = {
 	}
 
 	ZLD = { #Zhonglindong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33747,9 +33339,6 @@ countries = {
 	}
 
 	HZH = { #Hongzhou Poli
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -33763,9 +33352,6 @@ countries = {
 	}
 
 	XSY = { #Xisanyang
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -34090,7 +33676,7 @@ countries = {
 				name_wido = 1
 				name_aimeric = 1
 				name_hugh = 4
-				name_henri = 2
+				name_henry = 2
 				name_john = 1
 				name_amalric = 2
 			}
@@ -34269,6 +33855,9 @@ countries = {
 				dhimmi_abrahamic_communities
 
 				trunk_road_to_erzurum_privilege
+			}
+			bureaucracies = {
+				{ type = bayt_al_mal_bureaucracy date = 1300.1.1 entrenchment = 40 }
 			}
 		}
 
@@ -35253,7 +34842,7 @@ countries = {
 
 			centralization_vs_decentralization = 10
 			aristocracy_vs_plutocracy = -30
-			serfdom_vs_free_subjects = 0
+			serfdom_vs_free_subjects = -50
 			traditionalist_vs_innovative = 10
 			spiritualist_vs_humanist = 10
 			mercantilism_vs_free_trade = -25
@@ -35306,6 +34895,9 @@ countries = {
 				sharia_law = hanafi_policy
 				harem_law = secluded_harem_policy
 			}
+			bureaucracies = {
+				{ type = bayt_al_mal_bureaucracy date = 1300.1.1 entrenchment = 40 }
+			}
 		}
 
 		tolerated_cultures = {
@@ -35316,6 +34908,7 @@ countries = {
 		capital = bursa
 		ai_advance_preference_tags = {
 			warfare = 1
+			land = 1
 		}
 		country_rank = rank_duchy
 
@@ -37136,9 +36729,9 @@ countries = {
 			regnal_numbers = {
 				name_peter = 3
 				name_john = 1
-				Aymo = 3
-				Girold = 1
-				Willhelm = 1
+				name_haimo = 3
+				name_gerald = 1
+				name_william = 1
 			}
 			ruler = trn_peter_iii_turn
 
@@ -37668,7 +37261,7 @@ countries = {
 			ruler_term = {	character = nsi_gerlach_i_nassau start_date = 1298.7.2 regnal_number = 1	}
 
 			regnal_numbers = {
-				name_adolph = 1
+				name_adolf = 1
 				name_gerlach = 1
 				name_waleram = 2
 			}
@@ -37695,7 +37288,7 @@ countries = {
 			ruler_term = {	character = nsi_gerlach_i_nassau start_date = 1298.7.2 regnal_number = 1	}
 
 			regnal_numbers = {
-				name_adolph = 1
+				name_adolf = 1
 				name_gerlach = 1
 				name_waleram = 2
 			}
@@ -38269,9 +37862,8 @@ countries = {
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
+		include = "catholic_abbey"
 		include = "expl_northern_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "german_principality"
 		government = { ruler = random }
 		country_rank = rank_county
 		capital = ellwangen
@@ -38336,7 +37928,7 @@ countries = {
 
 			regnal_numbers = {
 				name_burchard = 2
-				name_friedrich = 9
+				name_frederick = 9
 				name_godfrey = 1
 			}
 		}
@@ -38387,7 +37979,7 @@ countries = {
 		include = "expl_northern_europe"
 		include = "catholic_monarchy_no_coast"
 		include = "german_principality"
-		government = { ruler = random }
+		government = { ruler = tub_gottfried_ii_tubingen }
 		country_rank = rank_county
 		capital = tubingen
 	}
@@ -41209,7 +40801,7 @@ countries = {
 
 			regnal_numbers = {
 				name_baldwin = 1
-				name_dirk = 1
+				name_theodoric = 1
 				name_egbert = 1
 				name_john = 2
 				name_otto = 2
@@ -41644,7 +41236,7 @@ countries = {
 				name_christian = 4
 				name_john = 3
 				name_otto = 2
-				Moritz = 1
+				name_maurice = 1
 				Egilmar = 2
 			}
 		}
@@ -42437,8 +42029,8 @@ countries = {
 			ruler_term = {	character = tes_kazimir_piast start_date = 1315.1.1 regnal_number = 1	}
 
 			regnal_numbers = {
-				Miszko = 1
-				Kazimir = 1
+				name_mieszko = 1
+				name_casimir = 1
 			}
 		}
 
@@ -42720,7 +42312,7 @@ countries = {
 		starting_technology_level = 3
 		include = "catholic_german_bishopric_no_coast"
 		include = "expl_northern_europe"
-		country_rank = rank_duchy
+		country_rank = rank_county
 		government = {
 			type = theocracy
 			ruler = nys_nanker
@@ -43730,7 +43322,7 @@ countries = {
 				name_yaropolk = 2
 				name_wenceslas = 2
 				name_waldemar = 2
-				name_sviatoslav = 1
+				name_svyatoslav = 1
 				name_yaroslav = 3
 				name_george = 2
 				name_andrew = 1
@@ -43801,7 +43393,7 @@ countries = {
 				name_yaropolk = 1
 				name_wenceslas = 2
 				name_waldemar = 2
-				name_sviatoslav = 1
+				name_svyatoslav = 1
 				name_yaroslav = 1
 				name_george = 2
 				name_andrew = 2
@@ -43972,7 +43564,7 @@ countries = {
 			ruler_term = { character = smo_alexander_glebovich_rurikovich start_date = 1297.1.1  end_date = 1314.1.1 regnal_number = 1 }
 			ruler_term = { character = smo_ivan_alexandrovich_rurikovich start_date = 1314.1.1 regnal_number = 1	}
 			regnal_numbers = {
-				Iwan = 1
+				name_john = 1
 			}
 		}
 		capital = smolensk
@@ -44095,6 +43687,7 @@ countries = {
 				#Burghers
 				market_fairs
 				cossack_identity
+				cossack_private_armies_privilege
 			}
 		}
 
@@ -44177,9 +43770,6 @@ countries = {
 
 	#Churumekua - CRK https://es.wikipedia.org/wiki/Churumuco_de_Morelos
 	CRK = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -44197,9 +43787,6 @@ countries = {
 
 	#Cuitzeo - CTE https://es.wikipedia.org/wiki/Municipio_de_Cuitzeo
 	CTE = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -44217,9 +43804,6 @@ countries = {
 
 	#Tuzantla - TUZ https://es.wikipedia.org/wiki/Tuzantla
 	TUZ = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -44237,9 +43821,6 @@ countries = {
 
 	#Tzitacuaro - TZI https://es.wikipedia.org/wiki/Zit%C3%A1cuaro
 	TZI = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -44257,9 +43838,6 @@ countries = {
 
 	#Taximaroa - TAX https://es.wikipedia.org/wiki/Ciudad_Hidalgo_(Michoac%C3%A1n)
 	TAX = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -44277,9 +43855,6 @@ countries = {
 
 	#Tenōchtitlan (Aztec Empire) - TNC - Vassal of Azcapozalco
 	TNC = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
@@ -44317,9 +43892,6 @@ countries = {
 
 	#Acolhuacan (Tetzcoco) - TTZ
 	TTZ = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_no_coast"
@@ -44339,9 +43911,6 @@ countries = {
 
 	#Culhuacan - CUL
 	CUL = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
@@ -44364,9 +43933,6 @@ countries = {
 
 	#Tepanecapan (Azcapotzalco) - TEP
 	TEP = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_no_coast"
@@ -44392,9 +43958,6 @@ countries = {
 
 	#Tlacopan - TCP https://es.wikipedia.org/wiki/Tacuba
 	TCP = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
@@ -44414,9 +43977,6 @@ countries = {
 
 	#Xaltocan - OTO
 	OTO = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -44436,9 +43996,6 @@ countries = {
 
 	#Axocopan - AXO
 	AXO = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -44460,9 +44017,6 @@ countries = {
 
 	#Tollohcan - MAT
 	MAT = {#https://es.wikipedia.org/wiki/Calixtlahuaca#Periodos_de_Ocupaci%C3%B3n
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -44482,9 +44036,6 @@ countries = {
 
 	#Malinalco - MLN
 	MLN = { #https://es.wikipedia.org/wiki/Malinalco
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -44502,9 +44053,6 @@ countries = {
 
 	#Tixtla - TLA
 	TLA = {#https://en.wikipedia.org/wiki/Tlapanec_language
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -44523,9 +44071,6 @@ countries = {
 
 	#Yopitzinco - YPZ
 	YPZ = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
@@ -44544,9 +44089,6 @@ countries = {
 
 	#Chilapa - CLP
 	CLP = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -44565,9 +44107,6 @@ countries = {
 
 	#Oapan - OAP
 	OAP = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -44586,9 +44125,6 @@ countries = {
 
 	#Tlaxcallan - TLX (Stateless until 1348)
 	TLX = {
-		own_control_core = {
-
-		}
 
 		discovered_regions = {
 			mesoamerica_region
@@ -44611,9 +44147,6 @@ countries = {
 
 	#Huexotzinco - HJZ
 	HJZ = {
-		own_control_core = {
-
-		}
 
 		discovered_regions = {
 			mesoamerica_region
@@ -44636,9 +44169,6 @@ countries = {
 
 	#Quauhquechollan - QLL
 	QLL = {
-		own_control_core = {
-
-		}
 
 		discovered_regions = {
 			mesoamerica_region
@@ -44661,10 +44191,6 @@ countries = {
 
 	#Zaachila - ZAP https://es.wikipedia.org/wiki/Zaachila
 	ZAP = {
-		own_control_core = {
-
-
-		}
 
 		include = "amerindian_monarchy"
 		include = "expl_mesoamerica"
@@ -44687,9 +44213,6 @@ countries = {
 
 	#Teposcocula - TPL https://arqueologiamexicana.mx/mexico-antiguo/teposcolula-oaxaca
 	TPL = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_monarchy"
 		include = "expl_mesoamerica"
@@ -44707,9 +44230,6 @@ countries = {
 
 	#Ixtlan - IXL
 	IXL = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_monarchy"
 		include = "expl_mesoamerica"
@@ -44727,9 +44247,6 @@ countries = {
 
 	#Yodzocahi - YDZ https://arqueologiamexicana.mx/mexico-antiguo/un-palacio-real-en-la-mixteca-oaxaquena
 	YDZ = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_monarchy"
 		include = "expl_mesoamerica"
@@ -44747,9 +44264,6 @@ countries = {
 
 	#Yautepec - YAU https://es.wikipedia.org/wiki/Municipio_de_Yautepec
 	YAU = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 1
 		include = "amerindian_monarchy"
@@ -44767,13 +44281,7 @@ countries = {
 
 	#Tehuantepec - THT https://es.wikipedia.org/wiki/Santo_Domingo_Tehuantepec
 	THT = {
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "amerindian_monarchy"
 		include = "expl_mesoamerica"
@@ -44791,9 +44299,6 @@ countries = {
 
 	#Miahuatlan - MHT
 	MHT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -44842,9 +44347,6 @@ countries = {
 
 	#Quiegoqui - QIG https://mediateca.inah.gob.mx/repositorio/islandora/object/tesis%3A3618
 	QIG = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -44863,9 +44365,6 @@ countries = {
 
 	#Teozacoalco - TZL https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2448-62212019000200011
 	TZL = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -44884,9 +44383,6 @@ countries = {
 
 	#Juxtlahuaca - JUX
 	JUX = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -44905,9 +44401,6 @@ countries = {
 
 	#Tlachquiauhco - TCQ
 	TCQ = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -44927,9 +44420,6 @@ countries = {
 
 	#Yucu Chatula - YCH
 	YCH = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl"
@@ -44949,9 +44439,6 @@ countries = {
 
 	# uu Ndiyi - NND
 	NND = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -44971,9 +44458,6 @@ countries = {
 
 	#Yodzocoo - COI
 	COI = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -44993,9 +44477,6 @@ countries = {
 
 	#Cuicatlan - CCN
 	CCN = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -45014,13 +44495,7 @@ countries = {
 
 	#Teotitlan - TEO
 	TEO = {
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -45046,13 +44521,7 @@ countries = {
 
 	#Coliman - CLM
 	CLM = {
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl"
@@ -45075,9 +44544,6 @@ countries = {
 
 	#Quiahuiztlan - QHZ
 	QHZ = { #https://es.wikipedia.org/wiki/Quiahuiztl%C3%A1n
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl"
@@ -45133,9 +44599,6 @@ countries = {
 
 	#Cempoala - TOT
 	TOT = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl"
@@ -45155,9 +44618,6 @@ countries = {
 
 	#Mizantla - MZT
 	MZT = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -45176,9 +44636,6 @@ countries = {
 
 	#Teayotlan - HST
 	HST = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl"
@@ -45198,9 +44655,6 @@ countries = {
 
 	#Tetzapotitlan - TZP
 	TZP = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -45220,9 +44674,6 @@ countries = {
 
 	#Tziuhcoac - TZH
 	TZH = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -45242,9 +44693,6 @@ countries = {
 
 	#Oxtlipan - OXT
 	OXT = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -45264,9 +44712,6 @@ countries = {
 
 	#Ozuluama - OZL
 	OZL = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl"
@@ -45286,9 +44731,6 @@ countries = {
 
 	#Tuxpan - TXP
 	TXP = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl"
@@ -45308,9 +44750,6 @@ countries = {
 
 	#Michuachapanco - MCC
 	MCC = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl"
@@ -45330,9 +44769,6 @@ countries = {
 
 	#Tamtoc - TTC
 	TTC = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -45352,9 +44788,6 @@ countries = {
 
 	#Xalisco - XAL
 	XAL = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy"
 		include = "expl_mesoamerica"
@@ -45373,9 +44806,6 @@ countries = {
 
 	#Tlalpan - TAA
 	TAA = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
@@ -45394,9 +44824,6 @@ countries = {
 
 	#Tzapotzingo - TZZ
 	TZZ = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -45415,9 +44842,6 @@ countries = {
 
 	#Sentispac - SNT
 	SNT = {
-		own_control_core = {
-
-		}
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
@@ -45452,9 +44876,6 @@ countries = {
 
 	#Tonala - TNL
 	TNL = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -45473,9 +44894,6 @@ countries = {
 
 	#Mextiacan - MXT
 	MXT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45492,9 +44910,6 @@ countries = {
 
 	#Yahualican - YAH
 	YAH = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45511,9 +44926,6 @@ countries = {
 
 	#Tecpatitlan - TPN
 	TPN = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45530,9 +44942,6 @@ countries = {
 
 	#Mitic - MIT
 	MIT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45549,9 +44958,6 @@ countries = {
 
 	#Xalostotitlan - XLT
 	XLT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45568,9 +44974,6 @@ countries = {
 
 	#Coinan - CON
 	CON = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45587,9 +44990,6 @@ countries = {
 
 	#Acatic - ACA
 	ACA = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45623,9 +45023,6 @@ countries = {
 
 	#Teulinchan - TEL
 	TEL = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -45644,9 +45041,6 @@ countries = {
 
 	#Xochipillan - XOC
 	XOC = {
-		own_control_core = {
-
-		}
 
 
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
@@ -45769,9 +45163,6 @@ countries = {
 
 	#Chalco - CLC
 	CLC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45818,9 +45209,6 @@ countries = {
 
 	#Cuauhnahuac - CUU
 	CUU = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45838,9 +45226,6 @@ countries = {
 
 	#Tlachco - TCH
 	TCH = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45861,9 +45246,6 @@ countries = {
 
 	#Oztoman - OZT
 	OZT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45881,9 +45263,6 @@ countries = {
 
 	#Temascaltepec - TMS
 	TMS = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45901,9 +45280,6 @@ countries = {
 
 	#Tepecoacuilco - TCC
 	TCC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45924,9 +45300,6 @@ countries = {
 
 	#Chiautla - CTL
 	CTL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45944,9 +45317,6 @@ countries = {
 
 	#Tetellan - TLL
 	TLL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45967,9 +45337,6 @@ countries = {
 
 	#Zompanco - ZOM
 	ZOM = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -45987,9 +45354,6 @@ countries = {
 
 	#Tlazcozauhtitlan - TLZ
 	TLZ = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46007,9 +45371,6 @@ countries = {
 
 	#Cuauhteopan - UAU
 	UAU = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46027,9 +45388,6 @@ countries = {
 
 	#Yohualtepec - YOH
 	YOH = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46047,9 +45405,6 @@ countries = {
 
 	#Tecpantepec - TPT
 	TPT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -46070,9 +45425,6 @@ countries = {
 
 	#Cihuatlan - CIH
 	CIH = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -46093,9 +45445,6 @@ countries = {
 
 	#Zacatollan - ZCT
 	ZCT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -46116,9 +45465,6 @@ countries = {
 
 	#Ajuchitlan - AJC
 	AJC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46136,9 +45482,6 @@ countries = {
 
 	#Tlapan - TLP
 	TLP = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46156,9 +45499,6 @@ countries = {
 
 	#Ayotlan - AYO
 	AYO = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -46176,9 +45516,6 @@ countries = {
 
 	#Ometepec - OMT
 	OMT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -46196,9 +45533,6 @@ countries = {
 
 	#Coatlicamac - CTC
 	CTC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46216,9 +45550,6 @@ countries = {
 
 	#Coatzacoalco - CTZ
 	CTZ = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy"
 		include = "expl_mesoamerica"
 		government = {
@@ -46240,9 +45571,6 @@ countries = {
 
 	#Tepeyacac - TPY
 	TPY = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46260,9 +45588,6 @@ countries = {
 
 	#Cuetlaxtlan - CTX
 	CTX = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy"
 		include = "expl_mesoamerica"
 		government = {
@@ -46280,9 +45605,6 @@ countries = {
 
 	#Cholollan - CLL
 	CLL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46300,9 +45622,6 @@ countries = {
 
 	#Xochimilco - XCH
 	XCH = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46320,9 +45639,6 @@ countries = {
 
 	#Atocpan - ATO
 	ATO = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46340,9 +45656,6 @@ countries = {
 
 	#Tollantzinco - TZC
 	TZC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46360,9 +45673,6 @@ countries = {
 
 	#Metztitlan - MET
 	MET = {#https://es.wikipedia.org/wiki/Metztitl%C3%A1n
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46382,9 +45692,6 @@ countries = {
 
 	#Huayacocotla - HYC https://es.wikipedia.org/wiki/Huayacocotla
 	HYC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46402,9 +45709,6 @@ countries = {
 
 	#Tutotepec - TUT https://es.wikipedia.org/wiki/Tutotepec
 	TUT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46422,9 +45726,6 @@ countries = {
 
 	#Xilotepec - XIL https://es.wikipedia.org/wiki/Se%C3%B1or%C3%ADo_de_Jilotepec
 	XIL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46442,9 +45743,6 @@ countries = {
 
 	#Zinapecuaro - ZIN
 	ZIN = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46462,9 +45760,6 @@ countries = {
 
 	#Ixtacamaxtitlan - IXT
 	IXT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46482,9 +45777,6 @@ countries = {
 
 	#Tetela - TEE
 	TEE = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46502,9 +45794,6 @@ countries = {
 
 	#Zacatlan - ZAT
 	ZAT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46522,9 +45811,6 @@ countries = {
 
 	#Tlatlauquitepec - TLQ
 	TLQ = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46542,9 +45828,6 @@ countries = {
 
 	#Tlapacoyan - TCY
 	TCY = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46562,9 +45845,6 @@ countries = {
 
 	#Ahuacatlan - AHU
 	AHU = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46582,9 +45862,6 @@ countries = {
 
 	#Cuauhchinanco - GCH
 	GCH = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46602,9 +45879,6 @@ countries = {
 
 	#Etzatlan - ETZ
 	ETZ = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46622,9 +45896,6 @@ countries = {
 
 	#Xochitepec - XCT
 	XCT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46645,9 +45916,6 @@ countries = {
 
 	#Ameca - AME
 	AME = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46695,9 +45963,6 @@ countries = {
 
 	#Amollan - AML
 	AML = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46715,9 +45980,6 @@ countries = {
 
 	#Cuzalapa - CZL
 	CZL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46735,9 +45997,6 @@ countries = {
 
 	#Tomatlan - TMT
 	TMT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -46755,9 +46014,6 @@ countries = {
 
 	#Melahuacan - MHC
 	MHC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46775,9 +46031,6 @@ countries = {
 
 	#Xihutla - XIH
 	XIH = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy"
 		include = "expl_mesoamerica"
 		government = {
@@ -46795,9 +46048,6 @@ countries = {
 
 	#Autlan - ATL
 	ATL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46815,9 +46065,6 @@ countries = {
 
 	#Cocollan - CCL
 	CCL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46835,9 +46082,6 @@ countries = {
 
 	#Huitzquilic - HTZ
 	HTZ = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46855,9 +46099,6 @@ countries = {
 
 	#Aztatlan - AZL
 	AZL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -46875,9 +46116,6 @@ countries = {
 
 	#Tlamazolan - TZM
 	TZM = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46897,9 +46135,6 @@ countries = {
 
 	#Tlapacoya - TLY
 	TLY = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46917,9 +46152,6 @@ countries = {
 
 	#Cuautla - CAU
 	CAU = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46937,9 +46169,6 @@ countries = {
 
 	#Amapila - AMP
 	AMP = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -46957,9 +46186,6 @@ countries = {
 
 	#Sayula - SAY
 	SAY = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46977,9 +46203,6 @@ countries = {
 
 	#Pantepec - PTP
 	PTP = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -46997,9 +46220,6 @@ countries = {
 
 	#Xalapa - XAP
 	XAP = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47017,9 +46237,6 @@ countries = {
 
 	#Cuauhtochco - CUO
 	CUO = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy"
 		include = "expl_mesoamerica"
 		government = {
@@ -47037,9 +46254,6 @@ countries = {
 
 	#Xicochimalco - XIC
 	XIC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47057,12 +46271,6 @@ countries = {
 
 	#Tochtepec - TOH https://es.wikipedia.org/wiki/Municipio_de_Tochtepec
 	TOH = {
-		own_control_core = {
-
-		}
-		own_control_integrated = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47080,9 +46288,6 @@ countries = {
 
 	#Teutila - TTA
 	TTA = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47100,9 +46305,6 @@ countries = {
 
 	#Puctlan - PTL
 	PTL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy"
 		include = "expl_mesoamerica"
 		government = {
@@ -47120,9 +46322,6 @@ countries = {
 
 	#Cosamaloapan - CSM
 	CSM = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47140,9 +46339,6 @@ countries = {
 
 	#Otatitlan - OTA
 	OTA = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47160,9 +46356,6 @@ countries = {
 
 	#Tlacotlalpan - TLT
 	TLT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy"
 		include = "expl_mesoamerica"
 		government = {
@@ -47210,9 +46403,6 @@ countries = {
 
 	#Iztachacalapan - IZC
 	IZC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47230,9 +46420,6 @@ countries = {
 
 	#Tesechoacan - TSE
 	TSE = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47250,9 +46437,6 @@ countries = {
 
 	#Cuauhcuetzpaltepec - CCP
 	CCP = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47270,9 +46454,6 @@ countries = {
 
 	#Ozumacin - OZU
 	OZU = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47290,9 +46471,6 @@ countries = {
 
 	#Atepec - ATP
 	ATP = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47310,9 +46488,6 @@ countries = {
 
 	#Choapan - CPN
 	CPN = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47330,9 +46505,6 @@ countries = {
 
 	#Xochiapa - XCP
 	XCP = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47350,9 +46522,6 @@ countries = {
 
 	#Atitlan - ATT
 	ATT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47370,9 +46539,6 @@ countries = {
 
 	#Ixtapan - IXA
 	IXA = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47393,9 +46559,6 @@ countries = {
 
 	#Cutzamala - CUZ
 	CUZ = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47419,9 +46582,6 @@ countries = {
 
 	#Teloloapan - TLO
 	TLO = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47442,9 +46602,6 @@ countries = {
 
 	#Amaticoztitlan - AMT
 	AMT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47462,9 +46619,6 @@ countries = {
 
 	#Itzocan - IZO
 	IZO = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47482,9 +46636,6 @@ countries = {
 
 	#Axochiapan - AXC
 	AXC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47502,9 +46653,6 @@ countries = {
 
 	#Tepexi - TPX
 	TPX = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47522,9 +46670,6 @@ countries = {
 
 	#Zacazonapan - ZCZ
 	ZCZ = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47542,13 +46687,6 @@ countries = {
 
 	#Itza - ITZ
 	ITZ = {
-		own_control_core = {
-
-
-		}
-		own_control_integrated = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47571,11 +46709,6 @@ countries = {
 
 	#Cocom - COC
 	COC = {
-		own_control_core = {
-
-
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47598,9 +46731,6 @@ countries = {
 
 	#Tutul-Xiu - XIU
 	XIU = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47621,9 +46751,6 @@ countries = {
 
 	#Ah Canul - CNL
 	CNL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47667,9 +46794,6 @@ countries = {
 
 	#Chel - HEL
 	HEL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47731,9 +46855,6 @@ countries = {
 
 	#Cháak teʼ éemal - CTM
 	CTM = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47751,9 +46872,6 @@ countries = {
 
 	#Kowoj - KOW
 	KOW = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47771,9 +46889,6 @@ countries = {
 
 	#Yoko t'aanob - YOK
 	YOK = {
-		own_control_core = {
-
-		}
 		include = "amerindian_mesoamerican_tribe_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47791,9 +46906,6 @@ countries = {
 
 	#Chʼol - XOL
 	XOL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_mesoamerican_tribe_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47831,12 +46943,6 @@ countries = {
 
 	#Kʼicheʼ - KIC
 	KIC = {
-		own_control_core = {
-
-		}
-		own_control_integrated = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47854,9 +46960,6 @@ countries = {
 
 	#Chorti - CHT
 	CHT = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -47878,9 +46981,6 @@ countries = {
 
 	#Sotz'leb - LAC
 	LAC = {
-		own_control_core = {
-
-		}
 		include = "amerindian_mesoamerican_tribe_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47896,9 +46996,6 @@ countries = {
 
 	#Kaqchikel - KAQ
 	KAQ = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47978,9 +47075,6 @@ countries = {
 
 	#Tzeltal - TZE
 	TZE = {
-		own_control_core = {
-
-		}
 		include = "amerindian_mesoamerican_tribe_not_nahuatl"
 		include = "expl_mesoamerica"
 		government = {
@@ -47996,9 +47090,6 @@ countries = {
 
 	#Tz'utujil - TZU
 	TZU = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -48016,9 +47107,6 @@ countries = {
 
 	#Q'anjob'al - QAN
 	QAN = {
-		own_control_core = {
-
-		}
 		include = "amerindian_advanced_monarchy_not_nahuatl_no_coast"
 		include = "expl_mesoamerica"
 		government = {
@@ -48060,9 +47148,6 @@ countries = {
 
 	#Kuskatan - KUS https://en.wikipedia.org/wiki/Cuzcatlan
 	KUS = {
-		own_control_core = {
-
-		}
 		discovered_regions = {
 			central_america_region
 		}
@@ -48082,9 +47167,6 @@ countries = {
 
 	#Cuauhtemallan - QUA
 	QUA = {
-		own_control_core = {
-
-		}
 		discovered_regions = {
 			central_america_region
 		}
@@ -48587,9 +47669,6 @@ countries = {
 
 	#Teypana pueblo - TEY
 	TEY = {
-		own_control_core = {
-
-		}
 		include = "amerindian_tribe_settled_northwestern"
 		include = "expl_northwestern_america"
 		government = {
@@ -48608,9 +47687,6 @@ countries = {
 
 	#Isleta Pueblo (Shiewhibak) - ISL
 	ISL = {
-		own_control_core = {
-
-		}
 		include = "amerindian_tribe_settled_northwestern"
 		include = "expl_northwestern_america"
 		government = {
@@ -48626,9 +47702,6 @@ countries = {
 
 	#Acoma Pueblo ( ak?u) - ACO
 	ACO = {
-		own_control_core = {
-
-		}
 		include = "amerindian_tribe_settled_northwestern"
 		include = "expl_northwestern_america"
 		government = {
@@ -48662,9 +47735,6 @@ countries = {
 
 	#Tano - TNN
 	TNN = {
-		own_control_core = {
-			 #Tano Tribe
-		}
 		include = "amerindian_tribe_settled_northwestern"
 		include = "expl_northwestern_america"
 		government = {
@@ -48680,9 +47750,6 @@ countries = {
 
 	#Taos pueblo (Ia?oph ybo) - TAO
 	TAO = {
-		own_control_core = {
-
-		}
 		include = "amerindian_tribe_settled_northwestern"
 		include = "expl_northwestern_america"
 		government = {
@@ -48698,9 +47765,6 @@ countries = {
 
 	#Sandia Pueblo (Tuf Shur Tia) - TST
 	TST = {
-		own_control_core = {
-			 #Sandia Pueblo
-		}
 		include = "amerindian_tribe_settled_northwestern"
 		include = "expl_northwestern_america"
 		government = {
@@ -48716,9 +47780,6 @@ countries = {
 
 	#Ohkwee  w ngeh - OHK
 	OHK = {
-		own_control_core = {
-
-		}
 		include = "amerindian_tribe_settled_northwestern"
 		include = "expl_northwestern_america"
 		government = {
@@ -48897,9 +47958,6 @@ countries = {
 
 	#Muyquyta - ZIP
 	ZIP = {
-		own_control_core = {
-
-		}
 		starting_technology_level = 0
 		include = "amerindian_tribe_colombia"
 		government = {
@@ -49378,9 +48436,6 @@ countries = {
 
 	#Xllang - XLL
 	XLL = { #https://es.wikipedia.org/wiki/Reino_Sic%C3%A1n
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49399,10 +48454,6 @@ countries = {
 
 	#Sacha-p-qulla - CYA
 	CYA = { #https://es.wikipedia.org/wiki/Cultura_chachapoyas
-		own_control_core = {
-
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49438,9 +48489,6 @@ countries = {
 
 	#Ichma - ICM
 	ICM = { #https://es.wikipedia.org/wiki/Cultura_ychsma
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49474,9 +48522,6 @@ countries = {
 
 	#Hanan Chanka - HNK
 	HNK = { #https://es.wikipedia.org/wiki/Chanca
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49539,9 +48584,6 @@ countries = {
 	#Qusqu - CSU
 	#Should ally Ayarmaca against the Charka
 	CSU = { #https://es.wikipedia.org/wiki/Curacazgo_incaico
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49580,9 +48622,6 @@ countries = {
 
 	#Ayarmaca - AYA
 	AYA = { #https://es.wikipedia.org/wiki/Ayarmaca
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49601,9 +48640,6 @@ countries = {
 
 	#Pinagua - PIG
 	PIG = { #https://es.wikipedia.org/wiki/Ayarmaca
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49647,9 +48683,6 @@ countries = {
 
 	#Lupijaki - LUP
 	LUP = { #https://es.wikipedia.org/wiki/Lupaca
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49667,9 +48700,6 @@ countries = {
 
 	#Charka - CRA
 	CRA = { #https://es.wikipedia.org/wiki/Pueblo_charca
-		own_control_core = {
-
-		}
 
 		include = "amerindian_monarchy"
 		include = "expl_andean"
@@ -49688,9 +48718,6 @@ countries = {
 
 	#Kana - KNA
 	KNA = { #https://es.wikipedia.org/wiki/Aimaras
-		own_control_core = {
-
-		}
 
 		discovered_areas = {
 			puna_area acamama_area chala_area
@@ -49716,9 +48743,6 @@ countries = {
 
 	#Karanka - KRK
 	KRK = { #https://es.wikipedia.org/wiki/Aimaras
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49736,9 +48760,6 @@ countries = {
 
 	#Qulla - QUL
 	QUL = { #https://es.wikipedia.org/wiki/Reino_colla
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49756,9 +48777,6 @@ countries = {
 
 	#Sura - SUR
 	SUR = { #https://es.wikipedia.org/wiki/Reinos_aimaras
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -49796,9 +48814,6 @@ countries = {
 
 	#Calva - CAV
 	CAV = { #https://es.wikipedia.org/wiki/Paltas
-		own_control_core = {
-
-		}
 
 		discovered_areas = {
 			quitu_area
@@ -49821,9 +48836,6 @@ countries = {
 
 	#Malacato - MLT
 	MLT = { #https://es.wikipedia.org/wiki/Paltas
-		own_control_core = {
-
-		}
 
 		discovered_areas = {
 			quitu_area
@@ -49846,9 +48858,6 @@ countries = {
 
 	#Garrochamba - GRR
 	GRR = { #https://es.wikipedia.org/wiki/Paltas
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50021,9 +49030,6 @@ countries = {
 
 	#Huamachuco - HCH
 	HCH = { #https://www.deperu.com/cultural/sitios-arqueologicos/complejo-arqueologico-markahuamachuco-2619 https://revistas.unife.edu.pe/index.php/consensus/article/download/404/361/1319
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50041,9 +49047,6 @@ countries = {
 
 	#Cuismancu - CUI
 	CUI = { #https://revistas.pucp.edu.pe/index.php/boletindearqueologia/article/view/1847/1783
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50110,9 +49113,6 @@ countries = {
 
 	#Collique - CLQ
 	CLQ = { #https://es.wikipedia.org/wiki/Cultura_Collique
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50129,9 +49129,6 @@ countries = {
 
 	#Canta - NTA
 	NTA = { #https://www.arqueologiadelperu.com.ar/canta.htm
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50148,9 +49145,6 @@ countries = {
 
 	#Huarco - HRC
 	HRC = {
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50216,9 +49210,6 @@ countries = {
 
 	#Sora - SRA
 	SRA = {
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50237,9 +49228,6 @@ countries = {
 	#Mayonmarka - MYM
 	#Settled Pop based, made into normal tag for balance
 	MYM = {
-		own_control_core = {
-
-		}
 
 		include = "andean_tribe"
 		include = "expl_andean"
@@ -50256,9 +49244,6 @@ countries = {
 	#Pocra - PCR
 	#Allied with the Hannan Charka
 	PCR = {
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50276,9 +49261,6 @@ countries = {
 
 	#Parinacocha - PCO
 	PCO = {
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50296,9 +49278,6 @@ countries = {
 
 	#Aruni - ANI
 	ANI = {
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50316,9 +49295,6 @@ countries = {
 
 	#Churajon - CHJ
 	CHJ = {
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50351,9 +49327,6 @@ countries = {
 
 	#Canchi - CNC
 	CNC = {
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50402,9 +49375,6 @@ countries = {
 
 	#Umasuyus - UMA
 	UMA = { #https://es.wikipedia.org/wiki/Achacachi
-		own_control_core = {
-
-		}
 
 		include = "andean_monarchy"
 		include = "expl_andean"
@@ -50534,9 +49504,6 @@ countries = {
 	#Killke - KKE
 	#Settled, NOTE transformed into normal tag for the sake of balance
 	KKE = {
-		own_control_core = {
-
-		}
 		discovered_areas = {
 			puna_area suni_area rupa_rupa_area acamama_area chala_area
 			qullaw_area
@@ -50972,11 +49939,6 @@ countries = {
 	}
 
 	GUG = { #Guge
-		own_control_core = {
-
-
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 
@@ -50992,9 +49954,6 @@ countries = {
 	}
 
 	PUR = { #Purang
-		own_control_core = {
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 		government = {
@@ -51009,12 +49968,6 @@ countries = {
 	}
 
 	MAR = { #Maryul
-		own_control_core = {
-
-
-
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 		government = {
@@ -51037,9 +49990,6 @@ countries = {
 	}
 
 	ZNK = { #Zanskar
-		own_control_core = {
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 
@@ -51246,9 +50196,6 @@ countries = {
 	}
 
 	MNL = { #Mangalai
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		include = "expl_mongols"
@@ -51266,9 +50213,6 @@ countries = {
 	}
 
 	MGG = { #Mangyül Gungthang
-		own_control_core = {
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 
@@ -51284,11 +50228,6 @@ countries = {
 	}
 
 	POO = { #Powo
-		own_control_core = {
-
-
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 
@@ -51309,9 +50248,6 @@ countries = {
 	}
 
 	HOR = { #Hor States
-		own_control_core = {
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 
@@ -51327,10 +50263,6 @@ countries = {
 	}
 
 	LGT = { #Lingtsang
-		own_control_core = {
-
-
-		}
 
 		include = "limited_east_asia_monarchy"
 
@@ -51350,9 +50282,6 @@ countries = {
 	}
 
 	DRG = { #Derge
-		own_control_core = {
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 
@@ -51368,10 +50297,6 @@ countries = {
 	}
 
 	NCN = { #Nangchen
-		own_control_core = {
-
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 
@@ -51387,11 +50312,6 @@ countries = {
 	}
 
 	GNJ = { #Gonjo
-		own_control_core = {
-
-
-
-		}
 
 		include = "east_asia_monarchy_no_coast"
 
@@ -51408,11 +50328,6 @@ countries = {
 	}
 
 	BTG = { #Batang
-		own_control_core = {
-
-
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51429,9 +50344,6 @@ countries = {
 	}
 
 	NBH = { #Nubhor
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51447,9 +50359,6 @@ countries = {
 	}
 
 	LTN = { #Litang
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51464,9 +50373,6 @@ countries = {
 	}
 
 	NYA = { #Nyarong
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51481,9 +50387,6 @@ countries = {
 	}
 
 	GYT = { #Gyelthang
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51502,9 +50405,6 @@ countries = {
 	}
 
 	YNG = { #Yongning
-		own_control_integrated = {
-
-		}
 
 		include = "asia_advanced_tribe"
 
@@ -51526,9 +50426,6 @@ countries = {
 	}
 
 	TNQ = { #Tianquan
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51547,9 +50444,6 @@ countries = {
 	}
 
 	MCI = { #Muchi
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51570,9 +50464,6 @@ countries = {
 	}
 
 	WMO = { #Weimao
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_tribe"
 
@@ -51587,9 +50478,6 @@ countries = {
 	}
 
 	TSK = { #TSK
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51608,9 +50496,6 @@ countries = {
 	}
 
 	SNP = { #Songpan
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51631,9 +50516,6 @@ countries = {
 	}
 
 	LGZ = { #Longzhou
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_tribe"
 
@@ -51652,10 +50534,6 @@ countries = {
 	}
 
 	MNZ = { #Minzhou
-		own_control_core = {
-
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51671,9 +50549,6 @@ countries = {
 	}
 
 	TAZ = { #Taozhou
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51688,9 +50563,6 @@ countries = {
 	}
 
 	KHG = { #Khagya
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51709,9 +50581,6 @@ countries = {
 	}
 
 	HEZ = { #Hezhou
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51730,9 +50599,6 @@ countries = {
 	}
 
 	JIZ = { #Jishizhou
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51751,9 +50617,6 @@ countries = {
 	}
 
 	BIR = { #Biri
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51768,9 +50631,6 @@ countries = {
 	}
 
 	GYE = { #Gyelrong
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51785,11 +50645,6 @@ countries = {
 	}
 
 	GOL = { #Golog
-		own_control_core = {
-
-
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51810,13 +50665,7 @@ countries = {
 	}
 
 	CKL = { #Minyag
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51836,9 +50685,6 @@ countries = {
 	}
 
 	AMD = { #Amdo
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51923,10 +50769,6 @@ countries = {
 	}
 
 	LMN = { #Lho Mon
-		own_control_core = {
-
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -51943,13 +50785,7 @@ countries = {
 	}
 
 	LJG = { #Lijiang
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "asia_advanced_tribe"
 
@@ -51969,9 +50805,6 @@ countries = {
 	}
 
 	SKK = { #Sikkim
-		own_control_core = {
-
-		}
 
 		include = "asia_advanced_no_pagan_tribe"
 
@@ -52359,9 +51192,6 @@ countries = {
 	}
 
 	JUS = { #Jusheri
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52394,9 +51224,6 @@ countries = {
 	}
 
 	NEY = { #Neyen
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52493,9 +51320,6 @@ countries = {
 
 	#Haixi TAGS
 	EJI = { #Ejimi
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "haixi_tribe"
@@ -52512,13 +51336,7 @@ countries = {
 	}
 
 	FUY = { #Fuyu
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "haixi_tribe"
@@ -52535,9 +51353,6 @@ countries = {
 	}
 
 	NAL = { #Nalaji
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "haixi_tribe"
@@ -52554,9 +51369,6 @@ countries = {
 	}
 
 	NEM = { #Nemer
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "haixi_tribe"
@@ -52574,9 +51386,6 @@ countries = {
 	}
 
 	SNC = { #Sancaha
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "haixi_tribe"
@@ -52593,9 +51402,6 @@ countries = {
 	}
 
 	TAS = { #Tashan
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "haixi_tribe"
@@ -52612,9 +51418,6 @@ countries = {
 	}
 
 	WEJ = { #Weji
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "haixi_tribe"
@@ -52632,9 +51435,6 @@ countries = {
 
 	#Hurga TAGS
 	ASU = { #Asu
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52651,9 +51451,6 @@ countries = {
 	}
 
 	BAY = { #Bayan
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52670,9 +51467,6 @@ countries = {
 	}
 
 	DLA = { #Dala
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52689,9 +51483,6 @@ countries = {
 	}
 
 	FLN = { #Fulun
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52708,9 +51499,6 @@ countries = {
 	}
 
 	GIL = { #Gilemi
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52727,9 +51515,6 @@ countries = {
 	}
 
 	HIJ = { #Hijan
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52746,9 +51531,6 @@ countries = {
 	}
 
 	HRO = { #Horo
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52765,9 +51547,6 @@ countries = {
 	}
 
 	HUR = { #Hurga
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52784,9 +51563,6 @@ countries = {
 	}
 
 	ILU = { #Ilu
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52803,9 +51579,6 @@ countries = {
 	}
 
 	IMN = { #Imanka
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52885,9 +51658,6 @@ countries = {
 	}
 
 	NRO = { #Noro
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52904,9 +51674,6 @@ countries = {
 	}
 
 	SMN = { #Shilimian
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52923,9 +51690,6 @@ countries = {
 	}
 
 	TOX = { #Ton
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52942,9 +51706,6 @@ countries = {
 	}
 
 	USS = { #Ussuri
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52961,9 +51722,6 @@ countries = {
 	}
 
 	WEK = { #Weken
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -52996,9 +51754,6 @@ countries = {
 
 	#Jurchen TAGS
 	AID = { #Aidan
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53015,9 +51770,6 @@ countries = {
 	}
 
 	AAR = { #Abdari
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53034,9 +51786,6 @@ countries = {
 	}
 
 	FUT = { #Futi
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53053,10 +51802,6 @@ countries = {
 	}
 
 	HIY = { #Haiyan
-		own_control_core = {
-
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53074,10 +51819,6 @@ countries = {
 	}
 
 	HLN = { #Halan
-		own_control_core = {
-
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53095,9 +51836,6 @@ countries = {
 	}
 
 	HNC = { #Huncun
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53114,9 +51852,6 @@ countries = {
 	}
 
 	HOT = { #Hotonggi
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53133,9 +51868,6 @@ countries = {
 	}
 
 	HUI = { #Huiba
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53152,9 +51884,6 @@ countries = {
 	}
 
 	ITU = { #Itun
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53171,9 +51900,6 @@ countries = {
 	}
 
 	JHT = { #Juru Hoton
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53190,9 +51916,6 @@ countries = {
 	}
 
 	LAL = { #Lalin
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53224,9 +51947,6 @@ countries = {
 	}
 
 	LLU = { #Lalu
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53243,9 +51963,6 @@ countries = {
 	}
 
 	MAH = { #Mahiyan
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53262,9 +51979,6 @@ countries = {
 	}
 
 	MIC = { #Michen
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53281,9 +51995,6 @@ countries = {
 	}
 
 	MUH = { #Muhiya
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53300,9 +52011,6 @@ countries = {
 	}
 
 	SHI = { #Shilin
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53319,9 +52027,6 @@ countries = {
 	}
 
 	SIR = { #Sirin
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53338,9 +52043,6 @@ countries = {
 	}
 
 	SUI = { #Suifun
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53357,9 +52059,6 @@ countries = {
 	}
 
 	TOD = { #Todo
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53376,9 +52075,6 @@ countries = {
 	}
 
 	WUY = { #Wuyemu
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53395,9 +52091,6 @@ countries = {
 	}
 
 	YRN = { #Yaran
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53414,9 +52107,6 @@ countries = {
 	}
 
 	YIM = { #Yimahu
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53433,9 +52123,6 @@ countries = {
 	}
 
 	YOO = { #Yoose
-		own_control_core = {
-
-		}
 
 		include = "expl_manchurian_tribe"
 		include = "jianzhou_tribe"
@@ -53505,10 +52192,6 @@ countries = {
 	}
 
 	CHA = { #Champa
-		own_control_core = {
-
-
-		}
 		our_cores_conquered_by_others = {
 			amaravati aryaru bal_cattinon bang_keng
 			bong_son camp_po_thit cat_tien chan_bo
@@ -53630,10 +52313,6 @@ countries = {
 	}
 
 	SUK = { #Sukhothai
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -53667,11 +52346,6 @@ countries = {
 	}
 
 	LNA = { #Lan Na
-		own_control_core = {
-
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -53703,9 +52377,6 @@ countries = {
 	}
 
 	LAV = { #Lavo
-		own_control_core = {
-
-		}
 
 		our_cores_conquered_by_others = {
 			ayodhya
@@ -53812,10 +52483,6 @@ countries = {
 	}
 
 	PEG = { #Pegu / Hanthawaddy
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy"
 		government = {
@@ -53844,10 +52511,6 @@ countries = {
 	}
 
 	SNG = { #Singapura
-		own_control_core = {
-
-
-		}
 
 		include = "indonesia_monarchy"
 		government = {
@@ -53869,10 +52532,6 @@ countries = {
 	}
 
 	LIG = { #Ligor
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy"
 
@@ -53898,14 +52557,7 @@ countries = {
 	}
 
 	LGK = { #Langkasuka
-		own_control_core = {
 
-
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "south_east_asia_monarchy"
 
@@ -53928,10 +52580,6 @@ countries = {
 	}
 
 	KED = { #Kedah
-		own_control_core = {
-
-
-		}
 
 		include = "expl_indonesia_muslim"
 		include = "expl_indonesian_trade_route"
@@ -53986,10 +52634,6 @@ countries = {
 	}
 
 	SPN = { #Suphanburi
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy"
 
@@ -54017,11 +52661,6 @@ countries = {
 	}
 
 	ARK = { #Arakan
-		own_control_core = {
-
-
-
-		}
 
 		include = "south_east_asia_monarchy"
 		government = {
@@ -54116,10 +52755,6 @@ countries = {
 	}
 
 	SAG = { #Sagaing
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -54135,10 +52770,6 @@ countries = {
 	}
 
 	TNG = { #Toungoo
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -54153,10 +52784,6 @@ countries = {
 	}
 
 	BPR = { #Prome
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -54171,10 +52798,6 @@ countries = {
 	}
 
 	PHY = { #Phayao
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -54189,10 +52812,6 @@ countries = {
 	}
 
 	PUA = { #Pua / Nan
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -54207,14 +52826,7 @@ countries = {
 	}
 
 	MUA = { #Muang Sua
-		own_control_core = {
 
-
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -54273,10 +52885,6 @@ countries = {
 	}
 
 	CBK = { #Nguu Hong (Cobra Kingdom) https://en.wikipedia.org/wiki/Ng%C6%B0u_H%E1%BB%91ng
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -54299,9 +52907,6 @@ countries = {
 	}
 
 	MYA = { #Mongyang
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54320,11 +52925,6 @@ countries = {
 	}
 
 	MKA = { #Mongkawng
-		own_control_core = {
-
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54348,9 +52948,6 @@ countries = {
 	}
 
 	HKM = { #Hkamti
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54369,9 +52966,6 @@ countries = {
 	}
 
 	MKN = { #Mong Kong
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54395,9 +52989,6 @@ countries = {
 	}
 
 	HHP = { #Hsawn Hsup
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54416,10 +53007,6 @@ countries = {
 	}
 
 	HSE = { #Hsenwi
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -54442,10 +53029,6 @@ countries = {
 	}
 
 	HSI = { #Hsipaw
-		own_control_core = {
-
-
-		}
 
 		tolerated_cultures = {
 			danu_culture
@@ -54465,10 +53048,6 @@ countries = {
 	}
 
 	MNI = { #Mongnai
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54488,11 +53067,6 @@ countries = {
 	}
 
 	MGT = { #Mongmit
-		own_control_core = {
-
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54511,9 +53085,6 @@ countries = {
 	}
 
 	KAL = { #Kale
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54532,10 +53103,6 @@ countries = {
 	}
 
 	WNT = { #Wuntho
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54554,10 +53121,6 @@ countries = {
 	}
 
 	BHM = { #Bhamo
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 
@@ -54577,13 +53140,7 @@ countries = {
 	}
 
 	KTG = { #Kengtung
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "south_east_asia_monarchy_no_coast"
 		government = {
@@ -54604,10 +53161,6 @@ countries = {
 	}
 
 	MLM = { #Mong Lem
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 
@@ -54732,7 +53285,7 @@ countries = {
 		type = pop
 
 		add_pops_from_locations = {
-			anyuan_lianzhou ruxi xiaodong baishan anding_mashan duyang yongshun lingfang shanglin qianjiang_binzhou
+			anyuan_lianzhou ruxi xiaodong baishan anding_mashan yongshun lingfang shanglin qianjiang_binzhou
 			yining yongfu guishun xiaozhenan zhenan_guishun ningpu yongning_hengzhou qianlong xilong
 			bada ceheng machang zhenfeng maping liucheng wuxian_liuzhou yangshou laibin luorong dayaoshan
 			lipu yangshuo nandan bama donglan zhishan nadi liuzhai
@@ -54758,10 +53311,6 @@ countries = {
 	}
 
 	MLB = { #Kangleipak (Manipur)
-		own_control_core = {
-
-
-		}
 
 		include = "south_east_asia_monarchy_no_mandala_no_coast"
 		government = {
@@ -54777,9 +53326,6 @@ countries = {
 	}
 
 	BES = { #Beruas
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy"
 
@@ -54798,9 +53344,6 @@ countries = {
 	}
 
 	MNJ = { #Manjung
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy"
 
@@ -54819,13 +53362,7 @@ countries = {
 	}
 
 	PTC = { #Phetchaburi
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "south_east_asia_monarchy"
 
@@ -54851,9 +53388,6 @@ countries = {
 	}
 
 	TSM = { #Tenasserim
-		own_control_core = {
-
-		}
 
 		include = "south_east_asia_monarchy"
 
@@ -55210,12 +53744,6 @@ countries = {
 	}
 
 	GAU = { #Gaur
-		own_control_core = {
-
-
-
-
-		}
 
 		include = "indian_muslim_monarchy_no_coast"
 		court_language = persian_language
@@ -55241,11 +53769,6 @@ countries = {
 	}
 
 	STN = { #Saptagram
-		own_control_core = {
-
-
-
-		}
 
 		include = "indian_muslim_monarchy"
 		court_language = persian_language
@@ -55280,12 +53803,6 @@ countries = {
 	}
 
 	AHO = { #Ahom
-		own_control_core = {
-
-
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_animist_monarchy"
@@ -55308,15 +53825,7 @@ countries = {
 	}
 
 	KMA = { #Kamata
-		own_control_core = {
 
-
-		}
-
-		own_control_integrated = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55340,9 +53849,6 @@ countries = {
 	}
 
 	DIM = { #Dimasa
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55362,10 +53868,6 @@ countries = {
 	}
 
 	TWI = { #Twipra
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55389,10 +53891,6 @@ countries = {
 	}
 
 	CUT = { #Chutia
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55415,10 +53913,6 @@ countries = {
 	}
 
 	JNT = { #Jaintia
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55440,10 +53934,6 @@ countries = {
 	}
 
 	TRF = { #Taraf
-		own_control_core = {
-
-
-		}
 
 		include = "indian_muslim_monarchy_no_coast"
 		religious_school = hanafi_school
@@ -55471,9 +53961,6 @@ countries = {
 	}
 
 	LUR = { #Laur
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55496,10 +53983,6 @@ countries = {
 	}
 
 	BHP = { #Mallabhum
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy"
@@ -55524,10 +54007,6 @@ countries = {
 	}
 
 	CER = { #Chero
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55547,9 +54026,6 @@ countries = {
 	}
 
 	UJJ = { #Ujjainiya
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55566,10 +54042,6 @@ countries = {
 	}
 
 	RKS = { #Raksel
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55593,10 +54065,6 @@ countries = {
 
 
 	ONW = { #Oiniwar
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55618,10 +54086,6 @@ countries = {
 	}
 
 	KKR = { #Khokhra
-		own_control_core = {
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55643,9 +54107,6 @@ countries = {
 	}
 
 	GWL = { #Garhwal
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55668,11 +54129,6 @@ countries = {
 	}
 
 	KHS = { #Khasa
-		own_control_core = {
-
-
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55698,9 +54154,6 @@ countries = {
 	}
 
 	KMN = { #Kumaon
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55723,9 +54176,6 @@ countries = {
 	}
 
 	KTU = { #Kathmandu
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55746,9 +54196,6 @@ countries = {
 	}
 
 	DTI = { #Doti
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55770,9 +54217,6 @@ countries = {
 	}
 
 	SRM = { #Nahan
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55792,9 +54236,6 @@ countries = {
 	}
 
 	JBL = { #Jubbal
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55810,13 +54251,7 @@ countries = {
 	}
 
 	LWA = { #Limbuwan
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -55843,9 +54278,6 @@ countries = {
 	}
 
 	CDD = { #Chaundandi
-		own_control_core = {
-
-		}
 
 		include = "expl_india_hindu"
 		include = "indian_hindu_monarchy_no_coast"
@@ -56321,11 +54753,6 @@ countries = {
 	}
 
 	SUN = { #Sunda
-		own_control_core = {
-
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56354,14 +54781,7 @@ countries = {
 	}
 
 	JMB = { #Jambi/Melayu/Dharmasraya
-		own_control_core = {
 
-
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56388,9 +54808,6 @@ countries = {
 	}
 
 	ATJ = { #Lambri/Lamuri/Aceh
-		own_control_core = {
-
-		}
 
 		religious_school = shafii_school
 		government = { mysticism_vs_jurisprudence = 20 }
@@ -56422,9 +54839,6 @@ countries = {
 	}
 
 	PSA = { #Pasai
-		own_control_core = {
-
-		}
 
 		religious_school = shafii_school
 		government = { mysticism_vs_jurisprudence = 20 }
@@ -56511,9 +54925,6 @@ countries = {
 	}
 
 	PNI = { #Pannai
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56539,10 +54950,6 @@ countries = {
 	}
 
 	BUS = { #Barus
-		own_control_core = {
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56568,10 +54975,6 @@ countries = {
 	}
 
 	INR = { #Indragiri
-		own_control_core = {
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56597,10 +55000,6 @@ countries = {
 	}
 
 	SGT = { #Siguntur
-		own_control_core = {
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56673,9 +55072,6 @@ countries = {
 	}
 
 	LGE = { #Linge
-		own_control_core = {
-
-		}
 
 		religious_school = shafii_school
 		government = { mysticism_vs_jurisprudence = 20 }
@@ -56774,11 +55170,6 @@ countries = {
 	}
 
 	NSR = { #Nan Sarunai
-		own_control_core = {
-
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56807,11 +55198,6 @@ countries = {
 	}
 
 	KRP = { #Kuripan
-		own_control_core = {
-
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56838,15 +55224,7 @@ countries = {
 	}
 
 	MRP = { #Kutai Martapura
-		own_control_core = {
 
-
-
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56874,9 +55252,6 @@ countries = {
 	}
 
 	KKG = { #Kutai Kartanegara
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56897,9 +55272,6 @@ countries = {
 	}
 
 	SMB = { #Sambas
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56925,18 +55297,7 @@ countries = {
 	}
 
 	TDG = { #Tidung
-		own_control_core = {
 
-
-
-		}
-
-		own_control_integrated = {
-
-
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -56967,15 +55328,7 @@ countries = {
 	}
 
 	BEI = { #Brunei
-		own_control_core = {
 
-		}
-		own_control_integrated = {
-
-		}
-
-		own_control_conquered = {
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57011,13 +55364,7 @@ countries = {
 	}
 
 	MNU = { #Melanau
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57044,9 +55391,6 @@ countries = {
 	}
 
 	SBG = { #Santubong
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57073,9 +55417,6 @@ countries = {
 	}
 
 	SGU = { #Sanggau
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57103,9 +55444,6 @@ countries = {
 	}
 
 	LNK = { #Landak
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57129,9 +55467,6 @@ countries = {
 	}
 
 	SBU = { #Selimbau
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57152,9 +55487,6 @@ countries = {
 	}
 
 	SLA = { #Silat
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57179,9 +55511,6 @@ countries = {
 	}
 
 	BLN = { #Bolaang
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57206,9 +55535,6 @@ countries = {
 	}
 
 	GRT = { #Gorontalo
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57234,10 +55560,6 @@ countries = {
 	}
 
 	PJT = { #Pudjananti
-		own_control_core = {
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57263,9 +55585,6 @@ countries = {
 	}
 
 	BGG = { #Bangga
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57338,9 +55657,6 @@ countries = {
 	}
 
 	BAI = { #Banggai
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57365,9 +55681,6 @@ countries = {
 	}
 
 	BTE = { #Bantaeng
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57388,9 +55701,6 @@ countries = {
 	}
 
 	GOW = { #Gowa
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57411,9 +55721,6 @@ countries = {
 	}
 
 	BOW = { #Bowontehu
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57434,9 +55741,6 @@ countries = {
 	}
 
 	BTN = { #Buton
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57457,9 +55761,6 @@ countries = {
 	}
 
 	MKG = { #Mekongga
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57480,9 +55781,6 @@ countries = {
 	}
 
 	KNW = { #Konawe
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57507,9 +55805,6 @@ countries = {
 	}
 
 	MRN = { #Moronene
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57530,9 +55825,6 @@ countries = {
 	}
 
 	CIN = { #Cina
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57553,9 +55845,6 @@ countries = {
 	}
 
 	KLS = { #Kalisusu
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57576,9 +55865,6 @@ countries = {
 	}
 
 	WUN = { #Muna
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57599,9 +55885,6 @@ countries = {
 	}
 
 	BNE = { #Bone
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57622,9 +55905,6 @@ countries = {
 	}
 
 	SDR = { #Sidenreng
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57645,9 +55925,6 @@ countries = {
 	}
 
 	RRU = { #Barru
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57668,9 +55945,6 @@ countries = {
 	}
 
 	SIG = { #Siang
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57691,9 +55965,6 @@ countries = {
 	}
 
 	PKR = { #Passokkorang
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57714,9 +55985,6 @@ countries = {
 	}
 
 	SLP = { #Selaparang
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57737,9 +56005,6 @@ countries = {
 	}
 
 	BIM = { #Bima
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57760,9 +56025,6 @@ countries = {
 	}
 
 	DOM = { #Dompu
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57783,9 +56045,6 @@ countries = {
 	}
 
 	NGL = { #Ngali
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57806,9 +56065,6 @@ countries = {
 	}
 
 	TLW = { #Taliwang
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57829,9 +56085,6 @@ countries = {
 	}
 
 	LRT = { #Larantuka
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57852,9 +56105,6 @@ countries = {
 	}
 
 	WHL = { #Wehale
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57881,9 +56131,6 @@ countries = {
 	}
 
 	BAC = { #Bacan
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57904,9 +56151,6 @@ countries = {
 	}
 
 	TER = { #Ternate
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57927,9 +56171,6 @@ countries = {
 	}
 
 	TID = { #Tidore
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57950,9 +56191,6 @@ countries = {
 	}
 
 	LOL = { #Loloda
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -57973,9 +56211,6 @@ countries = {
 	}
 
 	JLO = { #Jailolo
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58001,9 +56236,6 @@ countries = {
 	}
 
 	MOO = { #Moro
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58028,9 +56260,6 @@ countries = {
 	}
 
 	SUL = { #Lupah Sug
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58058,10 +56287,6 @@ countries = {
 	}
 
 	MYI = { #Ma-i
-		own_control_core = {
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58091,9 +56316,6 @@ countries = {
 	}
 
 	CEB = { #Cebu
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58118,10 +56340,6 @@ countries = {
 	}
 
 	TDO = { #Tondo
-		own_control_core = {
-
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58148,9 +56366,6 @@ countries = {
 	}
 
 	MNA = { #Maynila
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58224,13 +56439,7 @@ countries = {
 	}
 
 	PGS = { #Caboloan (Pangasinan)
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58257,13 +56466,7 @@ countries = {
 	}
 
 	BTU = { #Butuan
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58294,13 +56497,7 @@ countries = {
 	}
 
 	MGD = { #Wenduling (Maguindanao)
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58326,13 +56523,7 @@ countries = {
 	}
 
 	KIM = { #Kiliman (Buayan)
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58360,9 +56551,6 @@ countries = {
 	}
 
 	LNO = { #Lanao
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58389,9 +56577,6 @@ countries = {
 	}
 
 	IBL = { #Ibalon (Bikol)
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58417,9 +56602,6 @@ countries = {
 	}
 
 	PLL = { #Pulilu
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58440,9 +56622,6 @@ countries = {
 	}
 
 	TYY = { #Taytay
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58467,9 +56646,6 @@ countries = {
 	}
 
 	KML = { #Kumalarang
-		own_control_core = {
-
-		}
 
 		include = "expl_china"
 		include = "expl_indonesian_trade_route"
@@ -58490,9 +56666,6 @@ countries = {
 	}
 
 	KAM = { #Kaimana
-		own_control_core = {
-
-		}
 		include = "expl_indonesian_trade_route"
 		include = "expl_indonesia"
 		starting_technology_level = 3
@@ -58565,9 +56738,6 @@ countries = {
 	}
 
 	CNT = { #Cainta
-		own_control_core = {
-
-		}
 
 		include = "expl_indonesian_trade_route"
 		include = "expl_indonesia"
@@ -58588,9 +56758,6 @@ countries = {
 	}
 
 	BOL = { #Bool (Dapitan)
-		own_control_core = {
-
-		}
 
 		include = "expl_indonesian_trade_route"
 		include = "expl_indonesia"
@@ -58611,9 +56778,6 @@ countries = {
 	}
 
 	SML = { #Sanmalan
-		own_control_core = {
-
-		}
 
 		include = "expl_indonesian_trade_route"
 		include = "expl_indonesia"
@@ -58660,9 +56824,6 @@ countries = {
 
 	#Vungu
 	VUN = {
-		own_control_core = {
-
-		}
 
 		country_rank = rank_duchy
 		starting_technology_level = 3
@@ -58688,9 +56849,6 @@ countries = {
 
 	#Nsundi
 	NSU = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		discovered_regions = { kongo_region }
@@ -58710,9 +56868,6 @@ countries = {
 
 	#Vunga
 	VNA = {
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 3
 		discovered_regions = { kongo_region }
@@ -58735,13 +56890,7 @@ countries = {
 
 	#Maguela
 	MPE = {
-		own_control_core = {
 
-		}
-
-		own_control_integrated = {
-
-		}
 
 		our_cores_conquered_by_others = {
 			bula_kongo ngimbo_amburi
@@ -58904,9 +57053,6 @@ countries = {
 
 	#The Seven Kingdoms of Kongo dia Nlaza
 	MOM = {
-		own_control_core = {
-
-		}
 
 		our_cores_conquered_by_others = {
 			mbanza_nsundi mbanza_mbata mbanza_kongo
@@ -60176,9 +58322,6 @@ countries = {
 	#Mohawk/Kanien'kehaka
 	KKA = {
 
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 0
 		include = "haudenosaunee_tribe"
@@ -60236,9 +58379,6 @@ countries = {
 	#Onondaga/Onondagega
 	ONO = {
 
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 0
 		include = "expl_amerindian_east_coast"
@@ -60261,9 +58401,6 @@ countries = {
 	#Cayuga/Gayogohono
 	GYO = {
 
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 0
 		include = "expl_amerindian_east_coast"
@@ -60286,9 +58423,6 @@ countries = {
 	#Seneca/Onondowaga
 	ONN = {
 
-		own_control_core = {
-
-		}
 
 		starting_technology_level = 0
 		include = "haudenosaunee_tribe"
@@ -61646,6 +59780,9 @@ countries = {
 
 			ruler = krt_mu_izz_uddin_husayn_ibn_ghiyath_uddin
 
+			bureaucracies = {
+				{ type = bayt_al_mal_bureaucracy date = 1200.1.1 entrenchment = 75 }
+			}
 		}
 
 		tolerated_cultures = {
@@ -62879,9 +61016,6 @@ countries = {
 
 	ART = { #Arlat
 		type = army
-		own_control_core = {
-
-		}
 
 		include = "expl_middle_east"
 		include = "expl_mongols"
@@ -62917,10 +61051,6 @@ countries = {
 
 	APD = { #Apardi
 		type = army
-		own_control_core = {
-
-
-		}
 
 		include = "expl_middle_east"
 		include = "expl_mongols"
@@ -62957,11 +61087,6 @@ countries = {
 
 	SLD = { #Suldus
 		type = army
-		own_control_core = {
-
-
-
-		}
 
 		include = "expl_middle_east"
 		include = "expl_mongols"
@@ -63052,8 +61177,6 @@ countries = {
 			nurota ishtixon karmana primkent yangirabod
 		}
 
-		own_control_integrated = {
-		}
 
 		include = "expl_middle_east"
 		include = "expl_mongols"
@@ -63090,9 +61213,6 @@ countries = {
 
 	KTT = { #Khuttal
 		type = army
-		own_control_core = {
-
-		}
 
 		include = "expl_middle_east"
 		include = "expl_mongols"
@@ -64011,7 +62131,7 @@ countries = {
 		include = "muslim_monarchy_no_abrahamic_dhimmi_no_coast"
 		government = {
 			type = monarchy
-			heir_selection = cognatic_primogeniture
+			heir_selection = ibadi_zuhur_heir_selection
 
 			ruler = oma_abu_muhammad
 
@@ -64031,6 +62151,8 @@ countries = {
 
 			laws = {
 				sharia_law = ibadi_policy
+				ibadi_shurat_law = ibadi_institutionalize_the_shurat_policy
+				ibadi_imamate_law = ibadi_zuhur_imam_policy
 			}
 		}
 
@@ -66330,9 +64452,6 @@ countries = {
 
 	#MUI - Maui
 	MUI = {
-		own_control_core = {
-
-		}
 
 		include = "polynesian_monarchy"
 		include = "expl_polynesia"
@@ -66348,9 +64467,6 @@ countries = {
 
 	#LHN - Lahaina
 	LHN = {
-		own_control_core = {
-
-		}
 
 		include = "polynesian_monarchy"
 		include = "expl_polynesia"
@@ -66366,9 +64482,6 @@ countries = {
 
 	#MLK - Moloka'i
 	MLK = {
-		own_control_core = {
-
-		}
 
 		include = "polynesian_monarchy"
 		include = "expl_polynesia"
@@ -66394,9 +64507,6 @@ countries = {
 
 	#OAH - O'ahu
 	OAH = {
-		own_control_core = {
-
-		}
 
 		include = "polynesian_monarchy"
 		include = "expl_polynesia"
@@ -66419,9 +64529,6 @@ countries = {
 
 	#KAU - Kaua'i
 	KAU = {
-		own_control_core = {
-
-		}
 
 		include = "polynesian_monarchy"
 		include = "expl_polynesia"
@@ -66672,9 +64779,6 @@ countries = {
 	# --- Samoa ---
 	#Samoa - SAM
 	SAM = { #https://en.wikipedia.org/wiki/History_of_Samoa
-		own_control_core = {
-
-		}
 
 		include = "polynesian_monarchy"
 		include = "expl_polynesia"
@@ -66737,6 +64841,7 @@ countries = {
 
 	#IB0
 	IB0 = {
+
 		starting_technology_level = 3
 		include = "expl_mediterranean"
 		include = "expl_silk_road_west"
@@ -66750,10 +64855,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
-
 		capital = murcia
+		country_rank = rank_duchy
 
 		our_cores_conquered_by_others = {
 			cartagena lorca mula murcia
@@ -66779,9 +64882,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = villena
+		country_rank = rank_duchy
 	}
 
 	#IB2
@@ -66803,9 +64905,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = jativa
+		country_rank = rank_duchy
 	}
 
 	#IB3
@@ -66827,9 +64928,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = faro
+		country_rank = rank_duchy
 	}
 
 	#IB4
@@ -66851,9 +64951,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = evora
+		country_rank = rank_duchy
 	}
 
 	#IB5
@@ -66875,9 +64974,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = braganca
+		country_rank = rank_duchy
 	}
 
 	#IB6
@@ -66899,9 +64997,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = castelo_branco
+		country_rank = rank_duchy
 	}
 
 	#IB7
@@ -66923,9 +65020,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = badajoz
+		country_rank = rank_duchy
 	}
 
 	#IB8
@@ -66947,9 +65043,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = ciudad_rodrigo
+		country_rank = rank_duchy
 	}
 
 	#IB9
@@ -66971,9 +65066,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = salamanca
+		country_rank = rank_duchy
 	}
 
 	#IBA
@@ -66995,9 +65089,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = caceres
+		country_rank = rank_duchy
 	}
 
 	#IBB
@@ -67019,9 +65112,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = trujillo
+		country_rank = rank_duchy
 	}
 
 	#IBC
@@ -67043,9 +65135,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = zamora
+		country_rank = rank_duchy
 	}
 
 	#IBD
@@ -67067,9 +65158,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = benavente
+		country_rank = rank_duchy
 	}
 
 	#IBE
@@ -67091,9 +65181,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = oviedo
+		country_rank = rank_duchy
 	}
 
 	#IBF
@@ -67115,9 +65204,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = santander
+		country_rank = rank_duchy
 	}
 
 	#IBG
@@ -67139,9 +65227,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = bilbao
+		country_rank = rank_duchy
 	}
 
 	#IBH
@@ -67163,9 +65250,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = san_sebastian
+		country_rank = rank_duchy
 	}
 
 	#IBI
@@ -67187,9 +65273,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = ciudad_real
+		country_rank = rank_duchy
 	}
 
 	#IBJ
@@ -67211,9 +65296,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = toledo
+		country_rank = rank_duchy
 	}
 
 	#IBK
@@ -67235,9 +65319,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = ocana
+		country_rank = rank_duchy
 	}
 
 	#IBM
@@ -67259,9 +65342,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = madrid
+		country_rank = rank_duchy
 	}
 
 	#IBN
@@ -67283,9 +65365,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = guadalajara
+		country_rank = rank_duchy
 	}
 
 	#IBO
@@ -67307,9 +65388,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = avila
+		country_rank = rank_duchy
 	}
 
 	#IBP
@@ -67331,9 +65411,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = segovia
+		country_rank = rank_duchy
 	}
 
 	#IBQ
@@ -67355,9 +65434,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = valladolid
+		country_rank = rank_duchy
 	}
 
 	#IBR
@@ -67379,9 +65457,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = palencia
+		country_rank = rank_duchy
 	}
 
 	#IBS
@@ -67403,9 +65480,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = lerma
+		country_rank = rank_duchy
 	}
 
 	#IBT
@@ -67427,9 +65503,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = burgos
+		country_rank = rank_duchy
 	}
 
 	#IBU
@@ -67451,9 +65526,8 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = soria
+		country_rank = rank_duchy
 	}
 
 	#IBV
@@ -67475,9 +65549,54 @@ countries = {
 			heir_selection = cognatic_primogeniture
 		}
 
-		country_rank = rank_duchy
-
 		capital = cuenca
+		country_rank = rank_duchy
+	}
+
+	#IBW
+	IBW = {
+		own_control_core = {
+			andujar baeza cazorla jaen jodar martos ubeda
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "expl_silk_road_center"
+		include = "expl_silk_road_east"
+		include = "expl_indian_trade_route"
+		include = "panda_iberian_frontier"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = jaen
+		country_rank = rank_duchy
+	}
+
+	#IBX
+	IBX = {
+		own_control_core = {
+			betanzos coruna ferrol lugo mondonedo monforte_de_lemos navia_de_suarna sarria villalba vivero
+		}
+
+		starting_technology_level = 3
+		include = "expl_mediterranean"
+		include = "expl_silk_road_west"
+		include = "expl_silk_road_center"
+		include = "expl_silk_road_east"
+		include = "expl_indian_trade_route"
+		include = "panda_iberian_feudal"
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+		}
+
+		capital = lugo
+		country_rank = rank_duchy
 	}
 
 	#FR0
@@ -67906,52 +66025,6 @@ countries = {
 		}
 
 		capital = cosenza
-		country_rank = rank_duchy
-	}
-
-	#IBW
-	IBW = {
-		own_control_core = {
-			andujar baeza cazorla jaen jodar martos ubeda
-		}
-
-		starting_technology_level = 3
-		include = "expl_mediterranean"
-		include = "expl_silk_road_west"
-		include = "expl_silk_road_center"
-		include = "expl_silk_road_east"
-		include = "expl_indian_trade_route"
-		include = "panda_iberian_frontier"
-
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-		}
-
-		capital = jaen
-		country_rank = rank_duchy
-	}
-
-	#IBX
-	IBX = {
-		own_control_core = {
-			betanzos coruna ferrol lugo mondonedo monforte_de_lemos navia_de_suarna sarria villalba vivero
-		}
-
-		starting_technology_level = 3
-		include = "expl_mediterranean"
-		include = "expl_silk_road_west"
-		include = "expl_silk_road_center"
-		include = "expl_silk_road_east"
-		include = "expl_indian_trade_route"
-		include = "panda_iberian_feudal"
-
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-		}
-
-		capital = lugo
 		country_rank = rank_duchy
 	}
 }

@@ -7,10 +7,12 @@ Line format (produced by generate_new_countries.py):
   --name "Name" --name-adj "NameAdj" --region REGION
   [--provinces p1 p2] [--locations l1 l2] [--capital LOCATION] [--culture CULTURE]
 
-The --tag from the file is ignored; create_country.py auto-generates a fresh tag.
+The --tag from the file is ignored. A country already in panda_express_map.txt keeps
+its tag and color; otherwise create_country.py auto-generates a fresh tag.
 """
 
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -22,19 +24,28 @@ try:
 except ImportError:
     pass
 
-ROOT         = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
-INPUT_FILE   = ROOT / "mod_changes/new_countries.txt"
-LOCALIZATION = ROOT / "main_menu/localization/english/country_names_l_english.yml"
-SCRIPT       = Path(__file__).parent / "helpers" / "create_country.py"
+ROOT         = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent / "mod"))
+INPUT_FILE   = Path(__file__).parent.parent / "mod_changes/new_countries.txt"
+COUNTRIES    = ROOT / "main_menu/setup/1337/10_countries.txt"
+DEFINITIONS  = ROOT / "in_game/setup/countries/panda_express_map.txt"
+SCRIPT      = Path(__file__).parent / "helpers" / "create_country.py"
 
 
-def load_existing_names() -> set[str]:
-    """Return the set of country names already present in the localization file."""
-    if not LOCALIZATION.exists():
+def load_pinned_countries() -> dict[str, tuple[str, list[str]]]:
+    """Return {name: (tag, [r, g, b])} from the mod's definitions so rebuilds keep tags and colors."""
+    if not DEFINITIONS.exists():
+        return {}
+    text = DEFINITIONS.read_text(encoding="utf-8-sig")
+    pattern = r"^([A-Z0-9]{3})\s*=\s*\{\s*#\s*(.+?)\s*\n\s*color\s*=\s*rgb\s*\{\s*(\d+\s+\d+\s+\d+)\s*\}"
+    return {m.group(2): (m.group(1), m.group(3).split()) for m in re.finditer(pattern, text, re.MULTILINE)}
+
+
+def load_existing_tags() -> set[str]:
+    """Return the set of tags that already have a block in 10_countries.txt."""
+    if not COUNTRIES.exists():
         return set()
-    raw = LOCALIZATION.read_bytes()
-    text = raw[3:].decode("utf-8") if raw.startswith(b"\xef\xbb\xbf") else raw.decode("utf-8")
-    return {m.group(1) for m in __import__("re").finditer(r':\s*"([^"]+)"', text)}
+    text = COUNTRIES.read_text(encoding="utf-8-sig")
+    return set(re.findall(r"^\t([A-Z0-9]{3})\s*=\s*\{", text, re.MULTILINE))
 
 
 def parse_line(line: str) -> tuple[str, list[str]] | None:
@@ -69,13 +80,23 @@ def parse_line(line: str) -> tuple[str, list[str]] | None:
 
 
 def main():
-    existing_names = load_existing_names()
+    pinned = load_pinned_countries()
+    existing_tags = load_existing_tags()
 
     lines = INPUT_FILE.read_text(encoding='utf-8').splitlines()
     entries = [parse_line(l) for l in lines]
     entries = [e for e in entries if e is not None]
 
-    pending = [(name, args) for name, args in entries if name not in existing_names]
+    pending = []
+    for name, args in entries:
+        if name in pinned:
+            tag, color = pinned[name]
+            if tag in existing_tags:
+                continue
+            args = args + ['--tag', tag]
+            if '--color' not in args:
+                args = args + ['--color', *color]
+        pending.append((name, args))
     skipped = len(entries) - len(pending)
 
     print(f"Found {len(entries)} entries — {skipped} already present, {len(pending)} to apply.\n")

@@ -5,7 +5,7 @@ description: Update a country's location blocks in 10_countries.txt, ensuring no
 # Update Country Locations
 
 The user wants to set or modify the locations belonging to a country in:
-`main_menu/setup/start/10_countries.txt`
+`main_menu/setup/1337/10_countries.txt`
 
 ## Location block types (listed at top of file)
 - `own_control_core` — normal sovereign territory (most common)

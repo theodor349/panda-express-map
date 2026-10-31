@@ -77,7 +77,7 @@ Available emblems: `main_menu/gfx/coat_of_arms/colored_emblems/`
 
 ## Optional steps
 
-### International organizations — `main_menu/setup/start/15_international_organizations.txt`
+### International organizations — `main_menu/setup/1337/15_international_organizations.txt`
 
 Required if the country should be a member of the HRE or another organization at game start:
 ```

@@ -9,8 +9,8 @@ try:
 except ImportError:
     pass
 
-ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent))
-DIPLOMACY_PATH = ROOT / "main_menu" / "setup" / "start" / "12_diplomacy.txt"
+ROOT = Path(os.environ.get("EU5_MOD_PATH", Path(__file__).parent.parent / "mod"))
+DIPLOMACY_PATH = ROOT / "main_menu" / "setup" / "1337" / "12_diplomacy.txt"
 
 
 def main() -> None:
