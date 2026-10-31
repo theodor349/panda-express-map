@@ -1880,8 +1880,8 @@ countries = {
 		}
 
 		our_cores_conquered_by_others = {
-			bautzen gorlitz hoyerswerda marienstern
-			rothenburg_oberlausitz
+			   
+			
 		}
 	}
 
@@ -4436,10 +4436,10 @@ countries = {
 		}
 
 		our_cores_conquered_by_others = {
-			hereford kidderminster shrewsbury worcester
+			   
 
-			bampton barnstaple bideford exeter
-			okehampton plymouth
+			   
+			 
 		}
 	}
 
@@ -6046,10 +6046,10 @@ countries = {
 		}
 
 		our_cores_conquered_by_others = {
-			adoni ahobalam anantapur dhone
-			gandikota gutti kurnool nandyal
-			pavagada porumamilla srisailam udayagiri
-			vempalle
+			   
+			   
+			   
+			
 		}
 	}
 
@@ -6244,32 +6244,32 @@ countries = {
 		}
 
 		our_cores_conquered_by_others = {
-			attock kohat peshawar
+			  
 
-			agori bhojpur chai damoh
-			deogarh gobindpur hazaribagh hoshangabad
-			kalpi katrasgarh konch lalitpur
-			shergarh sidhi singorgarh sugaur
-			ujargarh urda vijaygarh
+			   
+			   
+			   
+			   
+			  
 
-			akola amravati basim kalam
-			kaulas kelapur mahagaon mehkar
-			panar sindkedh
+			   
+			   
+			 
 
-			bassein bombay chaul dabhol
-			janjira kalyan rajapur sangamesvara
-			savantvadi
+			   
+			   
+			
 
-			ajmer aklera ashaval baroda
-			bayana bhilwara bhind broach
-			chandor dadri daman deodar
-			dholka gagraun hansi hisar
-			khambat khaniadhana kurki makrana
-			mandalgarh mandore merta modasa
-			nagaur nasik osian patan
-			phulia radhanpur rander ranthambore
-			sabalgarh sambhar shahabad sheopur
-			sinnar sipri surat
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			  
 		}
 	}
 
@@ -7330,7 +7330,7 @@ countries = {
 		tolerated_cultures = { marwari }
 
 		our_cores_conquered_by_others = {
-			kiradu
+			
 		}
 	}
 
@@ -8532,12 +8532,12 @@ countries = {
 		 }
 
 		our_cores_conquered_by_others = {
-			dharmavaram kadiri palasamudram penukonda
+			   
 
-			bhavani coimbatore denkanikottai dharapuram
-			dharmapuri erode jagadevipalayam karur
-			krishnagiri palani pennagaram salem
-			satyamanagalam sendamangalam tiruppur tiruvannamalai
+			   
+			   
+			   
+			   
 		}
 	}
 
@@ -13182,11 +13182,11 @@ countries = {
 			birgi tire guzelhisar nazilli cine balat milas
 			gokabat marmaris bodrum mugla
 
-			berat devol
+			 
 
-			pyli
+			
 
-			alasehir
+			
 		}
 
 		starting_technology_level = 3
@@ -13710,8 +13710,8 @@ countries = {
 		our_cores_conquered_by_others = {
 			konjic
 
-			debar dukagjini has koman
-			lezha
+			   
+			
 		}
 		starting_technology_level = 3
 		include = "expl_mediterranean"
@@ -15183,12 +15183,12 @@ countries = {
 
 		our_cores_conquered_by_others = {
 
-			breteuil corbie nesle peronne
+			   
 
-			auneau chartres montargis sully
-			vitry_aux_loges
+			   
+			
 
-			sancoins vierzon
+			 
 		}
 
 		starting_technology_level = 3
@@ -17782,7 +17782,7 @@ countries = {
 		capital = evreux
 
 		our_cores_conquered_by_others = {
-			longueville
+			
 		}
 	}
 
@@ -17799,9 +17799,9 @@ countries = {
 		our_cores_conquered_by_others = {
 			evreux harcourt mortain #Evreux
 			longueville #Longueville
-			alencon argentan #Alencon
+			alencon  #Alencon
 
-			argentan bernay laigle
+			  
 		}
 
 		starting_technology_level = 3
@@ -19398,10 +19398,10 @@ countries = {
 		dynasty = marinid_dynasty
 
 		our_cores_conquered_by_others = {
-			ait_daoud aouint_yghomane azilal chichaoua
-			ifrane kalaat_sraghna mogador tednest
+			   
+			   
 
-			marbella ronda
+			 
 		}
 	}
 
@@ -23056,7 +23056,7 @@ countries = {
 		capital = cairo
 
 		our_cores_conquered_by_others = {
-			tobruk
+			
 		}
 	}
 
@@ -30537,50 +30537,50 @@ countries = {
 		}
 
 		our_cores_conquered_by_others = {
-			anfu_li anxiang bafan bazhai_duyun
-			changning_changning chenxi cili danleng
-			dayi dayong dushan emei
-			fushun huaihua huichuan_dechang huili
-			huitong jiajiang kuozhou langning
-			lingfang liyang_lizhou longyang longyou_jiading
-			luodian luxi luyang madi_yuanling
-			mayang meizhou mingshan nanxi
-			ningpu pengshan pengshui puge
-			pujiang_qiongzhou qianjiang_binzhou qianjiang_shaoqing qianlong
-			qianwei qianyang_yuanzhou qingfu qingjiang_liping
-			qingshen qiongzhou rongjing rongzhou
-			shanglin shimen shizhou suining_jing
-			taigong taoyuan tianzhu tongdao
-			wangmu weiyuan_jiading wuling wuyuan_nanning
-			xuanhua xuanhua_nanning xupu yandao
-			yibin yongning_hengzhou yongping yuanjiang
-			yuanling yuannan
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			 
 
-			anyue anzhou baimaguan cangxi
-			chengdu chengji chengzhou dazhu
-			deyang didao dingxi fuqiang
-			guanzhou huacheng huaying huizhou
-			huizhou_gongchang jiachuan jianzhou jiezhou
-			jingyan jintang jinyuan kangu
-			langzhong lanzhou lezhi liangdang
-			linshui liujiang longxi_gongchang lutang
-			miangu mianzhou mianzhu nanbu
-			nanchong nanjiang neijiang ningyuan_gongchang
-			pengxi pengzhou pixian puan
-			qinan qingchuan qingshui qixian_tongchuan
-			qujiang_guangan renshou sancha sanjiaocheng
-			shehong shifang shiquan_maozhou shuangliu
-			suining tongjiang tongwei weiyuan_lintao
-			xiangru xiaoxi xichong xihe_huizhou
-			xindu yanting yilong yingshan_shunqing
-			yuechi zengkou zhangming zhangxian
-			zhaohua zhongjiang zitong zixian
-			ziyang_zizhong
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			   
+			
 
-			bikinka chalin dobkuri gan
-			gapsan jangjin kuile menlu
-			mergen namunka non noto_ussuri
-			samsu taowen xunka
+			   
+			   
+			   
+			  
 		}
 	}
 
@@ -31212,8 +31212,8 @@ countries = {
 		capital = qingzhou_mongol
 
 		our_cores_conquered_by_others = {
-			haihaer kailu linhuang tuliemao
-			xinkai
+			   
+			
 		}
 	}
 
@@ -31255,11 +31255,11 @@ countries = {
 		capital = taizhou_jurchen
 
 		our_cores_conquered_by_others = {
-			arun bila buteha chaghankhot
-			chol gorlos huolin hurle
-			nongan nuomin sart talaha
-			taluhe wafang zhalong zhaozhou_jurchen
-			zhengjiatun
+			   
+			   
+			   
+			   
+			
 		}
 	}
 
@@ -49719,7 +49719,7 @@ countries = {
 			dartsedo lhagang baurang
 			chabcha buha caka dulan dungkar_amdo guolimu qardam
 
-			phari
+			
 		}
 
 		country_rank = rank_kingdom
@@ -52029,7 +52029,7 @@ countries = {
 		capital = angkor
 
 		our_cores_conquered_by_others = {
-			apui ban_don kon_tum song_be
+			   
 		}
 	}
 
@@ -54751,8 +54751,8 @@ countries = {
 		capital = kota_rentang
 
 		our_cores_conquered_by_others = {
-			gunung_sahilan kampar pangkalan_kerinci pelalawan
-			singingi
+			   
+			
 		}
 	}
 
@@ -60980,9 +60980,9 @@ countries = {
 		capital = akhsisek
 
 		our_cores_conquered_by_others = {
-			chiroqchi firabr guzor kerki
-			khoja_idat_kala kish_shahrisabz koson muborak
-			nasaf navidakh paikend
+			   
+			   
+			  
 		}
 	}
 
@@ -61026,7 +61026,7 @@ countries = {
 		capital = samarkand
 
 		our_cores_conquered_by_others = {
-			bukhara tim_samarkand
+			 
 		}
 	}
 
@@ -64604,7 +64604,7 @@ countries = {
 		capital = ulithi_atoll
 
 		our_cores_conquered_by_others = {
-			yap
+			
 		}
 	}
 
