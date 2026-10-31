@@ -1,0 +1,9 @@
+﻿government = {
+	reforms = {
+		catalan_merchant_privileges
+	}
+	centralization_vs_decentralization = 75
+	privilege = {
+		tun_ungovernable_agriculturalists
+	}
+}

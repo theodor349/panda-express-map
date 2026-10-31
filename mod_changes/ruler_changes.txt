@@ -20,3 +20,6 @@ CRO random
 
 # Naples: Provence gets its own ruler, with no Neapolitan consort or heir.
 PRO random clear_family
+
+# England: The Pale gets its own ruler now that it is no longer a dominion.
+PLE random

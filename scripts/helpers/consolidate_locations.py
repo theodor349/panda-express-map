@@ -64,6 +64,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--provinces", nargs="*", default=[], metavar="NAME", help="Province names")
     parser.add_argument("--locations", nargs="*", default=[], metavar="NAME", help="Individual location names")
     parser.add_argument("--tags",      nargs="*", default=[], metavar="TAG",  help="Take all locations from these country tags")
+    parser.add_argument("--exclude",   nargs="*", default=[], metavar="NAME", help="Locations to leave with their current owner")
     parser.add_argument("--file", default=str(DEFAULT_FILE), help="Path to 10_countries.txt")
     parser.add_argument("--definitions", default=str(DEFINITIONS), help="Path to definitions.txt")
     return parser.parse_args()
@@ -229,6 +230,7 @@ def main() -> None:
     locations_to_add.update(resolve_locations(geo, args.areas,     "area",     errors))
     locations_to_add.update(resolve_locations(geo, args.provinces, "province", errors))
     locations_to_add.update(resolve_locations(geo, args.locations, "location", errors))
+    locations_to_add.difference_update(args.exclude)
 
     if errors:
         for e in errors:
@@ -245,6 +247,7 @@ def main() -> None:
     if args.tags:
         tag_errors: list[str] = []
         locations_to_add.update(resolve_tag_locations(text, block_index, args.tags, tag_errors))
+        locations_to_add.difference_update(args.exclude)
         if tag_errors:
             for e in tag_errors:
                 print(e, file=sys.stderr)

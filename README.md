@@ -2,7 +2,7 @@
 
 An **Europa Universalis V** mod that splits the map into a multiplayer-friendly version.
 
-- **Version:** 0.5
+- **Version:** 0.6
 - **Game version:** 1.4.6 (1337 start date only)
 - **Scope:** Map changes only (English)
 

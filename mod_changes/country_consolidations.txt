@@ -25,7 +25,7 @@ DAI --areas red_river_delta_area champa_area
 
 # Tibet
 TIB --areas tsang_area nepal_area u_area kham_area ngari_area changtang_area amdo_area chuanxi_area longyou_area --provinces kangra_province punjab_hills_province
-QUN --areas badakhshan_area upper_indus_area --provinces peshawar_province balkh_province hissar_province kelif_province maymana_province bukhara_province kunduz_province 
+QUN --areas badakhshan_area upper_indus_area --provinces peshawar_province balkh_province hissar_province kelif_province maymana_province bukhara_province kunduz_province --exclude akhsisek
 QCH --tags MNL DGH 
 TRH --tags BAT KHD CRS OGE
 
@@ -42,7 +42,7 @@ JNG --areas saurashtra_area
 HAW --areas hawaii_area samoa_area 
 
 # Manchuria 
-MRE --areas ussuri_area songhua_area gwanbuk_area songnen_area --locations yangam boli
+MRE --areas ussuri_area songhua_area gwanbuk_area songnen_area --locations yangam boli --exclude qingzhou_mongol taizhou_jurchen
 
 # Japan
 JAP --provinces tamna_province ryuukyuu_province

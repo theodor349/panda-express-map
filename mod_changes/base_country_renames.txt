@@ -1,0 +1,6 @@
+# Format: <TAG> "New name"
+# Dormant base countries whose names clash with mod countries.
+ALV "Kingdom of the Algarve"
+ATU "Kingdom of Asturias"
+JAE "Kingdom of Jaén"
+TOL "Kingdom of Toledo"

@@ -2,7 +2,7 @@
 
 ## Project
 
-**Panda Express Map** — EU5 mod (`id: panda-express-map`, v0.5, game v1.4.6) that splits the map into a multiplayer-friendly version. Scope: English only, map changes only.
+**Panda Express Map** — EU5 mod (`id: panda-express-map`, v0.6, game v1.4.6) that splits the map into a multiplayer-friendly version. Scope: English only, map changes only.
 
 ## Paths
 
@@ -110,4 +110,4 @@ Set `-debug_mode` in Steam launch options for EU5 to enable debug mode. This sho
 - **Always copy the full base game file** before modifying — the game replaces the entire file, not individual entries.
 - **Mirror the base game path** exactly (e.g., `main_menu/setup/1337/10_countries.txt`).
 - A location may only appear in one country's own_control_core block in `10_countries.txt`.
-- **Rebuild from fresh base files** — before `apply_all.py`, delete `10_countries.txt`, `12_diplomacy.txt`, `country_names_l_english.yml` and `location_templates.txt`. It only copies base files that are missing, and rerunning over built files reshuffles land. Keep `panda_express_map.txt`: it pins each country's tag and color.
+- **Rebuild from fresh base files** — before `apply_all.py`, delete `10_countries.txt`, `12_diplomacy.txt`, `country_names_l_english.yml` and `location_templates.txt`. It only copies base files that are missing, and rerunning over built files reshuffles land. Keep `panda_express_map.txt`: it pins each country's tag and color. `apply_startup_fixes.py` regenerates `15_international_organizations.txt`, `16_wars.txt` and the `panda_landless_*` and `panda_hafsid_independent` templates from the base game on every build, so don't edit those by hand.

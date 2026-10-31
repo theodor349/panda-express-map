@@ -124,8 +124,8 @@ def find_named_block(
 
 def find_active_ruler_line(
     text: str, government_open: int, government_close: int
-) -> tuple[int, int, re.Match[str]]:
-    """Find the sole direct ruler assignment inside a government block."""
+) -> tuple[int, int, re.Match[str]] | None:
+    """Find the direct ruler assignment inside a government block, if it has one."""
     line_re = re.compile(
         r"^(?P<prefix>[ \t]*ruler\s*=\s*)"
         r"(?P<ruler>[A-Za-z0-9_.:-]+)"
@@ -150,11 +150,25 @@ def find_active_ruler_line(
         depth += code.count("{") - code.count("}")
         cursor = line_end + (1 if newline != -1 else 0)
 
-    if len(matches) != 1:
+    if len(matches) > 1:
         raise ValueError(
-            f"expected exactly one active ruler assignment; found {len(matches)}"
+            f"expected at most one active ruler assignment; found {len(matches)}"
         )
-    return matches[0]
+    return matches[0] if matches else None
+
+
+def remove_open_ruler_terms(text: str, start: int, end: int) -> tuple[str, int]:
+    """Remove ruler_term entries with no end_date from text[start:end]."""
+    pattern = re.compile(r"^[ \t]*ruler_term\s*=\s*\{", re.MULTILINE)
+    removed = 0
+    for match in reversed(list(pattern.finditer(text, start, end))):
+        _, close = find_block_extent(text, match.end() - 1)
+        if "end_date" in text[match.start():close]:
+            continue
+        line_end = text.find("\n", close)
+        text = text[:match.start()] + text[line_end + 1:]
+        removed += 1
+    return text, removed
 
 
 def find_direct_family_lines(
@@ -212,14 +226,25 @@ def set_country_ruler(
         sys.exit(f"ERROR: government block not found for '{tag}' in {path.name}")
 
     try:
-        line_start, line_end, match = find_active_ruler_line(text, *government)
+        active_ruler = find_active_ruler_line(text, *government)
     except ValueError as exc:
         sys.exit(f"ERROR: {tag}: {exc}")
 
-    old_ruler = match.group("ruler")
-    replacement = f'{match.group("prefix")}{ruler}{match.group("suffix")}'
-    updated = text[:line_start] + replacement + text[line_end:]
+    if active_ruler is None:
+        old_ruler = "(none)"
+        insert_at = government[0] + 1
+        updated = text[:insert_at] + f"\n\t\t\truler = {ruler}" + text[insert_at:]
+    else:
+        line_start, line_end, match = active_ruler
+        old_ruler = match.group("ruler")
+        replacement = f'{match.group("prefix")}{ruler}{match.group("suffix")}'
+        updated = text[:line_start] + replacement + text[line_end:]
     cleared: list[str] = []
+    if ruler == "random":
+        updated_country = find_named_block(updated, tag, 0, len(updated))
+        updated, open_terms = remove_open_ruler_terms(updated, updated_country[0], updated_country[1])
+        if open_terms:
+            cleared.append("open ruler_term")
     if clear_family:
         try:
             updated_country = find_named_block(updated, tag, 0, len(updated))
