@@ -1,0 +1,10 @@
+include = catholic_monarchy
+
+government = {
+	mercantilism_vs_free_trade = 30
+	land_vs_naval = 20
+
+	privilege = {
+		sponsor_maritime_contracts
+	}
+}

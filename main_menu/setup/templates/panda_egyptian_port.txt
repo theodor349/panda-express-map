@@ -1,0 +1,13 @@
+include = muslim_monarchy
+
+government = {
+	mysticism_vs_jurisprudence = 20
+	aristocracy_vs_plutocracy = -30
+	mercantilism_vs_free_trade = 20
+	land_vs_naval = 30
+
+	laws = {
+		sharia_law = shafii_policy
+		cultural_traditions_law = civil_society
+	}
+}

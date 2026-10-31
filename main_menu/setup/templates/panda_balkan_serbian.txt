@@ -1,0 +1,10 @@
+include = eastern_european_monarchy_no_coast
+
+government = {
+	quality_vs_quantity = 15
+	belligerent_vs_conciliatory = -10
+
+	laws = {
+		mining_law = burghers_mining_law
+	}
+}

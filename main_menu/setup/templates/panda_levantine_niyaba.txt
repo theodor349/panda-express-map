@@ -1,0 +1,13 @@
+include = muslim_monarchy
+
+government = {
+	mysticism_vs_jurisprudence = 20
+	belligerent_vs_conciliatory = -30
+	offensive_vs_defensive = 40
+	land_vs_naval = -40
+
+	laws = {
+		sharia_law = shafii_policy
+		medieval_levy_law = noble_levies
+	}
+}

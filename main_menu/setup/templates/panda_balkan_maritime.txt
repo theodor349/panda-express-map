@@ -1,0 +1,10 @@
+include = eastern_european_monarchy
+
+government = {
+	land_vs_naval = 40
+	mercantilism_vs_free_trade = -40
+
+	privilege = {
+		shipwright_contracts
+	}
+}

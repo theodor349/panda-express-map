@@ -1,0 +1,14 @@
+include = catholic_monarchy_no_coast
+
+government = {
+	centralization_vs_decentralization = 80
+	aristocracy_vs_plutocracy = -70
+	serfdom_vs_free_subjects = -80
+	mercantilism_vs_free_trade = -20
+	offensive_vs_defensive = 40
+	land_vs_naval = -75
+
+	laws = {
+		medieval_levy_law = noble_levies
+	}
+}

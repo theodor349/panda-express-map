@@ -1,0 +1,10 @@
+include = catholic_monarchy
+
+government = {
+	serfdom_vs_free_subjects = 20
+	land_vs_naval = 20
+
+	privilege = {
+		shipwright_contracts
+	}
+}

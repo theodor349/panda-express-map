@@ -1,0 +1,10 @@
+include = turkish_beylik_no_coast_no_greek
+
+government = {
+	centralization_vs_decentralization = 30
+	land_vs_naval = -40
+
+	laws = {
+		sharia_law = hanafi_policy
+	}
+}

@@ -1,0 +1,10 @@
+include = catholic_monarchy_no_coast
+
+government = {
+	serfdom_vs_free_subjects = 20
+	mercantilism_vs_free_trade = 20
+
+	laws = {
+		administrative_system = local_courts_administration
+	}
+}

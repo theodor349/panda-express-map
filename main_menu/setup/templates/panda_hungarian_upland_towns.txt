@@ -1,0 +1,10 @@
+include = eastern_european_catholic_monarchy_no_auxilium_no_coast
+court_language = church_dialect
+
+government = {
+	aristocracy_vs_plutocracy = -50
+
+	privilege = {
+		building_rights
+	}
+}

@@ -1,0 +1,10 @@
+include = muslim_monarchy_no_abrahamic_dhimmi_no_coast
+
+government = {
+	centralization_vs_decentralization = 60
+	land_vs_naval = -30
+
+	laws = {
+		sharia_law = maliki_policy
+	}
+}

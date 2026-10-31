@@ -54,6 +54,10 @@ that matches whether the country has a port in `ports.csv`. The `castilian_*`
 presets need Castilian culture and `basque` needs Basque culture. Supplying
 `--includes` overrides the preset.
 
+Countries outside Iberia set their government with `--includes`: the `expl_*`
+includes followed by a regional `panda_<region>_<name>` template from
+`main_menu/setup/templates/`. Each template is either coastal or inland.
+
 The script will error if the tag or name already exists.
 
 ---

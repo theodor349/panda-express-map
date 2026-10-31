@@ -1,0 +1,14 @@
+include = turkish_beylik
+
+government = {
+	centralization_vs_decentralization = 30
+	land_vs_naval = 10
+
+	privilege = {
+		sponsor_maritime_contracts
+	}
+
+	laws = {
+		sharia_law = hanafi_policy
+	}
+}

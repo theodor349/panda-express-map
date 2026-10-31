@@ -1,0 +1,12 @@
+include = catholic_monarchy
+
+government = {
+	centralization_vs_decentralization = 60
+	aristocracy_vs_plutocracy = -60
+	offensive_vs_defensive = 40
+
+	laws = {
+		legal_code_law = common_law_policy
+		medieval_levy_law = noble_levies
+	}
+}

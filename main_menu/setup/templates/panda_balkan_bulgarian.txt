@@ -1,0 +1,10 @@
+include = eastern_european_monarchy_no_coast
+
+government = {
+	centralization_vs_decentralization = 65
+	spiritualist_vs_humanist = -65
+
+	laws = {
+		patriarchate_law = state_patriarchate_policy
+	}
+}

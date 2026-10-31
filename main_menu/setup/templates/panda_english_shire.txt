@@ -1,0 +1,11 @@
+include = catholic_monarchy
+
+government = {
+	centralization_vs_decentralization = 30
+	mercantilism_vs_free_trade = -25
+	capital_economy_vs_traditional_economy = 30
+
+	laws = {
+		legal_code_law = common_law_policy
+	}
+}

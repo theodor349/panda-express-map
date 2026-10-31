@@ -1,0 +1,12 @@
+include = muslim_monarchy
+
+government = {
+	mysticism_vs_jurisprudence = 20
+	centralization_vs_decentralization = 60
+
+	laws = {
+		sharia_law = shafii_policy
+		administrative_system = local_courts_administration
+		medieval_levy_law = all_cultures
+	}
+}

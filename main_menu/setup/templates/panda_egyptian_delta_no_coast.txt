@@ -1,0 +1,12 @@
+include = muslim_monarchy_no_coast
+
+government = {
+	mysticism_vs_jurisprudence = 20
+	quality_vs_quantity = -10
+	land_vs_naval = -40
+
+	laws = {
+		sharia_law = shafii_policy
+		iqta_law = lenient_taxation
+	}
+}

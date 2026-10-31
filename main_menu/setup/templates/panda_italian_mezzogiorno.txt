@@ -1,0 +1,11 @@
+include = catholic_monarchy
+
+government = {
+	centralization_vs_decentralization = 30
+	aristocracy_vs_plutocracy = -60
+	mercantilism_vs_free_trade = 0
+
+	laws = {
+		medieval_levy_law = noble_levies
+	}
+}

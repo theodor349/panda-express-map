@@ -1,0 +1,11 @@
+include = catholic_monarchy
+
+government = {
+	centralization_vs_decentralization = 50
+	aristocracy_vs_plutocracy = -20
+	land_vs_naval = -30
+
+	laws = {
+		administrative_system = local_courts_administration
+	}
+}

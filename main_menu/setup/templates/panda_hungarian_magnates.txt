@@ -1,0 +1,11 @@
+include = eastern_european_catholic_monarchy_no_auxilium_no_coast
+court_language = church_dialect
+
+government = {
+	centralization_vs_decentralization = 70
+	offensive_vs_defensive = 35
+
+	laws = {
+		administrative_system = local_courts_administration
+	}
+}

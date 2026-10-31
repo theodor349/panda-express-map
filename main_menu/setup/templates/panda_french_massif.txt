@@ -1,0 +1,10 @@
+include = catholic_monarchy_no_coast
+
+government = {
+	centralization_vs_decentralization = 60
+	traditionalist_vs_innovative = -50
+
+	privilege = {
+		clergy_powerful_dioceses
+	}
+}

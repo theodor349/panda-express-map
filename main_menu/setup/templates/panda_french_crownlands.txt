@@ -1,0 +1,10 @@
+include = catholic_monarchy_no_coast
+
+government = {
+	land_vs_naval = -30
+
+	laws = {
+		medieval_levy_law = noble_levies
+		cultural_traditions_law = civil_society
+	}
+}
